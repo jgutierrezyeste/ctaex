@@ -7,16 +7,14 @@
     @csrf
     
    
-    <div class="container">
-    <label> EMPLEADO </label>
-    <input type="text" name="empleado" /><br/>
-    </div>
-    @error ('empleado')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
+    <@component('_components.div')
+    @slot('nombre_campo','empleado')
+@endcomponent
     
     <div class="container">
     <input type="submit" value="Añadir Empleado"/>
     </div>
+
+    <a href="{{route('empleadosAecca.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

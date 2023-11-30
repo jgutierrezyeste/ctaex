@@ -20,9 +20,11 @@
     @enderror
     
     
-    
+    <div class="container">
+        <input type="submit" value="Actualizar Empleados"/>
+        </div>
 
-    <input type="submit" value="Actualizar Empleado Aecca"/>
+    <a href="{{route('empleadosAecca.index')}}"> Vuelta al listado </a>
 
 </form>
 

@@ -63,7 +63,9 @@
     @endcomponent
 
     <div class="container">
-    <input type="submit" value="Añadir Aseguradora"/>
+    <input type="submit" value="Añadir Centro"/>
     </div>
+
+    <a href="{{route('centros.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

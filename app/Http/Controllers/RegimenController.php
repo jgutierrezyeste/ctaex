@@ -4,51 +4,68 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RegimenRequest;
 use App\Models\Regimen;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class RegimenController extends Controller
 {
-    public function mostrar()
+    public function index():View
     {
-        $regimen=Regimen::all();
-        return view ('regimen', compact ('regimen'));
+        $regimenes=Regimen::all();
+        return view('regimnes.regimen', compact('regimenes'));
     }
 
-    public function add()
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create():View
     {
-        return view ('addregimen');
+        return view('regimenes.addregimen');
     }
 
-    public function store(RegimenRequest $request)
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(RegimenRequest $request):RedirectResponse
     {
-        Regimen::create([
-            'alcance'=> $request->alcance,
-            'codigo_alcance'=> $request->codigo_alcance
-        ]);
-        return redirect()->route('index_regimen');
+        Regimen::create($request->all());
+        return redirect()->route('regimenes.index')->with('success','Régimen  añadida');
     }
 
-    public function update(RegimenRequest $request,Regimen $regimen)
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
     {
-        $regimen->update($request->all());
-        return redirect()->route('index_regimen');
+        //
     }
 
-    public function edit(Regimen $regimen)
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Regimen $regimene):View
     {
-        return view ('editregimen',compact ('regimen'));
+        return view('regimenes.editregimen', compact('regimene'));
     }
 
-    public function delete (Regimen $regimen)
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(RegimenRequest $request, Regimen $regimene):RedirectResponse
     {
-        return view ('deleteregimen', compact('regimen'));
+       $regimene->update($request->all());
+       return redirect()->route('regimenes.index')->with('success','Actualizado régimen'); 
     }
 
-    public function destroy (Request $request,Regimen $regimen)
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Regimen $regimene)
     {
-        $regimen->delete();
-        return redirect()->route('index_regimen');
-        
+        $regimene->delete();
+        return redirect()->route('regimenes.index')->with('danger','Eliminado régimen'); 
+
     }
 
 }

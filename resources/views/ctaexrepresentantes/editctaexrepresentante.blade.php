@@ -17,7 +17,11 @@
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
-    <input type="submit" value="Actualizar Representante"/>
+    <div class="container">
+        <input type="submit" value="Actualizar Representantes"/>
+        </div>
+
+    <a href="{{route('representantesCtaex.index')}}"> Vuelta al listado </a>
 
 </form>
 

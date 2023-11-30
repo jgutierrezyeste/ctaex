@@ -19,5 +19,7 @@
     <div class="container">
     <input type="submit" value="Actualizar Entidad"/>
     </div>
+
+    <a href="{{route('entidadesbancarias.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

@@ -32,7 +32,11 @@
     <p style ="color:red;">{{ $message }}</p>
     @enderror
 
-    <input type="submit" value="Actualizar Aseguradora"/>
+    <div class="container">
+        <input type="submit" value="Actualizar Aseguradora"/>
+        </div>
+
+    <a href="{{route('aseguradoras.index')}}"> Vuelta al listado </a>
 
 </form>
 

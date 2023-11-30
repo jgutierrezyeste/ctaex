@@ -20,8 +20,11 @@
     <label> telefono_avisos2 </label>
     <input type="text" name="telefono_avisos2" /><br/>
     </div>
+    
     <div class="container">
     <input type="submit" value="Añadir Aseguradora"/>
     </div>
+
+    <a href="{{route('aseguradoras.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

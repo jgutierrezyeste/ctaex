@@ -12,8 +12,9 @@
     <li> <h1>Aspectos judiciales:</h1>
         <ul>
             <li> <a href="{{ route('juzgados.index') }}"><h1>Juzgados</h1></a></li>
+            <li> <a href="{{ route('juzgadoPenal.index') }}"><h1>Juzgados Penales</h1></a></li>
             <li> <a href="{{ route('juzgadoInstruccion.index') }}"><h1>Juzgados de Instruccion</h1></a></li>
-            <li> <a href="{{ route('juzgadoPenal.index') }}"><h1>Centros</h1></a></li>
+      
             <li> <a href="{{ route('figuras.index') }}"><h1>Figuras</h1></a></li>
             <li> <a href="{{ route('procedimientosJudiciales.index') }}"><h1>Procedimientos Judiciales</h1></a></li>
             <li> <a href="{{ route('motivos.index') }}"><h1>Motivos</h1></a></li>

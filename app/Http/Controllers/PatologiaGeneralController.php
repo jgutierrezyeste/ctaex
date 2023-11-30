@@ -2,32 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PatologiaGeneralRequest;
+use App\Models\PatologiaGeneral;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class PatologiaGeneralController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index():View
     {
-        //
+        $patologias=PatologiaGeneral::all();
+        return view('patologiasgenerales.patologiageneral', compact('patologias'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create():View
     {
-        //
+        return view('patologiasgeneRales.addpatologiageneral');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PatologiaGeneralRequest $request):RedirectResponse
     {
-        //
+        PatologiaGeneral::create($request->all());
+        return redirect()->route('patologiasGenerales.index')->with('success','Patología General añadida');
     }
 
     /**
@@ -41,24 +44,27 @@ class PatologiaGeneralController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(PatologiaGeneral $patologiasGenerale):View
     {
-        //
+        return view('patologiasgenerales.editpatologiageneral', compact('patologiasGenerale'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(PatologiaGeneralRequest $request, PatologiaGeneral $patologiasGenerale):RedirectResponse
     {
-        //
+       $patologiasGenerale->update($request->all());
+       return redirect()->route('patologiasGenerales.index')->with('success','Actualizada opcion de Revisión'); 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(PatologiaGeneral $patologiasGenerale)
     {
-        //
+        $patologiasGenerale->delete();
+        return redirect()->route('patologiasGenerales.index')->with('danger','Eliminada patología general'); 
+
     }
 }

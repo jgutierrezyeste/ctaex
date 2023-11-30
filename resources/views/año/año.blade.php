@@ -3,14 +3,14 @@
 @section('subtitle','Años')
 
 @section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>AÑOS</td>
-            <td></td>
-            <td></td>
-            
+
+<table class="display table table striped table-hover" style="with:100%">
+        <thead>
+            <tr>
+            <th>AÑOS</td>
+            <th></td>
+            <th></td>
+            </tr>
         </thead>
         <tbody>
             @foreach ($años as $año)  
@@ -33,10 +33,10 @@
             @endforeach     
         </tbody>
     </table>
-</div>
+
     
     <form method="GET" action="{{ route('años.create') }}">
         @csrf
-        <input type="submit" value = "AÑADIR AÑO" />
+        <input type="submit" class="button" value = "AÑADIR AÑO" />
     </form>
 @endsection

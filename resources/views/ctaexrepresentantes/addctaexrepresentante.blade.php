@@ -12,5 +12,7 @@
     <div class="container">
         <input type="submit" value="Añadir Representante"/>
         </div>
+
+    <a href="{{route('representantesCtaex.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

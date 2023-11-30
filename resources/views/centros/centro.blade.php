@@ -3,7 +3,7 @@
 @section('subtitle','Aseguradoras')
 
 @section('content')
-<div class="table table-responsive">   
+  
 <table class="table table-sm table-bordered">
         <thead >
             
@@ -62,7 +62,7 @@
             @endforeach     
         </tbody>
     </table>
-</div>
+
     
     <form method="GET" action="{{route('centros.create') }}">
         @csrf

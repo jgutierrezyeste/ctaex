@@ -5,15 +5,13 @@
 @section('content')
 <form method ="POST" action ="{{route('parentescos.store')}}">
     @csrf
-    <div class="container">
-    <label> PARENTESCO </label>
-    <input type="text" name="parentesco" /><br/>
-    
-    @error ('parentesco')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
+    @component('_components.div')
+    @slot('nombre_campo','parentesco')
+@endcomponent
     <div class="container">
     <input type="submit" value="Añadir Parentesco"/>
     </div>
+
+    <a href="{{route('parentescos.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

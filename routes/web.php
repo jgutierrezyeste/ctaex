@@ -13,6 +13,7 @@ use App\Http\Controllers\DependenciaServicioSubtipoController;
 use App\Http\Controllers\DependenciaSevicioController;
 use App\Http\Controllers\DocumentoIdentificativoController;
 use App\Http\Controllers\EntidadBancariaController;
+use App\Http\Controllers\ExpedienteController;
 use App\Http\Controllers\FiguraController;
 use App\Http\Controllers\GradoDependenciaController;
 use App\Http\Controllers\IniciadorProcedimientoController;
@@ -28,7 +29,7 @@ use App\Http\Controllers\PatologiaController;
 use App\Http\Controllers\PatologiaGeneralController;
 use App\Http\Controllers\PenalJuzgadoController;
 use App\Http\Controllers\PrestacionController;
-use App\Http\Controllers\PrestacionDependeciaController;
+use App\Http\Controllers\PrestacionDependenciaController;
 use App\Http\Controllers\ProcedimientoJudicialController;
 use App\Http\Controllers\ProfesionalController;
 use App\Http\Controllers\ProvinciaController;
@@ -40,6 +41,7 @@ use App\Http\Controllers\SexoController;
 use App\Http\Controllers\SituacionController;
 use App\Http\Controllers\TrabajosController;
 use App\Http\Controllers\TsAsignadoController;
+use App\Http\Controllers\IntranetController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -55,17 +57,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','inicio');
-Route::get('/indice',[ApmController::class,'index'])->name('index_apm');
+Route::view('/','inicio')->name('principal');
+//Route::get('/indice',[ApmController::class,'index'])->name('index_apm');
+Route::get('/indiceapm',[ApmController::class,'index'])->name('index_apm');
+Route::get('/indiceintranet',[IntranetController::class,'index'])->name('index_intranet');
 
-/*Route::get('/regimen',[RegimenController::class,'mostrar'])->name('index_regimen');
-Route::get('/add',[RegimenController::class,'add'])->name('add_regimen');
-Route::post('/store',[RegimenController::class,'store'])->name('store_regimen');
-Route::put('/update/{regimen}',[RegimenController::class,'update'])->name('update_regimen');
-Route::get('/edit/{regimen}',[RegimenController::class,'edit'])->name('edit_regimen');
-Route::get('/delete/{regimen}',[RegimenController::class,'delete'])->name('delete_regimen');
-Route::delete('/destroy/{regimen}',[RegimenController::class,'destroy'])->name('destroy_regimen');
-*/
 Route::resource('/parentescos',ParentescoController::class);
 Route::resource('/aseguradoras',AseguradoraController::class);
 Route::resource('/entidadesbancarias',EntidadBancariaController::class);
@@ -93,7 +89,7 @@ Route::resource('/patologias',PatologiaController::class);
 Route::resource('/patologiasGenerales',PatologiaGeneralController::class);
 Route::resource('/juzgadoPenal',PenalJuzgadoController::class);
 Route::resource('/prestaciones',PrestacionController::class);
-Route::resource('/prestacionDependencias',PrestacionDependeciaController::class);
+Route::resource('/prestacionDependencias',PrestacionDependenciaController::class);
 Route::resource('/procedimientosJudiciales',ProcedimientoJudicialController::class);
 Route::resource('/profesionales',ProfesionalController::class);
 Route::resource('/provincias',ProvinciaController::class);
@@ -105,3 +101,5 @@ Route::resource('/situacion',SituacionController::class);
 Route::resource('/tsAsignados',TsAsignadoController::class);
 Route::resource('/regimenes',RegimenController::class);
 Route::resource('/trabajos',TrabajosController::class);
+Route::resource('/expedientes',ExpedienteController::class);
+Route::get('/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');

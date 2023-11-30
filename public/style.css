@@ -1,6 +1,6 @@
 .container{
-display:flex;
-padding:30px;
+
+padding:20px;
 border:3 px solid #ccc;
 
 }
@@ -10,4 +10,29 @@ border:3 px solid #ccc;
     border-radius:10px;
     border:1 px solid #ccc;
     flex-direction:column;
+}
+
+td{
+    
+    border-top:3px solid black;
+    border-left:3px solid black;
+    padding:30px
+    
+  
+}
+
+thead {
+    font-weight: bold;
+    border:10px solid black;
+
+}
+
+tr{ 
+    border-right:3px solid black;
+}
+
+.table {
+    
+    border:1px solid black;
+  
 }

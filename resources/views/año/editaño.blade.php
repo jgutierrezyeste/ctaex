@@ -19,5 +19,7 @@
     <div class="container">
     <input type="submit" value="Actualizar Año"/>
     </div>
+
+    <a href="{{route('años.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

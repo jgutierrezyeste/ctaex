@@ -12,5 +12,7 @@
     <div class="container">
         <input type="submit" value="Añadir Coche"/>
         </div>
+
+        <a href="{{route('coches.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

@@ -124,7 +124,11 @@
                                                     
                                             
 
-    <input type="submit" value="Actualizar Aseguradora"/>
+<div class="container">
+    <input type="submit" value="Actualizar Centro"/>
+</div>
+                                                
+<a href="{{route('centros.index')}}"> Vuelta al listado </a>
 
 </form>
 

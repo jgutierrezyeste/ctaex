@@ -19,5 +19,8 @@
     <div class="container">
     <input type="submit" value="Actualizar Parentesco"/>
     </div>
+
+
+    <a href="{{route('parentescos.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

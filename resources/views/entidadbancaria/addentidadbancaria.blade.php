@@ -5,15 +5,13 @@
 @section('content')
 <form method ="POST" action ="{{route('entidadesbancarias.store')}}">
     @csrf
-    <div class="container">
-    <label> ENTIDAD BANCARIA </label>
-    <input type="text" name="entidad" /><br/>
-    </div>
-    @error ('entidad')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
+    @component('_components.div')
+        @slot('nombre_campo','entidad')
+    @endcomponent
     <div class="container">
     <input type="submit" value="Añadir Entidad bancaria"/>
     </div>
+
+    <a href="{{route('entidadesbancarias.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

@@ -11,6 +11,8 @@
     
     <div class="container">
         <input type="submit" value="Añadir Comparecencia"/>
-        </div>
+    </div>
+
+    <a href="{{route('comparecencias.index')}}"> Vuelta al listado </a>
 </form>
 @endsection

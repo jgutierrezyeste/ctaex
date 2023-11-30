@@ -17,7 +17,11 @@
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
-    <input type="submit" value="Actualizar Servicio  Dependencia"/>
+    <div class="container">
+        <input type="submit" value="Actualizar Servicio Dependencia"/>
+        </div>
+
+    
 
     <a href="{{route('serviciosDependencias.index')}}"> Vuelta al listado </a>
 </form>
