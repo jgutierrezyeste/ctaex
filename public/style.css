@@ -1,0 +1,13 @@
+.container{
+display:flex;
+padding:30px;
+border:3 px solid #ccc;
+
+}
+
+.card{
+    padding:10px;
+    border-radius:10px;
+    border:1 px solid #ccc;
+    flex-direction:column;
+}
