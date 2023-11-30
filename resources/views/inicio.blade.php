@@ -9,7 +9,7 @@
 
 <form method ="GET" action ="{{route('index_intranet')}}">
     @csrf
-    <label> INICIO INTRANET</label>
+    <label> INICIO INTRANET modidicado</label>
     
     <div class="container">
     <input type="submit" value="PAGINA INTRANET"/>
