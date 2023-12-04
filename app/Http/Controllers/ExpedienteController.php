@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ExpedienteRequest;
 use App\Models\Expediente;
+use App\Models\Regimen;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -27,7 +28,8 @@ class ExpedienteController extends Controller
     public function consultar():View
     {
         $expedientes=Expediente::all();
-        return view('expedientes.consultarexpediente', compact('expedientes'));
+        $regimenes=Regimen::all();
+        return view('expedientes.consultarexpediente', compact('expedientes','regimenes'));
     }
 
 
@@ -53,11 +55,17 @@ class ExpedienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Expediente $expediente):View
+    public function edit(Expediente $expediente)
     {
-        return view('expedientes.editexpediente', compact('expediente'));
+        
     }
-
+    
+    public function busquedaEdicion():View 
+        {
+        $expedientes=Expediente::all();
+        $regimenes=Regimen::all();
+        return view('expedientes.editexpediente', compact('expedientes','regimenes'));
+        }
     /**
      * Update the specified resource in storage.
      */

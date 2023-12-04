@@ -103,3 +103,4 @@ Route::resource('/regimenes',RegimenController::class);
 Route::resource('/trabajos',TrabajosController::class);
 Route::resource('/expedientes',ExpedienteController::class);
 Route::get('/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
+Route::get('/busquedaEdicion',[ExpedienteController::class,'busquedaEdicion'])->name('expedientes.busquedaEdicion');
