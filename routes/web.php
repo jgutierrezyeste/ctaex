@@ -42,7 +42,7 @@ use App\Http\Controllers\SituacionController;
 use App\Http\Controllers\TrabajosController;
 use App\Http\Controllers\TsAsignadoController;
 use App\Http\Controllers\IntranetController;
-
+use App\Http\Controllers\JudicialesDefensaController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -102,5 +102,6 @@ Route::resource('/tsAsignados',TsAsignadoController::class);
 Route::resource('/regimenes',RegimenController::class);
 Route::resource('/trabajos',TrabajosController::class);
 Route::resource('/expedientes',ExpedienteController::class);
+Route::resource('/defensasjudiciales',JudicialesDefensaController::class);
 Route::get('/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
 Route::get('/busquedaEdicion',[ExpedienteController::class,'busquedaEdicion'])->name('expedientes.busquedaEdicion');

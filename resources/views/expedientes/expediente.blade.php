@@ -19,6 +19,13 @@
             <td>Centros</td>
             <td>Proxima Declaracion</td>
             <td>Resolucion</td>
+            <td>Aseguradora</td>
+            <td>Grado Dependencia</td>
+            <td>Servicio de dependencia</td>
+            <td>Subtipo de servicio</td>
+            <td>Prestacion de dependencia</td>
+            <td>Nivel de dependencia</td>
+            <td>Procedimiento judicial</td>
             <td></td>
             <td></td>
             
@@ -39,6 +46,14 @@
                     <td>{{ $expediente->centros->nombre_centro ?? ''}}</td>
                     <td>{{ $expediente->declaraciones->proxima_declaracion ?? ''}}</td>
                     <td>{{ $expediente->resoluciones->resolucion ?? ''}}</td>
+                    <td>{{ $expediente->aseguradoras->aseguradora ?? ''}}</td>
+                    <td>{{ $expediente->gradosdependencias->grado ?? ''}}</td>
+                    
+                    <td>{{ $expediente->serviciosdependencias->servicio ?? ''}}</td>
+                    <td>{{ $expediente->subtiposerviciosdependencias->servicio_subtipo ?? ''}}</td>
+                    <td>{{ $expediente->prestacionesdependencias->prestacion_dependencia ?? ''}}</td>
+                    <td>{{ $expediente->nivelesdependencias->nivel ?? ''}}</td>
+                    <td>{{ $expediente->procedimientosjudiciales->procedimiento ?? ''}}{{ $expediente->procedimientosjudiciales->codificacion ?? ''}}</td>
                     <td>
                         <form method="GET" action="{{route('expedientes.edit',$expediente->id) }}">
                         @csrf

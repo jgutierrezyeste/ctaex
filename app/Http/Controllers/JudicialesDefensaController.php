@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JudicialesDefensa;
 use Illuminate\Http\Request;
 
 class JudicialesDefensaController extends Controller
@@ -11,7 +12,8 @@ class JudicialesDefensaController extends Controller
      */
     public function index()
     {
-        //
+        $defensasjudiciales=JudicialesDefensa::all();
+        return view('defensasjudiciales.defensajudicial', compact('defensasjudiciales'));
     }
 
     /**

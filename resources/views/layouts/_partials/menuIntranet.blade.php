@@ -9,6 +9,11 @@
             <li>Mandar oficios</li>
         </ul>
     </li>
+    <li> <h1>Defensas judiciales</h1>
+        <ul>
+             <li><a href="{{ route('defensasjudiciales.index') }}"><h1>Listar defensas judiciales</h1></a></li>
+        </ul>
+    </li>
     <li> <a href=""><h1>Tutela</h1></a></li>
    
     <li> <a href=""><h1>Curatela</h1></a></li>

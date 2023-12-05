@@ -68,4 +68,38 @@ class Expediente extends Model
     {
         return $this->belongsTo(Resolucion::class,'resolucion_id');
     }
+
+    public function aseguradoras():BelongsTo
+    {
+        return $this->belongsTo(Aseguradora::class,'aseguradora_id'); 
+    }
+
+    public function gradosdependencias():BelongsTo
+    {
+        return $this->belongsTo(GradoDependencia::class,'gradodependencia_id'); 
+    }
+
+    public function serviciosdependencias():BelongsTo
+    {
+        return $this->belongsTo(DependenciaServicio::class,'dependenciaservicio_id'); 
+    }
+
+    public function subtiposerviciosdependencias():BelongsTo
+    {
+        return $this->belongsTo(DependenciaServicioSubtipo::class,'dependenciaserviciosubtipo_id'); 
+    }
+
+    public function prestacionesdependencias():BelongsTo
+    {
+        return $this->belongsTo(PrestacionDependencia::class,'prestaciondependencia_id'); 
+    }
+
+    public function nivelesdependencias():BelongsTo
+    {
+        return $this->belongsTo(NivelDependencia::class,'niveldependencia_id'); 
+    }
+    public function procedimientosjudiciales():BelongsTo
+    {
+        return $this->belongsTo(ProcedimientoJudicial::class,'procedimientojudicial_id'); 
+    }
 }
