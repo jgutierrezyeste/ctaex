@@ -13,8 +13,5 @@ class Regimen extends Model
     protected $guarded=[];
     //protected $primarkey='alcance';
 
-    public function expedientes():HasMany
-    {
-        return $this->hasMany(Expediente::class,'regimen_id');
-    }
+    
 }

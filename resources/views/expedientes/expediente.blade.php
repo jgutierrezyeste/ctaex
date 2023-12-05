@@ -35,7 +35,7 @@
                 <tr> 
                     <td>{{ $expediente->expte?? '' }}</td>
                     <td>{{ $expediente->tsasignado->trabajador_social?? ''}}</td>
-                    <td>{{ $expediente->regimens->regimen?? ''}}</td>  
+                    <td>td>  
                     <td>{{ $expediente->situacions->situacion ?? '' }}</td>
 
                     <td>{{ $expediente->sexos->sexo ?? '' }}</td>
@@ -44,8 +44,8 @@
                     <td>{{ $expediente->sanitarios->regimen_sanitario ?? ''}}</td>
                     <td>{{ $expediente->patologiasgenerales->patologia ?? ''}}</td>
                     <td>{{ $expediente->centros->nombre_centro ?? ''}}</td>
-                    <td>{{ $expediente->declaraciones->proxima_declaracion ?? ''}}</td>
-                    <td>{{ $expediente->resoluciones->resolucion ?? ''}}</td>
+                    <td></td>
+                    <td></td>
                     <td>{{ $expediente->aseguradoras->aseguradora ?? ''}}</td>
                     <td>{{ $expediente->gradosdependencias->grado ?? ''}}</td>
                     

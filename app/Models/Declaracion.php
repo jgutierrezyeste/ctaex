@@ -11,8 +11,5 @@ class Declaracion extends Model
     use HasFactory;
     protected $guarded=['id'];
 
-    public function expedientes():HasMany
-    {
-        return $this->hasMany(Expediente::class,'declaracion_id');
-    }
+    
 }

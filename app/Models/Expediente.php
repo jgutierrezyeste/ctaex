@@ -22,10 +22,7 @@ class Expediente extends Model
         return $this->belongsTo(TsAsignado::class);
     }
 
-    public function regimens():BelongsTo
-    {
-        return $this->belongsTo(Regimen::class,'regimen_id');
-    }
+    
 
     
 
@@ -59,16 +56,9 @@ class Expediente extends Model
         return $this->belongsTo(Centro::class,'centro_id');
     }
 
-    public function declaraciones():BelongsTo
-    {
-        return $this->belongsTo(Declaracion::class,'declaracion_id');
-    }
+    
 
-    public function resoluciones():BelongsTo
-    {
-        return $this->belongsTo(Resolucion::class,'resolucion_id');
-    }
-
+   
     public function aseguradoras():BelongsTo
     {
         return $this->belongsTo(Aseguradora::class,'aseguradora_id'); 
