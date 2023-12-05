@@ -35,7 +35,7 @@
                 <tr> 
                     <td>{{ $expediente->expte?? '' }}</td>
                     <td>{{ $expediente->tsasignado->trabajador_social?? ''}}</td>
-                    <td>td>  
+                    <td></td>  
                     <td>{{ $expediente->situacions->situacion ?? '' }}</td>
 
                     <td>{{ $expediente->sexos->sexo ?? '' }}</td>
