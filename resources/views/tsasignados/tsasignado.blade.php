@@ -36,6 +36,12 @@
         </tbody>
     </table>
 </div>
+
+@foreach ($trabajadores as $trabajador)
+    @foreach ($trabajador->expedientes as $expediente) 
+        <li>{{ $trabajador->trabajador_social }}{{ $expediente->expte }}</li>
+    @endforeach
+@endforeach
     
     <form method="GET" action="{{route('tsAsignados.create') }}">
         @csrf
