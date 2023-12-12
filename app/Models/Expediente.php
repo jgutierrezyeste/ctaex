@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Expediente extends Model
 {
@@ -51,6 +52,11 @@ class Expediente extends Model
         return $this->belongsTo(PatologiaGeneral::class,'patologiageneral_id');
     }
 
+    public function patologias():BelongsTo
+    {
+        return $this->belongsTo(Patologia::class,'patologia_id');
+    }
+
     public function centros():BelongsTo
     {
         return $this->belongsTo(Centro::class,'centro_id');
@@ -92,4 +98,42 @@ class Expediente extends Model
     {
         return $this->belongsTo(ProcedimientoJudicial::class,'procedimientojudicial_id'); 
     }
+
+    public function regimenes():BelongsToMany
+    {
+        return $this->belongsToMany(Regimen::class,'expediente_regimen','expediente_id','regimen_id');
+    }
+
+    public function declaraciones():BelongsToMany
+    {
+        return $this->belongsToMany(Declaracion::class,'expediente_declaracion','expediente_id','declaracion_id');
+    }
+
+    public function resoluciones():BelongsToMany
+    {
+        return $this->belongsToMany(Resolucion::class,'expediente_resolucion','expediente_id','resolucion_id');
+    }
+
+    public function juzgados():BelongsToMany
+    {
+        return $this->belongsToMany(Juzgado::class,'expediente_juzgado','expediente_id','juzgado_id');
+    }
+
+    public function entidadesbancarias():BelongsToMany
+    {
+        return $this->belongsToMany(EntidadBancaria::class,'expediente_entidad_bancaria','expediente_id','entidad_bancaria_id');
+    }
+
+    public function pensiones():BelongsToMany
+    {
+        return $this->belongsToMany(Pension::class,'expediente_pension','expediente_id','pension_id');
+    }
+
+    public function empleados():BelongsToMany
+    {
+        return $this->belongsToMany(AreaEccaEmpleado::class,'expediente_area_ecca_empleado','expediente_id','area_ecca_empleado_id');
+    }
+
+
+    
 }

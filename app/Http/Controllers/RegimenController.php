@@ -13,7 +13,7 @@ class RegimenController extends Controller
     public function index():View
     {
         $regimenes=Regimen::all();
-        return view('regimnes.regimen', compact('regimenes'));
+        return view('regimenes.regimen', compact('regimenes'));
     }
 
     /**

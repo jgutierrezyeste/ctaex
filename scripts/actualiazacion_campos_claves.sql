@@ -21,11 +21,12 @@ update expedientes e set prestaciondependencia_id=(select id from prestacion_dep
 update expedientes e set niveldependencia_id=(select id from nivel_dependencias where nivel=e.nivel_dependencia);
 update expedientes e set procedimientojudicial_id=(select id from procedimiento_judicials where codificacion=e.procedimiento_judicial);
 
+update judiciales_defensas jd set letrado_id=(select id from letrados where letrado=jd.letrado);
+update judiciales_defensas jd set juzgado_id=(select id from juzgados where juzgado=jd.juzgado);
+update judiciales_defensas jd set motivo_id=(select id from motivos where motivo=jd.motivo);
 
 
-
-
-
+update expedientes e set patologia_id=(select id from patologias where patologia=e.patologia_concreta);
 
 
 

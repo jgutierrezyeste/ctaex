@@ -15,6 +15,7 @@
             <td>Nacionalidad</td>
             <td>Tipo de documento</td>
             <td>Otra asistencia Sanitaria</td>
+            <td>Patologia Concreta</td>
             <td>Patologia General</td>
             <td>Centros</td>
             <td>Proxima Declaracion</td>
@@ -42,6 +43,7 @@
                     <td>{{ $expediente->nacionalidads->nacionalidad ?? ''}}</td>
                     <td>{{ $expediente->tipodocumentos->tipo_documento ?? ''}}</td>
                     <td>{{ $expediente->sanitarios->regimen_sanitario ?? ''}}</td>
+                    <td>{{ $expediente->patologias->patologia ?? ''}}</td>
                     <td>{{ $expediente->patologiasgenerales->patologia ?? ''}}</td>
                     <td>{{ $expediente->centros->nombre_centro ?? ''}}</td>
                     <td></td>
@@ -72,6 +74,32 @@
         </tbody>
     </table>
 </div>
+
+<div class="table table-responsive">   
+    <table class="table table-sm table-bordered">
+            <thead >
+                
+                <td>Expte</td>
+                <td>Regimen</td>
+                
+                
+            </thead>
+            <tbody>
+                @foreach ($expedientes as $expediente)
+                   <tr>
+                    <td>{{ $expediente-> expte?? '' }}</td> 
+                    <td>@foreach ($expediente->regimenes as $regimen)
+                        {{ $regimen->regimen }}
+                        
+                    @endforeach</td>
+                    </tr>
+                 
+                
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    
     
     <form method="GET" action="{{route('expedientes.create') }}">
         @csrf
