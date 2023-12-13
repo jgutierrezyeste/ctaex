@@ -18,8 +18,18 @@ class Juzgado extends Model
         return $this->hasMany(JudicialesDefensa::class,'juzgado_id');
     }
 
-    public function expedientes():BelongsToMany
+   public function expedientes():HasMany
+   {
+        return $this->hasMany(Expediente::class,'juzgado_id');
+   }
+
+   public function resoluciones():HasMany
     {
-        return $this->belongsToMany(Expediente::class,'expediente_juzgado','juzgado_id','expediente_id');
+        return $this->hasMany(Resolucion::class,'juzgado_dictado_id');
+    }
+
+    public function reintegros():HasMany
+    {
+        return $this->hasMany(Reintegro::class,'juzgado_id');
     }
 }

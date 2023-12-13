@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Expediente extends Model
 {
@@ -114,9 +115,9 @@ class Expediente extends Model
         return $this->belongsToMany(Resolucion::class,'expediente_resolucion','expediente_id','resolucion_id');
     }
 
-    public function juzgados():BelongsToMany
+    public function juzgados():BelongsTo
     {
-        return $this->belongsToMany(Juzgado::class,'expediente_juzgado','expediente_id','juzgado_id');
+        return $this->belongsTo(Juzgado::class,'juzgado_id');
     }
 
     public function entidadesbancarias():BelongsToMany
@@ -134,6 +135,14 @@ class Expediente extends Model
         return $this->belongsToMany(AreaEccaEmpleado::class,'expediente_area_ecca_empleado','expediente_id','area_ecca_empleado_id');
     }
 
+    public function administraciones():HasOne
+    {
+        return $this->hasOne(AdministracionBien::class,'expediente_id');
+    }
 
+    public function residencias():BelongsTo
+    {
+        return $this->belongsTo(Residencia::class,'residencia_id');
+    }
     
 }

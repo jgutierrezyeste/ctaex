@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('expediente_juzgado', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('expediente_id')->nullable()->default(null);
-            $table->bigInteger('juzgado_id')->nullable()->default(null);
-            
-            $table->timestamps();
+        Schema::table('expediente_resolucion', function (Blueprint $table) {
+            $table->renameColumn('juzgado_dictado','juzgado_dictado_id');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('expediente_juzgado');
+        Schema::table('expediente_resolucion', function (Blueprint $table) {
+            $table->renameColumn('juzgado_dictado_id','juzgado_dictado');
+        });
     }
 };

@@ -29,6 +29,14 @@ update judiciales_defensas jd set motivo_id=(select id from motivos where motivo
 update expedientes e set patologia_id=(select id from patologias where patologia=e.patologia_concreta);
 
 
+update administracion_biens ab set motivo_id=(select id from motivos where motivo=ab.motivo);
 
+update administracion_biens ab set expediente_id=(select id from expedientes where expte=ab.expte);
+update reintegros r set juzgado_id=(select id from juzgados where juzgado=r.juzgado);
+update reintegros r set regimen_id=(select id from regimens where regimen=r.regimen);
+update reintegros r set figura_id=(select id from figuras where figura=r.figura);
+update reintegros r set año_id=(select id from años where año=r.año);
 
+update expedientes e set residencia_id=(select id from residencias where expte=e.expte and nombre=e.nombre);
 
+update expedientes e set juzgado_id=(select id from juzgados where juzgado=e.juzgado);

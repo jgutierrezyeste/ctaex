@@ -19,5 +19,18 @@ class Regimen extends Model
         return $this->belongsToMany(Expediente::class,'expediente_regimen','regimen_id','expediente_id');
     }
 
-    
+    public function remociones():HasMany
+    {
+        return $this->hasMany(Remocion::class,'regimen_id');
+    }
+
+    public function reintegros():HasMany
+    {
+        return $this->hasMany(Reintegro::class,'regimen_id');
+    }
+
+    public function fallecidos():HasMany
+    {
+        return $this->hasMany(Fallecido::class,'regimen_id');
+    }
 }

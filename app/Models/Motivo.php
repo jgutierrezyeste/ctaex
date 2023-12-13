@@ -15,4 +15,9 @@ class Motivo extends Model
     {
         return $this->hasMany(JudicialesDefensa::class,'motivo_id');
     }
+
+    public function administraciones():HasMany
+    {
+        return $this->hasMany(AdministracionBien::class,'motivo_id');
+    }
 }
