@@ -10,8 +10,15 @@ class GradoDependencia extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    public function expedientes():HasMany
+    /*public function expedientes():HasMany
     {
         return $this->hasMany(Expediente::class,'gradodependencia_id');
+    }*/
+
+    public function expedientedependencias():HasMany
+    {
+        return $this->hasMany(DependenciaExpediente::class,'gradodependencia_id');
     }
+
+    
 }

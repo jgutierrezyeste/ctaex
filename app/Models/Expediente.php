@@ -71,7 +71,7 @@ class Expediente extends Model
         return $this->belongsTo(Aseguradora::class,'aseguradora_id'); 
     }
 
-    public function gradosdependencias():BelongsTo
+    /*public function gradosdependencias():BelongsTo
     {
         return $this->belongsTo(GradoDependencia::class,'gradodependencia_id'); 
     }
@@ -94,7 +94,8 @@ class Expediente extends Model
     public function nivelesdependencias():BelongsTo
     {
         return $this->belongsTo(NivelDependencia::class,'niveldependencia_id'); 
-    }
+    }*/
+
     public function procedimientosjudiciales():BelongsTo
     {
         return $this->belongsTo(ProcedimientoJudicial::class,'procedimientojudicial_id'); 
@@ -144,5 +145,17 @@ class Expediente extends Model
     {
         return $this->belongsTo(Residencia::class,'residencia_id');
     }
+
+    public function discapacidades():HasOne
+    {
+        return $this->hasOne(DiscapacidadExpediente::class,'expediente_id');
+    }
+
+    public function dependencias():HasOne
+    {
+        return $this->hasOne(DependenciaExpediente::class,'expediente_id');
+    }
+
+
     
 }
