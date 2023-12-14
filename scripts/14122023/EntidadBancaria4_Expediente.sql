@@ -1,0 +1,10 @@
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (23,  15, 'Rf 41-736807.13(FONDO INVERSION)');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (37,  15, '2085 4621 1303 3071 7614');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (40,  5, '46151400310568(DEPOSITO)');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (83,  9, 'ES30 3001 0043 3843 2002 1015');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (110,  18, 'ES53 2048 1041 8130 0007 6221');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (132,  18, '2048 1176 6526 0000 9636(DEPOSITO)');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (157,  15, '2085 4500 7723 0001 8363');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (327,  18, '2048 1209 2126 0000 4677(PLAZO FIJO)');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (359,  6, 'ES64 0182 2884 8304 11524681 8062(PLAZO FIJO)');
+INSERT INTO expediente_entidad_bancaria(expediente_id, entidad_bancaria_id, iban) VALUES (534,  18, 'ES87 2048 1023 9604001414(PRESTAMO PERSONAL)');
