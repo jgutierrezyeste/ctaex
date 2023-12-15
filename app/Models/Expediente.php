@@ -156,6 +156,9 @@ class Expediente extends Model
         return $this->hasOne(DependenciaExpediente::class,'expediente_id');
     }
 
-
+    public function prestaciones():BelongsToMany
+    {
+        return $this->belongsToMany(Prestacion::class,'expediente_prestacion','expediente_id','prestacion_id'); 
+    }
     
 }
