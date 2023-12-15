@@ -22,7 +22,7 @@ class PatologiaGeneralRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'patologia'=>'required'
+            'nombre'=>'required'
         ];
     }
 }

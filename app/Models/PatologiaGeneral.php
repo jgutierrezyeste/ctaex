@@ -10,6 +10,7 @@ class PatologiaGeneral extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='patologia_general';
 
     public function expedientes():HasMany
     {
