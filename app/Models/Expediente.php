@@ -21,7 +21,7 @@ class Expediente extends Model
 
     public function tsasignado():BelongsTo
     {
-        return $this->belongsTo(TsAsignado::class);
+        return $this->belongsTo(TsAsignado::class,'tsasignado_id');
     }
 
     
@@ -159,6 +159,11 @@ class Expediente extends Model
     public function prestaciones():BelongsToMany
     {
         return $this->belongsToMany(Prestacion::class,'expediente_prestacion','expediente_id','prestacion_id'); 
+    }
+
+    public function polizasdecesos():BelongsTo
+    {
+        return $this->belongsTo(PolizasDeceso::class,'poliza_id');
     }
     
 }

@@ -15,4 +15,9 @@ class Aseguradora extends Model
     {
         return $this->hasMany(Expediente::class,'aseguradora_id');
     }
+
+    public function polizasdecesos():HasMany
+    {
+        return $this->hasMany(PolizasDeceso::class,'aseguradora_id');
+    }
 }
