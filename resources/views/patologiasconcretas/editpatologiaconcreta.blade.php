@@ -4,16 +4,16 @@
 
 @section('content')
 
-<form method ="POST" action ="{{route('patologias.update', $patologia->id)}}">
+<form method ="POST" action ="{{route('patologiasConcretas.update', $patologiasConcreta->id)}}">
     
     @method('PUT')
     @csrf
     <div class="container">
-    <label>  PATOLOGIA </label>
-    <input type="text" name="patologia" value="{{ $patologia->patologia }}"/>
+    <label>  PATOLOGIA CONCRETA </label>
+    <input type="text" name="nombre" value="{{ $patologiasConcreta->nombre }}"/>
     </div>
     
-    @error('patologia')
+    @error('nombre')
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
@@ -22,7 +22,7 @@
         <input type="submit" value="Actualizar Patologia"/>
         </div>
 
-    <a href="{{route('patologias.index')}}"> Vuelta al listado </a>
+    <a href="{{route('patologiasConcretas.index')}}"> Vuelta al listado </a>
 </form>
 
 @endsection

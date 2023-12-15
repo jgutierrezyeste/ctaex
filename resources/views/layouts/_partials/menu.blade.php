@@ -42,8 +42,8 @@
     <li> <a href="{{ route('nacionalidades.index') }}"><h1>Nacionalidades</h1></a></li>
     <li> <a href="{{ route('provincias.index') }}"><h1>Provincias</h1></a></li>
     <li> <a href="{{ route('nivelDependencias.index') }}"><h1>Nivel Dependencias</h1></a></li>
-    <li> <a href="{{ route('patologias.index') }}"><h1>Patologias</h1></a></li>
-    <li> <a href="{{ route('patologiasGenerales.index') }}"><h1>PatologiasGenerales</h1></a></li>
+    <li> <a href="{{ route('patologiasConcretas.index') }}"><h1>Patologias Concretas</h1></a></li>
+    <li> <a href="{{ route('patologiasGenerales.index') }}"><h1>Patologias Generales</h1></a></li>
     <li> <a href="{{ route('opcionRevision.index') }}"><h1>Opciones Revision</h1></a></li>
     <li> <a href="{{ route('prestacionDependencias.index') }}"><h1>Prestaciones Dependencias</h1></a></li>
     <li> <a href="{{ route('prestaciones.index') }}"><h1>Prestaciones</h1></a></li>           

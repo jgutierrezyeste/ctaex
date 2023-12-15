@@ -53,10 +53,7 @@ class Expediente extends Model
         return $this->belongsTo(PatologiaGeneral::class,'patologiageneral_id');
     }
 
-    public function patologias():BelongsTo
-    {
-        return $this->belongsTo(Patologia::class,'patologia_id');
-    }
+    
 
     public function centros():BelongsTo
     {
@@ -71,30 +68,7 @@ class Expediente extends Model
         return $this->belongsTo(Aseguradora::class,'aseguradora_id'); 
     }
 
-    /*public function gradosdependencias():BelongsTo
-    {
-        return $this->belongsTo(GradoDependencia::class,'gradodependencia_id'); 
-    }
-
-    public function serviciosdependencias():BelongsTo
-    {
-        return $this->belongsTo(DependenciaServicio::class,'dependenciaservicio_id'); 
-    }
-
-    public function subtiposerviciosdependencias():BelongsTo
-    {
-        return $this->belongsTo(DependenciaServicioSubtipo::class,'dependenciaserviciosubtipo_id'); 
-    }
-
-    public function prestacionesdependencias():BelongsTo
-    {
-        return $this->belongsTo(PrestacionDependencia::class,'prestaciondependencia_id'); 
-    }
-
-    public function nivelesdependencias():BelongsTo
-    {
-        return $this->belongsTo(NivelDependencia::class,'niveldependencia_id'); 
-    }*/
+    
 
     public function procedimientosjudiciales():BelongsTo
     {
@@ -164,6 +138,11 @@ class Expediente extends Model
     public function polizasdecesos():BelongsTo
     {
         return $this->belongsTo(PolizasDeceso::class,'poliza_id');
+    }
+
+    public function patologiasconcretas():BelongsToMany
+    {
+        return $this->belongsToMany(PatologiaConcreta::class,'expediente_patologia_concreta','expediente_id','patologia_id');
     }
     
 }

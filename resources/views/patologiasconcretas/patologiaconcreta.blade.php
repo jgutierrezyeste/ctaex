@@ -7,7 +7,7 @@
 <table class="table table-sm table-bordered">
         <thead >
             
-            <td>Patologías</td>
+            <td>Patologías Concretas</td>
            
             <td></td>
             <td></td>
@@ -16,16 +16,16 @@
         <tbody>
             @foreach ($patologias as $patologia)  
                 <tr> 
-                    <td>{{ $patologia->patologia }}</td>
+                    <td>{{ $patologia->nombre }}</td>
                     
                     <td>
-                        <form method="GET" action="{{route('patologias.edit',$patologia->id) }}">
+                        <form method="GET" action="{{route('patologiasConcretas.edit',$patologia->id) }}">
                         @csrf
                         <input type="submit" value = "EDIT" />
                         </form>
                     </td>
                     <td>
-                        <form method="POST" action="{{route('patologias.destroy',$patologia->id) }}">
+                        <form method="POST" action="{{route('patologiasConcretas.destroy',$patologia->id) }}">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value = "DELETE" />
@@ -37,7 +37,7 @@
     </table>
 </div>
     
-    <form method="GET" action="{{route('patologias.create') }}">
+    <form method="GET" action="{{route('patologiasConcretas.create') }}">
         @csrf
         <input type="submit" value = "AÑADIR PATOLOGIA" />
     </form>
