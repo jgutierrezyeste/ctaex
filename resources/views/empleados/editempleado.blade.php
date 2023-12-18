@@ -4,7 +4,7 @@
 
 @section('content')
 
-<form method ="POST" action ="{{route('empleadosAecca.update', $empleadosAecca->id)}}">
+<form method ="POST" action ="{{route('empleados.update', $empleado->id)}}">
     
     @method('PUT')
     @csrf
@@ -13,9 +13,9 @@
 
     <div class="container">
     <label> EMPLEADO  </label>
-    <input type="text" name="empleado" value="{{ $empleadosAecca->empleado }}"/>
+    <input type="text" name="nombre" value="{{ $empleado->nombre }}"/>
     </div>
-    @error ('empleado')
+    @error ('nombre')
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
@@ -24,7 +24,7 @@
         <input type="submit" value="Actualizar Empleados"/>
         </div>
 
-    <a href="{{route('empleadosAecca.index')}}"> Vuelta al listado </a>
+    <a href="{{route('empleados.index')}}"> Vuelta al listado </a>
 
 </form>
 

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AreaEccaEmpleadoRequest extends FormRequest
+class EmpleadoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,7 @@ class AreaEccaEmpleadoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'empleado'=>'required|min:5|max:100'
+            'nombre'=>'required|min:3|max:100'
         ];
     }
 }

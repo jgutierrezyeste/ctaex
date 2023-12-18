@@ -1,6 +1,6 @@
 @extends ('layouts.landing')
-@section('title','Empleados Aecca')
-@section('subtitle','Empleados Aecca')
+@section('title','Empleados')
+@section('subtitle','Empleados ')
 
 @section('content')
 <div class="table table-responsive">   
@@ -18,16 +18,16 @@
             @foreach ($empleados as $empleado)  
                 <tr> 
                     
-                    <td>{{ $empleado->empleado }}</td>
+                    <td>{{ $empleado->nombre }}</td>
                     
                     <td>
-                        <form method="GET" action="{{route('empleadosAecca.edit',$empleado->id) }}">
+                        <form method="GET" action="{{route('empleados.edit',$empleado->id) }}">
                         @csrf
                         <input type="submit" value = "EDIT" />
                         </form>
                     </td>
                     <td>
-                        <form method="POST" action="{{route('empleadosAecca.destroy',$empleado->id) }}">
+                        <form method="POST" action="{{route('empleados.destroy',$empleado->id) }}">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value = "DELETE" />
@@ -39,8 +39,8 @@
     </table>
 </div>
     
-    <form method="GET" action="{{route('empleadosAecca.create') }}">
+    <form method="GET" action="{{route('empleados.create') }}">
         @csrf
-        <input type="submit" value = "AÑADIR EMPLEADO AECCA" />
+        <input type="submit" value = "AÑADIR EMPLEADO" />
     </form>
 @endsection

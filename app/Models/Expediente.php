@@ -107,7 +107,7 @@ class Expediente extends Model
 
     public function empleados():BelongsToMany
     {
-        return $this->belongsToMany(AreaEccaEmpleado::class,'expediente_area_ecca_empleado','expediente_id','area_ecca_empleado_id');
+        return $this->belongsToMany(Empleado::class,'expediente_empleado','expediente_id','empleado_id');
     }
 
     public function administraciones():HasOne
@@ -142,7 +142,7 @@ class Expediente extends Model
 
     public function patologiasconcretas():BelongsToMany
     {
-        return $this->belongsToMany(PatologiaConcreta::class,'expediente_patologia_concreta','expediente_id','patologia_id');
+        return $this->belongsToMany(PatologiaConcreta::class,'expediente_patologia_concreta','expediente_id','patologia_concreta_id');
     }
     
 }

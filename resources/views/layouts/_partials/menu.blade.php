@@ -26,7 +26,7 @@
 
     <li> <h1>Personal:</h1>
         <ul>
-            <li> <a href="{{ route('empleadosAecca.index') }}"><h1>Empleados Aecca</h1></a></li>
+            <li> <a href="{{ route('empleados.index') }}"><h1>Empleados</h1></a></li>
             <li> <a href="{{ route('sanitarios.index') }}"><h1>Sanitarios</h1></a></li>
             <li> <a href="{{ route('representantesCtaex.index') }}"><h1>Representantes Ctaex</h1></a></li>
             <li> <a href="{{ route('letrados.index') }}"><h1>Letrados</h1></a></li>

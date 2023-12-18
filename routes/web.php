@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApmController;
-use App\Http\Controllers\AreaEccaEmpleadoController;
+use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\AseguradoraController;
 use App\Http\Controllers\AñoController;
 use App\Http\Controllers\CarpetaDecesoController;
@@ -66,7 +66,7 @@ Route::resource('/parentescos',ParentescoController::class);
 Route::resource('/aseguradoras',AseguradoraController::class);
 Route::resource('/entidadesbancarias',EntidadBancariaController::class);
 Route::resource('/años',AñoController::class);
-Route::resource('/empleadosAecca',AreaEccaEmpleadoController::class);
+Route::resource('/empleados',EmpleadoController::class);
 Route::resource('/decesos',CarpetaDecesoController::class);
 Route::resource('/centros',CentroController::class);
 Route::resource('/coches',CocheController::class);
