@@ -12,6 +12,7 @@ class Resolucion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='resoluciones';
 
     public function expedientes():BelongsToMany
     {

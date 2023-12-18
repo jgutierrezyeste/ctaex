@@ -10,6 +10,7 @@ class Remocion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='remociones';
 
     public function parentescos():BelongsTo
     {

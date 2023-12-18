@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Regimen extends Model
 {
     use HasFactory;
-    //protected $table="Regimen";
+    protected $table='regimenes';
     protected $guarded=[];
     //protected $primarkey='alcance';
 

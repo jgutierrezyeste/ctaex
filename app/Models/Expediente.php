@@ -24,16 +24,12 @@ class Expediente extends Model
         return $this->belongsTo(TsAsignado::class,'tsasignado_id');
     }
 
-    
-
-    
-
     public function sexos():BelongsTo
     {
         return $this->belongsTo(Sexo::class,'sexo_id');
     }
 
-    public function nacionalidads():BelongsTo
+    public function nacionalidades():BelongsTo
     {
         return $this->belongsTo(Nacionalidad::class,'nacionalidad_id');
     }
@@ -61,15 +57,12 @@ class Expediente extends Model
     }
 
     
-
-   
     public function aseguradoras():BelongsTo
     {
         return $this->belongsTo(Aseguradora::class,'aseguradora_id'); 
     }
 
     
-
     public function procedimientosjudiciales():BelongsTo
     {
         return $this->belongsTo(ProcedimientoJudicial::class,'procedimientojudicial_id'); 

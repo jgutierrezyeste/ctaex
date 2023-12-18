@@ -10,6 +10,7 @@ class Nacionalidad extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='nacionalidades';
 
     public function expedientes():HasMany
     {

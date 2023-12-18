@@ -10,6 +10,7 @@ class ProcedimientoJudicial extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='procedimientos_judiciales';
     public function expedientes():HasMany
     {
         return $this->hasMany(Expediente::class,'procedimientojudicial_id');

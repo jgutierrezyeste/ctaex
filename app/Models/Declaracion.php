@@ -11,6 +11,7 @@ class Declaracion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='declaraciones';
 
     public function expedientes():BelongsToMany
     {

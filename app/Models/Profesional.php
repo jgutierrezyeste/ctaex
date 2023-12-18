@@ -10,6 +10,7 @@ class Profesional extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='profesionales';
 
     public function salidas():HasMany
     {

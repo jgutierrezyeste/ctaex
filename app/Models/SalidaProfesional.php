@@ -10,6 +10,7 @@ class SalidaProfesional extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='salida_profesionales';
 
     public function profesionales():BelongsTo
     {

@@ -10,6 +10,7 @@ class Prestacion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='prestaciones';
 
     public function expedientes():BelongsToMany
     {
