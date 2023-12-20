@@ -133,5 +133,9 @@ class Expediente extends Model
     {
         return $this->belongsToMany(PatologiaConcreta::class,'expediente_patologia_concreta','expediente_id','patologia_concreta_id');
     }
+    public function domicilios():BelongsTo
+    {
+        return $this->belongsTo(Domicilio::class,'domicilio_id');
+    }
     
 }

@@ -9,6 +9,8 @@
             
             <td>Expte</td>
             <td>Nombre_trabajador_social</td>
+            <td>Centro</td>
+            <td>Domicilio</td>
             <td>Regimen</td>
             <td>Situacion</td>
             <td>Sexo</td>
@@ -36,6 +38,8 @@
                 <tr> 
                     <td>{{ $expediente->expte?? '' }}</td>
                     <td>{{ $expediente->trabajadoressociales->nombre?? ''}}</td>
+                    <td>{{ $expediente->centros->nombre_centro?? ''}}</td>
+                    <td>{{ $expediente->domicilios->direccion?? ''}}</td>
                     <td></td>  
                     <td>{{ $expediente->situaciones->situacion ?? '' }}</td>
 
@@ -43,7 +47,7 @@
                     <td>{{ $expediente->nacionalidades->nacionalidad ?? ''}}</td>
                     <td>{{ $expediente->tipodocumentos->tipo_documento ?? ''}}</td>
                     <td>{{ $expediente->segurosmedicos->nombre ?? ''}}</td>
-                    <td>{{ $expediente->patologiasconcretas->nombre ?? ''}}</td>
+                    <td></td>
                     <td>{{ $expediente->patologiasgenerales->nombre ?? ''}}</td>
                     <td>{{ $expediente->centros->nombre_centro ?? ''}}</td>
                     <td></td>
@@ -90,6 +94,18 @@
                     <td>{{ $expediente-> expte?? '' }}</td> 
                     <td>@foreach ($expediente->regimenes as $regimen)
                         {{ $regimen->regimen }}
+                        
+                    @endforeach</td>
+                    </tr>
+                 
+                
+                @endforeach
+
+                @foreach ($expedientes as $expediente)
+                   <tr>
+                    <td>{{ $expediente-> expte?? '' }}</td> 
+                    <td>@foreach ($expediente->patologiasconcretas as $p)
+                        {{ $p->nombre??'' }}
                         
                     @endforeach</td>
                     </tr>
