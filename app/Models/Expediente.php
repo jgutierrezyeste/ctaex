@@ -19,9 +19,9 @@ class Expediente extends Model
         return $this->belongsTo(Situacion::class,'situacion_id');
     }
 
-    public function tsasignado():BelongsTo
+    public function trabajadoressociales():BelongsTo
     {
-        return $this->belongsTo(TsAsignado::class,'tsasignado_id');
+        return $this->belongsTo(TrabajadorSocial::class,'trabajador_social_id');
     }
 
     public function sexos():BelongsTo
@@ -39,9 +39,9 @@ class Expediente extends Model
         return $this->belongsTo(DocumentoIdentificativo::class,'documentoidentificativo_id');
     }
 
-    public function sanitarios():BelongsTo
+    public function segurosmedicos():BelongsTo
     {
-        return $this->belongsTo(Sanitario::class,'sanitario_id');
+        return $this->belongsTo(SeguroMedico::class,'seguro_medico_id');
     }
 
     public function patologiasgenerales():BelongsTo
@@ -108,10 +108,6 @@ class Expediente extends Model
         return $this->hasOne(AdministracionBien::class,'expediente_id');
     }
 
-    public function residencias():BelongsTo
-    {
-        return $this->belongsTo(Residencia::class,'residencia_id');
-    }
 
     public function discapacidades():HasOne
     {

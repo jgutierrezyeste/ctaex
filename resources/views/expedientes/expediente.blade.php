@@ -14,7 +14,7 @@
             <td>Sexo</td>
             <td>Nacionalidad</td>
             <td>Tipo de documento</td>
-            <td>Otra asistencia Sanitaria</td>
+            <td>Seguros Médicos</td>
             <td>Patologia Concreta</td>
             <td>Patologia General</td>
             <td>Centros</td>
@@ -35,16 +35,16 @@
             @foreach ($expedientes as $expediente)  
                 <tr> 
                     <td>{{ $expediente->expte?? '' }}</td>
-                    <td>{{ $expediente->tsasignado->trabajador_social?? ''}}</td>
+                    <td>{{ $expediente->trabajadoressociales->nombre?? ''}}</td>
                     <td></td>  
-                    <td>{{ $expediente->situacions->situacion ?? '' }}</td>
+                    <td>{{ $expediente->situaciones->situacion ?? '' }}</td>
 
                     <td>{{ $expediente->sexos->sexo ?? '' }}</td>
-                    <td>{{ $expediente->nacionalidads->nacionalidad ?? ''}}</td>
+                    <td>{{ $expediente->nacionalidades->nacionalidad ?? ''}}</td>
                     <td>{{ $expediente->tipodocumentos->tipo_documento ?? ''}}</td>
-                    <td>{{ $expediente->sanitarios->regimen_sanitario ?? ''}}</td>
-                    <td>{{ $expediente->patologias->patologia ?? ''}}</td>
-                    <td>{{ $expediente->patologiasgenerales->patologia ?? ''}}</td>
+                    <td>{{ $expediente->segurosmedicos->nombre ?? ''}}</td>
+                    <td>{{ $expediente->patologiasconcretas->nombre ?? ''}}</td>
+                    <td>{{ $expediente->patologiasgenerales->nombre ?? ''}}</td>
                     <td>{{ $expediente->centros->nombre_centro ?? ''}}</td>
                     <td></td>
                     <td></td>

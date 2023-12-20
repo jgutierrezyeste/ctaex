@@ -27,12 +27,12 @@
     <li> <h1>Personal:</h1>
         <ul>
             <li> <a href="{{ route('empleados.index') }}"><h1>Empleados</h1></a></li>
-            <li> <a href="{{ route('sanitarios.index') }}"><h1>Sanitarios</h1></a></li>
+            <li> <a href="{{ route('segurosMedicos.index') }}"><h1>Seguros Médicos</h1></a></li>
             <li> <a href="{{ route('representantesCtaex.index') }}"><h1>Representantes Ctaex</h1></a></li>
             <li> <a href="{{ route('letrados.index') }}"><h1>Letrados</h1></a></li>
             <li> <a href="{{ route('puestos.index') }}"><h1>Puestos</h1></a></li>
             <li> <a href="{{ route('profesionales.index') }}"><h1>Profesionales</h1></a></li>
-            <li> <a href="{{ route('tsAsignados.index') }}"><h1>Ts Asignados</h1></a></li>
+            <li> <a href="{{ route('trabajadoresSociales.index') }}"><h1>Ts Asignados</h1></a></li>
             <li> <a href="{{ route('iniciadorProcedimiento.index') }}"><h1>Iniciadores procedimientos</h1></a></li>
             <li> <a href="{{ route('parentescos.index') }}"> Parentescos </a></li>
         </ul>

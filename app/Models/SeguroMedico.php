@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Sanitario extends Model
+class SeguroMedico extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='seguros_medicos';
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'sanitario_id');
+        return $this->hasMany(Expediente::class,'seguro_medico_id');
     }
 }

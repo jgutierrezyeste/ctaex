@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class TsAsignado extends Model
+class TrabajadorSocial extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='trabajadores_sociales';
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'tsasignado_id');
+        return $this->hasMany(Expediente::class,'trabajador_social_id');
     }
 }

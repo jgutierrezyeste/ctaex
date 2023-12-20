@@ -4,22 +4,22 @@
 
 @section('content')
 
-<form method ="POST" action ="{{route('tsAsignados.update', $tsAsignado->id)}}">
+<form method ="POST" action ="{{route('trabajadoresSociales.update', $trabajadoresSociale->id)}}">
     
     @method('PUT')
     @csrf
     <div class="container">
     <label>  TRABAJADOR SOCIAL </label>
-    <input type="text" name="trabajador_social" value="{{ $tsAsignado->trabajador_social }}"/>
+    <input type="text" name="nombre" value="{{ $trabajadoresSociale->nombre }}"/>
     </div>
     
-    @error('trabajador_social')
+    @error('nombre')
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
     <div class="container">
     <label>  CODIFICACION </label>
-    <input type="text" name="codificacion" value="{{ $tsAsignado->codificacion }}"/>
+    <input type="text" name="codificacion" value="{{ $trabajadoresSociale->codificacion }}"/>
     </div>
         
     @error('codificacion')
@@ -30,7 +30,7 @@
         <input type="submit" value="Actualizar Trabajador Social"/>
         </div>
 
-    <a href="{{route('tsAsignados.index')}}"> Vuelta al listado </a>
+    <a href="{{route('trabajadoresSociales.index')}}"> Vuelta al listado </a>
 </form>
 
 @endsection

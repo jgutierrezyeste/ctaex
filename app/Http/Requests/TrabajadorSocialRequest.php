@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TsAsignadoRequest extends FormRequest
+class TrabajadorSocialRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,7 +23,7 @@ class TsAsignadoRequest extends FormRequest
     {
         return [
             'codificacion'=>'required|integer',
-            'trabajador_social'=>'required'
+            'nombre'=>'required'
         ];
     }
 }

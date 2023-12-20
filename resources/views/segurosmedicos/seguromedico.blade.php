@@ -1,31 +1,31 @@
 @extends ('layouts.landing')
-@section('title','Sanitario')
-@section('subtitle','Sanitario ')
+@section('title','Seguros Médicos')
+@section('subtitle','Seguros Médicos ')
 
 @section('content')
 <div class="table table-responsive">   
 <table class="table table-sm table-bordered">
         <thead >
             
-            <td>Sanitario</td>
+            <td>Seguros Médicos</td>
            
             <td></td>
             <td></td>
             
         </thead>
         <tbody>
-            @foreach ($sanitarios as $sanitario)  
+            @foreach ($seguros as $seguro)  
                 <tr> 
-                    <td>{{ $sanitario->regimen_sanitario }}</td>
+                    <td>{{ $seguro->nombre }}</td>
                     
                     <td>
-                        <form method="GET" action="{{route('sanitarios.edit',$sanitario->id) }}">
+                        <form method="GET" action="{{route('segurosMedicos.edit',$seguro->id) }}">
                         @csrf
                         <input type="submit" value = "EDIT" />
                         </form>
                     </td>
                     <td>
-                        <form method="POST" action="{{route('sanitarios.destroy',$sanitario->id) }}">
+                        <form method="POST" action="{{route('segurosMedicos.destroy',$seguro->id) }}">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value = "DELETE" />
@@ -37,7 +37,7 @@
     </table>
 </div>
     
-    <form method="GET" action="{{route('sanitarios.create') }}">
+    <form method="GET" action="{{route('segurosMedicos.create') }}">
         @csrf
         <input type="submit" value = "AÑADIR SANITARIO" />
     </form>
