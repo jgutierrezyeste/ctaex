@@ -17,4 +17,9 @@ class Declaracion extends Model
     {
         return $this->belongsToMany(Expediente::class,'expediente_declaracion','declaracion_id','expediente_id');
     }
+
+    public function rendicionesanuales():BelongsToMany
+    {
+        return $this->belongsToMany(RendicionAnual::class,'rendiciones_anuales_declaraciones','declaracion_id','rendicion_anual_id');
+    }
 }

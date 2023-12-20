@@ -16,4 +16,9 @@ class Empleado extends Model
     {
         return $this->belongsToMany(Expediente::class,'expediente_empleado','empleado_id','expediente_id');
     }
+
+    public function rendiciones():BelongsToMany
+    {
+        return $this->belongsToMany(Rendicion::class,'rendiciones_empleados','empleado_id','rendicion_id');
+    }
 }

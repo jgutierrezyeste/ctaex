@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Centro extends Model
@@ -14,5 +15,10 @@ class Centro extends Model
     public function expedientes():HasMany
     {
         return $this->hasMany(Expediente::class,'centro_id');
+    }
+
+    public function provincias():BelongsTo
+    {
+        return $this->belongsTo(Provincia::class,'provincia_id');
     }
 }
