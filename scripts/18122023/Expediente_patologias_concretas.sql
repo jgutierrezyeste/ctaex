@@ -1130,7 +1130,7 @@ INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) V
 INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (377, (SELECT id FROM patologia_concreta WHERE nombre = 'TRASTORNO DE PERSONALIDAD GRUPO B CON RASGOS HISTRINICOS'));
 INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (388, (SELECT id FROM patologia_concreta WHERE nombre = 'TRASTORNOS DIGESTIVOS'));
 INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (417, (SELECT id FROM patologia_concreta WHERE nombre = 'ANEMIA MICROCRITICA'));
-INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (426, (SELECT id FROM patologia_concreta WHERE nombre = 'LUXACION CONGENITA CADERA IZQ.'));
+INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (426, (SELECT id FROM patologia_concreta WHERE nombre = 'LUXACION CONGENITA CADERA IZQUIERDA'));
 INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (465, (SELECT id FROM patologia_concreta WHERE nombre = 'NIVEL COGNITIVO BAJO'));
 INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (467, (SELECT id FROM patologia_concreta WHERE nombre = 'AUTISMO'));
 INSERT INTO expediente_patologia_concreta(expediente_id,patologia_concreta_id) VALUES (475, (SELECT id FROM patologia_concreta WHERE nombre = 'EPILEPSIA'));

@@ -1,0 +1,12 @@
+UPDATE expedientes  SET numero_documento = 'X1818105R' WHERE expte = '02/T/2002';
+UPDATE expedientes  SET numero_documento = 'X1478285Y' WHERE expte = '04/T/2019';
+UPDATE expedientes  SET numero_documento = 'Y1891010X' WHERE expte = '10/T/2019';
+UPDATE expedientes  SET numero_documento = '11634360 5 ZX4' WHERE expte = '104/T/2000';
+UPDATE expedientes  SET numero_documento = 'X2924090P' WHERE expte = '13/T/2011';
+UPDATE expedientes  SET numero_documento = 'X1818081T' WHERE expte = '19/T/2005';
+UPDATE expedientes  SET numero_documento = 'Y-1090272-V' WHERE expte = '24/T/2020';
+UPDATE expedientes  SET numero_documento = 'X0745160Y' WHERE expte = '29/T/2014';
+UPDATE expedientes  SET numero_documento = 'X09649378G' WHERE expte = '34/T/2018';
+UPDATE expedientes  SET numero_documento = 'X2001267Z' WHERE expte = '35/T/2007';
+UPDATE expedientes  SET numero_documento = 'Y3493960K' WHERE expte = '37/T/2019';
+UPDATE expedientes  SET numero_documento = 'X3157069R' WHERE expte = '44/T/2014';
