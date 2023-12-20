@@ -10,10 +10,10 @@
     @csrf
     <div class="container">
     <label>  JUZGADO </label>
-    <input type="text" name="juzgado" value="{{ $juzgado->juzgado }}"/>
+    <input type="text" name="nombre" value="{{ $juzgado->nombre }}"/>
     </div>
     
-    @error('juzgado')
+    @error('nombre')
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
