@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('rendicion_id')->nullable()->default(null);
             $table->date('fecha_aceptacion_cargo')->nullable()->default(null);
+            $table->date('fecha_entrada')->nullable()->default(null);
             $table->timestamps();
         });
     }
