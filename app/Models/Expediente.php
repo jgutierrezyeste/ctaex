@@ -44,12 +44,6 @@ class Expediente extends Model
         return $this->belongsTo(SeguroMedico::class,'seguro_medico_id');
     }
 
-    public function patologiasgenerales():BelongsTo
-    {
-        return $this->belongsTo(PatologiaGeneral::class,'patologiageneral_id');
-    }
-
-    
 
     public function centros():BelongsTo
     {

@@ -12,8 +12,10 @@ class PatologiaGeneral extends Model
     protected $guarded=['id'];
     protected $table='patologia_general';
 
-    public function expedientes():HasMany
+    
+
+    public function patologiasconcretas():HasMany
     {
-        return $this->hasMany(Expediente::class,'patologiageneral_id');
+        return $this->hasMany(PatologiaConcreta::class,'patologia_general_id');
     }
 }
