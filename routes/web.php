@@ -35,7 +35,7 @@ use App\Http\Controllers\ProfesionalController;
 use App\Http\Controllers\ProvinciaController;
 use App\Http\Controllers\PuestoController;
 use App\Http\Controllers\RegimenController;
-use App\Http\Controllers\ResolucionController;
+use App\Http\Controllers\ProcedimientoResolucionController;
 use App\Http\Controllers\SeguroMedicoController;
 use App\Http\Controllers\SexoController;
 use App\Http\Controllers\SituacionController;
@@ -43,6 +43,7 @@ use App\Http\Controllers\TrabajosController;
 use App\Http\Controllers\TrabajadorSocialController;
 use App\Http\Controllers\IntranetController;
 use App\Http\Controllers\JudicialesDefensaController;
+use App\Http\Controllers\ResolucionController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -94,7 +95,7 @@ Route::resource('/procedimientosJudiciales',ProcedimientoJudicialController::cla
 Route::resource('/profesionales',ProfesionalController::class);
 Route::resource('/provincias',ProvinciaController::class);
 Route::resource('/puestos',PuestoController::class);
-Route::resource('/resoluciones',ResolucionController::class);
+Route::resource('/procedimientosresoluciones',ProcedimientoResolucionController::class);
 Route::resource('/segurosMedicos',SeguroMedicoController::class);
 Route::resource('/sexo',SexoController::class);
 Route::resource('/situacion',SituacionController::class);
@@ -103,5 +104,7 @@ Route::resource('/regimenes',RegimenController::class);
 Route::resource('/trabajos',TrabajosController::class);
 Route::resource('/expedientes',ExpedienteController::class);
 Route::resource('/defensasjudiciales',JudicialesDefensaController::class);
+Route::resource('/resoluciones',ResolucionController::class);
+
 Route::get('/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
 Route::get('/busquedaEdicion',[ExpedienteController::class,'busquedaEdicion'])->name('expedientes.busquedaEdicion');

@@ -19,7 +19,7 @@
             <li> <a href="{{ route('procedimientosJudiciales.index') }}"><h1>Procedimientos Judiciales</h1></a></li>
             <li> <a href="{{ route('motivos.index') }}"><h1>Motivos</h1></a></li>
             <li> <a href="{{ route('comparecencias.index') }}"><h1>Comparecencias</h1></a></li>
-            <li> <a href="{{ route('resoluciones.index') }}"><h1>Resoluciones</h1></a></li>
+            <li> <a href="{{ route('procedimientosresoluciones.index') }}"><h1>Procedimientos resoluciones</h1></a></li>
             
         </ul>
     </li>

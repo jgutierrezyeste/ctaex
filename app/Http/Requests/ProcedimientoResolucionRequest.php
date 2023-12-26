@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ResolucionRequest extends FormRequest
+class ProcedimientoResolucionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,7 @@ class ResolucionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'numero'=>'required',
-            'fecha'=>'requiered|date',
-            'juzgado'=>'required',
-            
+            'nombre'=>'required'
         ];
     }
 }

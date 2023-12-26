@@ -25,11 +25,13 @@ class Juzgado extends Model
 
    public function resoluciones():HasMany
     {
-        return $this->hasMany(Resolucion::class,'juzgado_dictado_id');
+        return $this->hasMany(Resolucion::class,'juzgado_id');
     }
 
     public function reintegros():HasMany
     {
         return $this->hasMany(Reintegro::class,'juzgado_id');
     }
+
+    
 }

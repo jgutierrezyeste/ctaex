@@ -6,7 +6,15 @@
 <form method ="POST" action ="{{route('resoluciones.store')}}">
     @csrf
     @component('_components.div')
-        @slot('nombre_campo','resolucion')
+        @slot('nombre_campo','numero')
+    @endcomponent
+
+    @component('_components.div')
+        @slot('nombre_campo','juzgado')
+    @endcomponent
+
+    @component('_components.div')
+        @slot('nombre_campo','fecha')
     @endcomponent
     
     <div class="container">

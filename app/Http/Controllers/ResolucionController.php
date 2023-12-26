@@ -55,7 +55,7 @@ class ResolucionController extends Controller
     public function update(ResolucionRequest $request, Resolucion $resolucione):RedirectResponse
     {
        $resolucione->update($request->all());
-       return redirect()->route('resoluciones.index')->with('success','Actualizada resolucion'); 
+       return redirect()->route('resoluciones.index')->with('success','Actualizada resolución'); 
     }
 
     /**
@@ -64,7 +64,7 @@ class ResolucionController extends Controller
     public function destroy(Resolucion $resolucione)
     {
         $resolucione->delete();
-        return redirect()->route('resoluciones.index')->with('danger','Eliminada resolucion'); 
+        return redirect()->route('resoluciones.index')->with('danger','Eliminado resolucion'); 
 
     }
 }

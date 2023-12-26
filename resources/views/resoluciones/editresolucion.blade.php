@@ -1,6 +1,6 @@
 @extends ('layouts.landing')
-@section('title','Resolucion')
-@section('subtitle','Resolucion')
+@section('title','Procedimientos Resolución')
+@section('subtitle','Resolución')
 
 @section('content')
 
@@ -9,15 +9,32 @@
     @method('PUT')
     @csrf
     <div class="container">
-    <label>  RESOLUCION </label>
-    <input type="text" name="resolucion" value="{{ $resolucione->resolucion }}"/>
+    <label>  NUMERO </label>
+    <input type="text" name="numero" value="{{ $resolucione->numero }}"/>
     </div>
     
-    @error('resolucion')
+    @error('numero')
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
+    <div class="container">
+        <label>  JUZGADO </label>
+        <input type="text" name="juzgado" value="{{ $resolucione->juzgado }}"/>
+        </div>
+        
+        @error('juzgado')
+        <p style ="color:red;">{{ $message }}</p>
+        @enderror
 
+        <div class="container">
+            <label> FECHA </label>
+            <input type="text" name="fecha" value="{{ $resolucione->fecha }}"/>
+            </div>
+
+            @error('fecha')
+            <p style ="color:red;">{{ $message }}</p>
+            @enderror
+        
     <div class="container">
         <input type="submit" value="Actualizar Resolucion"/>
         </div>

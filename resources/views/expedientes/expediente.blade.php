@@ -41,7 +41,7 @@
                     <td>{{ $expediente->centros->nombre_centro?? ''}}</td>
                     <td>{{ $expediente->domicilios->direccion?? ''}}</td>
                     <td></td>  
-                    <td>{{ $expediente->situaciones->situacion ?? '' }}</td>
+                    <td>{{ $expediente->estado_expediente ?? '' }}</td>
 
                     <td>{{ $expediente->sexos->sexo ?? '' }}</td>
                     <td>{{ $expediente->nacionalidades->nacionalidad ?? ''}}</td>

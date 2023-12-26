@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Expediente extends Model
@@ -14,10 +15,10 @@ class Expediente extends Model
     protected $guarded=['id'];
 
 
-    public function situacions():BelongsTo
+    /*public function situacions():BelongsTo
     {
         return $this->belongsTo(Situacion::class,'situacion_id');
-    }
+    }*/
 
     public function trabajadoressociales():BelongsTo
     {
@@ -72,9 +73,9 @@ class Expediente extends Model
         return $this->belongsToMany(Declaracion::class,'expediente_declaracion','expediente_id','declaracion_id');
     }
 
-    public function resoluciones():BelongsToMany
+    public function resoluciones():HasMany
     {
-        return $this->belongsToMany(Resolucion::class,'expediente_resolucion','expediente_id','resolucion_id');
+        return $this->hasMany(Resolucion::class,'expediente_id');
     }
 
     public function juzgados():BelongsTo
