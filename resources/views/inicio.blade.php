@@ -1,3 +1,7 @@
+@component('_components.cabecera_pagina')
+
+@endcomponent
+
 <form method ="GET" action ="{{route('index_apm')}}">
     @csrf
     <label> INICIO </label>

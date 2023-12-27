@@ -1,0 +1,40 @@
+:root{
+    --estado-buda:0.3s;
+    --cada-item: 40px;
+    --cantidad-items: 0;
+
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 16px;
+}
+
+nav ul li a {
+    box-sizing: 10px;
+    color: black;
+    display:block;
+    width:100%;
+    padding: 6px 10;
+}
+
+nav ul ul {
+   height: 0px;
+   overflow: hidden; 
+  /* transition: 0.4s;*/
+  transition: var(--estado-buda)
+}
+
+nav ul li:hover ul {
+    height: calc( var(--cantidad-items)*var(--cada-item));
+    background:green; background:linear-gradient(green,yellow);
+    margin-left: 100px;
+ }
+
+ nav ul ul a 
+ {
+    background: transparent;
+}
