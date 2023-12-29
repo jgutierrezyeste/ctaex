@@ -32,6 +32,12 @@ class ExpedienteController extends Controller
         return view('expedientes.consultarexpediente', compact('expedientes','regimenes'));
     }
 
+    public function buscar(Expediente $expediente)
+    {
+        $expediente=Expediente::find($expediente);
+        return view ('expedientes.showexpediente',compact('expediente'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -47,7 +53,7 @@ class ExpedienteController extends Controller
      */
     public function show(Expediente $expediente)
     {
-        return view('expedientes.consultarexpediente', compact('expediente'));
+        return view('expedientes.showexpediente', compact('expediente'));
     }
 
     

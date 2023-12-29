@@ -1,3 +1,4 @@
+<!--vista para indexar expedientes-->
 @extends ('layouts.landing')
 @section('title','Expedientes')
 @section('subtitle','Expedientes')
@@ -121,4 +122,8 @@
         @csrf
         <input type="submit" value = "AÑADIR EXPEDIENTE" />
     </form>
+
+ 
+    @component('_components.regreso_intranet')
+    @endcomponent
 @endsection

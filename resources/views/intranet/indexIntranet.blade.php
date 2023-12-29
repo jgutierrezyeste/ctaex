@@ -1,3 +1,3 @@
-@extends ('layouts.principalIntranet')
+@extends ('layouts.principalMenuIntranet')
 @section('title','Comision tutelar de adultos')
-@section('subtitle','Servicio de Adultos')
+

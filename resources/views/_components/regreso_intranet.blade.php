@@ -1,0 +1,1 @@
+<a href="{{route('index_intranet')}}"> Vuelta al menú principal </a> 

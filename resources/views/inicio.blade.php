@@ -1,21 +1,26 @@
-@component('_components.cabecera_pagina')
+@extends ('layouts.landing')
 
-@endcomponent
+@section('content')
+<link rel="stylesheet" href="style.css">
+<div class="bienvenido">
+    <label>
+        <p >BIENVENIDO AL CENTRO TUTELAR DE ADULTOS</p>
+    </label>
+</div>
 
-<form method ="GET" action ="{{route('index_apm')}}">
+<div class="botones">
+<form method ="GET" action ="{{route('autenticacion_apm')}}">
     @csrf
-    <label> INICIO </label>
     
-    <div class="container">
-    <input type="submit" value="PANEL ADMINISTRACION"/>
-    </div>
+    <button type="submit" class="botoninicio"> PANEL ADMINISTRACION</button>
+  
+
 </form>
 
 <form method ="GET" action ="{{route('index_intranet')}}">
     @csrf
-    <label> INICIO INTRANET</label>
+    <button type="submit"  class="botoninicio"> PAGINA INTRANET</button>
     
-    <div class="container">
-    <input type="submit" value="PAGINA INTRANET"/>
-    </div>
 </form>
+</div>
+@endsection

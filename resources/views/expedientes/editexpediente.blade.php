@@ -1,4 +1,4 @@
-@extends ('layouts.principalIntranet')
+@extends ('layouts.landing')
 @section('title','Comisión tutelar de adultos')
 @section('subtitle','BUSQUEDA DE EXPEDIENTES ')
 

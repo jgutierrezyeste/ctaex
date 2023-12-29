@@ -14,6 +14,10 @@ class ApmController extends Controller
         return view ('apm.index');
     }
 
+    public function autenticar()
+    {
+        return view ('apm.autenticacionapm');
+    }
     /**
      * Show the form for creating a new resource.
      */

@@ -59,7 +59,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/','inicio')->name('principal');
-//Route::get('/indice',[ApmController::class,'index'])->name('index_apm');
 Route::get('/indiceapm',[ApmController::class,'index'])->name('index_apm');
 Route::get('/indiceintranet',[IntranetController::class,'index'])->name('index_intranet');
 
@@ -108,3 +107,5 @@ Route::resource('/resoluciones',ResolucionController::class);
 
 Route::get('/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
 Route::get('/busquedaEdicion',[ExpedienteController::class,'busquedaEdicion'])->name('expedientes.busquedaEdicion');
+Route::get('/buscar/{expediente}',[ExpedienteController::class,'buscar'])->name('expedientes.buscar');
+Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');

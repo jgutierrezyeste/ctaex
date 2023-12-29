@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('menuintranet.css')}}">
+<link rel="stylesheet" href="{{ asset('menu.css')}}">
 
 <nav >
 <ul>
@@ -21,4 +21,5 @@
     <li> <h1>ADMINISTRADOR DE BIENES</h1></li>
     
 </ul>
+</nav>
 <a href="{{route('principal')}}"> Vuelta al menú principal </a> 

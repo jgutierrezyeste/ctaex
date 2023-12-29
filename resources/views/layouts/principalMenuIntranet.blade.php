@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="{{ asset('style.css')}}">
     @yield('subtitle')
     
-   
+     
 
 
 </body>

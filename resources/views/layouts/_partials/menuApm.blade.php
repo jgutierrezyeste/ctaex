@@ -1,8 +1,6 @@
+<link rel="stylesheet" href="{{ asset('menuhorizontal.css')}}">
 
-
-
-
-
+<nav >
 <ul>
     <li> <a href="{{ route('aseguradoras.index') }}"><h1>Aseguradoras</h1></a></li>
     <li> <a href="{{ route('centros.index') }}"><h1>Centros</h1></a></li>
@@ -10,7 +8,7 @@
     <li> <a href="{{ route('entidadesbancarias.index') }}"><h1>Entidades Bancarias</h1></a></li>
     <li> <a href="{{ route('gradosDependencia.index') }}"><h1>GradoDependencias</h1></a></li>
     <li> <h1>Aspectos judiciales:</h1>
-        <ul>
+        <ul style="--cantidad-items:8">
             <li> <a href="{{ route('juzgados.index') }}"><h1>Juzgados</h1></a></li>
             <li> <a href="{{ route('juzgadoPenal.index') }}"><h1>Juzgados Penales</h1></a></li>
             <li> <a href="{{ route('juzgadoInstruccion.index') }}"><h1>Juzgados de Instruccion</h1></a></li>
@@ -25,7 +23,7 @@
     </li>
 
     <li> <h1>Personal:</h1>
-        <ul>
+        <ul style="--cantidad-items:9">
             <li> <a href="{{ route('empleados.index') }}"><h1>Empleados</h1></a></li>
             <li> <a href="{{ route('segurosMedicos.index') }}"><h1>Seguros Médicos</h1></a></li>
             <li> <a href="{{ route('representantesCtaex.index') }}"><h1>Representantes Ctaex</h1></a></li>
@@ -34,7 +32,7 @@
             <li> <a href="{{ route('profesionales.index') }}"><h1>Profesionales</h1></a></li>
             <li> <a href="{{ route('trabajadoresSociales.index') }}"><h1>Ts Asignados</h1></a></li>
             <li> <a href="{{ route('iniciadorProcedimiento.index') }}"><h1>Iniciadores procedimientos</h1></a></li>
-            <li> <a href="{{ route('parentescos.index') }}"> Parentescos </a></li>
+            <li> <a href="{{ route('parentescos.index') }}"><h1>Parentescos</h1> </a></li>
         </ul>
     </li>
      
@@ -62,3 +60,4 @@
     
 
 </ul>
+</nav>

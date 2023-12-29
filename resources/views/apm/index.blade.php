@@ -1,6 +1,12 @@
 @extends ('layouts.landing')
-@section('title','Menus editables')
-@section('subtitle','Menus editables')
+@section('title')
+@section('subtitle')
 @section('content')
-    @include('layouts._partials.menu')
+    @component('_components.saludo')
+        @slot('saludo','Edicion panel de administracion')
+        @slot('extenso')
+    @endcomponent
+
+    @include('layouts._partials.menuApm')
+
 @endsection

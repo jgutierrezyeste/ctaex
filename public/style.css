@@ -39,3 +39,83 @@ tr{
     width:auto;
   
 }
+
+.bienvenido
+{
+    margin: 0;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 450px;
+    color: green;
+    font-weight:bold; 
+    font-size: 45px;
+    
+    
+}
+
+.botoninicio
+{
+    border: 2px solid green;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    background-color:rgb(235, 243, 227);
+    width:300px;
+    height:40px;    
+ 
+}
+
+.botones{
+    margin-top: 400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.saludo{
+    margin: 0;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 550px;
+    color: green;
+    font-weight:bold; 
+    font-size: 45px;
+    text-align: center;
+}
+
+.login{
+    margin-top: 400px;
+    margin-left: 800px;
+   
+    border: 1px transparent green;
+    font-size: 40px;
+    font-weight: bold;
+    color: green;
+    background-color:rgb(235, 243, 227);
+    width: 300px;
+    height: 400px; 
+}
+
+.misma_linea{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  
+}
+
+.btn-login
+{
+    border: 2px solid green;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    background-color:rgb(235, 243, 227);
+    width:150px;
+    height:40px;  
+}
+

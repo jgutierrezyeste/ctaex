@@ -30,11 +30,15 @@ nav ul ul {
 
 nav ul li:hover ul {
     height: calc( var(--cantidad-items)*var(--cada-item));
-    background:green; background:linear-gradient(green,yellow);
+    background:green; background:linear-gradient(rgb(81, 133, 81),rgb(92, 214, 100));
     margin-left: 100px;
  }
 
  nav ul ul a 
  {
     background: transparent;
+}
+nav { 
+    margin-top: 250px;
+
 }
