@@ -7,6 +7,7 @@ use App\Models\Expediente;
 use App\Models\Regimen;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class ExpedienteController extends Controller
@@ -27,14 +28,17 @@ class ExpedienteController extends Controller
 
     public function consultar():View
     {
+        $archivo=fopen("CONSULTAR.txt","w+");
         $expedientes=Expediente::all();
         $regimenes=Regimen::all();
+        
         return view('expedientes.consultarexpediente', compact('expedientes','regimenes'));
     }
 
-    public function buscar(Expediente $expediente)
+    public function buscar( $id)
     {
-        $expediente=Expediente::find($expediente);
+       $archivo=fopen("buscar.txt","w+");
+        $expediente=Expediente::find($id);
         return view ('expedientes.showexpediente',compact('expediente'));
     }
 
@@ -46,6 +50,41 @@ class ExpedienteController extends Controller
     {
         Expediente::create($request->all());
         return redirect()->route('expediente.index')->with('success','Expediente dependencia añadida');
+    }
+
+    /*public function busqueda(ExpedienteRequest $request)
+    {
+        
+        $archivo=fopen("busqueda.txt","w+");
+         
+        $expediente=Expediente::find($request->id);     
+        fwrite($archivo,$expediente->id);
+
+      
+        
+
+        
+        return view ('expedientes.showexpediente',compact('expediente'));
+    }*/
+
+    public function busqueda (ExpedienteRequest $request)
+    {
+        $archivo=fopen("busqueda_completa.txt","w+");
+        if ($request->has("id"))
+          $id=$request->get('id');
+        
+         
+        if ($request->has('nombre'))
+            $nombre=$request->get('nombre');
+            
+
+        $expedientes = DB::table('expedientes')
+        ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
+        ->where ('id','=',$id)
+        ->orwhere('nombre','=',$nombre)
+        ->Paginate(5);
+        
+        return view ('expedientes.showexpediente',compact('expedientes','id','nombre'));
     }
 
     /**
@@ -90,4 +129,6 @@ class ExpedienteController extends Controller
         return redirect()->route('expediente.index')->with('danger','Eliminado expediente'); 
 
     }
+
+    
 }

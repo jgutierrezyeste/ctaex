@@ -106,6 +106,8 @@ Route::resource('/defensasjudiciales',JudicialesDefensaController::class);
 Route::resource('/resoluciones',ResolucionController::class);
 
 Route::get('/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
+//Route::match(['get', 'post'], '/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
 Route::get('/busquedaEdicion',[ExpedienteController::class,'busquedaEdicion'])->name('expedientes.busquedaEdicion');
-Route::get('/buscar/{expediente}',[ExpedienteController::class,'buscar'])->name('expedientes.buscar');
+Route::get('/buscar/{id}',[ExpedienteController::class,'buscar'])->name('expedientes.buscar');
 Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
+Route::get('/busqueda',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda');

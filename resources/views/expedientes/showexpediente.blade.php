@@ -9,17 +9,24 @@
         <thead >
             
             <td>Expte</td>
+            <td>Apellido</td>
+            <td>Nombre</td>
+            <td>Fecha de nacimiento</td>
+            <td>Numero de documento</td>
             
             <td></td>
             <td></td>
             
         </thead>
         <tbody>
-           
+            @foreach ($expedientes as $expediente)  
                 <tr> 
                     
                     <td>{{ $expediente->expte?? '' }}</td>
-                    
+                    <td>{{ $expediente->apellido?? '' }}</td>
+                    <td>{{ $expediente->nombre?? '' }}</td>
+                    <td>{{ $expediente->fecha_nacimiento?? '' }}</td>
+                    <td>{{ $expediente->numero_documento?? '' }}</td>
                     <td>
                         <form method="GET" action="{{route('expedientes.edit',$expediente->id) }}">
                         @csrf
@@ -34,9 +41,9 @@
                         </form>
                     </td>
                 </tr>
-                
+            @endforeach    
         </tbody>
     </table>
-
+    {{ $expedientes->appends($_GET)->links() }}
 
 @endsection
