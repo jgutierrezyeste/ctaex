@@ -67,24 +67,29 @@ class ExpedienteController extends Controller
         return view ('expedientes.showexpediente',compact('expediente'));
     }*/
 
+    
+
     public function busqueda (ExpedienteRequest $request)
     {
         $archivo=fopen("busqueda_completa.txt","w+");
         if ($request->has("id"))
           $id=$request->get('id');
-        
-         
         if ($request->has('nombre'))
             $nombre=$request->get('nombre');
-            
-
+        if ($request->has('apellido'))
+            $apellido=$request->get('apellido');
+       
         $expedientes = DB::table('expedientes')
         ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
-        ->where ('id','=',$id)
-        ->orwhere('nombre','=',$nombre)
+        ->when($id, function ($query) use ($id) {
+            return $query->where('id','=',$id);})
+        ->when($nombre, function ($query) use ($nombre) {
+            return $query->where('nombre','=',$nombre);})
+        ->when($apellido, function ($query) use ($apellido) {
+                return $query->where('apellido','=',$apellido);})
         ->Paginate(5);
         
-        return view ('expedientes.showexpediente',compact('expedientes','id','nombre'));
+        return view ('expedientes.showexpediente',compact('expedientes','id','nombre','apellido'));
     }
 
     /**
