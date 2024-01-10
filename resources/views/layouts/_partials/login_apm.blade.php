@@ -13,5 +13,10 @@
         <input type="text" name="Contraseña"/><br/>
     </div>
     
-    
+    <div align="center" >
+        <form method="GET" action="{{route('index_apm') }}">
+            @csrf
+            <input type="submit" class="btn-login" value = "LOGIN" />
+        </form>
+</div>
 </div>
