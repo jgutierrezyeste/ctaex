@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ExpedienteRequest;
 use App\Models\Expediente;
+use App\Models\Juzgado;
 use App\Models\Regimen;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -22,8 +23,9 @@ class ExpedienteController extends Controller
      * Show the form for creating a new resource.
      */
     public function create():View
-    {
-        return view('expedientes.addexpediente');
+    {   $juzgados=Juzgado::all();
+        $regimenes=Regimen::all();
+        return view('expedientes.addexpediente',compact('juzgados','regimenes'));
     }
 
     public function consultar():View
