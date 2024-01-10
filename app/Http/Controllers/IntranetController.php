@@ -61,4 +61,9 @@ class IntranetController extends Controller
     {
         //
     }
+
+    public function autenticar()
+    {
+        return view ('intranet.autenticacionintranet');
+    }
 }

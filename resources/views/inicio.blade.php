@@ -17,7 +17,7 @@
 
 </form>
 
-<form method ="GET" action ="{{route('index_intranet')}}">
+<form method ="GET" action ="{{route('autenticacion_intranet')}}">
     @csrf
     <button type="submit"  class="botoninicio"> PAGINA INTRANET</button>
     

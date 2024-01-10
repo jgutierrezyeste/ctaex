@@ -111,3 +111,4 @@ Route::get('/busquedaEdicion',[ExpedienteController::class,'busquedaEdicion'])->
 Route::get('/buscar/{id}',[ExpedienteController::class,'buscar'])->name('expedientes.buscar');
 Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
 Route::get('/busqueda',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda');
+Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacion_intranet');
