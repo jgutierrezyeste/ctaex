@@ -8,21 +8,20 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class ProcedimientoResolucion extends Model
+class Localidad extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='procedimientos_resolucion';
+    protected $table='localidades';
 
-   
-
-    public function juzgados():BelongsTo
+    public function provincias():BelongsTo
     {
-        return $this->belongsTo(Juzgado::class,'juzgado_dictado_id');
+        return $this->belongsTo(Provincia::class,'provincia_id');
     }
 
-    public function resoluciones():HasMany
+    
+    public function codigos_postales():BelongsToMany
     {
-        return $this->hasMany(Resolucion::class,'procedimiento_resolucion_id');
+        return $this->belongsToMany(CodigoPostal::class,'localidades_codigos_postales','localidad_id','codigo_postal_id');
     }
 }

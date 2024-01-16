@@ -35,7 +35,7 @@ use App\Http\Controllers\ProfesionalController;
 use App\Http\Controllers\ProvinciaController;
 use App\Http\Controllers\PuestoController;
 use App\Http\Controllers\RegimenController;
-use App\Http\Controllers\ProcedimientoResolucionController;
+use App\Http\Controllers\TipoResolucionController;
 use App\Http\Controllers\SeguroMedicoController;
 use App\Http\Controllers\SexoController;
 use App\Http\Controllers\SituacionController;
@@ -94,7 +94,7 @@ Route::resource('/procedimientosJudiciales',ProcedimientoJudicialController::cla
 Route::resource('/profesionales',ProfesionalController::class);
 Route::resource('/provincias',ProvinciaController::class);
 Route::resource('/puestos',PuestoController::class);
-Route::resource('/procedimientosresoluciones',ProcedimientoResolucionController::class);
+Route::resource('/tiposresoluciones',TipoResolucionController::class);
 Route::resource('/segurosMedicos',SeguroMedicoController::class);
 Route::resource('/sexo',SexoController::class);
 Route::resource('/situacion',SituacionController::class);

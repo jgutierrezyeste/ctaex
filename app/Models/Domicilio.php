@@ -22,4 +22,9 @@ class Domicilio extends Model
     {
         return $this->belongsTo(Provincia::class,'provincia_id');
     }
+
+    public function codigos_postales():BelongsTo
+    {
+        return $this->belongsTo(CodigoPostal::class,'codigo_postal_id');
+    }
 }

@@ -17,6 +17,11 @@ class Centro extends Model
         return $this->hasMany(Expediente::class,'centro_id');
     }
 
+    public function codigos_postales():BelongsTo
+    {
+        return $this->belongsTo(CodigoPostal::class,'codigo_postal_id');
+    }
+
     public function provincias():BelongsTo
     {
         return $this->belongsTo(Provincia::class,'provincia_id');

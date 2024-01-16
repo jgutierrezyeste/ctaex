@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="style.css">
-<div class="saludo">
+<div class="saludo" >
     <label>
         <p>{{ $saludo }}</p>
         <p>{{ $extenso }}</p>

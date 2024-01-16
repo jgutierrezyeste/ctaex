@@ -6,7 +6,6 @@
         @slot('saludo','Edicion panel de administracion')
         @slot('extenso')
     @endcomponent
-
-    @include('layouts._partials.menuApm')
+     @include('layouts._partials.menuApm')
 
 @endsection

@@ -74,10 +74,9 @@ tr{
 }
 
 .saludo{
-    margin: 0;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 550px;
+  
+   
+  
     color: green;
     font-weight:bold; 
     font-size: 45px;
@@ -85,8 +84,8 @@ tr{
 }
 
 .login{
-    margin-top: 400px;
-    margin-left: 800px;
+    margin-top: 150px;
+    margin-left: 750px;
    
     border: 1px transparent green;
     font-size: 40px;
@@ -98,12 +97,13 @@ tr{
 }
 
 .misma_linea{
-    width: 100%;
+    width: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
     align-items: center;
+ 
     margin-bottom: 15px;
   
 }

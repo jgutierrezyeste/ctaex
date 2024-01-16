@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
 
 class Resolucion extends Model
 {
@@ -13,9 +13,9 @@ class Resolucion extends Model
     protected $guarded=['id'];
     protected $table='resoluciones';
 
-    public function procedimientosresoluciones():BelongsTo
+    public function tipos_resoluciones():BelongsTo
     {
-        return $this->belongsTo(ProcedimientoResolucion::class,'procedimiento_resolucion_id');
+        return $this->belongsTo(TipoResolucion::class,'tipo_resolucion_id');
     }
 
     public function expedientes():BelongsTo
@@ -28,8 +28,8 @@ class Resolucion extends Model
         return $this->belongsTo(Juzgado::class,'juzgado_id');
     }
 
-    public function tipos_resoluciones():BelongsToMany
+    public function modos_resoluciones():BelongsTo
     {
-        return $this->belongsToMany(TipoResolucion::class,'resolucion_tipo_resolucion','resolucion_id','tipo_resolucion_id');
+        return $this->belongsTo(ModoResolucion::class,'modo_resolucion_id');
     }
 }

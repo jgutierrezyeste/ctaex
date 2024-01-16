@@ -2,21 +2,21 @@
     <div class="misma_linea">
         @component('_components.user')
         @endcomponent
-        <label> Usuario </label>
-        <input type="text" name="Usuario"/><br/>
+        <label style="width:50%"> Usuario </label>
+        <input style="width:50%" type="text" name="Usuario"/><br/>
     </div>
     
     <div class="misma_linea">
         @component('_components.contraseña')
         @endcomponent
-        <label> Contraseña </label>
-        <input type="text" name="Contraseña"/><br/>
+        <label  style="width:50%"> Contraseña </label>
+        <input  style="width:50%" type="text" name="Contraseña"/><br/>
     </div>
     
-    <div align="center" >
+    <div align="center" style="width:500px">
         <form method="GET" action="{{route('index_apm') }}">
             @csrf
-            <input type="submit" class="btn-login" value = "LOGIN" />
+            <input type="submit" class="btn-login" align="center" value = "LOGIN" />
         </form>
 </div>
 </div>
