@@ -37,7 +37,7 @@ class Expediente extends Model
 
     public function tipodocumentos():BelongsTo
     {
-        return $this->belongsTo(DocumentoIdentificativo::class,'documentoidentificativo_id');
+        return $this->belongsTo(DocumentoIdentificativo::class,'documento_identificativo_id');
     }
 
     public function segurosmedicos():BelongsTo
@@ -121,7 +121,7 @@ class Expediente extends Model
 
     public function polizasdecesos():BelongsTo
     {
-        return $this->belongsTo(PolizasDeceso::class,'poliza_id');
+        return $this->belongsTo(PolizasDeceso::class,'poliza_deceso_id');
     }
 
     public function patologiasconcretas():BelongsToMany

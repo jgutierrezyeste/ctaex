@@ -14,7 +14,7 @@ class PolizasDeceso extends Model
 
     public function expedientes():HasOne
     {
-        return $this->hasOne(Expediente::class,'poliza_id');
+        return $this->hasOne(Expediente::class,'poliza_deceso_id');
     }
 
     public function carpetas():BelongsTo

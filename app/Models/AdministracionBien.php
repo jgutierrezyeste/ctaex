@@ -10,6 +10,7 @@ class AdministracionBien extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='administracion_bienes';
 
     public function motivos():BelongsTo
     {

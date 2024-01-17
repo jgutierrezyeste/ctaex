@@ -10,9 +10,10 @@ class DocumentoIdentificativo extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='documentos_identificativos';
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'documentoidentificativo_id');
+        return $this->hasMany(Expediente::class,'documento_identificativo_id');
     }
 }
