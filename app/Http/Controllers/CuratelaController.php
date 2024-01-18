@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdministracionBienController extends Controller
+class CuratelaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -62,7 +62,6 @@ class AdministracionBienController extends Controller
         //
     }
 
-    
     public function consultar()
     {}
 

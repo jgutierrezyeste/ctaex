@@ -1,0 +1,2 @@
+
+<td>{{ $expediente->$campo}} </td>

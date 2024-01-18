@@ -1,0 +1,1 @@
+<td>{{ $campo_propio }} </td>

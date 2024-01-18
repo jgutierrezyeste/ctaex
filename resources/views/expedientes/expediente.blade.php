@@ -124,6 +124,5 @@
     </form>
 
  
-    @component('_components.regreso_intranet')
-    @endcomponent
+    <x-regreso  ruta="index_intranet" regreso="Back "></x-regreso>
 @endsection

@@ -28,9 +28,9 @@
     <td width="60%" bgcolor="#FFEBCD">      
         <select id="regimen_inicial" name="regimen_inicial" class="form-control" style="width:100px">
             <option value=""></option>
-            @foreach ($expedientes as $expediente)
-                <option value=""></option>
-            @endforeach
+            @foreach ($regimenes as $regimen)
+            <option value="{{ $regimen['id'] }}">{{ $regimen['regimen'] }}</option>
+        @endforeach
             
         </select>
     </td>

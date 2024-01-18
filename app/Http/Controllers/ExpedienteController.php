@@ -30,16 +30,16 @@ class ExpedienteController extends Controller
 
     public function consultar():View
     {
-        $archivo=fopen("CONSULTAR.txt","w+");
+      
         $expedientes=Expediente::all();
         $regimenes=Regimen::all();
-        
+      
         return view('expedientes.consultarexpediente', compact('expedientes','regimenes'));
     }
 
     public function buscar( $id)
     {
-       $archivo=fopen("buscar.txt","w+");
+      
         $expediente=Expediente::find($id);
         return view ('expedientes.showexpediente',compact('expediente'));
     }

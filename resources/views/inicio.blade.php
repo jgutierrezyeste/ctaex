@@ -11,10 +11,8 @@
 <div class="botones">
 <form method ="GET" action ="{{route('autenticacion_apm')}}">
     @csrf
-    
-    <button type="submit" class="botoninicio"> PANEL ADMINISTRACION</button>
+        <button type="submit" class="botoninicio"> PANEL ADMINISTRACION</button>
   
-
 </form>
 
 <form method ="GET" action ="{{route('autenticacion_intranet')}}">

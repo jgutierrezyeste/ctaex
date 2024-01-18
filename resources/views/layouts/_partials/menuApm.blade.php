@@ -8,28 +8,26 @@
     <li> <a href="{{ route('entidadesbancarias.index') }}"><h1>Entidades Bancarias</h1></a></li>
     
     <li> <h1>Aspectos judiciales:</h1>
-        <ul style="--cantidad-items:8">
+        <ul style="--cantidad-items:5">
             <li> <a href="{{ route('juzgados.index') }}"><h1>Juzgados</h1></a></li>
-            <li> <a href="{{ route('juzgadoPenal.index') }}"><h1>Juzgados Penales</h1></a></li>
-            <li> <a href="{{ route('juzgadoInstruccion.index') }}"><h1>Juzgados de Instruccion</h1></a></li>
+           
       
             <li> <a href="{{ route('figuras.index') }}"><h1>Figuras</h1></a></li>
             <li> <a href="{{ route('procedimientosJudiciales.index') }}"><h1>Procedimientos Judiciales</h1></a></li>
             <li> <a href="{{ route('motivos.index') }}"><h1>Motivos</h1></a></li>
-            <li> <a href="{{ route('comparecencias.index') }}"><h1>Comparecencias</h1></a></li>
+            
             <li> <a href="{{ route('tiposresoluciones.index') }}"><h1>Procedimientos resoluciones</h1></a></li>
             
         </ul>
     </li>
 
     <li> <h1>Personal:</h1>
-        <ul style="--cantidad-items:9">
+        <ul style="--cantidad-items:6">
             <li> <a href="{{ route('empleados.index') }}"><h1>Empleados</h1></a></li>
             <li> <a href="{{ route('segurosMedicos.index') }}"><h1>Seguros Médicos</h1></a></li>
-            <li> <a href="{{ route('representantesCtaex.index') }}"><h1>Representantes Ctaex</h1></a></li>
+           
             <li> <a href="{{ route('letrados.index') }}"><h1>Letrados</h1></a></li>
-            <li> <a href="{{ route('puestos.index') }}"><h1>Puestos</h1></a></li>
-            <li> <a href="{{ route('profesionales.index') }}"><h1>Profesionales</h1></a></li>
+           
             <li> <a href="{{ route('trabajadoresSociales.index') }}"><h1>Ts Asignados</h1></a></li>
             <li> <a href="{{ route('iniciadorProcedimiento.index') }}"><h1>Iniciadores procedimientos</h1></a></li>
             <li> <a href="{{ route('parentescos.index') }}"><h1>Parentescos</h1> </a></li>
@@ -69,11 +67,6 @@
     </li>
    
     <li> <a href="{{ route('opcionRevision.index') }}"><h1>Opciones Revision</h1></a></li>
-           
-   
-    <li> <a href="{{ route('coches.index') }}"><h1>Coches</h1></a></li>
-   
-    <li> <a href="{{ route('trabajos.index') }}"><h1>Trabajos</h1></a></li>
     
     <li> <a href="{{ route('años.index') }}"><h1>Años</h1></a></li>
     
