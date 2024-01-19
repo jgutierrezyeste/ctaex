@@ -24,4 +24,9 @@ class Localidad extends Model
     {
         return $this->belongsToMany(CodigoPostal::class,'localidades_codigos_postales','localidad_id','codigo_postal_id');
     }
+
+    public function municipios():BelongsTo
+    {
+        return $this->belongsTo(Municipio::class,'municipio_id');
+    }
 }
