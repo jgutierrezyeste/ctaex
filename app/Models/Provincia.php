@@ -21,9 +21,9 @@ class Provincia extends Model
         return $this->hasMany(Centro::class,'provincia_id');
     }
 
-    public function localidades():HasMany
+    public function entidades():HasMany
     {
-        return $this->hasMany(Localidad::class,'provincia_id');
+        return $this->hasMany(Entidad::class,'provincia_id');
     }
 
     public function municipios():HasMany

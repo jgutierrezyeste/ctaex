@@ -14,9 +14,9 @@ class CodigoPostal extends Model
     protected $guarded=['id'];
     protected $table='codigos_postales';
 
-    public function localidades():BelongsToMany
+    public function entidades():BelongsToMany
     {
-        return $this->belongsToMany(Localidad::class,'localidades_codigos_postales','codigo_postal_id','localidad_id');
+        return $this->belongsToMany(Entidad::class,'entidades_codigos_postales','codigo_postal_id','entidad_id');
     }
 
     public function centros():HasMany
