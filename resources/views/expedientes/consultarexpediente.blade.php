@@ -5,7 +5,7 @@
 @section('subtitle')
     
     @component('_components.comun_expedientes')
-        @slot('titulo_menu','CONSULTA DE EXPEDIENTES')
+        @slot('titulo_menu','CONSULTA DE LOS EXPEDIENTES')
     @endcomponent
 
 @endsection
@@ -16,81 +16,15 @@
 
 <!-- FORMULARIO -->
 <div align = "center"> 
-    <form method ="GET" action ="{{route('expedientes.busqueda')}}" id="formulario_busqueda" name="formulario_busqueda">
+    <form method ="GET" action ="{{route('expedientes.busquedaConsulta')}}" id="formulario_busquedaconsulta" name="formulario_busquedaconsulta">
         @csrf
         <table width="55%" cellspacing ="0" cellpadding="5" bordercolor="black" border="1">
             <tbody>
         
                 @include('layouts._partials.comun_tabla_expedientes') 
 
-            <tr>
-                <td width="20%" bgcolor="white"> 
-                    <font face="Arial">
-                    <label> Propuesta Aceptacion </label>
-                    </font>
-                </td>
-
-                <td width="60%" bgcolor="#FFEBCD">      
-                        Desde : 
-                            <input type="date" class="form-control" id="propuestaAceptacionDesde" name="propuestaAceptacionDesde" />
-                        Hasta : 
-                            <input type="date" class="form-control" id="propuestaAceptacionHasta" name="propuestaAceptacionHasta"/>
-                </td>
-            </tr>
-
-            <tr>
-                <td width="20%" bgcolor="white"> 
-                    <font face="Arial">
-                    <label> Entrada Sanidad y Dependencia </label>
-                    </font>
-                </td>
-
-                <td width="60%" bgcolor="#FFEBCD">      
-                        Desde : 
-                            <input type="date" class="form-control" id="entradaSanidadDesde" name="entradaSanidadDesde" />
-                        Hasta : 
-                            <input type="date" class="form-control" id="entradaSanidadHasta" name="entradaSanidadHasta"/>
-                </td>
-            </tr>
-            
-            <tr>
-                <td width="20%" bgcolor="white"> 
-                    <font face="Arial">
-                    <label> Enviar Gabinete Juridico </label>
-                    </font>
-                </td>
-
-                <td width="60%" bgcolor="#FFEBCD">      
-                        Desde : 
-                            <input type="date" class="form-control" id="enviarGabineteDesde" name="enviarGabineteDesde" />
-                        Hasta : 
-                            <input type="date" class="form-control" id="enviarGabineteHasta" name="enviarGabineteHasta"/>
-                </td>
-            </tr>
-
-            <tr>
-                <td width="20%" bgcolor="white"> 
-                    <font face="Arial">
-                    <label> Recibir Gabinete Juridico </label>
-                    </font>
-                </td>
-
-                <td width="60%" bgcolor="#FFEBCD">      
-                        Desde : 
-                            <input type="date" class="form-control" id="recibirGabineteDesde" name="recibirGabineteDesde" />
-                        Hasta : 
-                            <input type="date" class="form-control" id="recibirGabineteHasta" name="recibirGabineteHasta"/>
-                </td>
-            </tr>         
+                @include('layouts._partials.comun_fechas_consulta') 
                         
-                       
-                    
-                        
-                    
-                
-
-
-        
 
             </tbody>
         </table>

@@ -1,0 +1,76 @@
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown:hover .dropdown-menu {
+    
+    display: block;
+    background:green; background:linear-gradient(rgb(81, 133, 81),rgb(92, 214, 100));
+    position:absolute;
+    
+    margin-left:100px;
+}
+  
+
+.dropdown:hover .dropdown-menu li:hover .sub-menu{
+    visibility:visible;
+    background: transparent;
+    margin-left:80px;
+}
+
+.dropdown .dropdown-menu .sub-menu li ul li{
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px; 
+}
+
+.dropdown:hover .dropdown-menu li:hover .sub-menu li:hover{
+    visibility:visible;
+    background: transparent;
+    margin-left:80px;
+} 
+/***************nuevo intento +++++++++++++++++*/
+/*.dropdown ul{
+    left: 100%;
+    position: absolute;
+    top: 0;
+    display: hidden;
+    margin-top: -1px;   
+}*/
+
+/*.dropdown-menu{
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;   
+}
+/*
+.sub-menu{
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;  
+}*/
+
+/*.dropdown :hover .sub-menu{
+    visibility:visible;
+    background:green; background:linear-gradient(rgb(81, 133, 81),rgb(92, 214, 100));
+    position:absolute;  
+   
+
+}*/
+
+
+/*
+<link rel="stylesheet" href="https://code.jquery.com/jquery-3.7.1.js"
+integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+crossorigin="anonymous">*/

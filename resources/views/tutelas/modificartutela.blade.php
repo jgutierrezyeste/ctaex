@@ -5,7 +5,7 @@
 @section('subtitle')
     
     @component('_components.comun_expedientes')
-        @slot('titulo_menu','CONSULTA DE LA/S TUTELA/S')
+        @slot('titulo_menu','MODIFICACION DE LA/S TUTELA/S')
     @endcomponent
 
 @endsection
@@ -14,7 +14,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"> </script>
 <!-- FORMULARIO -->
 <div align = "center"> 
-    <form method ="GET" action ="{{route('expedientes.busqueda')}}" id="formulario_busqueda" name="formulario_busqueda">
+    <form method ="GET" action ="{{route('tutelas.busquedaModificar')}}" id="formulario_busqueda" name="formulario_busqueda">
         @csrf
         <table width="55%" cellspacing ="0" cellpadding="5" bordercolor="black" border="1">
             <tbody>

@@ -1,0 +1,51 @@
+ul {
+    list-style:none;
+    
+}
+/* todos los elementos a que esten dentro li que esten dentro de nav*/
+.nav li a{
+  
+    background-color:green;
+    color:black;
+    text-decoration: none;
+    padding:10px 15px;
+    display:block;/* para que no se agolpen los datos*/
+}
+
+/*hover es para cuando pasemos el raton por encima, cambia de color la opcion*/
+.nav li :hover{
+    background:green; background:linear-gradient(rgb(81, 133, 81),rgb(92, 214, 100));
+ 
+    
+}
+/*los li directos dentro de nav*/
+.nav > li{
+   float:none;
+
+   
+  
+}
+
+.nav li ul{
+    display:none; /*desapararecen los submenus*/
+    position: relative;
+    min-width:70px;
+}
+
+/*los li cuando pasemos el raton por encima*/
+.nav li:hover > ul{
+    display:block;/*si lo cambio a flex, me salen los submenus en horizontal*/
+    background:green; background:linear-gradient(rgb(81, 133, 81),rgb(92, 214, 100));
+    margin-left:150px;
+}
+
+/*submenus*/
+.nav li ul li{
+position:relative;
+/*margin-left:300px;*/
+}
+
+.nav li ul li ul{
+    /*right: +300px;*/
+    top: 0px;
+}

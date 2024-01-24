@@ -2,8 +2,8 @@
     <tbody>
         <tr>
             <td width="33%" align="left">
-                @component('_components.back_principal')
-                @endcomponent
+               
+                <x-back_principal  ruta="index_intranet"></x-back_principal>
             </td>
             <td align="center">
                 <font size ="6" color="DarkOrange" >

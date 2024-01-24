@@ -45,5 +45,5 @@
         </tbody>
     </table>
     {{ $expedientes->appends($_GET)->links() }}
-
+    <x-regreso  ruta="expedientes.modificar" regreso="Back "></x-regreso>
 @endsection

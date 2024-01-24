@@ -39,9 +39,7 @@ use App\Http\Controllers\ResolucionController;
 use App\Http\Controllers\TutelaController;
 use App\Http\Controllers\CuratelaController;
 use App\Http\Controllers\AdministracionBienController;
-
-
-
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -57,8 +55,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/','inicio')->name('principal');
+//Route::view('/menus','welcome_menu')->name('bienvenida');
+//Route::get('/menus',[MenuController::class,'menus'])->name('bienvenida');
 Route::get('/indiceapm',[ApmController::class,'index'])->name('index_apm');
 Route::get('/indiceintranet',[IntranetController::class,'index'])->name('index_intranet');
+Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
+Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacion_intranet');
 
 Route::resource('/parentescos',ParentescoController::class);
 Route::resource('/aseguradoras',AseguradoraController::class);
@@ -96,17 +98,18 @@ Route::resource('/defensasjudiciales',JudicialesDefensaController::class);
 Route::resource('/resoluciones',ResolucionController::class);
 
 Route::get('/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
-//Route::match(['get', 'post'], '/consultarExpedientes',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
-Route::get('/busquedaEdicion',[ExpedienteController::class,'busquedaEdicion'])->name('expedientes.busquedaEdicion');
+Route::get('/modificarExpedientes',[ExpedienteController::class,'modificar'])->name('expedientes.modificar');
 Route::get('/buscar/{id}',[ExpedienteController::class,'buscar'])->name('expedientes.buscar');
-Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
-Route::get('/busqueda',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda');
-Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacion_intranet');
+
+Route::get('/busquedaModificar',[ExpedienteController::class,'busquedaModificar'])->name('expedientes.busquedaModificar');
+Route::get('/busquedaConsulta',[ExpedienteController::class,'busquedaConsulta'])->name('expedientes.busquedaConsulta');
+
 Route::get('/consultarTutela',[TutelaController::class,'consultar'])->name('tutelas.consultar');
 Route::get('/modificarTutela',[TutelaController::class,'modificar'])->name('tutelas.modificar');
 Route::get('/oficiosTutela',[TutelaController::class,'oficios'])->name('tutelas.oficios');
 Route::get('/inventarioTutela',[TutelaController::class,'inventarios'])->name('tutelas.inventarios');
-Route::get('/busquedaTutela',[TutelaController::class,'busqueda'])->name('tutelas.busqueda');
+Route::get('/tutelas/busquedaTutelaConsulta',[TutelaController::class,'busquedaConsulta'])->name('tutelas.busquedaConsulta');
+Route::get('/tutelas/busquedaTutelaModificar',[TutelaController::class,'busquedaModificar'])->name('tutelas.busquedaModificar');
 Route::resource('/tutelas',TutelaController::class);
 Route::get('/consultarCuratela',[CuratelaController::class,'consultar'])->name('curatelas.consultar');
 Route::get('/modificarCuratela',[CuratelaController::class,'modificar'])->name('curatelas.modificar');

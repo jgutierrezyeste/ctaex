@@ -75,7 +75,10 @@ class TutelaController extends Controller
 
     public function modificar()
     {
-
+        $expedientes = Expediente::where('expte','like','%T%')->get();
+        $regimenes=Regimen::all();
+        
+        return view('tutelas.modificartutela', compact('expedientes','regimenes'));
     }
     public function oficios()
     {
@@ -87,7 +90,7 @@ class TutelaController extends Controller
 
     }
 
-    public function busqueda (ExpedienteRequest $request)
+    public function busquedaConsulta (ExpedienteRequest $request)
     {
         
         if ($request->has("id"))
@@ -112,6 +115,34 @@ class TutelaController extends Controller
         
         
         
-        return view ('tutelas.showtutela',compact('expedientes','id','nombre','apellido'));
+        return view ('tutelas.showtutelaconsulta',compact('expedientes','id','nombre','apellido'));
+    }
+
+    public function busquedaModificar (ExpedienteRequest $request)
+    {
+        
+        if ($request->has("id"))
+          {
+            $id=$request->get('id');
+            $expte=$request->get('expte');
+          }
+        if ($request->has('nombre'))
+            $nombre=$request->get('nombre');
+        if ($request->has('apellido'))
+            $apellido=$request->get('apellido');
+       
+        $expedientes = DB::table('expedientes')
+        ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
+        ->when($id, function ($query) use ($id) {
+            return $query->where('id','=',$id);})
+        ->when($nombre, function ($query) use ($nombre) {
+            return $query->where('nombre','=',$nombre);})
+        ->when($apellido, function ($query) use ($apellido) {
+                return $query->where('apellido','=',$apellido);})
+        ->Paginate(5);
+        
+        
+        
+        return view ('tutelas.showtutelaModificar',compact('expedientes','id','nombre','apellido'));
     }
 }

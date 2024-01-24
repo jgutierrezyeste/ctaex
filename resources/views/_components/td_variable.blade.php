@@ -1,1 +1,1 @@
-<td>{{ $campo_propio }} </td>
+<td class="{{ $tipo }}">{{ $campo_propio }} </td>

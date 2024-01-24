@@ -54,24 +54,10 @@ class ExpedienteController extends Controller
         return redirect()->route('expediente.index')->with('success','Expediente dependencia añadida');
     }
 
-    /*public function busqueda(ExpedienteRequest $request)
-    {
-        
-        $archivo=fopen("busqueda.txt","w+");
-         
-        $expediente=Expediente::find($request->id);     
-        fwrite($archivo,$expediente->id);
-
-      
-        
-
-        
-        return view ('expedientes.showexpediente',compact('expediente'));
-    }*/
 
     
 
-    public function busqueda (ExpedienteRequest $request)
+    public function busquedaModificar (ExpedienteRequest $request)
     {
         $archivo=fopen("busqueda_completa.txt","w+");
         if ($request->has("id"))
@@ -91,7 +77,35 @@ class ExpedienteController extends Controller
                 return $query->where('apellido','=',$apellido);})
         ->Paginate(5);
         
-        return view ('expedientes.showexpediente',compact('expedientes','id','nombre','apellido'));
+        return view ('expedientes.showexpedientemodificar',compact('expedientes','id','nombre','apellido'));
+    }
+
+
+    public function busquedaConsulta (ExpedienteRequest $request)
+    {
+        if ($request->has("id"))
+          {
+            $id=$request->get('id');
+            $expte=$request->get('expte');
+          }
+        if ($request->has('nombre'))
+            $nombre=$request->get('nombre');
+        if ($request->has('apellido'))
+            $apellido=$request->get('apellido');
+       
+        $expedientes = DB::table('expedientes')
+        ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
+        ->when($id, function ($query) use ($id) {
+            return $query->where('id','=',$id);})
+        ->when($nombre, function ($query) use ($nombre) {
+            return $query->where('nombre','=',$nombre);})
+        ->when($apellido, function ($query) use ($apellido) {
+                return $query->where('apellido','=',$apellido);})
+        ->Paginate(5);
+        
+        
+        
+        return view ('expedientes.showexpedienteConsulta',compact('expedientes','id','nombre','apellido'));
     }
 
     /**
@@ -99,7 +113,7 @@ class ExpedienteController extends Controller
      */
     public function show(Expediente $expediente)
     {
-        return view('expedientes.showexpediente', compact('expediente'));
+       // return view('expedientes.showexpediente', compact('expediente'));
     }
 
     
@@ -112,7 +126,7 @@ class ExpedienteController extends Controller
         
     }
     
-    public function busquedaEdicion():View 
+    public function modificar():View 
         {
         $expedientes=Expediente::all();
         $regimenes=Regimen::all();

@@ -1,10 +1,8 @@
-
+<div align="center" >
 <form method="GET" action="{{route($ruta) }}">
     @csrf
-   
-    <input type="submit" class="btn-regreso" align="center" value = "{{$regreso}}" />
+    <input type="submit" class="btn-regreso"  value = "{{$regreso}}" />
 </form>
-
+</div>
 
     
- 

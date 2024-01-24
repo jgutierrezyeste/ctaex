@@ -16,7 +16,7 @@
 
 <!-- FORMULARIO -->
 <div align = "center"> 
-    <form method ="GET" action ="{{route('tutelas.busqueda')}}" id="formulario_busqueda" name="formulario_busqueda">
+    <form method ="GET" action ="{{route('tutelas.busquedaConsulta')}}" id="formulario_busqueda" name="formulario_busqueda">
         @csrf
         <table width="55%" cellspacing ="0" cellpadding="5" bordercolor="black" border="1">
             <tbody>
@@ -25,14 +25,6 @@
 
                 @include('layouts._partials.comun_fechas_consulta') 
                         
-                       
-                    
-                        
-                    
-                
-
-
-        
 
             </tbody>
         </table>

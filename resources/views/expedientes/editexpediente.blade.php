@@ -10,7 +10,7 @@
 
 @section('content')
 <div align = "center"> 
-    <form method ="GET" action ="{{route('expedientes.busqueda')}}" id="formulario_busqueda" name="formulario_busqueda">
+    <form method ="GET" action ="{{route('expedientes.busquedaModificar')}}" id="formulario_busqueda" name="formulario_busqueda">
         @csrf
         <table width="55%" cellspacing ="0" cellpadding="5" bordercolor="black" border="1">
             <tbody>

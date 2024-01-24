@@ -1,11 +1,10 @@
         
-            <td>N.Expediente</td>
-            <td>Nombre</td>
-            <td>Apellidos</td>
-            <td>Entrada B.S</td>
-            <td>Enviar Gab</td>
-            <td>Recibir Gab</td>    
-                    
+<x-td_variable campo_propio="Nº Expediente" tipo="columna_cabecera"></x-td_variable>
+<x-td_variable campo_propio="Nombre" tipo="columna_cabecera"></x-td_variable>
+<x-td_variable campo_propio="Apellidos" tipo="columna_cabecera"></x-td_variable>
+<x-td_variable campo_propio="Entrada B.S" tipo="columna_cabecera"></x-td_variable>
+<x-td_variable campo_propio="Enviar Gab" tipo="columna_cabecera"></x-td_variable>
+<x-td_variable campo_propio="Recibir Gab" tipo="columna_cabecera"></x-td_variable> 
                     
 
 
