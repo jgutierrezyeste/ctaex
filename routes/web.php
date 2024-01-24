@@ -40,6 +40,7 @@ use App\Http\Controllers\TutelaController;
 use App\Http\Controllers\CuratelaController;
 use App\Http\Controllers\AdministracionBienController;
 use App\Http\Controllers\MenuController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
