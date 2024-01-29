@@ -13,6 +13,7 @@
 <body>
     @include('layouts._partials.message')
     <link rel="stylesheet" href="{{ asset('style.css')}}">
+    
     @yield('subtitle')
     
     @yield('content')

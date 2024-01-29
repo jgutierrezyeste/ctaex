@@ -1,49 +1,56 @@
 
+
 @extends ('layouts.landing')
 @section('title','Expedientes')
-@section('subtitle','Expedientes')
+@section('subtitle')
+    
+    @component('_components.comun_expedientes')
+        @slot('titulo_menu','LISTADO DE EXPEDIENTE/S')
+    @endcomponent
+    
+    @if( $nombre )
+        <p  class="negrita" style="text-align:center "> Expedientes con Nombre : {{ $nombre}} </p>
+    @endif
+    
+    @if( $apellido )
+    <p  class="negrita" style="text-align:center "> Expedientes con Apellidos : {{ $apellido}} </p>
+    @endif
+
+    @if( $id )
+   
+    <p class="negrita" style="text-align:center "> Expedientes con N. Expediente : {{ $expedientes[0]->expte}} </p>
+  
+    @endif
+@endsection
 
 @section('content')
-  
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Expte</td>
-            <td>Apellido</td>
-            <td>Nombre</td>
-            <td>Fecha de nacimiento</td>
-            <td>Numero de documento</td>
-            
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
-            @foreach ($expedientes as $expediente)  
-                <tr> 
-                    
-                    <td>{{ $expediente->expte?? '' }}</td>
-                    <td>{{ $expediente->apellido?? '' }}</td>
-                    <td>{{ $expediente->nombre?? '' }}</td>
-                    <td>{{ $expediente->fecha_nacimiento?? '' }}</td>
-                    <td>{{ $expediente->numero_documento?? '' }}</td>
-                    <td>
-                        <form method="GET" action="{{route('expedientes.edit',$expediente->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('expedientes.destroy',$expediente->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach    
-        </tbody>
-    </table>
+ 
+  <table width="100%">
+    <thead > 
+        <x-td_variable campo_propio="" tipo="columna_cabecera"></x-td_variable>
+        <x-td_variable campo_propio="Regimen Inicial" tipo="columna_cabecera"></x-td_variable>    
+         @include('layouts._partials.resultado_busquedas')
+    </thead>
+    <tbody>
+        @foreach ($expedientes as $expediente)  
+        <tr>
+            <x-datos_resultado_busqueda :expediente="$expediente" campo=""></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda :expediente="$expediente" tipo="columna_cabecera" campo="regimen"></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda :expediente="$expediente" campo="expte"></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda :expediente="$expediente" tipo="columna_cabecera" campo="nombre"></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda :expediente="$expediente" tipo="columna_cabecera" campo="apellido"></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda :expediente="$expediente" tipo="columna_cabecera" campo="fecha_remision"></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda :expediente="$expediente" tipo="columna_cabecera" campo="fecha_recepcion"></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda :expediente="$expediente" tipo="columna_cabecera" campo="regimen_definitivo"></x-datos_resultado_busqueda>
+        </tr>
+        @endforeach
+    </tbody>
+  </table>
+<br>
     {{ $expedientes->appends($_GET)->links() }}
-    <x-regreso  ruta="expedientes.consultar" regreso="Back "></x-regreso>
+  <x-regreso  ruta="expedientes.consultar" regreso=" Volver "></x-regreso>
 @endsection
+
+
+
+

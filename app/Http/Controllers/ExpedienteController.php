@@ -37,6 +37,14 @@ class ExpedienteController extends Controller
         return view('expedientes.consultarexpediente', compact('expedientes','regimenes'));
     }
 
+    public function oficios($vista):View
+    {
+
+        $expedientes=Expediente::all();
+        $regimenes=Regimen::all();
+        return view($vista,compact('expedientes','regimenes'));
+    }
+
     public function buscar( $id)
     {
       
@@ -59,7 +67,7 @@ class ExpedienteController extends Controller
 
     public function busquedaModificar (ExpedienteRequest $request)
     {
-        $archivo=fopen("busqueda_completa.txt","w+");
+       
         if ($request->has("id"))
           $id=$request->get('id');
         if ($request->has('nombre'))
@@ -107,6 +115,35 @@ class ExpedienteController extends Controller
         
         return view ('expedientes.showexpedienteConsulta',compact('expedientes','id','nombre','apellido'));
     }
+
+
+public function busqueda(ExpedienteRequest $request,$vista)
+{
+    
+    if ($request->has("id"))
+    {
+      $id=$request->get('id');
+      $expte=$request->get('expte');
+    }
+  if ($request->has('nombre'))
+      $nombre=$request->get('nombre');
+  if ($request->has('apellido'))
+      $apellido=$request->get('apellido');
+ 
+  $expedientes = DB::table('expedientes')
+  ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
+  ->when($id, function ($query) use ($id) {
+      return $query->where('id','=',$id);})
+  ->when($nombre, function ($query) use ($nombre) {
+      return $query->where('nombre','=',$nombre);})
+  ->when($apellido, function ($query) use ($apellido) {
+          return $query->where('apellido','=',$apellido);})
+  ->Paginate(5);
+  
+  
+  
+  return view ( $vista ,compact('expedientes','id','nombre','apellido'));
+}
 
     /**
      * Display the specified resource.

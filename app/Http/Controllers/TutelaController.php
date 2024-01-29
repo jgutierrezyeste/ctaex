@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ExpedienteRequest;
 use App\Models\Expediente;
 use App\Models\Regimen;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+use Illuminate\View\View;
 
 class TutelaController extends Controller
 {
@@ -66,12 +69,12 @@ class TutelaController extends Controller
     {
         //
     }
-    public function consultar()
-    {   
+    public function consultar($vista):View
+    {  
         $expedientes = Expediente::where('expte','like','%T%')->get();
         $regimenes=Regimen::all();
         
-        return view('tutelas.consultartutela', compact('expedientes','regimenes'));}
+        return view($vista, compact('expedientes','regimenes'));}
 
     public function modificar()
     {
@@ -80,9 +83,11 @@ class TutelaController extends Controller
         
         return view('tutelas.modificartutela', compact('expedientes','regimenes'));
     }
-    public function oficios()
+    public function oficios($vista)
     {
-
+        $expedientes = Expediente::where('expte','like','%T%')->get();
+        $regimenes=Regimen::all();
+        return view($vista,compact('expedientes','regimenes'));
     }
 
     public function inventarios()
@@ -90,7 +95,7 @@ class TutelaController extends Controller
 
     }
 
-    public function busquedaConsulta (ExpedienteRequest $request)
+    public function busqueda (ExpedienteRequest $request,$vista)
     {
         
         if ($request->has("id"))
@@ -115,34 +120,6 @@ class TutelaController extends Controller
         
         
         
-        return view ('tutelas.showtutelaconsulta',compact('expedientes','id','nombre','apellido'));
-    }
-
-    public function busquedaModificar (ExpedienteRequest $request)
-    {
-        
-        if ($request->has("id"))
-          {
-            $id=$request->get('id');
-            $expte=$request->get('expte');
-          }
-        if ($request->has('nombre'))
-            $nombre=$request->get('nombre');
-        if ($request->has('apellido'))
-            $apellido=$request->get('apellido');
-       
-        $expedientes = DB::table('expedientes')
-        ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
-        ->when($id, function ($query) use ($id) {
-            return $query->where('id','=',$id);})
-        ->when($nombre, function ($query) use ($nombre) {
-            return $query->where('nombre','=',$nombre);})
-        ->when($apellido, function ($query) use ($apellido) {
-                return $query->where('apellido','=',$apellido);})
-        ->Paginate(5);
-        
-        
-        
-        return view ('tutelas.showtutelaModificar',compact('expedientes','id','nombre','apellido'));
+        return view ($vista,compact('expedientes','id','nombre','apellido'));
     }
 }

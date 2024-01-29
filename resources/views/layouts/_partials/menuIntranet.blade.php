@@ -8,7 +8,15 @@
             <li><a href="{{ route('expedientes.create') }}"><h1>Iniciar Expedientes</h1></a></li>
             <li><a href="{{ route('expedientes.modificar') }}"><h1>Modificar Expedientes</h1></a></li>
             <li><a href="{{ route('expedientes.consultar') }}"><h1>Consultar Expedientes</h1></a></li>
-            <li>Mandar oficios</li>
+            <li><a href=""><h1>Mandar oficios</h1></a>
+                <ul style="--cantidad-items:3">
+                    
+                    <li><a href="{{ route('expedientes.oficiostutor','expedientes.oficiostutor')}}"><h1>Acuerdo de Tutor</h1></a></li>
+                    <li><a href="{{ route('expedientes.oficiosdefensorjudicial', 'expedientes.oficiosdefensorjudicial')}}"><h1>Acuerdo de Defensor Judicial</h1></a></li>
+                    <li><a href="{{ route('expedientes.oficioscurador','expedientes.oficioscurador')}}"><h1>Acuerdo de Curador</h1></a></li>
+                    
+                </ul>
+            </li>
         </ul>
     </li>
     <li> <h1>DEFENSAS JUDICIALES</h1>
@@ -18,23 +26,23 @@
     </li>
     <li> <h1>TUTELA</h1>
         <ul style="--cantidad-items:17">
-            <li><a href="{{ route('tutelas.consultar') }}"><h1>Consultar</h1></a></li>
-            <li><a href="{{ route('tutelas.modificar') }}"><h1>Modificar</h1></a></li>
-            <li><a href="{{ route('tutelas.oficios') }}"><h1>Mandar Oficios</h1></a>
+            <li><a href="{{ route('tutelas.consultar','tutelas.consultartutela')}}"><h1>Consultar</h1></a></li>
+            <li><a href="{{ route('tutelas.modificar','tutelas.modificartutela')}}"><h1>Modificar</h1></a></li>
+            <li><a href=""><h1>Mandar Oficios</h1></a>
                 <ul style="--cantidad-items:7">
                     <li><a href=""><h1>Ayuntamiento</h1></a>
                         <ul style="--cantidad-items:2">
-                            <li><a href=""><h1>Certificado Bienes</h1></a></li>
-                            <li><a href=""><h1>Informe Ayuntamiento Servicios Sociales</h1></a></li>
+                            <li><a href="{{ route('tutelas.oficios','tutelas.certificadobienes') }}"><h1>Certificado Bienes</h1></a></li>
+                            <li><a href="{{ route('tutelas.oficios','tutelas.informeayuntamiento') }}"><h1>Informe Ayuntamiento Servicios Sociales</h1></a></li>
                             
                         </ul>
                     </li>
-                    <li><a href=""><h1>P.N.C</h1></a></li>
-                    <li><a href=""><h1>Bancos</h1></a></li>
-                    <li><a href=""><h1>Centros</h1></a></li>
-                    <li><a href=""><h1>Seguridad Social</h1></a></li>
-                    <li><a href=""><h1>Juzgado</h1></a></li>
-                    <li><a href=""><h1>Autorizacion Judicial Internamiento</h1></a></li>
+                    <li><a href="{{ route('tutelas.oficios','tutelas.pnc') }}"><h1>P.N.C</h1></a></li>
+                    <li><a href="{{ route('tutelas.oficios','tutelas.bancos') }}"><h1>Bancos</h1></a></li>
+                    <li><a href="{{ route('tutelas.oficios','tutelas.centros') }}"><h1>Centros</h1></a></li>
+                    <li><a href="{{ route('tutelas.oficios','tutelas.seguridadsocial') }}"><h1>Seguridad Social</h1></a></li>
+                    <li><a href="{{ route('tutelas.oficios','tutelas.juzgado') }}"><h1>Juzgado</h1></a></li>
+                    <li><a href="{{ route('tutelas.oficios','tutelas.autorizacioninternamiento') }}"><h1>Autorizacion Judicial Internamiento</h1></a></li>
                 </ul>
             </li>
             <li><a href="{{ route('tutelas.inventarios') }}"><h1>Inventarios</h1></a>
