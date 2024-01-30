@@ -9,4 +9,5 @@ class OpcionRevision extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='opciones_revision';
 }
