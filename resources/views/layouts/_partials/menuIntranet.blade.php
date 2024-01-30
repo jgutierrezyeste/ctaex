@@ -45,11 +45,11 @@
                     <li><a href="{{ route('tutelas.oficios','tutelas.autorizacioninternamiento') }}"><h1>Autorizacion Judicial Internamiento</h1></a></li>
                 </ul>
             </li>
-            <li><a href="{{ route('tutelas.inventarios') }}"><h1>Inventarios</h1></a>
+            <li><a href=""><h1>Inventarios</h1></a>
                 <ul style="--cantidad-items:3">
-                    <li><a href=""><h1>De Bienes</h1></a></li>
-                    <li><a href=""><h1>Informe Anual</h1></a></li>
-                    <li><a href=""><h1>Fallecimiento</h1></a></li>
+                    <li><a href="{{ route('tutelas.inventarios','tutelas.invbienes') }}"><h1>De Bienes</h1></a></li>
+                    <li><a href="{{ route('tutelas.inventarios','tutelas.invinformeanual') }}"><h1>Informe Anual</h1></a></li>
+                    <li><a href="{{ route('tutelas.inventarios','tutelas.invfallecimiento') }}"><h1>Fallecimiento</h1></a></li>
                     
                     
                 </ul>

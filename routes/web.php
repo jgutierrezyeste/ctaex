@@ -115,7 +115,7 @@ Route::get('/tutelas/busquedaTutela/{vista}',[TutelaController::class,'busqueda'
 Route::get('/consultarTutela/{vista}',[TutelaController::class,'consultar'])->name('tutelas.consultar');
 Route::get('/modificarTutela/{vista}',[TutelaController::class,'modificar'])->name('tutelas.modificar');
 //Route::get('/oficiosTutela',[TutelaController::class,'oficios'])->name('tutelas.oficios');
-Route::get('/inventarioTutela',[TutelaController::class,'inventarios'])->name('tutelas.inventarios');
+Route::get('/inventariosTutela/{vista}',[TutelaController::class,'inventarios'])->name('tutelas.inventarios');
 //Route::get('/tutelas/busquedaTutelaConsulta',[TutelaController::class,'busqueda'])->name('tutelas.busquedaConsulta');
 //Route::get('/tutelas/busquedaTutelaModificar',[TutelaController::class,'busqueda'])->name('tutelas.busquedaModificar');
 Route::get('/oficiosTutela/{vista}',[TutelaController::class,'oficios'])->name('tutelas.oficios');

@@ -90,9 +90,11 @@ class TutelaController extends Controller
         return view($vista,compact('expedientes','regimenes'));
     }
 
-    public function inventarios()
+    public function inventarios($vista)
     {
-
+        $expedientes = Expediente::where('expte','like','%T%')->get();
+        $regimenes=Regimen::all();
+        return view($vista,compact('expedientes','regimenes'));
     }
 
     public function busqueda (ExpedienteRequest $request,$vista)
