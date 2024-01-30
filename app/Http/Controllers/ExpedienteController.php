@@ -28,13 +28,13 @@ class ExpedienteController extends Controller
         return view('expedientes.addexpediente',compact('juzgados','regimenes'));
     }
 
-    public function consultar():View
+    public function consultar($vista):View
     {
       
         $expedientes=Expediente::all();
         $regimenes=Regimen::all();
       
-        return view('expedientes.consultarexpediente', compact('expedientes','regimenes'));
+        return view($vista, compact('expedientes','regimenes'));
     }
 
     public function oficios($vista):View
@@ -65,7 +65,7 @@ class ExpedienteController extends Controller
 
     
 
-    public function busquedaModificar (ExpedienteRequest $request)
+    /*public function busquedaModificar (ExpedienteRequest $request)
     {
        
         if ($request->has("id"))
@@ -115,7 +115,7 @@ class ExpedienteController extends Controller
         
         return view ('expedientes.showexpedienteConsulta',compact('expedientes','id','nombre','apellido'));
     }
-
+*/
 
 public function busqueda(ExpedienteRequest $request,$vista)
 {
@@ -186,6 +186,13 @@ public function busqueda(ExpedienteRequest $request,$vista)
         $expediente->delete();
         return redirect()->route('expediente.index')->with('danger','Eliminado expediente'); 
 
+    }
+
+    public function inventarios($vista)
+    {
+        $expedientes = Expediente::all();
+        $regimenes=Regimen::all();
+        return view($vista,compact('expedientes','regimenes'));
     }
 
     

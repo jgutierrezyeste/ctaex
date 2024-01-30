@@ -118,6 +118,7 @@ class TutelaController extends Controller
             return $query->where('nombre','=',$nombre);})
         ->when($apellido, function ($query) use ($apellido) {
                 return $query->where('apellido','=',$apellido);})
+        ->where ('expte','like','%T%')
         ->Paginate(5);
         
         
