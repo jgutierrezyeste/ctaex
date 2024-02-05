@@ -11,8 +11,13 @@ class Figura extends Model
     use HasFactory;
     protected $guarded=['id'];
 
-    public function reintegros():HasMany
+    public function restituciones():HasMany
     {
         return $this->hasMany(Reintegro::class,'figura_id');
+    }
+
+    public function resoluciones():HasMany
+    {
+        return $this->hasMany(Resolucion::class,'tipo_figura_id');
     }
 }
