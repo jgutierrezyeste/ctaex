@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DefensaJudicial;
 use App\Models\JudicialesDefensa;
 use Illuminate\Http\Request;
 
-class JudicialesDefensaController extends Controller
+class DefensaJudicialController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $defensasjudiciales=JudicialesDefensa::all();
+        $defensasjudiciales=DefensaJudicial::all();
         return view('defensasjudiciales.defensajudicial', compact('defensasjudiciales'));
     }
 

@@ -16,7 +16,7 @@ class AseguradoraController extends Controller
     public function index()
     {
         $aseguradoras=Aseguradora::all();
-        return view ('aseguradora.aseguradora', compact ('aseguradoras'));
+        return view ('aseguradora.aseguradoraplantilla', compact ('aseguradoras'));
     }
 
     /**

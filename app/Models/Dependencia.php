@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class DependenciaExpediente extends Model
+class Dependencia extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='dependencias';
 
     public function expedientes():BelongsTo
     {
@@ -34,7 +35,7 @@ class DependenciaExpediente extends Model
 
     public function gradosdependencias():BelongsTo
     {
-        return $this->belongsTo(GradoDependencia::class,'gradodepenedencia_id');
+        return $this->belongsTo(GradoDependencia::class,'gradodependencia_id');
     }
 
     public function nivelesdependencias():BelongsTo

@@ -13,11 +13,11 @@ class Figura extends Model
 
     public function restituciones():HasMany
     {
-        return $this->hasMany(Reintegro::class,'figura_id');
+        return $this->hasMany(Restitucion::class,'figura_id');
     }
 
     public function resoluciones():HasMany
     {
-        return $this->hasMany(Resolucion::class,'tipo_figura_id');
+        return $this->hasMany(Resolucion::class,'figura_id');
     }
 }

@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Reintegro extends Model
+class Restitucion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='restituciones';
 
     public function juzgados():BelongsTo
     {

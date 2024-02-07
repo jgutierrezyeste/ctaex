@@ -106,12 +106,12 @@ class Expediente extends Model
 
     public function discapacidades():HasOne
     {
-        return $this->hasOne(DiscapacidadExpediente::class,'expediente_id');
+        return $this->hasOne(Discapacidad::class,'expediente_id');
     }
 
     public function dependencias():HasOne
     {
-        return $this->hasOne(DependenciaExpediente::class,'expediente_id');
+        return $this->hasOne(Dependencia::class,'expediente_id');
     }
 
     public function prestaciones():BelongsToMany

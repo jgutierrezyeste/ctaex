@@ -13,9 +13,9 @@ class Resolucion extends Model
     protected $guarded=['id'];
     protected $table='resoluciones';
 
-    public function tipos_resoluciones():BelongsTo
+    public function figuras():BelongsTo
     {
-        return $this->belongsTo(TipoResolucion::class,'tipo_resolucion_id');
+        return $this->belongsTo(Figura::class,'figura_id');
     }
 
     public function expedientes():BelongsTo
