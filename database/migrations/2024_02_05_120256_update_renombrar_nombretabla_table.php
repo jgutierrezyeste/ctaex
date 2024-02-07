@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('administracion_biens', function (Blueprint $table) {
             $table->renameColumn('situacion','estado');
         });
-        Schema::rename('administracion_biens','adminsitracion_bienes');
+        Schema::rename('administracion_biens','administracion_bienes');
 
     }
 
