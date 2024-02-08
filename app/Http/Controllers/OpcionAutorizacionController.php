@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OpcionAutorizacionRequest;
 use App\Http\Requests\OpcionRevisionRequest;
+use App\Models\OpcionAutorizacion;
 use App\Models\OpcionRevision;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class OpcionRevisionController extends Controller
+class OpcionAutorizacionController extends Controller
 {
     public function index():View
     {
-        $opciones=OpcionRevision::all();
+        $opciones=OpcionAutorizacion::all();
         return view('opcionesrevision.opcionrevision', compact('opciones'));
     }
 
@@ -27,9 +29,9 @@ class OpcionRevisionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(OpcionRevisionRequest $request):RedirectResponse
+    public function store(OpcionAutorizacionRequest $request):RedirectResponse
     {
-        OpcionRevision::create($request->all());
+        OpcionAutorizacion::create($request->all());
         return redirect()->route('opcionRevision.index')->with('success','Opción revisión añadida');
     }
 
@@ -44,7 +46,7 @@ class OpcionRevisionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(OpcionRevision $opcionRevision):View
+    public function edit(OpcionAutorizacion $opcionAutorizacion):View
     {
         return view('opcionesrevision.editopcionrevision', compact('opcionRevision'));
     }
@@ -52,18 +54,18 @@ class OpcionRevisionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(OpcionRevisionRequest $request, OpcionRevision $opcionRevision):RedirectResponse
+    public function update(OpcionAutorizacionRequest $request, OpcionAutorizacion $opcionAutorizacion):RedirectResponse
     {
-       $opcionRevision->update($request->all());
+       $opcionAutorizacion->update($request->all());
        return redirect()->route('opcionRevision.index')->with('success','Actualizada opcion de Revisión'); 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OpcionRevision $opcionRevision)
+    public function destroy(OpcionAutorizacion $opcionAutorizacion)
     {
-        $opcionRevision->delete();
+        $opcionAutorizacion->delete();
         return redirect()->route('opcionRevision.index')->with('danger','Eliminada opcion de revision'); 
 
     }
