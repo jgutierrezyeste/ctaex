@@ -1,0 +1,1 @@
+update expediente_patologia_concreta set patologia_concreta_id=218 where patologia_concreta_id=223 or patologia_concreta_id=224;
