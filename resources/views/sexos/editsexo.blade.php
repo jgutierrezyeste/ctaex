@@ -10,7 +10,7 @@
     @csrf
     <div class="container">
     <label>  SEXO </label>
-    <input type="text" name="sexo" value="{{ $sexo->sexo }}"/>
+    <input type="text" name="nombre" value="{{ $sexo->nombre }}"/>
     </div>
     
     @error('sexo')

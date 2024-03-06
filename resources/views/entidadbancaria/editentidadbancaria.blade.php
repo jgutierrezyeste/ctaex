@@ -10,7 +10,7 @@
     @csrf
     <div class="container">
     <label> ENTIDAD </label>
-    <input type="text" name="entidad" value="{{ $entidadesbancaria->entidad }}"/><br/>
+    <input type="text" name="nombre" value="{{ $entidadesbancaria->nombre }}"/><br/>
     </div>
     @error ('entidad')
     <p style ="color:red;">{{ $message }}</p>

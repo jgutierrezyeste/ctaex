@@ -1,29 +1,29 @@
 @extends ('layouts.landing')
-@section('title','Parentescos')
-@section('subtitle','Parentescos')
+@section('title','Relaciones')
+@section('subtitle','Relaciones')
 
 @section('content')
 <div class="table table-responsive">   
 <table class="table table-sm table-bordered">
         <thead >
             
-            <td>PARENTESCOS</td>
+            <td>RELACIONES</td>
             <td></td>
             <td></td>
             
         </thead>
         <tbody>
-            @foreach ($parentescos as $parentesco)  
+            @foreach ($relaciones as $relacion)  
                 <tr> 
-                    <td>{{ $parentesco->parentesco }}</td>
+                    <td>{{ $relacion->nombre }}</td>
                     <td>
-                        <form method="GET" action="{{route('parentescos.edit',$parentesco->id) }}">
+                        <form method="GET" action="{{route('relaciones.edit',$relacion->id) }}">
                         @csrf
                         <input type="submit" value = "EDIT" />
                         </form>
                     </td>
                     <td>
-                        <form method="POST" action="{{route('parentescos.destroy',$parentesco->id) }}">
+                        <form method="POST" action="{{route('relaciones.destroy',$relacion->id) }}">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value = "DELETE" />
@@ -35,8 +35,8 @@
     </table>
 </div>
     
-    <form method="GET" action="{{route('parentescos.create') }}">
+    <form method="GET" action="{{route('relaciones.create') }}">
         @csrf
-        <input type="submit" value = "AÑADIR PARENTESCO" />
+        <input type="submit" value = "AÑADIR RELACION" />
     </form>
 @endsection

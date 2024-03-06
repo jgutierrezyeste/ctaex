@@ -16,7 +16,7 @@
         <tbody>
             @foreach ($servicios as $servicio)  
                 <tr> 
-                    <td>{{ $servicio->servicio }}</td>
+                    <td>{{ $servicio->nombre }}</td>
                     
                     <td>
                         <form method="GET" action="{{route('serviciosDependencias.edit',$servicio->id) }}">

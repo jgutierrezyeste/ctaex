@@ -16,7 +16,7 @@
         <tbody>
             @foreach ($subtipos as $subtipo)  
                 <tr> 
-                    <td>{{ $subtipo->servicio_subtipo }}</td>
+                    <td>{{ $subtipo->nombre }}</td>
                     
                     <td>
                         <form method="GET" action="{{route('subtipoDependencias.edit',$subtipo->id) }}">

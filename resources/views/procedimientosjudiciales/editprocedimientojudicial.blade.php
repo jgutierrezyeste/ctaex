@@ -9,8 +9,8 @@
     @method('PUT')
     @csrf
     <div class="container">
-    <label>  PROCEDIMIENTO JUDICIAL </label>
-    <input type="text" name="procedimiento" value="{{ $procedimientosJudiciale->procedimiento }}"/>
+    <label>  ABREVIATURA </label>
+    <input type="text" name="abreviatura" value="{{ $procedimientosJudiciale->abreviatura }}"/>
     </div>
     
     @error('procedimiento')
@@ -18,8 +18,8 @@
     @enderror
     
     <div class="container">
-        <label>  CODIFICACION </label>
-        <input type="text" name="codificacion" value="{{ $procedimientosJudiciale->codificacion }}"/>
+        <label>  NOMBRE </label>
+        <input type="text" name="nombre" value="{{ $procedimientosJudiciale->nombre }}"/>
         </div>
         
         @error('codificacion')

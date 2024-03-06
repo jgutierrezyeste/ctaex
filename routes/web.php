@@ -9,6 +9,7 @@ use App\Http\Controllers\CentroController;
 use App\Http\Controllers\DependenciaServicioSubtipoController;
 use App\Http\Controllers\DependenciaSevicioController;
 use App\Http\Controllers\DocumentoIdentificativoController;
+
 use App\Http\Controllers\EntidadBancariaController;
 use App\Http\Controllers\ExpedienteController;
 use App\Http\Controllers\FiguraController;
@@ -20,7 +21,7 @@ use App\Http\Controllers\MotivoController;
 use App\Http\Controllers\NacionalidadController;
 use App\Http\Controllers\NivelDependenciaController;
 use App\Http\Controllers\OpcionAutorizacionController;
-use App\Http\Controllers\ParentescoController;
+use App\Http\Controllers\RelacionController;
 use App\Http\Controllers\PatologiaConcretaController;
 use App\Http\Controllers\PatologiaGeneralController;
 use App\Http\Controllers\PrestacionController;
@@ -31,7 +32,7 @@ use App\Http\Controllers\RegimenController;
 
 use App\Http\Controllers\SeguroMedicoController;
 use App\Http\Controllers\SexoController;
-use App\Http\Controllers\SituacionController;
+use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\TrabajadorSocialController;
 use App\Http\Controllers\IntranetController;
 use App\Http\Controllers\DefensaJudicialController;
@@ -64,7 +65,7 @@ Route::get('/indiceintranet',[IntranetController::class,'index'])->name('index_i
 Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
 Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacion_intranet');
 
-Route::resource('/parentescos',ParentescoController::class);
+Route::resource('/relaciones',RelacionController::class);
 Route::resource('/aseguradoras',AseguradoraController::class);
 Route::resource('/entidadesbancarias',EntidadBancariaController::class);
 Route::resource('/años',AñoController::class);
@@ -92,7 +93,7 @@ Route::resource('/provincias',ProvinciaController::class);
 Route::resource('/figuras',FiguraController::class);
 Route::resource('/segurosMedicos',SeguroMedicoController::class);
 Route::resource('/sexo',SexoController::class);
-Route::resource('/situacion',SituacionController::class);
+Route::resource('/estado',EstadoController::class);
 Route::resource('/trabajadoresSociales',TrabajadorSocialController::class);
 Route::resource('/regimenes',RegimenController::class);
 Route::resource('/expedientes',ExpedienteController::class);

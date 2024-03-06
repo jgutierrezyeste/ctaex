@@ -8,7 +8,7 @@
     <li> <a href="{{ route('entidadesbancarias.index') }}"><h1>Entidades Bancarias</h1></a></li>
     
     <li> <h1>Aspectos judiciales:</h1>
-        <ul style="--cantidad-items:5">
+        <ul style="--cantidad-items:4">
             <li> <a href="{{ route('juzgados.index') }}"><h1>Juzgados</h1></a></li>
            
       
@@ -16,7 +16,7 @@
             <li> <a href="{{ route('procedimientosJudiciales.index') }}"><h1>Procedimientos Judiciales</h1></a></li>
             <li> <a href="{{ route('motivos.index') }}"><h1>Motivos</h1></a></li>
             
-            <li> <a href="{{ route('tiposresoluciones.index') }}"><h1>Procedimientos resoluciones</h1></a></li>
+            
             
         </ul>
     </li>
@@ -30,7 +30,7 @@
            
             <li> <a href="{{ route('trabajadoresSociales.index') }}"><h1>Ts Asignados</h1></a></li>
             <li> <a href="{{ route('iniciadorProcedimiento.index') }}"><h1>Iniciadores procedimientos</h1></a></li>
-            <li> <a href="{{ route('parentescos.index') }}"><h1>Parentescos</h1> </a></li>
+            <li> <a href="{{ route('relaciones.index') }}"><h1>Relaciones</h1> </a></li>
         </ul>
     </li>
      
@@ -40,7 +40,7 @@
             <li> <a href="{{ route('provincias.index') }}"><h1>Provincias</h1></a></li>
             <li> <a href="{{ route('sexo.index') }}"><h1>Sexos</h1></a></li>
             <li> <a href="{{ route('documentosIdentificativos.index') }}"><h1>Documentos Identificativos</h1></a></li>
-            <li> <a href="{{ route('situacion.index') }}"><h1>Situaciones</h1></a></li>
+            <li> <a href="{{ route('estado.index') }}"><h1>Estados</h1></a></li>
         </ul>
     </li>
 
@@ -66,7 +66,7 @@
         </ul>
     </li>
    
-    <li> <a href="{{ route('opcionRevision.index') }}"><h1>Opciones Revision</h1></a></li>
+    <li> <a href="{{ route('opcionAutorizacion.index') }}"><h1>Opciones Autorizacion</h1></a></li>
     
     <li> <a href="{{ route('años.index') }}"><h1>Años</h1></a></li>
     

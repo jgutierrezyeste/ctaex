@@ -1,18 +1,18 @@
 @extends ('layouts.landing')
-@section('title','Situación')
-@section('subtitle','INSERCION DE SITUACION')
+@section('title','Estado')
+@section('subtitle','INSERCION DE ESTADO')
 @section('content')
 
-<form method ="POST" action ="{{route('situacion.store')}}">
+<form method ="POST" action ="{{route('estado.store')}}">
     @csrf
     @component('_components.div')
-        @slot('nombre_campo','situacion')
+        @slot('nombre_campo','nombre')
     @endcomponent
     
     <div class="container">
-        <input type="submit" value="Añadir Situacion"/>
+        <input type="submit" value="Añadir Estado"/>
         </div>
 
-    <a href="{{route('situacion.index')}}"> Vuelta al listado </a> 
+    <a href="{{route('estado.index')}}"> Vuelta al listado </a> 
 </form>
 @endsection

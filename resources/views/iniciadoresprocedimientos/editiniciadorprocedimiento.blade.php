@@ -10,7 +10,7 @@
     @csrf
     <div class="container">
     <label>  INICIADOR </label>
-    <input type="text" name="iniciador" value="{{ $iniciadorProcedimiento->iniciador }}"/>
+    <input type="text" name="nombre" value="{{ $iniciadorProcedimiento->nombre }}"/>
     </div>
     
     @error('iniciador')

@@ -16,7 +16,7 @@
         <tbody>
             @foreach ($figuras as $figura)  
                 <tr> 
-                    <td>{{ $figura->figura }}</td>
+                    <td>{{ $figura->nombre }}</td>
                     
                     <td>
                         <form method="GET" action="{{route('figuras.edit',$figura->id) }}">

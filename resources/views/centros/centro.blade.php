@@ -29,7 +29,7 @@
         <tbody>
             @foreach ($centros as $centro)  
                 <tr> 
-                    <td>{{ $centro->nombre_centro }}</td>
+                    <td>{{ $centro->nombre }}</td>
                     <td>{{ $centro->tipo_via }}</td>
                     <td>{{ $centro->direccion }}</td>
                     <td>{{ $centro->numero }}</td>

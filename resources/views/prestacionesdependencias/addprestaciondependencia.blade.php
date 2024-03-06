@@ -6,7 +6,7 @@
 <form method ="POST" action ="{{route('prestacionDependencias.store')}}">
     @csrf
     @component('_components.div')
-        @slot('nombre_campo','prestacion_dependencia')
+        @slot('nombre_campo','nombre')
     @endcomponent
 
     

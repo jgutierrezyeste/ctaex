@@ -6,7 +6,7 @@
 <form method ="POST" action ="{{route('figuras.store')}}">
     @csrf
     @component('_components.div')
-        @slot('nombre_campo','figura')
+        @slot('nombre_campo','nombre')
     @endcomponent
     
     <div class="container">

@@ -10,7 +10,7 @@
     @csrf
     <div class="container">
     <label>  PRESTACION DEPENDENCIA </label>
-    <input type="text" name="prestacion_dependencia" value="{{ $prestacionDependencia->prestacion_dependencia }}"/>
+    <input type="text" name="nombre" value="{{ $prestacionDependencia->nombre }}"/>
     </div>
     
     @error('prestacion_dependencia')

@@ -6,11 +6,11 @@
 <form method ="POST" action ="{{route('regimenes.store')}}">
     @csrf
     @component('_components.div')
-        @slot('nombre_campo','regimen')
+        @slot('nombre_campo','nombre')
     @endcomponent
     
     @component('_components.div')
-    @slot('nombre_campo','codigo_regimen')
+    @slot('nombre_campo','abreviatura')
     @endcomponent
 
     <div class="container">

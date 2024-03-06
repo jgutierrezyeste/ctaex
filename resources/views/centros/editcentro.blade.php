@@ -11,7 +11,7 @@
     
         <div class="container">
         <label> CENTROS  </label>
-        <input type="text" name="nombre_centro" value="{{ $centro->nombre_centro }}"/>
+        <input type="text" name="nombre" value="{{ $centro->nombre }}"/>
         </div>
         @error ('nombre_centro')
         <p style ="color:red;">{{ $message }}</p>

@@ -10,7 +10,7 @@
     @csrf
     <div class="container">
     <label>  REGIMEN </label>
-    <input type="text" name="regimen" value="{{ $regimene->regimen }}"/>
+    <input type="text" name="nombre" value="{{ $regimene->nombre }}"/>
     </div>
     
     @error('regimen')
@@ -19,7 +19,7 @@
     
     <div class="container">
         <label>  CODIGO_REGIMEN </label>
-        <input type="text" name="codigo_regimen" value="{{ $regimene->codigo_regimen }}"/>
+        <input type="text" name="abreviatura" value="{{ $regimene->abreviatura }}"/>
         </div>
         
         @error('codigo_regimen')

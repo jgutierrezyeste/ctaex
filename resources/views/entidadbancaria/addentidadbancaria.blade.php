@@ -6,7 +6,7 @@
 <form method ="POST" action ="{{route('entidadesbancarias.store')}}">
     @csrf
     @component('_components.div')
-        @slot('nombre_campo','entidad')
+        @slot('nombre_campo','nombre')
     @endcomponent
     <div class="container">
     <input type="submit" value="Añadir Entidad bancaria"/>

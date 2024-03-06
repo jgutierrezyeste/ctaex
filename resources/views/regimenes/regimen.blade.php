@@ -7,8 +7,8 @@
 <table class="table table-sm table-bordered">
         <thead >
             
-            <td>Regimen</td>
-            <td>Codigo_regimen</td>
+            <td>Nombre</td>
+            <td>Abreviatura</td>
            
             <td></td>
             <td></td>
@@ -17,8 +17,8 @@
         <tbody>
             @foreach ($regimenes as $regimen)  
                 <tr> 
-                    <td>{{ $regimen->regimen }}</td>
-                    <td>{{ $regimen->codigo_regimen }}</td>
+                    <td>{{ $regimen->nombre }}</td>
+                    <td>{{ $regimen->abreviatura }}</td>
                     <td>
                         <form method="GET" action="{{route('regimenes.edit',$regimen->id) }}">
                         @csrf
@@ -53,7 +53,7 @@
             @foreach ($regimenes as $regimen)  
                
                     <tr>
-                        <td>{{ $regimen-> regimen?? '' }}</td> 
+                        <td>{{ $regimen-> nombre?? '' }}</td> 
                         <td>@foreach ($regimen->expedientes as $expediente)
                             {{ $expediente->expte }}
                             

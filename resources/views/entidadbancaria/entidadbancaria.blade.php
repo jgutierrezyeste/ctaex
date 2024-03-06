@@ -15,7 +15,7 @@
         <tbody>
             @foreach ($entidadesbancarias as $entidadesbancaria)  
                 <tr> 
-                    <td>{{ $entidadesbancaria->entidad }}</td>
+                    <td>{{ $entidadesbancaria->nombre }}</td>
                     <td>
                         <form method="GET" action="{{route('entidadesbancarias.edit', $entidadesbancaria->id) }}">
                         @csrf

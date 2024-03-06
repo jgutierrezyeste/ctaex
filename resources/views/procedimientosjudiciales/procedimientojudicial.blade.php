@@ -7,8 +7,8 @@
 <table class="table table-sm table-bordered">
         <thead >
             
-            <td>Procedimientos Judiaciles</td>
-            <td>Codificacion</td>
+            <td>Abreviatura</td>
+            <td>Nombre</td>
             <td></td>
             <td></td>
             
@@ -16,8 +16,8 @@
         <tbody>
             @foreach ($procedimientos as $procedimiento)  
                 <tr> 
-                    <td>{{ $procedimiento->procedimiento }}</td>
-                    <td>{{ $procedimiento->codificacion }}</td>
+                    <td>{{ $procedimiento->abreviatura }}</td>
+                    <td>{{ $procedimiento->nombre }}</td>
                     <td>
                         <form method="GET" action="{{route('procedimientosJudiciales.edit',$procedimiento->id) }}">
                         @csrf

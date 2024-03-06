@@ -1,28 +1,28 @@
 @extends ('layouts.landing')
-@section('title','Situacion')
-@section('subtitle','Situacion')
+@section('title','Estado')
+@section('subtitle','Estado')
 
 @section('content')
 
-<form method ="POST" action ="{{route('situacion.update', $situacion->id)}}">
+<form method ="POST" action ="{{route('estado.update', $estado->id)}}">
     
     @method('PUT')
     @csrf
     <div class="container">
-    <label>  SITUACION </label>
-    <input type="text" name="situacion" value="{{ $situacion->situacion }}"/>
+    <label>  NOMBRE </label>
+    <input type="text" name="nombre" value="{{ $estado->nombre }}"/>
     </div>
     
-    @error('situacion')
+    @error('nombre')
     <p style ="color:red;">{{ $message }}</p>
     @enderror
     
 
     <div class="container">
-        <input type="submit" value="Actualizar Situacion"/>
+        <input type="submit" value="Actualizar Estado"/>
         </div>
 
-    <a href="{{route('situacion.index')}}"> Vuelta al listado </a>
+    <a href="{{route('estado.index')}}"> Vuelta al listado </a>
 </form>
 
 @endsection
