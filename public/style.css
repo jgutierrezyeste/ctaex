@@ -35,6 +35,17 @@ td{
     background-color: pink;
 }
 
+.columna_botones{
+    padding:10px;
+    border: 0px;
+    background-color: white;
+}
+.columna_datos{
+    padding:10px;
+    border:1px solid #000;
+    background-color: white;
+}
+
 thead {
     font-weight: bold;
     border:10px solid black;
