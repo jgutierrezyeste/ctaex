@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SituacionRequest extends FormRequest
+class RepresentanteRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,7 @@ class SituacionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'situacion'=>'required'
+            //
         ];
     }
 }

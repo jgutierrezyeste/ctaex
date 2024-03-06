@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ParentescoRequest extends FormRequest
+class RelacionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,7 @@ class ParentescoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'parentesco'=>'required|min:3'
+            'nombre'=>'required|min:3'
         ];
     }
 }

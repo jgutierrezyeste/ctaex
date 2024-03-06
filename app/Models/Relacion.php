@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Situacion extends Model
+class Relacion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='situaciones';
-
-    public function expedientes():HasMany
+    protected $table='relaciones';
+    
+    public function representantesremociones():HasMany
     {
-        return $this->hasMany(Expediente::class,'situacion_id');
+        return $this->hasMany(RepresentanteRemocion::class,'relacion_id');
     }
+
+    
 }

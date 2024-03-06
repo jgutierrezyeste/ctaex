@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProcedimientoJudicialRequest extends FormRequest
+class EstadoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,6 @@ class ProcedimientoJudicialRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'abreviatura'=>'required|max:3',
             'nombre'=>'required'
         ];
     }

@@ -13,7 +13,7 @@ class Motivo extends Model
 
     public function defensasjudiciales():HasMany
     {
-        return $this->hasMany(JudicialesDefensa::class,'motivo_id');
+        return $this->hasMany(DefensaJudicial::class,'motivo_id');
     }
 
     public function administraciones():HasMany

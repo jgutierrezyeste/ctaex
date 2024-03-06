@@ -21,4 +21,9 @@ class AdministracionBien extends Model
     {
         return $this->belongsTo(Expediente::class,'expediente_id');
     }
+
+    public function estados():BelongsTo
+    {
+        return $this->belongsTo(Estado::class,'estado_id');
+    }
 }

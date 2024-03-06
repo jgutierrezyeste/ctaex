@@ -15,8 +15,8 @@ class DependenciaServicioSubtipo extends Model
         return $this->hasMany(Expediente::class,'dependenciaserviciosubtipo_id');
     }*/
 
-    public function expedientesdependencias():HasMany
+    public function dependencias():HasMany
     {
-        return $this->hasMany(DependenciaExpediente::class,'dependenciaserviciosubtipo_id');
+        return $this->hasMany(Dependencia::class,'dependenciaserviciosubtipo_id');
     }
 }

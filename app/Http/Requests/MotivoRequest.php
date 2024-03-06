@@ -22,7 +22,7 @@ class MotivoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'motivo'=>'required'
+            'nombre'=>'required'
         ];
     }
 }

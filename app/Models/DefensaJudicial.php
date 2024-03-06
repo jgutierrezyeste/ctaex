@@ -10,7 +10,7 @@ class DefensaJudicial extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $guarede='defensas_judiciales';
+    protected $table='defensas_judiciales';
 
     public function letrados():BelongsTo
     {
@@ -27,5 +27,15 @@ class DefensaJudicial extends Model
     public function motivos():BelongsTo
     {
         return $this->belongsTo(Motivo::class,'motivo_id');
+    }
+
+    public function expedientes():BelongsTo
+    {
+        return $this->belongsTo(Expediente::class,'expediente_id');
+    }
+
+    public function estados():BelongsTo
+    {
+        return $this->belongsTo(Estado::class,'estado_id');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Remocion extends Model
 {
@@ -12,13 +13,18 @@ class Remocion extends Model
     protected $guarded=['id'];
     protected $table='remociones';
 
-    public function parentescos():BelongsTo
+    
+
+    public function representantes():BelongsToMany
     {
-        return $this->belongsTo(Parentesco::class,'parentesco_id');
+        return $this->belongsToMany(Representante::class,'representantes_remocion','remocion_id','representante_id');
     }
 
-    public function regimenes():BelongsTo
+
+
+    public function expedientes():BelongsTo
     {
-        return $this->belongsTo(Regimen::class,'regimen_id');
+        return $this->belongsTo(Expediente::class,'expediente_id');
     }
+
 }

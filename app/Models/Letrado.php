@@ -14,6 +14,6 @@ class Letrado extends Model
     
     public function defensasjudiciales():HasMany
     {
-        return $this->hasMany(JudicialesDefensa::class,'letrado_id');
+        return $this->hasMany(DefensaJudicial::class,'letrado_id');
     }
 }

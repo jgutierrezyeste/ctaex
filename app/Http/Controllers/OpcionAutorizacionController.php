@@ -15,7 +15,7 @@ class OpcionAutorizacionController extends Controller
     public function index():View
     {
         $opciones=OpcionAutorizacion::all();
-        return view('opcionesrevision.opcionrevision', compact('opciones'));
+        return view('opcionesautorizacion.opcionautorizacion', compact('opciones'));
     }
 
     /**
@@ -23,7 +23,7 @@ class OpcionAutorizacionController extends Controller
      */
     public function create():View
     {
-        return view('opcionesrevision.addopcionrevision');
+        return view('opcionesautorizacion.addopcionautorizacion');
     }
 
     /**
@@ -32,7 +32,7 @@ class OpcionAutorizacionController extends Controller
     public function store(OpcionAutorizacionRequest $request):RedirectResponse
     {
         OpcionAutorizacion::create($request->all());
-        return redirect()->route('opcionRevision.index')->with('success','Opción revisión añadida');
+        return redirect()->route('opcionAutorizacion.index')->with('success','Opción autorizacion añadida');
     }
 
     /**
@@ -48,7 +48,7 @@ class OpcionAutorizacionController extends Controller
      */
     public function edit(OpcionAutorizacion $opcionAutorizacion):View
     {
-        return view('opcionesrevision.editopcionrevision', compact('opcionRevision'));
+        return view('opcionesautorizacion.editopcionautorizacion', compact('opcionAutorizacion'));
     }
 
     /**
@@ -57,7 +57,7 @@ class OpcionAutorizacionController extends Controller
     public function update(OpcionAutorizacionRequest $request, OpcionAutorizacion $opcionAutorizacion):RedirectResponse
     {
        $opcionAutorizacion->update($request->all());
-       return redirect()->route('opcionRevision.index')->with('success','Actualizada opcion de Revisión'); 
+       return redirect()->route('opcionAutorizacion.index')->with('success','Actualizada opcion de Revisión'); 
     }
 
     /**
@@ -66,7 +66,7 @@ class OpcionAutorizacionController extends Controller
     public function destroy(OpcionAutorizacion $opcionAutorizacion)
     {
         $opcionAutorizacion->delete();
-        return redirect()->route('opcionRevision.index')->with('danger','Eliminada opcion de revision'); 
+        return redirect()->route('opcionAutorizacion.index')->with('danger','Eliminada opcion de revision'); 
 
     }
 }

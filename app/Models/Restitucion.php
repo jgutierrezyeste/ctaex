@@ -33,4 +33,16 @@ class Restitucion extends Model
     {
         return $this->belongsTo(Año::class,'año_id');
     }
+
+    public function tiposrestituciones():BelongsTo
+    {
+        return $this->belongsTo(TipoRestitucion::class,'tipo_restitucion_id');
+    }
+
+    public function expedientes():BelongsTo
+    {
+        return $this->belongsTo(Expediente::class,'expediente_id');
+    }
+
+    
 }

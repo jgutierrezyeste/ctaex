@@ -16,21 +16,26 @@ class Regimen extends Model
 
     public function expedientes():BelongsToMany
     {
-        return $this->belongsToMany(Expediente::class,'expediente_regimen','regimen_id','expediente_id');
+        return $this->belongsToMany(Expediente::class,'expedientes_regimenes','regimen_id','expediente_id');
     }
 
-    public function remociones():HasMany
+    /*public function remociones():HasMany
     {
         return $this->hasMany(Remocion::class,'regimen_id');
-    }
+    }*/
 
-    public function reintegros():HasMany
+    /*public function reintegros():HasMany
     {
         return $this->hasMany(Reintegro::class,'regimen_id');
-    }
+    }*/
 
     public function fallecidos():HasMany
     {
         return $this->hasMany(Fallecido::class,'regimen_id');
+    }
+
+    public function revisiones():BelongsToMany
+    {
+        return $this->belongsToMany(Revision::class,'regimenes_revisiones','regimen_id','revision_id');
     }
 }

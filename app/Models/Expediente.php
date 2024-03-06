@@ -15,10 +15,10 @@ class Expediente extends Model
     protected $guarded=['id'];
 
 
-    /*public function situacions():BelongsTo
+    public function estados():BelongsTo
     {
-        return $this->belongsTo(Situacion::class,'situacion_id');
-    }*/
+        return $this->belongsTo(Estado::class,'estado_id');
+    }
 
     public function trabajadoressociales():BelongsTo
     {
@@ -65,7 +65,7 @@ class Expediente extends Model
 
     public function regimenes():BelongsToMany
     {
-        return $this->belongsToMany(Regimen::class,'expediente_regimen','expediente_id','regimen_id');
+        return $this->belongsToMany(Regimen::class,'expedientes_regimenes','expediente_id','regimen_id');
     }
 
     public function declaraciones():BelongsToMany
@@ -131,6 +131,26 @@ class Expediente extends Model
     public function domicilios():BelongsTo
     {
         return $this->belongsTo(Domicilio::class,'domicilio_id');
+    }
+
+    public function defensasjudiciales():HasMany
+    {
+        return $this->hasMany(DefensaJudicial::class,'expediente_id');
+    }
+
+    public function restituciones():HasOne
+    {
+        return $this->hasOne(Expediente::class,'expediente_id');
+    }
+
+    public function revisiones():HasMany
+    {
+        return $this->hasMany(Revision::class,'expediente_id');
+    }
+
+    public function remociones():HasOne
+    {
+        return $this->hasOne(Expediente::class,'expediente_id');
     }
     
 }
