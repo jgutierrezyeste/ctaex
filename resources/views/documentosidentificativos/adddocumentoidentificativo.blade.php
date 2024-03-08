@@ -6,7 +6,7 @@
 <form method ="POST" action ="{{route('documentosIdentificativos.store')}}">
     @csrf
     @component('_components.div')
-        @slot('nombre_campo','tipo_documento')
+        @slot('nombre_campo','tipo')
     @endcomponent
     
     <div class="container">

@@ -35,12 +35,13 @@
     </li>
      
     <li> <h1> Datos personales </h1>
-        <ul style="--cantidad-items:5">
+        <ul style="--cantidad-items:6">
             <li> <a href="{{ route('nacionalidades.index') }}"><h1>Nacionalidades</h1></a></li>
             <li> <a href="{{ route('provincias.index') }}"><h1>Provincias</h1></a></li>
             <li> <a href="{{ route('sexo.index') }}"><h1>Sexos</h1></a></li>
             <li> <a href="{{ route('documentosIdentificativos.index') }}"><h1>Documentos Identificativos</h1></a></li>
             <li> <a href="{{ route('estado.index') }}"><h1>Estados</h1></a></li>
+            <li> <a href="{{ route('tiposVia.index') }}"><h1>Tipos Via</h1></a></li>
         </ul>
     </li>
 

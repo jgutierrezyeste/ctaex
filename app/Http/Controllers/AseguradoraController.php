@@ -24,6 +24,7 @@ class AseguradoraController extends Controller
      */
     public function create():View
     {
+        $archivo=fopen("create.txt","w+");
         return view ('aseguradora.addaseguradora');
     }
 
@@ -33,7 +34,7 @@ class AseguradoraController extends Controller
     public function store(AseguradoraRequest $request):RedirectResponse
     {
         Aseguradora::create([
-            'aseguradora'=> $request->aseguradora,
+            'nombre'=> $request->nombre,
             'telefono_avisos'=>$request->telefono_avisos,
             'telefono_avisos2'=>$request->telefono_avisos2    
         ]);

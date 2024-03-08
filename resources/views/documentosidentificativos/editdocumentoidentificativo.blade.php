@@ -10,7 +10,7 @@
     @csrf
     <div class="container">
     <label>  DOCUMENTO IDENTIFICATIVO </label>
-    <input type="text" name="tipo_documento" value="{{ $documentosIdentificativo->tipo_documento }}"/>
+    <input type="text" name="tipo" value="{{ $documentosIdentificativo->tipo }}"/>
     </div>
     
     @error('tipo_documento')

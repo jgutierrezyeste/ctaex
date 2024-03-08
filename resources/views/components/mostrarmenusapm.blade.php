@@ -1,11 +1,13 @@
-@props(['expedientes','regimenes','titulo','rutaRegreso','vista'])
+@props(['titulo','rutaRegreso','rutaAniadir'])
 @extends ('layouts.landing')
 @section('title','Comision Tutelar de adultos')
 
 
 
 @section('subtitle')
-    <x-comun_expedientes :titulo="$titulo" :ruta="$ruta"></x-comun_expedientes>
+
+    <x-comun_expedientes :titulo="$titulo" :ruta="$rutaRegreso"></x-comun_expedientes>
+    <x-boton_aniadir :ruta="$rutaAniadir" ></x-boton_aniadir>
 @endsection
 
 @section('content')
@@ -16,6 +18,7 @@
         </thead>
         <tbody>
             @yield('cuerpo')
+        
         </tbody>
     </table>
 @endsection

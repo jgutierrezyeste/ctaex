@@ -22,7 +22,7 @@ class AseguradoraRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'aseguradora'=>'required',
+            'nombre'=>'required',
             'telefono_avisos'=>'max:9',
             'telefono_avisos2'=>'max:9',
         

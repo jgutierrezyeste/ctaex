@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class DocumentoIdentificativoRequest extends FormRequest
+class TipoViaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,7 @@ class DocumentoIdentificativoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'tipo'=>'required'
+            'nombre'=>'required'
         ];
     }
 }

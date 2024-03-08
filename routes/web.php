@@ -40,6 +40,8 @@ use App\Http\Controllers\ResolucionController;
 use App\Http\Controllers\TutelaController;
 use App\Http\Controllers\CuratelaController;
 use App\Http\Controllers\AdministracionBienController;
+use App\Http\Controllers\TipoViaController;
+
 use App\Http\Controllers\MenuController;
 
 use Illuminate\Support\Facades\Auth;
@@ -95,6 +97,8 @@ Route::resource('/segurosMedicos',SeguroMedicoController::class);
 Route::resource('/sexo',SexoController::class);
 Route::resource('/estado',EstadoController::class);
 Route::resource('/trabajadoresSociales',TrabajadorSocialController::class);
+Route::resource('/tiposVia',TipoViaController::class);
+
 Route::resource('/regimenes',RegimenController::class);
 Route::resource('/expedientes',ExpedienteController::class);
 Route::resource('/defensasjudiciales',DefensaJudicialController::class);
