@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::table('administracion_bienes', function (Blueprint $table) {
             
             $table->unsignedBigInteger('estado_id')->change();
+            
             $table->foreign('estado_id')->references('id')->on('estados');
             
         });
