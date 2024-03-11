@@ -11,7 +11,6 @@ return new class extends Migration
         Schema::table('patologia_concreta', function (Blueprint $table) {
             
             $table->unsignedBigInteger('patologia_general_id')->change();
-            
             $table->foreign('patologia_general_id')->references('id')->on('patologia_general');
 
             
