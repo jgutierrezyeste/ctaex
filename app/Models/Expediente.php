@@ -153,4 +153,9 @@ class Expediente extends Model
         return $this->hasOne(Expediente::class,'expediente_id');
     }
     
+    public function expedienteshistoricios():HasMany
+    {
+        return $this->hasMany(ExpedienteHistorico::class,'expediente_id');
+    }
+    
 }

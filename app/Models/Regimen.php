@@ -38,4 +38,9 @@ class Regimen extends Model
     {
         return $this->belongsToMany(Revision::class,'regimenes_revisiones','regimen_id','revision_id');
     }
+
+    public function expedienteshistoricios():HasMany
+    {
+        return $this->hasMany(ExpedienteHistorico::class,'regimen_id');
+    }
 }
