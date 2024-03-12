@@ -11,8 +11,10 @@ class CarpetaDeceso extends Model
     use HasFactory;
     protected $guarded=['id'];
 
-    public function polizasdecesos():HasMany
+    public function segurosdecesos():HasMany
     {
-        return $this->hasMany(PolizasDeceso::class,'carpeta_id');
+        return $this->hasMany(SeguroDeceso::class,'carpeta_deceso_id');
     }
+
+    
 }

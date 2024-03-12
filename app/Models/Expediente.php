@@ -157,5 +157,10 @@ class Expediente extends Model
     {
         return $this->hasMany(ExpedienteHistorico::class,'expediente_id');
     }
+
+    public function gestionsegurodecesos():HasOne
+    {
+        return $this->hasOne(GestionSeguroDeceso::class,'expediente_id');
+    }
     
 }
