@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('revisiones', function (Blueprint $table) {
             $table->id();
+            
             $table->bigInteger('expediente_id')->nullable()->default(null);
             $table->bigInteger('iniciador_id')->nullable()->default(null);
             $table->date('fecha_revision')->nullable()->default(null);

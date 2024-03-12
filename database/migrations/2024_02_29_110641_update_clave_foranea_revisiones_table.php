@@ -13,6 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('expediente_id')->change();
             $table->foreign('expediente_id')->references('id')->on('expedientes');
 
+            
             $table->unsignedBigInteger('iniciador_id')->change();
             $table->foreign('iniciador_id')->references('id')->on('iniciador_procedimientos');
             
