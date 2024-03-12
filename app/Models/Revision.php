@@ -18,10 +18,7 @@ class Revision extends Model
         return $this->belongsTo(Expediente::class,'expediente_id');
     }
 
-    public function regimenes():BelongsToMany
-    {
-        return $this->belongsToMany(Regimen::class,'regimenes_revisiones','revision_id','regimen_id');
-    }
+    
 
     public function iniciadorprocedimientos():BelongsTo
     {
