@@ -1,0 +1,1 @@
+update iniciador_procedimientos set nombre=upper(nombre)
