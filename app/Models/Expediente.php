@@ -119,10 +119,7 @@ class Expediente extends Model
         return $this->belongsToMany(Prestacion::class,'expediente_prestacion','expediente_id','prestacion_id'); 
     }
 
-    public function polizasdecesos():BelongsTo
-    {
-        return $this->belongsTo(PolizasDeceso::class,'poliza_deceso_id');
-    }
+    
 
     public function patologiasconcretas():BelongsToMany
     {
