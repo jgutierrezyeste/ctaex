@@ -10,19 +10,11 @@ class ExpedienteHistorico extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='expediente_historico';
+    protected $table='historico_expediente';
 
-    public function expedientes():BelongsTo
-    {
-        return $this->belongsTo(Expediente::class,'expediente_id');
-    }
+    
 
-    public function regimenes():BelongsTo
-    {
-        return $this->belongsTo(Regimen::class,'regimen_id');
-    }
-
-    public function tiposregimenes():BelongsTo
+    public function tiposregimen():BelongsTo
     {
         return $this->belongsTo(TipoRegimen::class,'tipo_regimen_id');
     }
