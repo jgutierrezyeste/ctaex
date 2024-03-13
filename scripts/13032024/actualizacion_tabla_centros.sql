@@ -3,6 +3,7 @@ UPDATE centros SET tipo_via = 'CALLE' WHERE tipo_via = 'C';
 UPDATE centros SET tipo_via = 'CALLE' WHERE tipo_via = 'C/';
 UPDATE centros SET tipo_via = 'CALLE' WHERE tipo_via = 'calle';
 UPDATE centros SET tipo_via = 'CAMINO' WHERE tipo_via = 'CMNO.';
+UPDATE centros SET tipo_via = 'CARRETERA' WHERE tipo_via = 'CTRA.';
 UPDATE centros SET tipo_via = 'PASEO' WHERE tipo_via = 'PSO';
 UPDATE centros SET tipo_via = 'PASEO' WHERE tipo_via = 'PSO.';
 UPDATE centros SET tipo_via = 'PLAZA' WHERE tipo_via = 'PZA.';
