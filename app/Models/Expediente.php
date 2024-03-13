@@ -65,7 +65,7 @@ class Expediente extends Model
 
     public function regimenes():BelongsToMany
     {
-        return $this->belongsToMany(Regimen::class,'expedientes_regimenes','expediente_id','regimen_id');
+        return $this->belongsToMany(Regimen::class,'historico_expediente','expediente_id','regimen_id');
     }
 
     public function declaraciones():BelongsToMany
@@ -150,10 +150,7 @@ class Expediente extends Model
         return $this->hasOne(Expediente::class,'expediente_id');
     }
     
-    public function expedienteshistoricios():HasMany
-    {
-        return $this->hasMany(ExpedienteHistorico::class,'expediente_id');
-    }
+    
 
     public function gestionsegurodecesos():HasOne
     {

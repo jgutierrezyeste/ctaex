@@ -16,7 +16,7 @@ class Regimen extends Model
 
     public function expedientes():BelongsToMany
     {
-        return $this->belongsToMany(Expediente::class,'expedientes_regimenes','regimen_id','expediente_id');
+        return $this->belongsToMany(Expediente::class,'historico_expediente','regimen_id','expediente_id');
     }
 
     /*public function remociones():HasMany

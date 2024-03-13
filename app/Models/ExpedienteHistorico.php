@@ -21,4 +21,9 @@ class ExpedienteHistorico extends Model
     {
         return $this->belongsTo(Regimen::class,'regimen_id');
     }
+
+    public function tiposregimenes():BelongsTo
+    {
+        return $this->belongsTo(TipoRegimen::class,'tipo_regimen_id');
+    }
 }

@@ -12,13 +12,10 @@ class TipoRegimen extends Model
     protected $guarded=['id'];
     protected $table='tipos_regimen';
 
-    public function expedientesregimenes():HasMany
+    public function expedienteshistoricos():HasMany
     {
-        return $this->hasMany(ExpedienteRegimen::class,'tipo_regimen_id');
+        return $this->hasMany(ExpedienteHistorico::class,'tipo_regimen_id');
     }
 
-    public function regimenesrevisiones():HasMany
-    {
-        return $this->hasMany(RegimenRevision::class,'tipo_regimen_id');
-    }
+
 }
