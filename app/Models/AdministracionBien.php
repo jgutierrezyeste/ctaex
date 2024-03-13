@@ -12,9 +12,9 @@ class AdministracionBien extends Model
     protected $guarded=['id'];
     protected $table='administracion_bienes';
 
-    public function motivos():BelongsTo
+    public function motivoscancelacion():BelongsTo
     {
-        return $this->belongsTo(Motivo::class,'motivo_id');
+        return $this->belongsTo(Motivo::class,'motivo_cancelacion_id');
     }
 
     public function expedientes():BelongsTo

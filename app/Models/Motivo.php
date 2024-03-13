@@ -18,6 +18,6 @@ class Motivo extends Model
 
     public function administraciones():HasMany
     {
-        return $this->hasMany(AdministracionBien::class,'motivo_id');
+        return $this->hasMany(AdministracionBien::class,'motivo_cancelacion_id');
     }
 }
