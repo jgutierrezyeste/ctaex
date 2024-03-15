@@ -1,5 +1,7 @@
 UPDATE centros SET codigo_postal='';
 
+SET foreign_key_checks = 0;
+
 TRUNCATE table unidades_poblacionales_codigos_postales;
 TRUNCATE table codigos_postales;
 TRUNCATE table unidades_poblacionales;
