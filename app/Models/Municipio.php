@@ -13,9 +13,9 @@ class Municipio extends Model
     protected $guarded=['id'];
     protected $table='municipios';
 
-    public function entidades():HasMany
+    public function unidadespoblacionales():HasMany
     {
-        return $this->hasMany(Entidad::class,'municipio_id');
+        return $this->hasMany(UnidadPoblacional::class,'municipio_id');
     }
 
     public function provincias():BelongsTo

@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Entidad extends Model
+class UnidadPoblacional extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='entidades';
+    protected $table='unidades_poblacionales';
 
     public function provincias():BelongsTo
     {
@@ -22,7 +22,7 @@ class Entidad extends Model
     
     public function codigos_postales():BelongsToMany
     {
-        return $this->belongsToMany(CodigoPostal::class,'entidades_codigos_postales','entidad_id','codigo_postal_id');
+        return $this->belongsToMany(CodigoPostal::class,'unidades_poblacionales_codigos_postales','unidad_poblacional_id','codigo_postal_id');
     }
 
     public function municipios():BelongsTo
