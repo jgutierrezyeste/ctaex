@@ -1,0 +1,12 @@
+INSERT INTO `meses` (`nombre`) VALUES ('ENERO');
+INSERT INTO `meses` (`nombre`) VALUES ('FEBRERO');
+INSERT INTO `meses` (`nombre`) VALUES ('MARZO');
+INSERT INTO `meses` (`nombre`) VALUES ('ABRIL');
+INSERT INTO `meses` (`nombre`) VALUES ('MAYO');
+INSERT INTO `meses` (`nombre`) VALUES ('JUNIO');
+INSERT INTO `meses` (`nombre`) VALUES ('JULIO');
+INSERT INTO `meses` (`nombre`) VALUES ('AGOSTO');
+INSERT INTO `meses` (`nombre`) VALUES ('SEPTIEMBRE');
+INSERT INTO `meses` (`nombre`) VALUES ('OCTUBRE');
+INSERT INTO `meses` (`nombre`) VALUES ('NOVIEMBRE');
+INSERT INTO `meses` (`nombre`) VALUES ('DICIEMBRE');
