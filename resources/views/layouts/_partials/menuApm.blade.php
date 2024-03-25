@@ -8,13 +8,14 @@
     <li> <a href="{{ route('entidadesbancarias.index') }}"><h1>Entidades Bancarias</h1></a></li>
     
     <li> <h1>Aspectos judiciales:</h1>
-        <ul style="--cantidad-items:4">
+        <ul style="--cantidad-items:5">
             <li> <a href="{{ route('juzgados.index') }}"><h1>Juzgados</h1></a></li>
            
       
             <li> <a href="{{ route('figuras.index') }}"><h1>Figuras</h1></a></li>
             <li> <a href="{{ route('procedimientosJudiciales.index') }}"><h1>Procedimientos Judiciales</h1></a></li>
             <li> <a href="{{ route('motivos.index') }}"><h1>Motivos</h1></a></li>
+            <li> <a href="{{ route('autorizacion.index') }}"><h1>Autorizaciones</h1></a></li>
             
             
             

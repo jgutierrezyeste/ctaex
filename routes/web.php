@@ -3,6 +3,8 @@
 use App\Http\Controllers\ApmController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\AseguradoraController;
+use App\Http\Controllers\AutorizacionController;
+
 use App\Http\Controllers\AñoController;
 use App\Http\Controllers\CarpetaDecesoController;
 use App\Http\Controllers\CentroController;
@@ -69,6 +71,7 @@ Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacio
 
 Route::resource('/relaciones',RelacionController::class);
 Route::resource('/aseguradoras',AseguradoraController::class);
+Route::resource('/autorizacion',AutorizacionController::class);
 Route::resource('/entidadesbancarias',EntidadBancariaController::class);
 Route::resource('/años',AñoController::class);
 Route::resource('/empleados',EmpleadoController::class);
