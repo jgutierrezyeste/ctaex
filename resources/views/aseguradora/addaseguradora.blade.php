@@ -14,8 +14,8 @@
 @section ('campos')
 
     <x-div nombreCampo="nombre" ></x-div>
-    <x-div nombreCampo="telefono_avisos" ></x-div>
-    <x-div nombreCampo="telefono_avisos2" ></x-div>
+    <x-div nombreCampo="telefono1" ></x-div>
+    <x-div nombreCampo="telefono2" ></x-div>
 
 @endsection
   

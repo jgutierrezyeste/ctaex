@@ -23,8 +23,8 @@ class AseguradoraRequest extends FormRequest
     {
         return [
             'nombre'=>'required',
-            'telefono_avisos'=>'max:9',
-            'telefono_avisos2'=>'max:9',
+            'telefono1'=>'max:9',
+            'telefono2'=>'max:9',
         
         ];
     }

@@ -22,7 +22,7 @@ class EntidadBancariaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'entidad'=>'required|min:3'
+            'nombre'=>'required|min:3'
         ];
     }
 }
