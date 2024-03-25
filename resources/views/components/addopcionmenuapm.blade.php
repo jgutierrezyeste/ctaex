@@ -1,6 +1,7 @@
 
-@props(['titulo','rutaRegreso','rutaGuardar','rutaIndice'])
-
+@props(['titulo','rutaRegreso','rutaGuardar','rutaIndice','campos'])
+@extends ('layouts.landing')
+@section('title','Comision Tutelar de adultos')
 
 @section('subtitle')
 
@@ -12,7 +13,10 @@
     
 <form method ="POST" action ="{{route($rutaGuardar) }}">
     @csrf
-    @yield('campos')
+    
+    @foreach ( $campos as $campo)
+    <x-div nombreCampo="{{ $campo }}" ></x-div>
+    @endforeach
     
     <div class="container">
         <input type="submit" value="Guardar"/>
@@ -26,33 +30,3 @@
 
 
 
-@extends ('layouts.landing')
-@section('title','Aseguradoras')
-@section('subtitle','INSERCION DE ASEGURADORA NUEVA')
-@section('content')
-
-<form method ="POST" action ="{{route('aseguradoras.store')}}">
-    @csrf
-    <div class="container">
-    <label> ASEGURADORA </label>
-    <input type="text" name="aseguradora" /><br/>
-    </div>
-    @error ('aseguradora')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
-    <div class="container">
-    <label> telefono_avisos </label>
-    <input type="text" name="telefono_avisos" /><br/>
-    </div>
-    <div class="container">
-    <label> telefono_avisos2 </label>
-    <input type="text" name="telefono_avisos2" /><br/>
-    </div>
-    
-    <div class="container">
-    <input type="submit" value="Añadir Aseguradora"/>
-    </div>
-
-    <a href="{{route('aseguradoras.index')}}"> Vuelta al listado </a>
-</form>
-@endsection
