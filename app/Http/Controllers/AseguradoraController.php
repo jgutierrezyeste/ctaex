@@ -24,7 +24,7 @@ class AseguradoraController extends Controller
      */
     public function create():View
     {
-        $archivo=fopen("create.txt","w+");
+       
         return view ('aseguradora.addaseguradora');
     }
 
