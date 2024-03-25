@@ -2,23 +2,12 @@
 
 @php
     $ruta_regreso="index_apm";
-    $subtitulo="Aseguradoras";
+    $subtitulo="Añadir Aseguradora nueva";
     $rutaGuardar="aseguradoras.store";
     $rutaIndice="aseguradoras.index";
-     
+    $campos=['nombre','telefono1','telefono2'];
 
 @endphp
 
-<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice">
-   
-@section ('campos')
-
-    <x-div nombreCampo="nombre" ></x-div>
-    <x-div nombreCampo="telefono1" ></x-div>
-    <x-div nombreCampo="telefono2" ></x-div>
-
-@endsection
-  
-               
-
-</x-addopcionmenuapm>
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>

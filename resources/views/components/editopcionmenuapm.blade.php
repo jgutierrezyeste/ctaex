@@ -1,4 +1,4 @@
-@props(['titulo','rutaRegreso','rutaActualizar','rutaIndice','elementoEdicion'])
+@props(['titulo','rutaRegreso','rutaActualizar','rutaIndice','elementoEdicion','campos'])
 @extends ('layouts.landing')
 @section('title','Comision Tutelar de adultos')
 
@@ -14,7 +14,10 @@
     @method('PUT')
     @csrf
 
-    @yield('campos')
+    @foreach ($campos as $campo)
+    <x-div_edicion nombreCampo="{{ $campo }}" :nombreModelo="$elementoEdicion" ></x-div_edicion>
+    
+    @endforeach
     
     <div class="container">
         <input type="submit" value="Actualizar"/>
