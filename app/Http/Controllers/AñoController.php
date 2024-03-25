@@ -16,27 +16,27 @@ class AñoController extends Controller
     public function index()
     {
         $años=Año::all();
-        return view ('año.año', compact ('años'));
+        return view ('años.año', compact ('años'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create():View
     {
-        return view ('año.addaño');
+        
+        return view ('años.addaño');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(AñoRequest $request)
+    public function store(AñoRequest $request):RedirectResponse
     {
         Año::create([
-            'año'=> $request->año
-            
+            'nombre'=> $request->nombre    
         ]);
-        return redirect()->route('años.index')->with('success','Añp nuevo añadido');
+        return redirect()->route('años.index')->with('success','Año nuevo añadido');
     }
 
     /**
@@ -52,7 +52,7 @@ class AñoController extends Controller
      */
     public function edit(Año $año):View
     {
-        return view ('año.editaño',compact ('año'));
+        return view ('años.editaño',compact ('año'));
     }
 
     /**

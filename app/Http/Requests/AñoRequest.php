@@ -22,7 +22,7 @@ class AñoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre'=>'required|max:4'
+            'nombre'=>'required|max:4|min:4'
         ];
     }
 }
