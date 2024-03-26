@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Patologia')
-@section('subtitle','INSERCION DE PATOLOGIA CONCRETA')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir patología concreta nueva";
+    $rutaGuardar="patologiasConcretas.store";
+    $rutaIndice="patologiasConcretas.index";
+    $campos=['nombre','patologia_general_id'];
 
-<form method ="POST" action ="{{route('patologiasConcretas.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Patologia"/>
-        </div>
+@endphp
 
-    <a href="{{route('patologiasConcretas.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
