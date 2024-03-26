@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Juzgados')
-@section('subtitle','Juzgados ')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Juzgados";
+    $rutaEdicion="juzgados.edit";
+    $rutaDelete="juzgados.destroy";
+    $rutaAniadir="juzgados.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Juzgados</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($juzgados as $juzgado)  
-                <tr> 
-                    <td>{{ $juzgado->nombre }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('juzgados.edit',$juzgado->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('juzgados.destroy',$juzgado->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('juzgados.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR JUZGADO" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $juzgado->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$juzgado"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$juzgado"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>

@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Juzgado')
-@section('subtitle','INSERCION DE JUZGADO')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir juzgado nuevo";
+    $rutaGuardar="juzgados.store";
+    $rutaIndice="juzgados.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('juzgados.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Juzgado"/>
-        </div>
+@endphp
 
-    <a href="{{route('juzgados.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
