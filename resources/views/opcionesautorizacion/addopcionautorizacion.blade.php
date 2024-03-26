@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Opción de Autorizacion')
-@section('subtitle','INSERCION DE OPCION DE AUTORIZACION')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir opcion autorizacion nuevo";
+    $rutaGuardar="opcionAutorizacion.store";
+    $rutaIndice="opcionAutorizacion.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('opcionAutorizacion.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Opción Autorizacion"/>
-        </div>
+@endphp
 
-    <a href="{{route('opcionAutorizacion.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>

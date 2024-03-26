@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Opción Autorización')
-@section('subtitle','LISTADO DE OPCIONES DE AUTORIZACION ')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Opciones autorizacion";
+    $rutaEdicion="opcionAutorizacion.edit";
+    $rutaDelete="opcionAutorizacion.destroy";
+    $rutaAniadir="opcionAutorizacion.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Opciones</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($opciones as $opcion)  
-                <tr> 
-                    <td>{{ $opcion->nombre }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('opcionAutorizacion.edit',$opcion->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('opcionAutorizacion.destroy',$opcion->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('opcionAutorizacion.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR OPCION DE AUTORIZACION" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $opcion->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$opcion"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$opcion"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>
