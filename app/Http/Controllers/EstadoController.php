@@ -13,7 +13,7 @@ class EstadoController extends Controller
     public function index():View
     {
         $estados=Estado::all();
-        return view('situaciones.situacion', compact('estados'));
+        return view('estados.estado', compact('estados'));
     }
 
     /**
@@ -21,7 +21,7 @@ class EstadoController extends Controller
      */
     public function create():View
     {
-        return view('situaciones.addsituacion');
+        return view('estados.addestado');
     }
 
     /**
@@ -46,7 +46,7 @@ class EstadoController extends Controller
      */
     public function edit(Estado $estado):View
     {
-        return view('situaciones.editsituacion', compact('estado'));
+        return view('estados.editestado', compact('estado'));
     }
 
     /**
