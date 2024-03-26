@@ -1,77 +1,29 @@
-@extends ('layouts.landing')
-@section('title','REGÍMENES')
-@section('subtitle','LISTADO DE REGÍMENES ')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Regimenes";
+    $rutaEdicion="regimenes.edit";
+    $rutaDelete="regimenes.destroy";
+    $rutaAniadir="regimenes.create"; 
+    $campos=['nombre','abreviatura'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Nombre</td>
-            <td>Abreviatura</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
-            @foreach ($regimenes as $regimen)  
-                <tr> 
-                    <td>{{ $regimen->nombre }}</td>
-                    <td>{{ $regimen->abreviatura }}</td>
-                    <td>
-                        <form method="GET" action="{{route('regimenes.edit',$regimen->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('regimenes.destroy',$regimen->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
+@endphp
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Regimen</td>
-            <td>expte</td>
-           
-            
-            
-        </thead>
-        <tbody>
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($regimenes as $regimen)  
-               
-                    <tr>
-                        <td>{{ $regimen-> nombre?? '' }}</td> 
-                        <td>@foreach ($regimen->expedientes as $expediente)
-                            {{ $expediente->expte }}
-                            
-                        @endforeach</td>
-                        </tr>
-                     
-                    
-         
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $regimen->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$regimen"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$regimen"></x-boton_editar>
+                </td>
+            </tr>
+            
             @endforeach  
-            
-            
-        </tbody>
-    </table>
-</div>
-
-    
-    <form method="GET" action="{{route('regimenes.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR REGIMEN" />
-    </form>
-@endsection
+                
+    @endsection
+</x-mostrarmenusapm>

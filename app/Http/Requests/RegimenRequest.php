@@ -22,8 +22,8 @@ class RegimenRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'alcance'=>'required|max:255',
-            'codigo_alcance'=>'required|max:4|min:2'
+            'nombre'=>'required|max:255',
+            'abreviatura'=>'required|max:4|min:2'
         ];
     }
 }

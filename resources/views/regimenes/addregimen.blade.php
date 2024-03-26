@@ -1,23 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Régimen')
-@section('subtitle','INSERCION DE REGIMEN')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir regimen nuevo";
+    $rutaGuardar="regimenes.store";
+    $rutaIndice="regimenes.index";
+    $campos=['nombre','abreviatura'];
 
-<form method ="POST" action ="{{route('regimenes.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    @component('_components.div')
-    @slot('nombre_campo','abreviatura')
-    @endcomponent
+@endphp
 
-    <div class="container">
-        <input type="submit" value="Añadir Regimen"/>
-        </div>
-
-    <a href="{{route('regimenes.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
-    
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
