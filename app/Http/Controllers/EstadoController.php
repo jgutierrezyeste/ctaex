@@ -30,7 +30,7 @@ class EstadoController extends Controller
     public function store(EstadoRequest $request):RedirectResponse
     {
         Estado::create($request->all());
-        return redirect()->route('estado.index')->with('success','Estado  añadido');
+        return redirect()->route('estados.index')->with('success','Estado  añadido');
     }
 
     /**
@@ -55,7 +55,7 @@ class EstadoController extends Controller
     public function update(EstadoRequest $request, Estado $estado):RedirectResponse
     {
        $estado->update($request->all());
-       return redirect()->route('estado.index')->with('success','Actualizado estado'); 
+       return redirect()->route('estados.index')->with('success','Actualizado estado'); 
     }
 
     /**
@@ -64,7 +64,7 @@ class EstadoController extends Controller
     public function destroy(Estado $estado)
     {
         $estado->delete();
-        return redirect()->route('estado.index')->with('danger','Eliminado estado'); 
+        return redirect()->route('estados.index')->with('danger','Eliminado estado'); 
 
     }
 }

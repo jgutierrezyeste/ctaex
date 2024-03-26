@@ -13,7 +13,7 @@
             @foreach ($estados as $estado)  
             <tr> 
                 @foreach ($campos as $campo)
-                <td class="columna_datos">{{ $autorizacion->$campo }}</td>
+                <td class="columna_datos">{{ $estado->$campo }}</td>
                 @endforeach
                 <td>
                     <x-boton_editar :ruta="$rutaEdicion" :elemento="$estado"></x-boton_editar>
