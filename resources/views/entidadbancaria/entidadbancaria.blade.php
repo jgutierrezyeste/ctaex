@@ -1,42 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Entidades Bancarias')
-@section('subtitle','Entidades Bancarias')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Entidades bancarias";
+    $rutaEdicion="entidadesbancarias.edit";
+    $rutaDelete="entidadesbancarias.destroy";
+    $rutaAniadir="entidadesbancarias.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
+            @foreach ($entidadesbancarias as $entidadbancaria)  
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $entidadbancaria->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$entidadbancaria"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$entidadbancaria"></x-boton_editar>
+                </td>
+            </tr>
             
-            <td>ENTIDADES BANCARIAS</td>
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
-            @foreach ($entidadesbancarias as $entidadesbancaria)  
-                <tr> 
-                    <td>{{ $entidadesbancaria->nombre }}</td>
-                    <td>
-                        <form method="GET" action="{{route('entidadesbancarias.edit', $entidadesbancaria->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('entidadesbancarias.destroy', $entidadesbancaria->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('entidadesbancarias.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR ENTIDAD BANCARIA" />
-    </form>
-@endsection
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>
