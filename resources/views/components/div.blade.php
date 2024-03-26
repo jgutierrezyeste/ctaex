@@ -1,6 +1,6 @@
 @props(['nombreCampo'])
 <div class="container">
-    <label> {{ $nombreCampo }} </label>
+    <label> {{ strtoupper($nombreCampo) }} </label>
     <input type="text" name="{{ $nombreCampo }}" /><br/>
 </div>
 @error ($nombreCampo)

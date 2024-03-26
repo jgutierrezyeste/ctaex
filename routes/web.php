@@ -105,7 +105,7 @@ Route::resource('/figuras',FiguraController::class);
 Route::resource('/representantes',RepresentanteController::class);
 Route::resource('/segurosMedicos',SeguroMedicoController::class);
 Route::resource('/sexo',SexoController::class);
-Route::resource('/estado',EstadoController::class);
+Route::resource('/estados',EstadoController::class);
 Route::resource('/trabajadoresSociales',TrabajadorSocialController::class);
 Route::resource('/tiposVia',TipoViaController::class);
 Route::resource('/tiposRestitucion',TipoRestitucionController::class);
