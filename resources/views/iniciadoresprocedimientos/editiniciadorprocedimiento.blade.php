@@ -1,28 +1,10 @@
-@extends ('layouts.landing')
-@section('title','Iniciador Procedimiento')
-@section('subtitle','Iniciador Procedimiento')
+@php
+    $rutaRegreso="index_apm";
+    $subtitulo="Edicion de Iniciadores de procedimiento";
+    $rutaActualizar="iniciadorProcedimiento.update";
+    $rutaIndice="iniciadorProcedimiento.index";
+    $campos=['nombre'];
+@endphp
 
-@section('content')
-
-<form method ="POST" action ="{{route('iniciadorProcedimiento.update', $iniciadorProcedimiento->id)}}">
-    
-    @method('PUT')
-    @csrf
-    <div class="container">
-    <label>  INICIADOR </label>
-    <input type="text" name="nombre" value="{{ $iniciadorProcedimiento->nombre }}"/>
-    </div>
-    
-    @error('iniciador')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
-    
-
-    <div class="container">
-        <input type="submit" value="Actualizar Iniciador Procedimiento"/>
-        </div>
-
-    <a href="{{route('iniciadorProcedimiento.index')}}"> Vuelta al listado </a>
-</form>
-
-@endsection
+<x-editopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :rutaActualizar="$rutaActualizar" :rutaIndice="$rutaIndice" :elementoEdicion="$iniciadorProcedimiento" :campos="$campos" >
+</x-editopcionmenuapm>

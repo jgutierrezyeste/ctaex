@@ -22,7 +22,7 @@ class IniciadorProcedimientoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'iniciador'=>'required'
+            'nombre'=>'required'
         ];
     }
 }

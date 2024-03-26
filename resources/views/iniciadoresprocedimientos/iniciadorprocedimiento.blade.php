@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Iniciador Procedimiento')
-@section('subtitle','Iniciador Procedimiento')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Iniciadores Procedimientos";
+    $rutaEdicion="iniciadorProcedimiento.edit";
+    $rutaDelete="iniciadorProcedimiento.destroy";
+    $rutaAniadir="iniciadorProcedimiento.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Iniciadores</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($iniciadores as $iniciador)  
-                <tr> 
-                    <td>{{ $iniciador->nombre }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('iniciadorProcedimiento.edit',$iniciador->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('iniciadorProcedimiento.destroy',$iniciador->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('iniciadorProcedimiento.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR PROCEDIMIENTO" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $iniciador->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$iniciador"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$iniciador"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>

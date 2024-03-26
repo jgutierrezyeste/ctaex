@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Iniciador Procedimiento')
-@section('subtitle','INSERCION DE INICIADOR PROCEDIMIENTO')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir Iniciador procedimiento nuevo";
+    $rutaGuardar="iniciadorProcedimiento.store";
+    $rutaIndice="iniciadorProcedimiento.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('iniciadorProcedimiento.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Iniciador Procedimiento"/>
-        </div>
+@endphp
 
-    <a href="{{route('iniciadorProcedimiento.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
