@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Grados dependencia')
-@section('subtitle','INSERCION DE GRADOS DEPENDENCIA')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir Grado nuevo";
+    $rutaGuardar="gradosDependencia.store";
+    $rutaIndice="gradosDependencia.index";
+    $campos=['grado'];
 
-<form method ="POST" action ="{{route('gradosDependencia.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','grado')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Grado"/>
-        </div>
+@endphp
 
-    <a href="{{route('gradosDependencia.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
