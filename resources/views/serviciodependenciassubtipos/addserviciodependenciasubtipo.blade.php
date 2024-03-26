@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Servicio Dependencias Subtipo')
-@section('subtitle','INSERCION DE SERVICIO DEPENDENCIA SUBTIPO')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo=" Añadir Dependencia Servicio Subtipo";
+    $rutaGuardar="subtipoDependencias.store";
+    $rutaIndice="subtipoDependencias.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('subtipoDependencias.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Servicio Dependencia Subtipo"/>
-        </div>
+@endphp
 
-    <a href="{{route('subtipoDependencias.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>

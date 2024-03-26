@@ -22,7 +22,7 @@ class DependenciaServicioSubtipoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'servicio_subtipo'=>'required'
+            'nombre'=>'required'
         ];
     }
 }
