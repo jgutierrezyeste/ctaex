@@ -74,7 +74,7 @@
     
     <li> <a href="{{ route('regimenes.index') }}"><h1>Regimenes</h1></a></li>
     
-    
+    <li> <a href="{{ route('carpetas.index') }}"><h1>Carpetas Decesos</h1></a></li>
 
 </ul>
 </nav>
