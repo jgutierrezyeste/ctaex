@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Figuras')
-@section('subtitle','INSERCION DE FIGURA')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir Figura nueva";
+    $rutaGuardar="figuras.store";
+    $rutaIndice="figuras.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('figuras.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Figura"/>
-        </div>
+@endphp
 
-    <a href="{{route('figuras.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
