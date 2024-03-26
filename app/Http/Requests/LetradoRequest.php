@@ -22,7 +22,7 @@ class LetradoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'letrado'=>'required'
+            'nombre'=>'required'
         ];
     }
 }

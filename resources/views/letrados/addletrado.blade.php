@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Letrado')
-@section('subtitle','INSERCION DE LETRADO')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir letrado nuevo";
+    $rutaGuardar="letrados.store";
+    $rutaIndice="letrados.index";
+    $campos=['nombre','apellido1','apellido2'];
 
-<form method ="POST" action ="{{route('letrados.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','letrado')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Letrado"/>
-        </div>
+@endphp
 
-    <a href="{{route('letrados.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
