@@ -33,8 +33,8 @@ class CentroController extends Controller
     public function store(CentroRequest $request): RedirectResponse
     {
         /*Centro::create([
-            'nombre_centro'=> $request->nombre_centro,
-            'tipo_via'=> $request->tipo_via,
+            'nombre'=> $request->nombre_centro,
+            'tipo_via_id'=> $request->tipo_via_id,
             'direccion'=> $request->direccion,
             'numero'=>$request->numero,
             'planta'=> $request->planta, 
@@ -83,6 +83,6 @@ class CentroController extends Controller
     public function destroy(Centro $centro)
     {
         $centro->delete();
-        return redirect()->route('centros.index')->with('danger','Centro eliminada');
+        return redirect()->route('centros.index')->with('danger','Centro eliminado');
     }
 }

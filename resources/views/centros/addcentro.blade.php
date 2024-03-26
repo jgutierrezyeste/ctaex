@@ -1,71 +1,12 @@
-@extends ('layouts.landing')
-@section('title','Centros')
-@section('subtitle','INSERCION DE CENTRO NUEVO')
-@section('content')
-
-<form method ="POST" action ="{{route('centros.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    @component('_components.div')
-        @slot('nombre_campo','tipo_via')
-    @endcomponent
-
-    @component('_components.div')t
-        @slot('nombre_campo','direccion')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','numero')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','planta')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','poblacion')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','provincia')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','codigo_postal')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','telefono')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','telefono2')
-    @endcomponent
-
-    @component('_components.div')
-        @slot('nombre_campo','fax')
-    @endcomponent
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir Centro nuevo";
+    $rutaGuardar="centros.store";
+    $rutaIndice="centros.index";
+    $campos=['nombre','tipo_via_id','direccion','numero','planta','letra','codigo_postal_id','telefono','telefono2','fax','correo_electronico','observaciones'];
 
 
-    @component('_components.div')
-    @slot('nombre_campo','fax2')
-    @endcomponent  
-    
-    @component('_components.div')
-        @slot('nombre_campo','correo_electronico')
-    @endcomponent
+@endphp
 
-    @component('_components.div')
-        @slot('nombre_campo','observaciones')
-    @endcomponent
-
-    <div class="container">
-    <input type="submit" value="Añadir Centro"/>
-    </div>
-
-    <a href="{{route('centros.index')}}"> Vuelta al listado </a>
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>

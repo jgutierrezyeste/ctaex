@@ -22,15 +22,15 @@ class CentroRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre_centro'=>'required',
-            'tipo_via'=>'required',
+            'nombre'=>'required',
+            'tipo_via_id'=>'required',
             'direccion'=>'required',
             'numero'=>'required',
-            'poblacion'=>'required',
-            'provincia'=>'required',
-            'codigo_postal'=>'required',
+            
+            
             'telefono'=>'required|min:9|max:9',
             'correo_electronico'=>'nullable|email'
         ];
     }
 }
+$campos=['nombre','tipo_via_id','direccion','numero','planta','letra','codigo_postal_id','telefono','telefono2','fax','correo_electronico','observaciones'];
