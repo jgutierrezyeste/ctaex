@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Nivel de Dependencia')
-@section('subtitle','INSERCION DE NIVEL DE DEPENDENCIA')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir nivel dependencia nuevo";
+    $rutaGuardar="nivelDependencias.store";
+    $rutaIndice="nivelDependencias.index";
+    $campos=['nivel'];
 
-<form method ="POST" action ="{{route('nivelDependencias.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nivel')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Nivel Dependencia"/>
-        </div>
+@endphp
 
-    <a href="{{route('nivelDependencias.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
