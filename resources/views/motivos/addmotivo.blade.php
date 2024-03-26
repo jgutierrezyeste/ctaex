@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Motivo')
-@section('subtitle','INSERCION DE MOTIVO')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir motivo nuevo";
+    $rutaGuardar="motivos.store";
+    $rutaIndice="motivos.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('motivos.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Motivo"/>
-        </div>
+@endphp
 
-    <a href="{{route('motivos.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
