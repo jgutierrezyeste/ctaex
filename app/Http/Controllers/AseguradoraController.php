@@ -35,8 +35,8 @@ class AseguradoraController extends Controller
     {
         Aseguradora::create([
             'nombre'=> $request->nombre,
-            'telefono_avisos'=>$request->telefono_avisos,
-            'telefono_avisos2'=>$request->telefono_avisos2    
+            'telefono1'=>$request->telefono1,
+            'telefono2'=>$request->telefono2    
         ]);
         return redirect()->route('aseguradoras.index')->with('success','Aseguradora nueva añadido');
     }
