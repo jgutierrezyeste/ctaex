@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Prestaciones dependencias')
-@section('subtitle','LISTADO DE PRESTACIONES DE DEPENDENCIA')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Prestaciones dependencias";
+    $rutaEdicion="prestacionDependencias.edit";
+    $rutaDelete="prestacionDependencias.destroy";
+    $rutaAniadir="prestacionDependencias.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>prestaciones Dependencias</td>
-            
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($prestaciones as $prestacion)  
-                <tr> 
-                    <td>{{ $prestacion->nombre }}</td>
-                  
-                    <td>
-                        <form method="GET" action="{{route('prestacionDependencias.edit',$prestacion->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('prestacionDependencias.destroy',$prestacion->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('prestacionDependencias.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR PRESTACION DEPENDENCIA" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $prestacion->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$prestacion"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$prestacion"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>

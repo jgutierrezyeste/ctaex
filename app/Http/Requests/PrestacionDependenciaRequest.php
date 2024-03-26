@@ -22,7 +22,7 @@ class PrestacionDependenciaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'prestacion_dependencia'=>'required'
+            'nombre'=>'required'
         ];
     }
 }
