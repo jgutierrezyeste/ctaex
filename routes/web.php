@@ -45,7 +45,12 @@ use App\Http\Controllers\AdministracionBienController;
 use App\Http\Controllers\TipoViaController;
 
 use App\Http\Controllers\MenuController;
-
+use App\Http\Controllers\ModoResolucionController;
+use App\Http\Controllers\RepresentanteController;
+use App\Http\Controllers\TipoRegimenController;
+use App\Http\Controllers\TipoRendicionAnualController;
+use App\Http\Controllers\TipoRestitucionController;
+use App\Models\TipoRestitucion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -75,7 +80,7 @@ Route::resource('/autorizacion',AutorizacionController::class);
 Route::resource('/entidadesbancarias',EntidadBancariaController::class);
 Route::resource('/años',AñoController::class);
 Route::resource('/empleados',EmpleadoController::class);
-Route::resource('/decesos',CarpetaDecesoController::class);
+Route::resource('/carpetas',CarpetaDecesoController::class);
 Route::resource('/centros',CentroController::class);
 Route::resource('/serviciosDependencias',DependenciaSevicioController::class);
 Route::resource('/subtipoDependencias',DependenciaServicioSubtipoController::class);
@@ -85,6 +90,7 @@ Route::resource('/gradosDependencia',GradoDependenciaController::class);
 Route::resource('/iniciadorProcedimiento',IniciadorProcedimientoController::class);
 Route::resource('/juzgados',JuzgadoController::class);
 Route::resource('/letrados',LetradoController::class);
+Route::resource('/resolucionModos',ModoResolucionController::class);
 Route::resource('/motivos',MotivoController::class);
 Route::resource('/nacionalidades',NacionalidadController::class);
 Route::resource('/nivelDependencias',NivelDependenciaController::class);
@@ -96,11 +102,15 @@ Route::resource('/prestacionDependencias',PrestacionDependenciaController::class
 Route::resource('/procedimientosJudiciales',ProcedimientoJudicialController::class);
 Route::resource('/provincias',ProvinciaController::class);
 Route::resource('/figuras',FiguraController::class);
+Route::resource('/representantes',RepresentanteController::class);
 Route::resource('/segurosMedicos',SeguroMedicoController::class);
 Route::resource('/sexo',SexoController::class);
 Route::resource('/estado',EstadoController::class);
 Route::resource('/trabajadoresSociales',TrabajadorSocialController::class);
 Route::resource('/tiposVia',TipoViaController::class);
+Route::resource('/tiposRestitucion',TipoRestitucionController::class);
+Route::resource('/tiposRendicionAnual',TipoRendicionAnualController::class);
+Route::resource('/tiposRegimen',TipoRegimenController::class);
 
 Route::resource('/regimenes',RegimenController::class);
 Route::resource('/expedientes',ExpedienteController::class);
