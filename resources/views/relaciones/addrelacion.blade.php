@@ -1,17 +1,11 @@
-@extends ('layouts.landing')
-@section('title','Relaciones')
-@section('subtitle','INSERCION DE RELACION NUEVA')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir relación nueva";
+    $rutaGuardar="relaciones.store";
+    $rutaIndice="relaciones.index";
+    $campos=['nombre'];
 
-@section('content')
-<form method ="POST" action ="{{route('relaciones.store')}}">
-    @csrf
-    @component('_components.div')
-    @slot('nombre_campo','nombre')
-@endcomponent
-    <div class="container">
-    <input type="submit" value="Añadir Relacion"/>
-    </div>
+@endphp
 
-    <a href="{{route('relaciones.index')}}"> Vuelta al listado </a>
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
