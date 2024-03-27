@@ -1,18 +1,11 @@
-@extends ('layouts.landing')
-@section('title','sEXO')
-@section('subtitle','INSERCION DE SEXO')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir Sexo nuevo";
+    $rutaGuardar="sexo.store";
+    $rutaIndice="sexo.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('sexo.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir sexo"/>
-        </div>
+@endphp
 
-    <a href="{{route('sexo.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>

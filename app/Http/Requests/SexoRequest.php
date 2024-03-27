@@ -22,7 +22,7 @@ class SexoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'sexo'=>'required'
+            'nombre'=>'required'
         ];
     }
 }
