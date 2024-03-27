@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Seguros Médicos')
-@section('subtitle','Seguros Médicos ')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Seguros Medicos";
+    $rutaEdicion="segurosMedicos.edit";
+    $rutaDelete="segurosMedicos.destroy";
+    $rutaAniadir="segurosMedicos.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Seguros Médicos</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($seguros as $seguro)  
-                <tr> 
-                    <td>{{ $seguro->nombre }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('segurosMedicos.edit',$seguro->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('segurosMedicos.destroy',$seguro->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('segurosMedicos.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR SANITARIO" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $seguro->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$seguro"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$seguro"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>
