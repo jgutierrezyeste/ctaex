@@ -11,7 +11,7 @@ class ModoResolucion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='modo_resolucion';
+    protected $table='modos_resolucion';
 
     public function resoluciones():HasMany
     {
