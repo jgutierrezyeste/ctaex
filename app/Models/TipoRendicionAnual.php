@@ -11,7 +11,7 @@ class TipoRendicionAnual extends Model
 
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='tipos_renidicion_anual';
+    protected $table='tipos_rendicion_anual';
 
     public function rendiciones_anuales():HasMany
     {
