@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Servicios Dependencias Subtipo')
-@section('subtitle','Servicios Dependencias Subtipo')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Documentos identificativos";
+    $rutaEdicion="documentosIdentificativos.edit";
+    $rutaDelete="documentosIdentificativos.destroy";
+    $rutaAniadir="documentosIdentificativos.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Documento Identificativo</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($documentos as $documento)  
-                <tr> 
-                    <td>{{ $documento->tipo }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('documentosIdentificativos.edit',$documento->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('documentosIdentificativos.destroy',$documento->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('documentosIdentificativos.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR DOCUMENTO IDENTIFICATIVO" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $documento->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$documento"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$documento"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>

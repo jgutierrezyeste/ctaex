@@ -1,28 +1,10 @@
-@extends ('layouts.landing')
-@section('title','Documento identificativo')
-@section('subtitle','DOCUMENTO IDENTIFICATIVO')
+@php
+    $rutaRegreso="index_apm";
+    $subtitulo="Edicion de documentos identificativos";
+    $rutaActualizar="documentosIdentificativos.update";
+    $rutaIndice="documentosIdentificativos.index";
+    $campos=['nombre'];
+@endphp
 
-@section('content')
-
-<form method ="POST" action ="{{route('documentosIdentificativos.update', $documentosIdentificativo->id)}}">
-    
-    @method('PUT')
-    @csrf
-    <div class="container">
-    <label>  DOCUMENTO IDENTIFICATIVO </label>
-    <input type="text" name="tipo" value="{{ $documentosIdentificativo->tipo }}"/>
-    </div>
-    
-    @error('tipo_documento')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
-    
-
-    <div class="container">
-        <input type="submit" value="Actualizar Tipo Documento"/>
-        </div>
-
-    <a href="{{route('documentosIdentificativos.index')}}"> Vuelta al listado </a>
-</form>
-
-@endsection
+<x-editopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :rutaActualizar="$rutaActualizar" :rutaIndice="$rutaIndice" :elementoEdicion="$documentoIdentificativo" :campos="$campos" >
+</x-editopcionmenuapm>
