@@ -8,16 +8,17 @@
     <li> <a href="{{ route('entidadesbancarias.index') }}"><h1>Entidades Bancarias</h1></a></li>
     
     <li> <h1>Aspectos judiciales:</h1>
-        <ul style="--cantidad-items:5">
+        <ul style="--cantidad-items:9">
             <li> <a href="{{ route('juzgados.index') }}"><h1>Juzgados</h1></a></li>
            
-      
+            <li> <a href="{{ route('iniciadorProcedimiento.index') }}"><h1>Iniciadores procedimientos</h1></a></li>
             <li> <a href="{{ route('figuras.index') }}"><h1>Figuras</h1></a></li>
             <li> <a href="{{ route('procedimientosJudiciales.index') }}"><h1>Procedimientos Judiciales</h1></a></li>
             <li> <a href="{{ route('motivos.index') }}"><h1>Motivos</h1></a></li>
             <li> <a href="{{ route('autorizacion.index') }}"><h1>Autorizaciones</h1></a></li>
-            
-            
+            <li> <a href="{{ route('tiposRestitucion.index') }}"><h1>Tipos Restitucion</h1></a></li>
+            <li> <a href="{{ route('resolucionModos.index') }}"><h1>Modos Resolución</h1></a></li>
+            <li> <a href="{{ route('tiposRendicionAnual.index') }}"><h1>Tipos de Rendiciones anuales</h1></a></li>
             
         </ul>
     </li>
@@ -30,8 +31,10 @@
             <li> <a href="{{ route('letrados.index') }}"><h1>Letrados</h1></a></li>
            
             <li> <a href="{{ route('trabajadoresSociales.index') }}"><h1>Ts Asignados</h1></a></li>
-            <li> <a href="{{ route('iniciadorProcedimiento.index') }}"><h1>Iniciadores procedimientos</h1></a></li>
+            
             <li> <a href="{{ route('relaciones.index') }}"><h1>Relaciones</h1> </a></li>
+            <li> <a href="{{ route('representantes.index') }}"><h1>Representantes legales</h1> </a></li>
+
         </ul>
     </li>
      
@@ -41,7 +44,7 @@
             <li> <a href="{{ route('provincias.index') }}"><h1>Provincias</h1></a></li>
             <li> <a href="{{ route('sexo.index') }}"><h1>Sexos</h1></a></li>
             <li> <a href="{{ route('documentosIdentificativos.index') }}"><h1>Documentos Identificativos</h1></a></li>
-            <li> <a href="{{ route('estado.index') }}"><h1>Estados</h1></a></li>
+            <li> <a href="{{ route('estados.index') }}"><h1>Estados</h1></a></li>
             <li> <a href="{{ route('tiposVia.index') }}"><h1>Tipos Via</h1></a></li>
         </ul>
     </li>
@@ -73,7 +76,7 @@
     <li> <a href="{{ route('años.index') }}"><h1>Años</h1></a></li>
     
     <li> <a href="{{ route('regimenes.index') }}"><h1>Regimenes</h1></a></li>
-    
+    <li> <a href="{{ route('tiposRegimen.index') }}"><h1>Tipos de Regimenes</h1></a></li>
     <li> <a href="{{ route('carpetas.index') }}"><h1>Carpetas Decesos</h1></a></li>
 
 </ul>
