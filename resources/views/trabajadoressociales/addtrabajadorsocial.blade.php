@@ -1,22 +1,11 @@
-@extends ('layouts.landing')
-@section('title',' Trabajador Social')
-@section('subtitle','INSERCION DE TRABAJADOR SOCIAL')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir Trabajador/a Social nuevo/a";
+    $rutaGuardar="trabajadoresSociales.store";
+    $rutaIndice="trabajadoresSociales.index";
+    $campos=['codificacion','nombre'];
 
-<form method ="POST" action ="{{route('trabajadoresSociales.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
+@endphp
 
-    @component('_components.div')
-        @slot('nombre_campo','codificacion')
-    @endcomponent
-    
-    <div class="container">
-        <input type="submit" value="Añadir Trabajador Social"/>
-        </div>
-
-    <a href="{{route('trabajadoresSociales.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
