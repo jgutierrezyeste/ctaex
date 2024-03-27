@@ -1,29 +1,10 @@
-@extends ('layouts.landing')
-@section('title','Tipo Via')
-@section('subtitle','Edición de tipo de vía')
+@php
+    $rutaRegreso="index_apm";
+    $subtitulo="Edicion de Tipos de vía";
+    $rutaActualizar="tiposVia.update";
+    $rutaIndice="tiposVia.index";
+    $campos=['nombre'];
+@endphp
 
-@section('content')
-
-<form method ="POST" action ="{{route('tiposVia.update', $tiposVium->id)}}">
-    
-    @method('PUT')
-    @csrf
-    <div class="container">
-    <label>  TIPOS DE VIA </label>
-    <input type="text" name="nombre" value="{{ $tiposVium->nombre }}"/>
-    </div>
-    
-    @error('nombre')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
-    
-    
-    
-        <div class="container">
-        <input type="submit" value="Actualizar Tipo Via"/>
-        </div>
-
-    <a href="{{route('tiposVia.index')}}"> Vuelta al listado </a>
-</form>
-
-@endsection
+<x-editopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :rutaActualizar="$rutaActualizar" :rutaIndice="$rutaIndice" :elementoEdicion="$tiposVium" :campos="$campos" >
+</x-editopcionmenuapm>

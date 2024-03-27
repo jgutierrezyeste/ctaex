@@ -1,46 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Tipos Via')
-@section('subtitle','LISTADO DE TIPOS DE VIA')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Tipos de vía";
+    $rutaEdicion="tiposVia.edit";
+    $rutaDelete="tiposVia.destroy";
+    $rutaAniadir="tiposVia.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Tipos Via</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($vias as $via)  
-                <tr> 
-                    <td>{{ $via->nombre }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('tiposVia.edit',$via->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('tiposVia.destroy',$via->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-
-
-    
-    <form method="GET" action="{{route('tiposVia.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR TIPO VIA" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $via->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$via"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$via"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>

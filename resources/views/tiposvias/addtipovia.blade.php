@@ -1,20 +1,11 @@
-@extends ('layouts.landing')
-@section('title',' Tipos de Via')
-@section('subtitle','INSERCION DE TIPO VIA')
-@section('content')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Añadir Tipo de vía nuevo";
+    $rutaGuardar="tiposVia.store";
+    $rutaIndice="tiposVia.index";
+    $campos=['nombre'];
 
-<form method ="POST" action ="{{route('tiposVia.store')}}">
-    @csrf
-    @component('_components.div')
-        @slot('nombre_campo','nombre')
-    @endcomponent
+@endphp
 
-    
-    
-    <div class="container">
-        <input type="submit" value="Añadir Tipo Via"/>
-        </div>
-
-    <a href="{{route('tiposVia.index')}}"> Vuelta al listado </a> 
-</form>
-@endsection
+<x-addopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaGuardar="$rutaGuardar" :rutaIndice="$rutaIndice" :campos="$campos" >
+   </x-addopcionmenuapm>
