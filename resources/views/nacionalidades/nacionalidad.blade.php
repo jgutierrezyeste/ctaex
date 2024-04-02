@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Nacionalidades')
-@section('subtitle','Nacionalidades ')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Nacionalidades";
+    $rutaEdicion="nacionalidades.edit";
+    $rutaDelete="nacionalidades.destroy";
+    $rutaAniadir="nacionalidades.create"; 
+    $campos=['nombre'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Nacionalidades</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($nacionalidades as $nacionalidad)  
-                <tr> 
-                    <td>{{ $nacionalidad->nombre }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('nacionalidades.edit',$nacionalidad->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('nacionalidades.destroy',$nacionalidad->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('nacionalidades.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR NACIONALIDAD" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $nacionalidad->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$nacionalidad"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$nacionalidad"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>

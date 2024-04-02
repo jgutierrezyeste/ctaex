@@ -1,28 +1,10 @@
-@extends ('layouts.landing')
-@section('title','Nacionalidad')
-@section('subtitle','Nacionalidad')
+@php
+    $rutaRegreso="index_apm";
+    $subtitulo="Edicion de nacionalidades";
+    $rutaActualizar="nacionalidades.update";
+    $rutaIndice="nacionalidades.index";
+    $campos=['nombre'];
+@endphp
 
-@section('content')
-
-<form method ="POST" action ="{{route('nacionalidades.update', $nacionalidade->id)}}">
-    
-    @method('PUT')
-    @csrf
-    <div class="container">
-    <label>  NACIONALIDAD </label>
-    <input type="text" name="nombre" value="{{ $nacionalidade->nombre }}"/>
-    </div>
-    
-    @error('nacionalidad')
-    <p style ="color:red;">{{ $message }}</p>
-    @enderror
-    
-
-    <div class="container">
-        <input type="submit" value="Actualizar Nacionalidad"/>
-        </div>
-
-    <a href="{{route('nacionalidades.index')}}"> Vuelta al listado </a>
-</form>
-
-@endsection
+<x-editopcionmenuapm :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :rutaActualizar="$rutaActualizar" :rutaIndice="$rutaIndice" :elementoEdicion="$nacionalidade" :campos="$campos" >
+</x-editopcionmenuapm>

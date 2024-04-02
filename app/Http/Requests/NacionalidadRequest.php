@@ -22,7 +22,7 @@ class NacionalidadRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nacionalidad'=>'required'
+            'nombre'=>'required'
         ];
     }
 }
