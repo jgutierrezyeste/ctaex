@@ -65,57 +65,6 @@ class ExpedienteController extends Controller
 
     
 
-    /*public function busquedaModificar (ExpedienteRequest $request)
-    {
-       
-        if ($request->has("id"))
-          $id=$request->get('id');
-        if ($request->has('nombre'))
-            $nombre=$request->get('nombre');
-        if ($request->has('apellido'))
-            $apellido=$request->get('apellido');
-       
-        $expedientes = DB::table('expedientes')
-        ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
-        ->when($id, function ($query) use ($id) {
-            return $query->where('id','=',$id);})
-        ->when($nombre, function ($query) use ($nombre) {
-            return $query->where('nombre','=',$nombre);})
-        ->when($apellido, function ($query) use ($apellido) {
-                return $query->where('apellido','=',$apellido);})
-        ->Paginate(5);
-        
-        return view ('expedientes.showexpedientemodificar',compact('expedientes','id','nombre','apellido'));
-    }
-
-
-    public function busquedaConsulta (ExpedienteRequest $request)
-    {
-        if ($request->has("id"))
-          {
-            $id=$request->get('id');
-            $expte=$request->get('expte');
-          }
-        if ($request->has('nombre'))
-            $nombre=$request->get('nombre');
-        if ($request->has('apellido'))
-            $apellido=$request->get('apellido');
-       
-        $expedientes = DB::table('expedientes')
-        ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
-        ->when($id, function ($query) use ($id) {
-            return $query->where('id','=',$id);})
-        ->when($nombre, function ($query) use ($nombre) {
-            return $query->where('nombre','=',$nombre);})
-        ->when($apellido, function ($query) use ($apellido) {
-                return $query->where('apellido','=',$apellido);})
-        ->Paginate(5);
-        
-        
-        
-        return view ('expedientes.showexpedienteConsulta',compact('expedientes','id','nombre','apellido'));
-    }
-*/
 
 public function busqueda(ExpedienteRequest $request,$vista)
 {
@@ -127,22 +76,22 @@ public function busqueda(ExpedienteRequest $request,$vista)
     }
   if ($request->has('nombre'))
       $nombre=$request->get('nombre');
-  if ($request->has('apellido'))
-      $apellido=$request->get('apellido');
+  if ($request->has('apellido1'))
+      $apellido1=$request->get('apellido1');
  
   $expedientes = DB::table('expedientes')
-  ->select ('id', 'nombre', 'apellido', 'fecha_nacimiento', 'expte','numero_documento')
+  ->select ('id', 'nombre', 'apellido1', 'fecha_nacimiento', 'expte','numero_documento')
   ->when($id, function ($query) use ($id) {
       return $query->where('id','=',$id);})
   ->when($nombre, function ($query) use ($nombre) {
       return $query->where('nombre','=',$nombre);})
-  ->when($apellido, function ($query) use ($apellido) {
-          return $query->where('apellido','=',$apellido);})
+  ->when($apellido1, function ($query) use ($apellido1) {
+          return $query->where('apellido1','=',$apellido1);})
   ->Paginate(5);
   
   
   
-  return view ( $vista ,compact('expedientes','id','nombre','apellido'));
+  return view ( $vista ,compact('expedientes','id','nombre','apellido1'));
 }
 
     /**

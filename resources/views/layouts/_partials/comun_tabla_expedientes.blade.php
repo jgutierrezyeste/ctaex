@@ -29,7 +29,7 @@
         <select id="regimen_inicial" name="regimen_inicial" class="form-control" style="width:100px">
             <option value=""></option>
             @foreach ($regimenes as $regimen)
-            <option value="{{ $regimen['id'] }}">{{ $regimen['regimen'] }}</option>
+            <option value="{{ $regimen['id'] }}">{{ $regimen['nombre'] }}</option>
         @endforeach
             
         </select>
@@ -44,7 +44,7 @@
     </td>
 
     <td width="60%" bgcolor="#FFEBCD">      
-        <input type="text" id="apellido" name="apellido" style="color:blue"/>
+        <input type="text" id="apellido1" name="apellido1" style="color:blue"/>
     </td>
 </tr>
 
