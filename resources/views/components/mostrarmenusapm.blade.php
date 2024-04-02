@@ -12,14 +12,16 @@
 
 @section('content')
     
-    <table width="55%" cellspacing="0" cellpadding ="5" align="center">
+    <table width="auto"cellspacing="0" cellpadding ="5" align="center">
         <thead>
             @foreach ($campos as $campo)
                 <x-td_variable campo_propio={{$campo}} ></x-td_variable>       
       
             @endforeach
             <x-td_variable campo_propio="" tipo="columna_botones"></x-td_variable>
+            <x-td_variable campo_propio="" tipo="columna_botones"></x-td_variable>
         </thead>
+       
         
         <tbody>
             @yield('cuerpo')

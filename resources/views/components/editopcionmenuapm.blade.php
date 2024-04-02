@@ -10,16 +10,20 @@
 
 @section('content')
     
-<form method ="POST" action ="{{route($rutaActualizar,$elementoEdicion->id) }}">
+<form method ="POST" action ="{{route($rutaActualizar,$elementoEdicion->id) }}" >
     @method('PUT')
     @csrf
+    
 
-    @foreach ($campos as $campo)
-    <x-div_edicion nombreCampo="{{ $campo }}" :nombreModelo="$elementoEdicion" ></x-div_edicion>
-    
-    @endforeach
-    
-    <div class="container">
+    <table width="100%" cellspacing="0" cellpadding ="5" align="center">
+        @foreach ($campos as $campo)
+        <td>
+        <x-div_edicion nombreCampo="{{ $campo }}" :nombreModelo="$elementoEdicion" ></x-div_edicion>
+        </td>
+        @endforeach
+        
+    </table>
+    <div class="container" align="center">
         <input type="submit" value="Actualizar"/>
     </div>
 </form>

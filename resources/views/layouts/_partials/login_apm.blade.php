@@ -1,5 +1,5 @@
-<div class="login">
-    <div class="misma_linea">
+<div class="login" align="center">
+    <div class="misma_linea" >
         @include('layouts._partials.user')
         <label style="width:50%"> Usuario </label>
         <input style="width:50%" type="text" name="Usuario"/><br/>

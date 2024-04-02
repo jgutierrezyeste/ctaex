@@ -11,16 +11,20 @@
 
 @section('content')
     
-<form method ="POST" action ="{{route($rutaGuardar) }}">
+<form method ="POST" action ="{{route($rutaGuardar) }}" >
     @csrf
-    
-    @foreach ( $campos as $campo)
-    <x-div nombreCampo="{{ $campo }}" ></x-div>
+    <table width="100%" cellspacing="0" cellpadding ="5" align="center">
+        @foreach ($campos as $campo)
+        <td>
+        <x-div nombreCampo="{{ $campo }}"></x-div>
+        </td>
     @endforeach
-    
-    <div class="container">
-        <input type="submit" value="Guardar"/>
+        
+    </table>
+        <div class="container" align="center">
+         <input type="submit" value="Guardar"/>
     </div>
+    
 </form>
 <x-boton_indicemenu :ruta="$rutaIndice"></x-boton_indicemenu>
 @endsection
