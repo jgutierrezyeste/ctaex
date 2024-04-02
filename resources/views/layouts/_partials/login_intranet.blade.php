@@ -1,4 +1,4 @@
-<div class="login">
+<div class="login" align="center">
     <div class="misma_linea">
         @include('layouts._partials.user')
         <label style="width:50%"> Usuario </label>
