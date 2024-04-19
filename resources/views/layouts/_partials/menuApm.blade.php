@@ -78,6 +78,8 @@
     <li> <a href="{{ route('regimenes.index') }}"><h1>Regimenes</h1></a></li>
     <li> <a href="{{ route('tiposRegimen.index') }}"><h1>Tipos de Regimenes</h1></a></li>
     <li> <a href="{{ route('carpetas.index') }}"><h1>Carpetas Decesos</h1></a></li>
+    <li> <a href="{{ route('provincias.index') }}"><h1>Provincias</h1></a></li>
 
 </ul>
 </nav>
+<a href="{{route('acceso_aplicativo')}}"> Vuelta al menú principal </a>

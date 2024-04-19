@@ -11,9 +11,9 @@
    
 </head>
 <body>
-    
-    
-
+    <div align="right">
+    <x-cierre_sesion ruta="cerrar_sesion"></x-cierre_sesion>
+    </div>
     <table width="100%" border="0">
         <tbody>
             <tr>

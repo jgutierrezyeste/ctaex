@@ -3,19 +3,20 @@
     <tbody>
         <tr>
             <td width="33%" align="left">
-                   <x-back_principal  :ruta="$ruta"></x-back_principal>
+               
+                <x-back_principal  :ruta="$ruta"></x-back_principal>
             </td>
             <td align="center">
                 <font size ="6" color="DarkOrange" >
                     <b> {{ $titulo }} </b>
                 </font>
-            </br>
-                <font size ="5" color="DarkOrange" >
-                    <b> {{ $subtitulo }} </b>
-                </font>
             </td>
-           
-            <td width="33%"></td>
+            <td width="33%" align ="center">
+                
+                <x-cierre_sesion ruta="cerrar_sesion"></x-cierre_sesion>
+            </td>
+            
         </tr>
     </tbody>
 </table>
+

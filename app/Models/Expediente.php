@@ -156,5 +156,9 @@ class Expediente extends Model
     {
         return $this->hasOne(GestionSeguroDeceso::class,'expediente_id');
     }
+    public function rendiciones():BelongsTo
+    {
+        return $this->belongsTo(Rendicion::class,'expediente_id');
+    }
     
 }

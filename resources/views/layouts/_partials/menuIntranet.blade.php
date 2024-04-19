@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="{{ asset('menu-submenus.css')}}">
 
-
 <ul class="nav">
     <li> <h1>EXPEDIENTES</h1>
         <ul style="--cantidad-items:5">
@@ -125,7 +124,9 @@
             
         </ul>
     </li>
+    <li><a href="{{ route('index_apm') }}"><h1>Mantenimiento</h1></a></li>
+
     
 </ul>
 
-<a href="{{route('principal')}}"> Vuelta al menú principal </a> 
+

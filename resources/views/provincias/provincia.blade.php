@@ -1,44 +1,29 @@
-@extends ('layouts.landing')
-@section('title','Provincias')
-@section('subtitle','Provincias ')
+@php
+    $ruta_regreso="index_apm";
+    $subtitulo="Provincias";
+    $rutaEdicion="provincias.edit";
+    $rutaDelete="provincias.destroy";
+    $rutaAniadir="provincias.create"; 
+    $campos=['nombre','patologia_general_id'];
 
-@section('content')
-<div class="table table-responsive">   
-<table class="table table-sm table-bordered">
-        <thead >
-            
-            <td>Provincias</td>
-           
-            <td></td>
-            <td></td>
-            
-        </thead>
-        <tbody>
+@endphp
+
+<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+    @section('cuerpo')
             @foreach ($provincias as $provincia)  
-                <tr> 
-                    <td>{{ $provincia->nombre }}</td>
-                    
-                    <td>
-                        <form method="GET" action="{{route('provincias.edit',$provincia->id) }}">
-                        @csrf
-                        <input type="submit" value = "EDIT" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="POST" action="{{route('provincias.destroy',$provincia->id) }}">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value = "DELETE" />
-                        </form>
-                    </td>
-                </tr>
-            @endforeach     
-        </tbody>
-    </table>
-</div>
-    
-    <form method="GET" action="{{route('provincias.create') }}">
-        @csrf
-        <input type="submit" value = "AÑADIR PROVINCIA" />
-    </form>
-@endsection
+            <tr> 
+                @foreach ($campos as $campo)
+                <td class="columna_datos">{{ $provincia->$campo }}</td>
+                @endforeach
+                <td>
+                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$provincia"></x-boton_editar>
+                </td>
+                <td>
+                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$provincia"></x-boton_editar>
+                </td>
+            </tr>
+            
+            @endforeach  
+                
+    @endsection
+</x-mostrarmenusapm>

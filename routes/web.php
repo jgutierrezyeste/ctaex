@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccesoController;
 use App\Http\Controllers\ApmController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\AseguradoraController;
@@ -53,6 +54,8 @@ use App\Http\Controllers\TipoRestitucionController;
 use App\Models\TipoRestitucion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisterController;
+
 
 
 /*
@@ -65,17 +68,41 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+/*relacionado con <menu></menu
+*/
+Route::get('/',[MenuController::class,'menus'])->name('menu_vertical');
+//Route::view('/','welcome_menu');
+/*nuevas cositas 16042024*/
+Route::get('/principal',[AccesoController::class,'acceder'])->name('acceso_aplicativo');
+Route::post('/iniciarsesion',[AccesoController::class,'iniciar_sesion'])->name('iniciar_sesion');
+Route::get('/cerrarsession',[AccesoController::class,'cerrar_sesion'])->name('cerrar_sesion');
 
-Route::view('/','inicio')->name('principal');
-//Route::view('/menus','welcome_menu')->name('bienvenida');
-//Route::get('/menus',[MenuController::class,'menus'])->name('bienvenida');
-Route::get('/indiceapm',[ApmController::class,'index'])->name('index_apm');
+//Route::view('/','inicio')->name('principal');
+/*vista indice del apm para su edición*/
+Route::get('/indiceapm',[ApmController::class,'index'])->middleware('auth')->name('index_apm');
+/*vista del menu de la intranet, donde se muestran los expedientes, curatelas...*/
 Route::get('/indiceintranet',[IntranetController::class,'index'])->name('index_intranet');
-Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
-Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacion_intranet');
 
+Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
+
+/*nuevo*/
+//Route::post('/iniciasesion',[ApmController::class,'login2'])->name('login_apm');
+
+Route::get('/acceso_apm',[ApmController::class,'acceder'])->name('acceso_apm');
+Route::view('/registro','apm.registrousuario')->name('vista_registro');
+Route::view('/login','apm.autenticacionapm')->name('autenticacion_apm');
+
+
+
+
+Route::post('/registrarse',[ApmController::class,'registrar'])->name('registrar_apm');
+Route::get('/salir',[ApmController::class,'logout2'])->name('salir_apm');
+
+Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacion_intranet');
+/** */
 Route::resource('/relaciones',RelacionController::class);
 Route::resource('/aseguradoras',AseguradoraController::class);
+Route::get('/asegurador',[AseguradoraController::class,'getaseguradora']);
 Route::resource('/autorizacion',AutorizacionController::class);
 Route::resource('/entidadesbancarias',EntidadBancariaController::class);
 Route::resource('/años',AñoController::class);
@@ -155,3 +182,9 @@ Route::get('/modificarAdmBienes/{vista}',[AdministracionBienController::class,'m
 Route::get('/oficiosAdmBienes/{vista}',[AdministracionBienController::class,'oficios'])->name('administracionbienes.oficios');
 Route::get('/inventarioAdmBienes/{vista}',[AdministracionBienController::class,'inventarios'])->name('administracionbienes.inventarios');
 Route::resource('/administracionbienes',AdministracionBienController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

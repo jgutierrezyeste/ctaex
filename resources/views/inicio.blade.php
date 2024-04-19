@@ -15,6 +15,12 @@
   
 </form>
 
+<form method ="GET" action ="{{route('acceso_apm')}}">
+    @csrf
+        <button type="submit" class="botoninicio"> PANEL ACCESO</button>
+  
+</form>
+
 <form method ="GET" action ="{{route('autenticacion_intranet')}}">
     @csrf
     <button type="submit"  class="botoninicio"> PAGINA INTRANET</button>

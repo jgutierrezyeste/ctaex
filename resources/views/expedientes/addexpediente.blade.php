@@ -1,10 +1,11 @@
+@php
+    $titulo="INICIO DE EXPEDIENTE"
+@endphp
 @extends ('layouts.landing')
 @section('title','Comisión tutelar de adultos')
 @section('subtitle')
     
-    @component('_components.comun_expedientes')
-        @slot('titulo_menu','INICIO DE EXPEDIENTE')
-    @endcomponent
+<x-comun_expedientes :titulo="$titulo"></x-comun_expedientes>
 
 @endsection
 @section('content')
