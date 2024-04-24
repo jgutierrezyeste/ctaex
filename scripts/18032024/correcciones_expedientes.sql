@@ -24,7 +24,7 @@ UPDATE `expedientes` SET `nombre` = 'SOLEDAD' WHERE (`expte` = '04/CA/2001');
 UPDATE `expedientes` SET `nombre` = 'MARIA MONTEVIRGEN' WHERE (`expte` = '02/T/2012');
 
 UPDATE `fallecidos` SET `apellidos` = 'PAREDES HERNANDEZ' WHERE (`expte` = '002/T/2020');
-UPDATE `fallecidos` SET `nombre` = 'NICANOR' WHERE (`id` = '013/T/2009');
+UPDATE `fallecidos` SET `nombre` = 'NICANOR' WHERE (`expte` = '013/T/2009');
 UPDATE `fallecidos` SET `nombre` = 'ANGELES' WHERE (`expte` = '022/T/2021');
 UPDATE `fallecidos` SET `nombre` = 'MARIA JOSEFA' WHERE (`expte` = '035/T/2018');
 

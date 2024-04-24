@@ -3,7 +3,7 @@ UPDATE `defensas_judiciales` SET `apellidos` = 'REYES RODRIGUEZ' WHERE (`nombre`
 UPDATE `defensas_judiciales` SET `apellidos` = 'BARBERO SANCHEZ' WHERE (`nombre` = 'CONCEPCION' and num_expte='45/15');
 UPDATE `defensas_judiciales` SET `nombre` = 'FELIX' WHERE (`apellidos` = 'GUARDABRAZOS PEREZ');
 UPDATE `defensas_judiciales` SET `nombre` = 'JOAQUIN JOSE' WHERE (`apellidos` = 'EXPOSITO VERDION');
-UPDATE `defensas_judiciales` SET `apellidos` = 'ROSCO AVALOS' WHERE (`nombre` = 'ANA MARIA' and num_expte='69/19');
+UPDATE `defensas_judiciales` SET `apellidos` = 'ROSCO AVALOS' WHERE (`nombre` = 'ANA MARIA' and num_expte='66/19');
 UPDATE `defensas_judiciales` SET `nombre` = 'JOSE MARIA' WHERE (`apellidos` = 'ESCOBAR MACIAS' and num_expte='80/09');
 UPDATE `defensas_judiciales` SET `apellidos` = 'BARNETO ALVAREZ' WHERE (`nombre` = 'MARIA PIEDAD' and num_expte='83/23');
 UPDATE `defensas_judiciales` SET `apellidos` = 'ESTEVEZ DE FELIPE' WHERE (`nombre` = 'DAVID' and num_expte='06/21');
