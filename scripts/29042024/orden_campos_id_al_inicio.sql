@@ -1,0 +1,18 @@
+alter table defensas_judiciales modify column motivo_id bigint(20) unsigned after juzgado_id;
+alter table defensas_judiciales modify column estado_id bigint(20) unsigned after motivo_id;
+alter table administracion_bienes modify column estado_id bigint(20) unsigned after expediente_id;
+alter table administracion_bienes modify column motivo_cancelacion_id bigint(20) unsigned after estado_id;
+alter table codigos_postales modify column unidad_poblacional_id bigint(20) unsigned after id;
+alter table dependencias modify column dependenciaservicio_id bigint(20) unsigned after nivel_id;
+alter table dependencias modify column dependenciaserviciosubtipo_id bigint(20) unsigned after dependenciaservicio_id;
+alter table dependencias modify column prestaciondependencia_id bigint(20) unsigned after dependenciaserviciosubtipo_id;
+alter table dependencias modify column activa tinyint(1) after prestaciondependencia_id;
+alter table fallecidos modify column regimen_id bigint(20) unsigned after expediente_id;
+alter table historico_expediente modify column nombre text after tipo_regimen_id;
+alter table patologia_concreta modify column patologia_general_id bigint(20) unsigned after id;
+alter table resoluciones modify column numero text after modo_resolucion_id;
+alter table resoluciones modify column fecha date after modo_resolucion_id;
+alter table resoluciones modify column expediente_id bigint(20) unsigned after id;
+alter table seguro_decesos modify column poliza text after carpeta_deceso_id;
+alter table unidades_poblacionales modify column provincia_id bigint(20) unsigned after id;
+alter table unidades_poblacionales modify column municipio_id bigint(20) unsigned after provincia_id;
