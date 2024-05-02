@@ -1,0 +1,1 @@
+UPDATE expedientes_intranet ei SET ei.expediente_datos_personales_id = (SELECT edp.id FROM expediente_datos_personales edp WHERE edp.nombre = ei.nombre && edp.apellido1 = ei.apellido1)
