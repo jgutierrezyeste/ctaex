@@ -1,5 +1,5 @@
 UPDATE `expedientes` SET `apellido1` = 'SANCHO GARCIA' WHERE (`expte` = '01/T/2014');
-UPDATE `expedientes` SET `apellido1` = ' DOS SANTOS DOS SANTOS' WHERE (`expte` = '02/T/2002');
+UPDATE `expedientes` SET `apellido1` = 'DOS SANTOS DOS SANTOS' WHERE (`expte` = '02/T/2002');
 UPDATE `expedientes` SET `nombre` = 'MARIA TRINIDAD' WHERE (`expte` = '03/C/2015');
 UPDATE `expedientes` SET `apellido1` = 'GONZALEZ OLIVERA' WHERE (`expte` = '03/T/2016');
 
@@ -12,7 +12,7 @@ UPDATE `expedientes` SET `apellido1` = 'MONTAÑO RANGEL' WHERE (`expte` = '15/T/
 UPDATE `expedientes` SET `apellido1` = 'MEJIAS DE LA MORENA' WHERE (`expte` = '15/T/2015');
 UPDATE `expedientes` SET `apellido1` = 'JIMENEZ GARCIA' WHERE (`expte` = '15/T/2016');
 UPDATE `expedientes` SET `apellido1` = 'GALAN PINILLA' WHERE (`expte` = '18/T/1997');
-UPDATE `expedientes` SET `apellido1` = 'DOS SANTOS DOS SANTOS' WHERE (`expte` = '17/T/2005');
+UPDATE `expedientes` SET `apellido1` = 'DOS SANTOS DOS SANTOS' WHERE (`expte` = '19/T/2005');
 UPDATE `expedientes` SET `apellido1` = 'GATO LOZANO\r' WHERE (`expte` = '21/CR/1998');
 UPDATE `expedientes` SET `nombre` = 'MARIA CARMEN' WHERE (`expte` = '23/T/2019');
 UPDATE `expedientes` SET `apellido1` = 'JIMENEZ SALGADO' WHERE (`expte` = '28/T/2012');
