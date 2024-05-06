@@ -9,6 +9,9 @@ UPDATE `ctaex`.`expediente_datos_personales` SET `nombre` = 'MARIA DEL CARMEN' W
 UPDATE `ctaex`.`expediente_datos_personales` SET `nombre` = 'MARIA DE LOS ANGELES' WHERE (`nombre` = 'MARIA ANGELES' && `apellido1` = 'IGLESIAS SANCHO');
 UPDATE `ctaex`.`expediente_datos_personales` SET `nombre` = 'ANGEL GONZALO' WHERE (`nombre` = 'ANGEL' && `apellido1` = 'MORENO GOMEZ');
 UPDATE `ctaex`.`expediente_datos_personales` SET `nombre` = 'NICOLAS VICTORIANO' WHERE (`nombre` = 'VICTORIANO' && `apellido1` = 'RODRIGUEZ VENEGAS');
+UPDATE `ctaex`.`expediente_datos_personales` SET `nombre` = 'IDELFONSA DOLORES' WHERE (`nombre` = 'DOLORES' && `apellido1` = 'MACIAS PERDIGON');
+UPDATE `ctaex`.`expediente_datos_personales` SET `apellido1` = 'MURILLO CUMBRES' WHERE (`nombre` = 'MODESTO' && `apellido1` = 'MURILLO CUMBES');
+
 
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'CARMELO' && edp.apellido1 =  'VERA NAVAS';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'FRANCISCO MANUEL' && edp.apellido1 =  'DOS SANTOS DOS SANTOS';
@@ -465,7 +468,7 @@ UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos W
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'Celestino' && edp.apellido1 =  'Lobato Bravo';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'Gregorio-Martín' && edp.apellido1 =  'Mangas Sánchez';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'Angel Gonzalo' && edp.apellido1 =  'Moreno Gómez';
-UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'Carmen' && edp.apellido1 =  'Bergoñon  Pérez';
+UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'Carmen' && edp.apellido1 =  'Bergoñon Pérez';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'Camila' && edp.apellido1 =  'Piriz Pina';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'Francisca' && edp.apellido1 =  'Campos Rojo';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'Jesús' && edp.apellido1 =  'Suárez Borrego';
@@ -842,7 +845,7 @@ UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos W
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'CATALINA' && edp.apellido1 =  'BERLOSO CAMPOS';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'DIEGO' && edp.apellido1 =  'MERINO HOLGADO';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'EUSEBIO' && edp.apellido1 =  'MARTÍNEZ NUÑEZ';
-UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'MARIA TERESA CABEZON' && edp.apellido1 =  'PLASENCIA MAJADAS';
+UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'MARIA CABEZON TERESA' && edp.apellido1 =  'PLASENCIA MAJADAS';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'MANUELA' && edp.apellido1 =  'MURILLO GONZALEZ';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'HOMBRE') WHERE edp.nombre = 'VALENTIN' && edp.apellido1 =  'RUBIO AGENJO';
 UPDATE expediente_datos_personales edp SET edp.sexo_id = (SELECT id FROM sexos WHERE nombre = 'MUJER') WHERE edp.nombre = 'INOCENCIA' && edp.apellido1 =  'SANCHEZ PANIAGUA';
