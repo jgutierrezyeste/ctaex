@@ -66,7 +66,7 @@ class ExpedienteController extends Controller
     
 
 
-public function busqueda(ExpedienteRequest $request,$vista)
+/*public function busqueda(ExpedienteRequest $request,$vista)
 {
     
     if ($request->has("id"))
@@ -79,8 +79,10 @@ public function busqueda(ExpedienteRequest $request,$vista)
   if ($request->has('apellido1'))
       $apellido1=$request->get('apellido1');
  
-  $expedientes = DB::table('expedientes')
-  ->select ('id', 'nombre', 'apellido1', 'fecha_nacimiento', 'expte','numero_documento')
+  $expedientes = DB::table('expediente_datos_personales')
+  
+
+  ->select ('id', 'nombre', 'apellido1', 'fecha_nacimiento','numero_documento')
   ->when($id, function ($query) use ($id) {
       return $query->where('id','=',$id);})
   ->when($nombre, function ($query) use ($nombre) {
@@ -92,6 +94,37 @@ public function busqueda(ExpedienteRequest $request,$vista)
   
   
   return view ( $vista ,compact('expedientes','id','nombre','apellido1'));
+}*/
+
+
+public function busqueda(Request $request,$vista)
+{
+    
+    if ($request->has("id"))
+    {
+      $id=$request->get('id');
+      $expte=$request->get('expte');
+    }
+  if ($request->has('nombre'))
+      $nombre=$request->get('nombre');
+  if ($request->has('apellido1'))
+      $apellido1=$request->get('apellido1');
+ 
+  $expedientes = DB::table('expedientes_intranet')
+  
+
+  ->select ('*')
+  ->when($id, function ($query) use ($id) {
+      return $query->where('id','=',$id);})
+  ->when($nombre, function ($query) use ($nombre) {
+      return $query-> join('expediente_datos_personales','expediente_datos_personales_id','=','expediente_datos_personales.id')-> where('nombre','=',$nombre);})
+  ->when($apellido1, function ($query) use ($apellido1) {
+          return $query->where('apellido1','=',$apellido1);})
+  ->Paginate(5);
+  
+  
+  
+  return view ( $vista ,compact('expedientes','id','nombre','apellido1','expte'));
 }
 
     /**

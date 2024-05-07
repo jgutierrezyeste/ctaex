@@ -12,6 +12,6 @@ class Sexo extends Model
     protected $guarded=['id'];
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'sexo_id');
+        return $this->hasMany(ExpedienteDatoPersonal::class,'sexo_id');
     }
 }

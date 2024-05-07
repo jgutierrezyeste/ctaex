@@ -14,6 +14,6 @@ class SeguroMedico extends Model
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'seguro_medico_id');
+        return $this->hasMany(ExpedienteDatoPersonal::class,'seguro_medico_id');
     }
 }

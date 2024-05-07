@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Domicilio extends Model
@@ -13,10 +14,12 @@ class Domicilio extends Model
     protected $guarded=['id'];
     protected $table='domicilios';
 
-    public function expedientes():HasOne
+    public function expedientes():HasMany
     {
-        return $this->hasOne(Expediente::class,'domicilio_id');
+        return $this->hasMany(ExpedienteDatoPersonal::class,'domicilio_id');
     }
+
+    
 
     public function provincias():BelongsTo
     {

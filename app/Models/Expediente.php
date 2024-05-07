@@ -13,6 +13,7 @@ class Expediente extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='expedientes_intranet';
 
 
     public function estados():BelongsTo
@@ -25,38 +26,7 @@ class Expediente extends Model
         return $this->belongsTo(TrabajadorSocial::class,'trabajador_social_id');
     }
 
-    public function sexos():BelongsTo
-    {
-        return $this->belongsTo(Sexo::class,'sexo_id');
-    }
-
-    public function nacionalidades():BelongsTo
-    {
-        return $this->belongsTo(Nacionalidad::class,'nacionalidad_id');
-    }
-
-    public function tipodocumentos():BelongsTo
-    {
-        return $this->belongsTo(DocumentoIdentificativo::class,'documento_identificativo_id');
-    }
-
-    public function segurosmedicos():BelongsTo
-    {
-        return $this->belongsTo(SeguroMedico::class,'seguro_medico_id');
-    }
-
-
-    public function centros():BelongsTo
-    {
-        return $this->belongsTo(Centro::class,'centro_id');
-    }
-
     
-    public function aseguradoras():BelongsTo
-    {
-        return $this->belongsTo(Aseguradora::class,'aseguradora_id'); 
-    }
-
     
     public function procedimientosjudiciales():BelongsTo
     {

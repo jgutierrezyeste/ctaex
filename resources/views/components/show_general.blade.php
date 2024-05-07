@@ -15,8 +15,9 @@
 
     @if( $id )
    
-    <p class="negrita" style="text-align:center "> Expedientes con N. Expediente : {{ $expedientes[0]->expte}} </p>
-  
+    <p class="negrita" style="text-align:center "> Expedientes con N. Expediente : {{ $id}} </p>
+
+
     @endif
 @endsection
 

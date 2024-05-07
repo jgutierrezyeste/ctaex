@@ -14,6 +14,6 @@ class DocumentoIdentificativo extends Model
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'documento_identificativo_id');
+        return $this->hasMany(ExpedienteDatoPersonal::class,'documento_identificativo_id');
     }
 }

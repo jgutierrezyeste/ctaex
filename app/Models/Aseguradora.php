@@ -13,7 +13,7 @@ class Aseguradora extends Model
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'aseguradora_id');
+        return $this->hasMany(ExpedienteDatoPersonal::class,'aseguradora_id');
     }
 
     

@@ -14,7 +14,7 @@ class Centro extends Model
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'centro_id');
+        return $this->hasMany(ExpedienteDatoPersonal::class,'centro_id');
     }
 
     public function codigos_postales():BelongsTo

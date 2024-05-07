@@ -14,6 +14,6 @@ class Nacionalidad extends Model
 
     public function expedientes():HasMany
     {
-        return $this->hasMany(Expediente::class,'nacionalidad_id');
+        return $this->hasMany(ExpedienteDatoPersonal::class,'nacionalidad_id');
     }
 }
