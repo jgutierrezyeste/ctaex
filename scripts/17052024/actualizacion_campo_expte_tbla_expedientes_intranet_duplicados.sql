@@ -28,6 +28,7 @@ update expedientes_intranet set expte='25/T/1998' where id=802 and expte='28/T/1
 update fallecidos set expte='25/T/1998' where expediente_id=802 and expte='28/T/1998';
 
 update expedientes_intranet set expte='04/C/2004' where id =35 and expte='02/C/2004';
+update expedientes_intranet set expte_antes_revison=NULL , expte_antiguo=NULL WHERE id=35 and expte='04/C/2004';
 
 update defensas_judiciales set expediente_id=614 where expediente_id=1149;
 delete from expedientes_intranet where id=1149;

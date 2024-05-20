@@ -32,7 +32,6 @@ INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)v
 INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)values ('32','28','19','484,61');
 INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)values ('33','32','19','453,3');
 INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)values ('34','22','14','1099,79');
-INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)values ('35','32','19','453,3');
 INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)values ('36','32','19','453,3');
 INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)values ('37','24','19','894,04');
 INSERT INTO expediente_prestacion (expediente_id,prestacion_id,año_id,importe)values ('38','28','19','484,61');
