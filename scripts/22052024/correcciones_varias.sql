@@ -1,0 +1,13 @@
+UPDATe prestaciones set nombre='CLASES PASIVAS PROTECCION FAMILIAR' WHERE nombre='CLASES PASIVAS PF';
+update prestaciones set nombre='INGRESO MINIMO VITAL' WHERE nombre='IMV';
+update prestaciones set nombre='ISFAS PROTECCION FAMILIAR'	where nombre='ISFAS PF';
+update historico_expediente set observaciones = NULL where observaciones = " ";
+update expedientes_intranet set num_expte_intranet='33/18' where expediente_datos_personales_id=614 and expte='35/T/2018';
+update motivos set nombre='CURATELA ASISTENCIAL FAMILIAR' where nombre='CURATELA ASISTENCIA FAMILIAR';
+update motivos set nombre='CURATELA REPRESENTATIVA COMISION' where nombre='CURATELA REPRESENTAIVA COMISION';
+update motivos set nombre='PROCEDIMIENTO FINALIZADO'  where nombre ='FIN PROCEDIMIENTO';
+update motivos set nombre='PROCEDIMIENTO ARCHIVADO'  where nombre ='ARCHIVADO PROCEDIMIENTO';
+UPDATE nacionalidades set nombre='EXPAÑOLA' where nombre='ESPAÑA';
+UPDATE nacionalidades set nombre='MARROQUI' where nombre='MARRUECOS';
+UPDATE nacionalidades set nombre='PORTUGUESA' where nombre='PORTUGAL';
+UPDATE nacionalidades set nombre='RUMANA' where nombre='RUMANIA';
