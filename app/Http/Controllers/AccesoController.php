@@ -24,7 +24,7 @@ class AccesoController extends Controller
 
     public function iniciar_sesion(LoginRequest $request)
     {
-        $archivo=fopen("loginacceso.txt","w+");
+       
         $credentials = $request->getCredentials();
         if (!Auth::validate($credentials)){
             return redirect()->to (route('acceso_aplicativo'))->withErrors ('auth.failed');

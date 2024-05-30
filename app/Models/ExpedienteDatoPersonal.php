@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ExpedienteDatoPersonal extends Model
 {
@@ -47,6 +48,11 @@ class ExpedienteDatoPersonal extends Model
     public function domicilios():BelongsTo
     {
         return $this->belongsTo(Domicilio::class,'domicilio_id');
+    }
+
+    public function expedientes():HasMany
+    {
+        return $this->hasMany(Expediente::class,'expediente_datos_personales_id');
     }
 
 

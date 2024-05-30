@@ -76,12 +76,13 @@ Route::get('/',[MenuController::class,'menus'])->name('menu_vertical');
 Route::get('/principal',[AccesoController::class,'acceder'])->name('acceso_aplicativo');
 Route::post('/iniciarsesion',[AccesoController::class,'iniciar_sesion'])->name('iniciar_sesion');
 Route::get('/cerrarsession',[AccesoController::class,'cerrar_sesion'])->name('cerrar_sesion');
+Route::get('/indiceapm',[ApmController::class,'index'])->middleware('auth')->name('index_apm');
+Route::get('/indiceintranet',[IntranetController::class,'index'])->middleware('auth')->name('index_intranet');
+
 
 //Route::view('/','inicio')->name('principal');
-/*vista indice del apm para su edición*/
-Route::get('/indiceapm',[ApmController::class,'index'])->middleware('auth')->name('index_apm');
-/*vista del menu de la intranet, donde se muestran los expedientes, curatelas...*/
-Route::get('/indiceintranet',[IntranetController::class,'index'])->name('index_intranet');
+
+
 
 Route::get('/administrador',[ApmController::class,'autenticar'])->name('autenticacion_apm');
 
@@ -101,87 +102,88 @@ Route::get('/salir',[ApmController::class,'logout2'])->name('salir_apm');
 Route::get('/user',[IntranetController::class,'autenticar'])->name('autenticacion_intranet');
 /** */
 Route::resource('/relaciones',RelacionController::class);
-Route::resource('/aseguradoras',AseguradoraController::class);
-Route::get('/asegurador',[AseguradoraController::class,'getaseguradora']);
-Route::resource('/autorizacion',AutorizacionController::class);
-Route::resource('/entidadesbancarias',EntidadBancariaController::class);
-Route::resource('/años',AñoController::class);
-Route::resource('/empleados',EmpleadoController::class);
-Route::resource('/carpetas',CarpetaDecesoController::class);
-Route::resource('/centros',CentroController::class);
-Route::resource('/serviciosDependencias',DependenciaSevicioController::class);
-Route::resource('/subtipoDependencias',DependenciaServicioSubtipoController::class);
-Route::resource('/documentosIdentificativos',DocumentoIdentificativoController::class);
-Route::resource('/figuras',FiguraController::class);
-Route::resource('/gradosDependencia',GradoDependenciaController::class);
-Route::resource('/iniciadorProcedimiento',IniciadorProcedimientoController::class);
-Route::resource('/juzgados',JuzgadoController::class);
-Route::resource('/letrados',LetradoController::class);
-Route::resource('/resolucionModos',ModoResolucionController::class);
-Route::resource('/motivos',MotivoController::class);
-Route::resource('/nacionalidades',NacionalidadController::class);
-Route::resource('/nivelDependencias',NivelDependenciaController::class);
-Route::resource('/opcionAutorizacion',OpcionAutorizacionController::class);
-Route::resource('/patologiasConcretas',PatologiaConcretaController::class);
-Route::resource('/patologiasGenerales',PatologiaGeneralController::class);
-Route::resource('/prestaciones',PrestacionController::class);
-Route::resource('/prestacionDependencias',PrestacionDependenciaController::class);
-Route::resource('/procedimientosJudiciales',ProcedimientoJudicialController::class);
-Route::resource('/provincias',ProvinciaController::class);
-Route::resource('/figuras',FiguraController::class);
-Route::resource('/representantes',RepresentanteController::class);
-Route::resource('/segurosMedicos',SeguroMedicoController::class);
-Route::resource('/sexo',SexoController::class);
-Route::resource('/estados',EstadoController::class);
-Route::resource('/trabajadoresSociales',TrabajadorSocialController::class);
-Route::resource('/tiposVia',TipoViaController::class);
-Route::resource('/tiposRestitucion',TipoRestitucionController::class);
-Route::resource('/tiposRendicionAnual',TipoRendicionAnualController::class);
-Route::resource('/tiposRegimen',TipoRegimenController::class);
+Route::resource('/aseguradoras',AseguradoraController::class)->middleware('auth');
+Route::get('/asegurador',[AseguradoraController::class,'getaseguradora'])->middleware('auth');
+Route::resource('/autorizacion',AutorizacionController::class)->middleware('auth');
+Route::resource('/entidadesbancarias',EntidadBancariaController::class)->middleware('auth');
+Route::resource('/años',AñoController::class)->middleware('auth');
+Route::resource('/empleados',EmpleadoController::class)->middleware('auth');
 
-Route::resource('/regimenes',RegimenController::class);
-Route::resource('/expedientes',ExpedienteController::class);
-Route::resource('/defensasjudiciales',DefensaJudicialController::class);
-Route::resource('/resoluciones',ResolucionController::class);
+Route::resource('/carpetas',CarpetaDecesoController::class)->middleware('auth');
+Route::resource('/centros',CentroController::class)->middleware('auth');
+Route::resource('/serviciosDependencias',DependenciaSevicioController::class)->middleware('auth');
+Route::resource('/subtipoDependencias',DependenciaServicioSubtipoController::class)->middleware('auth');
+Route::resource('/documentosIdentificativos',DocumentoIdentificativoController::class)->middleware('auth');
+Route::resource('/figuras',FiguraController::class)->middleware('auth');
+Route::resource('/gradosDependencia',GradoDependenciaController::class)->middleware('auth');
+Route::resource('/iniciadorProcedimiento',IniciadorProcedimientoController::class)->middleware('auth');
+Route::resource('/juzgados',JuzgadoController::class)->middleware('auth');
+Route::resource('/letrados',LetradoController::class)->middleware('auth');
+Route::resource('/resolucionModos',ModoResolucionController::class)->middleware('auth');
+Route::resource('/motivos',MotivoController::class)->middleware('auth');
+Route::resource('/nacionalidades',NacionalidadController::class)->middleware('auth');
+Route::resource('/nivelDependencias',NivelDependenciaController::class)->middleware('auth');
+Route::resource('/opcionAutorizacion',OpcionAutorizacionController::class)->middleware('auth');
+Route::resource('/patologiasConcretas',PatologiaConcretaController::class)->middleware('auth');
+Route::resource('/patologiasGenerales',PatologiaGeneralController::class)->middleware('auth');
+Route::resource('/prestaciones',PrestacionController::class)->middleware('auth');
+Route::resource('/prestacionDependencias',PrestacionDependenciaController::class)->middleware('auth');
+Route::resource('/procedimientosJudiciales',ProcedimientoJudicialController::class)->middleware('auth');
+Route::resource('/provincias',ProvinciaController::class)->middleware('auth');
 
-Route::get('/busqueda/{vista}',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda');
-Route::get('/consultarExpedientes/{vista}',[ExpedienteController::class,'consultar'])->name('expedientes.consultar');
-Route::get('/modificarExpedientes/{vista}',[ExpedienteController::class,'modificar'])->name('expedientes.modificar');
+Route::resource('/representantes',RepresentanteController::class)->middleware('auth');
+Route::resource('/segurosMedicos',SeguroMedicoController::class)->middleware('auth');
+Route::resource('/sexo',SexoController::class)->middleware('auth');
+Route::resource('/estados',EstadoController::class)->middleware('auth');
+Route::resource('/trabajadoresSociales',TrabajadorSocialController::class)->middleware('auth');
+Route::resource('/tiposVia',TipoViaController::class)->middleware('auth');
+Route::resource('/tiposRestitucion',TipoRestitucionController::class)->middleware('auth');
+Route::resource('/tiposRendicionAnual',TipoRendicionAnualController::class)->middleware('auth');
+Route::resource('/tiposRegimen',TipoRegimenController::class)->middleware('auth');
+
+Route::resource('/regimenes',RegimenController::class)->middleware('auth');
+Route::resource('/expedientes',ExpedienteController::class)->middleware('auth');
+Route::resource('/defensasjudiciales',DefensaJudicialController::class)->middleware('auth');
+Route::resource('/resoluciones',ResolucionController::class)->middleware('auth');
+
+Route::get('/busqueda/{vista}',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda')->middleware('auth');
+Route::get('/consultarExpedientes/{vista}',[ExpedienteController::class,'consultar'])->name('expedientes.consultar')->middleware('auth');
+Route::get('/modificarExpedientes/{vista}',[ExpedienteController::class,'modificar'])->name('expedientes.modificar')->middleware('auth');
 //Route::get('/oficiosExpediente',[ExpedienteController::class,'oficios'])->name('expedientes.oficios');
 //Route::get('/oficiostutorExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficiostutor');
 //Route::get('/oficiosdefensorjudicialExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficiosdefensorjudicial');
 //Route::get('/oficioscuradorExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficioscurador');
-Route::get('/buscar/{id}',[ExpedienteController::class,'buscar'])->name('expedientes.buscar');
-Route::get('/oficiosExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficios');
-Route::get('/inventariosExpediente/{vista}',[ExpedienteController::class,'inventarios'])->name('expedientes.inventarios');
+Route::get('/buscar/{id}',[ExpedienteController::class,'buscar'])->name('expedientes.buscar')->middleware('auth');
+Route::get('/oficiosExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficios')->middleware('auth');
+Route::get('/inventariosExpediente/{vista}',[ExpedienteController::class,'inventarios'])->name('expedientes.inventarios')->middleware('auth');
 
 //Route::get('/busquedaModificar',[ExpedienteController::class,'busquedaModificar'])->name('expedientes.busquedaModificar');
 //Route::get('/busquedaConsulta',[ExpedienteController::class,'busquedaConsulta'])->name('expedientes.busquedaConsulta');
-Route::get('/busqueda/{vista}',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda');
+Route::get('/busqueda/{vista}',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda')->middleware('auth');
 
 /*tutelas*/
-Route::get('/tutelas/busquedaTutela/{vista}',[TutelaController::class,'busqueda'])->name('tutelas.busqueda');
-Route::get('/consultarTutela/{vista}',[TutelaController::class,'consultar'])->name('tutelas.consultar');
-Route::get('/modificarTutela/{vista}',[TutelaController::class,'modificar'])->name('tutelas.modificar');
-Route::get('/inventariosTutela/{vista}',[TutelaController::class,'inventarios'])->name('tutelas.inventarios');
-Route::get('/oficiosTutela/{vista}',[TutelaController::class,'oficios'])->name('tutelas.oficios');
-Route::resource('/tutelas',TutelaController::class);
+Route::get('/tutelas/busquedaTutela/{vista}',[TutelaController::class,'busqueda'])->name('tutelas.busqueda')->middleware('auth');
+Route::get('/consultarTutela/{vista}',[TutelaController::class,'consultar'])->name('tutelas.consultar')->middleware('auth');
+Route::get('/modificarTutela/{vista}',[TutelaController::class,'modificar'])->name('tutelas.modificar')->middleware('auth');
+Route::get('/inventariosTutela/{vista}',[TutelaController::class,'inventarios'])->name('tutelas.inventarios')->middleware('auth');
+Route::get('/oficiosTutela/{vista}',[TutelaController::class,'oficios'])->name('tutelas.oficios')->middleware('auth');
+Route::resource('/tutelas',TutelaController::class)->middleware('auth');
 
 /*curatelas*/
-Route::get('/curatelas/busquedaCuratela/{vista}',[CuratelaController::class,'busqueda'])->name('curatelas.busqueda');
-Route::get('/consultarCuratela/{vista}',[CuratelaController::class,'consultar'])->name('curatelas.consultar');
-Route::get('/modificarCuratela/{vista}',[CuratelaController::class,'modificar'])->name('curatelas.modificar');
-Route::get('/oficiosCuratela/{vista}',[CuratelaController::class,'oficios'])->name('curatelas.oficios');
-Route::get('/inventarioCuratela/{vista}',[CuratelaController::class,'inventarios'])->name('curatelas.inventarios');
-Route::resource('/curatelas',CuratelaController::class);
+Route::get('/curatelas/busquedaCuratela/{vista}',[CuratelaController::class,'busqueda'])->name('curatelas.busqueda')->middleware('auth');
+Route::get('/consultarCuratela/{vista}',[CuratelaController::class,'consultar'])->name('curatelas.consultar')->middleware('auth');
+Route::get('/modificarCuratela/{vista}',[CuratelaController::class,'modificar'])->name('curatelas.modificar')->middleware('auth');
+Route::get('/oficiosCuratela/{vista}',[CuratelaController::class,'oficios'])->name('curatelas.oficios')->middleware('auth');
+Route::get('/inventarioCuratela/{vista}',[CuratelaController::class,'inventarios'])->name('curatelas.inventarios')->middleware('auth');
+Route::resource('/curatelas',CuratelaController::class)->middleware('auth');
 
 /*adminsitracion de bienes*/
-Route::get('/adminitracionbienes/busquedaAdmBien/{vista}',[AdministracionBienController::class,'busqueda'])->name('administracionbienes.busqueda');
-Route::get('/consultarAdmBienes/{vista}',[AdministracionBienController::class,'consultar'])->name('administracionbienes.consultar');
-Route::get('/modificarAdmBienes/{vista}',[AdministracionBienController::class,'modificar'])->name('administracionbienes.modificar');
-Route::get('/oficiosAdmBienes/{vista}',[AdministracionBienController::class,'oficios'])->name('administracionbienes.oficios');
-Route::get('/inventarioAdmBienes/{vista}',[AdministracionBienController::class,'inventarios'])->name('administracionbienes.inventarios');
-Route::resource('/administracionbienes',AdministracionBienController::class);
+Route::get('/adminitracionbienes/busquedaAdmBien/{vista}',[AdministracionBienController::class,'busqueda'])->name('administracionbienes.busqueda')->middleware('auth');
+Route::get('/consultarAdmBienes/{vista}',[AdministracionBienController::class,'consultar'])->name('administracionbienes.consultar')->middleware('auth');
+Route::get('/modificarAdmBienes/{vista}',[AdministracionBienController::class,'modificar'])->name('administracionbienes.modificar')->middleware('auth');
+Route::get('/oficiosAdmBienes/{vista}',[AdministracionBienController::class,'oficios'])->name('administracionbienes.oficios')->middleware('auth');
+Route::get('/inventarioAdmBienes/{vista}',[AdministracionBienController::class,'inventarios'])->name('administracionbienes.inventarios')->middleware('auth');
+Route::resource('/administracionbienes',AdministracionBienController::class)->middleware('auth');
 
 Auth::routes();
 

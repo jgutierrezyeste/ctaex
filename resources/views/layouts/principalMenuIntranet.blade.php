@@ -17,14 +17,17 @@
     <table width="100%" border="0">
         <tbody>
             <tr>
-                <td width="20%">
+                <td width="60%">
                     @include('layouts._partials.menuIntranet')  
                 </td>
-                <td width="60%" align ="center">
+                <td width="40%" >
                     @include('layouts._partials.escudo_pagina_principal')
                 </td>
-                <td widt="20%"></td>
-    
+               
+            </tr>
+        </tbody>
+    </table>
+
     
     @include('layouts._partials.message')
     <link rel="stylesheet" href="{{ asset('style.css')}}">

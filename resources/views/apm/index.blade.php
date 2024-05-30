@@ -1,11 +1,16 @@
-@extends ('layouts.landing')
-@section('title')
-@section('subtitle')
-@section('content')
-    @component('_components.saludo')
-        @slot('saludo','Edicion panel de administracion')
-        @slot('extenso')
-    @endcomponent
-     @include('layouts._partials.menuApm')
+@php
+$titulo="EDICION PANEL DE ADMINISTRACION ";    
+@endphp
 
+@extends ('layouts.landing')
+@section('title','Comisión tutelar de adultos')
+@section('subtitle')
+    
+    
+    <x-comun_expedientes :titulo="$titulo"></x-comun_expedientes>
+@endsection
+
+@section('content')
+@include('layouts._partials.menuApm')
+    
 @endsection

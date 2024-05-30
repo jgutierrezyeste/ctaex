@@ -24,11 +24,13 @@
               @extends ('layouts.landing')
              
               @section ('content')
-
+<br>
+<br>
               <x-saludo saludo="BIENVENIDO AL CENTRO TUTELAR DE ADULTOS" extenso="Identifiquese o regístrese"></x-saludo>
              
-
-            <section>
+<br>
+<br>
+              <section class="vh-50">
                 <div class="container-fluid h-custom">
                   <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-md-9 col-lg-6 col-xl-5">
@@ -65,7 +67,7 @@
 
                         <div class="text-center text-lg-start mt-4 pt-2">
                           <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
-                            style="padding-left: 2.5rem; padding-right: 2.5rem;">Inicio Sesión</button>
+                            style="padding-left: 2.5rem; padding-right: 2.5rem; background-color: green; border-color:green">Inicio Sesión</button>
                           <p class="small fw-bold mt-2 pt-1 mb-0">¿No tienes cuenta? <a href="{{route('vista_registro')}}"
                               class="link-danger">Resgistrarse</a></p>
                         </div>
@@ -74,16 +76,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-                  <!-- Copyright -->
-                  <div class="text-white mb-3 mb-md-0">
-                    Copyright © 2020. All rights reserved.
-                  </div>
-                  <!-- Copyright -->
-
-                  
-                </div>
+                
               
               </section>
               @endsection

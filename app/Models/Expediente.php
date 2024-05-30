@@ -131,4 +131,8 @@ class Expediente extends Model
         return $this->belongsTo(Rendicion::class,'expediente_id');
     }
     
+    public function datos_personales():BelongsTo
+    {
+        return $this->belongsTo(ExpedienteDatoPersonal::class,'expediente_datos_personales_id');
+    }
 }

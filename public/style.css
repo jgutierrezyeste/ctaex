@@ -19,8 +19,16 @@ td{
    /* border-top:3px solid black;
     border-left:3px solid black;*/
     padding:10px; 
+    
 }
 
+table{
+    width:100%;
+}
+
+.tablegeneral{
+    width:55%;
+}
 
 .columna_cabecera{
     padding:10px;
@@ -196,4 +204,19 @@ crossorigin="anonymous">*/
     display: flex;
 }*/
   
-  
+  /*añadido login*/
+  .divider:after,
+  .divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+  }
+  .h-custom {
+  height: calc(100% - 73px);
+  }
+  @media (max-width: 450px) {
+  .h-custom {
+  height: 100%;
+  }
+  }

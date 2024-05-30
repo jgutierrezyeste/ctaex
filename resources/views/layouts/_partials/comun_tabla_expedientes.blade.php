@@ -11,7 +11,7 @@
             <select id="id" name="id" class="form-control" style="width:100px">
                 <option value=""></option>
                 @foreach ($expedientes as $expediente)
-                    <option value="{{ $expediente['id'] }}">{{ $expediente['expte'] }}</option>
+                    <option value="{{ $expediente['id'] }}">{{ $expediente['num_expte_intranet'] }}</option>
                 @endforeach
                 
             </select>
@@ -39,12 +39,24 @@
 <tr>
     <td width="20%" bgcolor="white"> 
         <font face="Arial">
-        <label> Apellidos </label>
+        <label> Apellido1 </label>
         </font>
     </td>
 
     <td width="60%" bgcolor="#FFEBCD">      
         <input type="text" id="apellido1" name="apellido1" style="color:blue"/>
+    </td>
+</tr>
+
+<tr>
+    <td width="20%" bgcolor="white"> 
+        <font face="Arial">
+        <label> Apellido2 </label>
+        </font>
+    </td>
+
+    <td width="60%" bgcolor="#FFEBCD">      
+        <input type="text" id="apellido2" name="apellido2" style="color:blue"/>
     </td>
 </tr>
 

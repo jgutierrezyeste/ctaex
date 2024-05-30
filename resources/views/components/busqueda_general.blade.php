@@ -15,7 +15,7 @@
 <div align = "center"> 
     <form method ="GET" action ="{{route($ruta,$vista)}}" id="formulario_busquedaconsulta" name="formulario_busquedaconsulta">
         @csrf
-        <table width="55%" cellspacing ="0" cellpadding="5" bordercolor="black" border="1">
+        <table class="tablegeneral" cellspacing ="0" cellpadding="5" bordercolor="black" border="1">
             <tbody>
         
                 @include('layouts._partials.comun_tabla_expedientes') 
@@ -25,6 +25,7 @@
 
             </tbody>
         </table>
+    </br>
         <div class="container">
             <input type="submit" value="BUSCAR EXPEDIENTE" />
         </div>

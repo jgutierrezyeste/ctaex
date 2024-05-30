@@ -1,4 +1,4 @@
-@props(['expedientes','regimenes','titulo','ruta','nombre','id','apellido1','campos','vista'])
+@props(['expedientes','regimenes','titulo','ruta','nombre','id','apellido1','apellido2','numexpteintranet','campos','vista'])
 @extends ('layouts.landing')
 @section('title','Prueba')
 @section('subtitle')
@@ -9,13 +9,13 @@
         <p  class="negrita" style="text-align:center "> Expedientes con Nombre : {{ $nombre}} </p>
     @endif
     
-    @if( $apellido1 )
-    <p  class="negrita" style="text-align:center "> Expedientes con Apellidos : {{ $apellido1}} </p>
+    @if( $apellido1  or $apellido2)
+    <p  class="negrita" style="text-align:center "> Expedientes con Apellidos : {{ $apellido1??' '}} {{ $apellido2??' ' }} </p>
     @endif
 
     @if( $id )
    
-    <p class="negrita" style="text-align:center "> Expedientes con N. Expediente : {{ $id}} </p>
+    <p class="negrita" style="text-align:center "> Expedientes con N. Expediente : {{ $numexpteintranet}}</p>
 
 
     @endif
@@ -30,7 +30,11 @@
          @include('layouts._partials.resultado_busquedas')
     </thead>
     <tbody>
+  
+      
+    
       @foreach ($expedientes as $expediente)  
+
       <tr>
         <x-datos_resultado_busqueda :expediente="$expediente" campo=""></x-datos_resultado_busqueda>
 
