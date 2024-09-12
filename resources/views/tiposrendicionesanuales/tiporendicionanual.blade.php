@@ -1,29 +1,19 @@
 @php
-    $ruta_regreso="index_apm";
-    $subtitulo="Tipos de Rendicion Anual";
+    $rutaRegreso="index_apm";
+    $subtitulo="Tipos Rendicion Anual";
     $rutaEdicion="tiposRendicionAnual.edit";
+    $rutaActualizar="tiposRendicionAnual.actualizar";
     $rutaDelete="tiposRendicionAnual.destroy";
     $rutaAniadir="tiposRendicionAnual.create"; 
+    $rutaEliminar="tiposRendicionAnual.eliminar";
     $campos=['nombre'];
+    $getById="tiposRendicionAnualId/";
 
 @endphp
 
-<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+<x-mostrarmenusapmselect :elementos="$tiposrendicionanual" :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :vista="$rutaEdicion" :rutaAniadir="$rutaAniadir" :campos="$campos" :rutaEdicion="$rutaEdicion" :rutaActualizar="$rutaActualizar" :getById="$getById" :rutaEliminar="$rutaEliminar">    
+
     @section('cuerpo')
-            @foreach ($tiposrendicionanual as $tiporendicionanual)  
-            <tr> 
-                @foreach ($campos as $campo)
-                <td class="columna_datos">{{ $tiporendicionanual->$campo }}</td>
-                @endforeach
-                <td>
-                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$tiporendicionanual"></x-boton_editar>
-                </td>
-                <td>
-                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$tiporendicionanual"></x-boton_editar>
-                </td>
-            </tr>
-            
-            @endforeach  
-                
-    @endsection
-</x-mostrarmenusapm>
+    @endsection        
+   
+</x-mostrarmenusapmselect>

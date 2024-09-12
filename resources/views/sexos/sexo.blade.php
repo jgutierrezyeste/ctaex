@@ -1,29 +1,19 @@
 @php
-    $ruta_regreso="index_apm";
-    $subtitulo="Sexo";
+    $rutaRegreso="index_apm";
+    $subtitulo="Sexos";
     $rutaEdicion="sexo.edit";
+    $rutaActualizar="sexo.actualizar";
     $rutaDelete="sexo.destroy";
     $rutaAniadir="sexo.create"; 
+    $rutaEliminar="sexo.eliminar";
     $campos=['nombre'];
+    $getById="sexosId/";
 
 @endphp
 
-<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+<x-mostrarmenusapmselect :elementos="$sexos" :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :vista="$rutaEdicion" :rutaAniadir="$rutaAniadir" :campos="$campos" :rutaEdicion="$rutaEdicion" :rutaActualizar="$rutaActualizar" :getById="$getById" :rutaEliminar="$rutaEliminar">    
+
     @section('cuerpo')
-            @foreach ($sexos as $sexo)  
-            <tr> 
-                @foreach ($campos as $campo)
-                <td class="columna_datos">{{ $sexo->$campo }}</td>
-                @endforeach
-                <td>
-                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$sexo"></x-boton_editar>
-                </td>
-                <td>
-                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$sexo"></x-boton_editar>
-                </td>
-            </tr>
-            
-            @endforeach  
-                
-    @endsection
-</x-mostrarmenusapm>
+    @endsection        
+   
+</x-mostrarmenusapmselect>

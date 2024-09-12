@@ -1,4 +1,4 @@
-@props(['elementos','titulo','rutaRegreso','vista','rutaAniadir','campos','rutaEdicion'])
+@props(['elementos','titulo','rutaRegreso','vista','rutaAniadir','campos','rutaEdicion','rutaActualizar','getById','rutaEliminar'])
 @extends ('layouts.landing')
 @section('title','Comisión tutelar de adultos')
 
@@ -10,8 +10,12 @@
 
 @section('content')
 
-<x-comun_show_select :nombreMenu="$titulo" :elementos="$elementos" :campos="$campos" :rutaEdicion="$rutaEdicion" ></x-comun_show_menu>
 
 
+<x-comun_show_select :nombreMenu="$titulo" :elementos="$elementos" :campos="$campos" :rutaActualizar="$rutaActualizar" :getById="$getById" :rutaEliminar="$rutaEliminar">
+
+</x-comun_show_select>
+
+<x-boton_indicemenu  :ruta="$rutaRegreso" ></x-boton_indicemenu>
 
 @endsection

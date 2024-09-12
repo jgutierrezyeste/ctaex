@@ -4,7 +4,7 @@
     $titulo_menu="LISTADO DE EXPEDIENTES";  
     $ruta="expedientes.consultar";  
     $vista="expedientes.consultarexpediente";
-    $campos=['num_expte_intranet','expte','nombre','apellido1','apellido2','fecha_entrada_area_aecca','fecha_remision','fecha_recepcion'];
+    $campos=['nombre','apellido1','apellido2','fecha_aceptacion','fecha_entrada_area_aecca','fecha_remision','fecha_recepcion'];
    
       
 @endphp

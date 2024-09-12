@@ -15,7 +15,7 @@
     @csrf
     
 
-    <table width="55%" cellspacing ="0" cellpadding="5"  border="0" align="center">
+    <table class="tablegeneral" cellspacing ="0" cellpadding="5"  border="0" align="center">
                     
                     
         <tbody>

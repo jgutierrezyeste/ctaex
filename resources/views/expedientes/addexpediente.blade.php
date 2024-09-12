@@ -12,7 +12,7 @@
 <div align="center">
 <form id="inicio_expediente" name="inicio_expediente" method ="POST" action ="{{route('expedientes.store')}}">
     @csrf
-    <table width="80%" height="40%" cellspacing="0" cellpadding="8" border="0">
+    <table class="tablegeneral" cellspacing="0" cellpadding="8" border="0">
         <tbody>
             <tr>
                 <td bgcolor="white" colspan="2">
@@ -23,24 +23,39 @@
             </tr>
             <tr>
                 <td width="45%" bgcolor="#FFEBCD" align="right">
-                    <font size="2" color="black" facñe="Arial">
+                    <font size="2" color="black" face="Arial">
                         <b>Entrada en la Junta </b>
                     </font>
                     <input id="fecha_entrada" type="date" value="" style="width:80;" maxlength="10" name="fecha_entrada"></input>
                 </td>
                 <td width="55%" bgcolor="#FFEBCD">
-                    <font size="2" color="black" facñe="Arial">
+                    <font size="2" color="black" face="Arial">
                         <b>Acuerdo Aceptacion Cargo </b>
                     </font>
                     <input id="fecha_aceptacion" type="date" value="" style="width:80;" maxlength="10" name="fecha_aceptacion"></input>
                 </td>
 
             </tr>
+            <tr>
+              <td width="45%" bgcolor="#FFEBCD" align="right">
+                  <font size="2" color="black" face="Arial">
+                      <b>Remisión al gabinete </b>
+                  </font>
+                  <input id="remision_gabinete" type="date" value="" style="width:80;" maxlength="10" name="remision_gabinete"></input>
+              </td>
+              <td width="55%" bgcolor="#FFEBCD">
+                  <font size="2" color="black" face="Arial">
+                      <b>Recibimos del Gabinete </b>
+                  </font>
+                  <input id="recibimos_gabinete" type="date" value="" style="width:80;" maxlength="10" name="recibimos_gabinete"></input>
+              </td>
+
+          </tr>
    
         </tbody>
     </table>
 
-    <table width="80%" height="40%" cellspacing="0" cellpadding="8" border="0">
+    <table class="tablegeneral" cellspacing="0" cellpadding="8" border="0">
         <tbody>
             <tr>
                 <td bgcolor="white" colspan="2">
@@ -52,13 +67,13 @@
             </tr>
             <tr>
                 <td width="45%" bgcolor="#FFEBCD" align="right">
-                    <font size="2" color="black" facñe="Arial">
+                    <font size="2" color="black" face="Arial">
                         <b>Nombre </b>
                     </font>
                     <input id="nombre" type="text" value="" style="width:150;"  name="nombre"></input>
                 </td>
                 <td width="55%" bgcolor="#FFEBCD">
-                    <font size="2" color="black" facñe="Arial">
+                    <font size="2" color="black" face="Arial">
                         <b>Apellidos </b>
                     </font>
                     <input id="apellidos" type="text" value="" style="width:250;" name="apellidos"></input>
@@ -66,15 +81,15 @@
             </tr>
             <tr>
                 <td width="45%" bgcolor="#FFEBCD" align="center" colspan="2">
-                    <font size="2" color="black" facñe="Arial">
+                    <font size="2" color="black" face="Arial">
                         <b>Sexo: </b>
                     </font>
                     <input id="sexo" type="radio" checked="" value="H" style="width:150;"  name="sexo"></input>
-                    <font size="2" color="black" facñe="Arial">
+                    <font size="2" color="black" face="Arial">
                         <b>Varón </b>
                     </font>
                     <input id="sexo" type="radio"  value="M" style="width:150;"  name="sexo"></input>
-                    <font size="2" color="black" facñe="Arial">
+                    <font size="2" color="black" face="Arial">
                         <b>Mujer </b>
                     </font>
                 </td>
@@ -84,7 +99,7 @@
         </tbody>
     </table>
 
-    <table  width="80%" height="40%" cellspacing="0" cellpadding="8" border="0">
+    <table  class="tablegeneral" cellspacing="0" cellpadding="8" border="0">
                    
         <tbody>
             <tr>
@@ -129,7 +144,7 @@
         </tbody>
     </table>
 
-<table width="80%" height="40%" cellspacing="0" cellpadding="8" border="0" >
+<table class="tablegeneral" cellspacing="0" cellpadding="8" border="0" >
                
     <tbody><tr>
         <td colspan="3" bgcolor="white">	       

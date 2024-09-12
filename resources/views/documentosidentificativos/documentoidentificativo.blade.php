@@ -1,29 +1,19 @@
 @php
-    $ruta_regreso="index_apm";
-    $subtitulo="Documentos identificativos";
+    $rutaRegreso="index_apm";
+    $subtitulo="Documentos Identificativos";
     $rutaEdicion="documentosIdentificativos.edit";
+    $rutaActualizar="documentosIdentificativos.actualizar";
     $rutaDelete="documentosIdentificativos.destroy";
     $rutaAniadir="documentosIdentificativos.create"; 
+    $rutaEliminar="documentosIdentificativos.eliminar";
     $campos=['nombre'];
+    $getById="documentosIdentificativosId/";
 
 @endphp
 
-<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+<x-mostrarmenusapmselect :elementos="$documentos" :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :vista="$rutaEdicion" :rutaAniadir="$rutaAniadir" :campos="$campos" :rutaEdicion="$rutaEdicion" :rutaActualizar="$rutaActualizar" :getById="$getById" :rutaEliminar="$rutaEliminar">    
+
     @section('cuerpo')
-            @foreach ($documentos as $documento)  
-            <tr> 
-                @foreach ($campos as $campo)
-                <td class="columna_datos">{{ $documento->$campo }}</td>
-                @endforeach
-                <td>
-                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$documento"></x-boton_editar>
-                </td>
-                <td>
-                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$documento"></x-boton_editar>
-                </td>
-            </tr>
-            
-            @endforeach  
-                
-    @endsection
-</x-mostrarmenusapm>
+    @endsection        
+   
+</x-mostrarmenusapmselect>

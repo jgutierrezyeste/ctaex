@@ -1,29 +1,20 @@
+<!--archivo para probar el select en los menus del apm-->
 @php
-    $ruta_regreso="index_apm";
+    $rutaRegreso="index_apm";
     $subtitulo="Relaciones";
     $rutaEdicion="relaciones.edit";
-    $rutaDelete="relaciones.destroy";
+   $rutaActualizar="relaciones.actualizar"; 
+   $rutaEliminar="relaciones.eliminar";
     $rutaAniadir="relaciones.create"; 
+    
     $campos=['nombre'];
+    $getById="relacionselect/";
 
 @endphp
 
-<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
-    @section('cuerpo')
-            @foreach ($relaciones as $relacion)  
-            <tr> 
-                @foreach ($campos as $campo)
-                <td class="columna_datos">{{ $relacion->$campo }}</td>
-                @endforeach
-                <td>
-                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$relacion"></x-boton_editar>
-                </td>
-                <td>
-                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$relacion"></x-boton_editar>
-                </td>
-            </tr>
-            
-            @endforeach  
-                
-    @endsection
-</x-mostrarmenusapm>
+<x-mostrarmenusapmselect :elementos="$relaciones" :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :vista="$rutaEdicion" :rutaAniadir="$rutaAniadir" :campos="$campos" :rutaEdicion="$rutaEdicion" :rutaActualizar="$rutaActualizar" :getById="$getById" :rutaEliminar="$rutaEliminar" :rutaEliminar="$rutaEliminar">    
+
+    @section('cuerpo')         
+    @endsection        
+   
+</x-mostrarmenusapmselect>

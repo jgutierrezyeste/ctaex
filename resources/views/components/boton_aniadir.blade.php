@@ -4,7 +4,7 @@
     <img src="{{asset('assets/img/boton_añadir.png')}}" alt="40" width="40" >
     </a>
     </div>-->
-   <table width="15%" border="0" align="right">
+   <table class="botonaniadir" width="15%" border="0" align="right">
     <tbody>
         <tr>
             <td width="66%" align="center">

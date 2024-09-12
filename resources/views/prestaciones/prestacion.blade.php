@@ -1,29 +1,19 @@
 @php
-    $ruta_regreso="index_apm";
+    $rutaRegreso="index_apm";
     $subtitulo="Prestaciones";
     $rutaEdicion="prestaciones.edit";
+    $rutaActualizar="prestaciones.actualizar";
     $rutaDelete="prestaciones.destroy";
     $rutaAniadir="prestaciones.create"; 
-    $campos=['nombre','siglas'];
+    $rutaEliminar="prestaciones.eliminar";
+    $campos=['nombre'];
+    $getById="prestacionesId/";
 
 @endphp
 
-<x-mostrarmenusapm :titulo="$subtitulo" :rutaRegreso="$ruta_regreso" :rutaAniadir="$rutaAniadir" :campos="$campos" >    
+<x-mostrarmenusapmselect :elementos="$prestaciones" :titulo="$subtitulo" :rutaRegreso="$rutaRegreso" :vista="$rutaEdicion" :rutaAniadir="$rutaAniadir" :campos="$campos" :rutaEdicion="$rutaEdicion" :rutaActualizar="$rutaActualizar" :getById="$getById" :rutaEliminar="$rutaEliminar">    
+
     @section('cuerpo')
-            @foreach ($prestaciones as $prestacion)  
-            <tr> 
-                @foreach ($campos as $campo)
-                <td class="columna_datos">{{ $prestacion->$campo }}</td>
-                @endforeach
-                <td>
-                    <x-boton_editar :ruta="$rutaEdicion" :elemento="$prestacion"></x-boton_editar>
-                </td>
-                <td>
-                    <x-boton_eliminar :ruta="$rutaDelete" :elemento="$prestacion"></x-boton_editar>
-                </td>
-            </tr>
-            
-            @endforeach  
-                
-    @endsection
-</x-mostrarmenusapm>
+    @endsection        
+   
+</x-mostrarmenusapmselect>

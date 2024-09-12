@@ -1,5 +1,5 @@
 @props(['titulo','subtitulo'=>'','ruta'=>'index_intranet'])
-<table width="100%" border="0">
+<table  width="100%" border="0" align="center">
     <tbody>
         <tr>
             <td width="33%" align="left">
@@ -11,7 +11,7 @@
                     <b> {{ $titulo }} </b>
                 </font>
             </td>
-            <td width="33%" align ="center">
+            <td width="33%" align ="right">
                 
                 <x-cierre_sesion ruta="cerrar_sesion"></x-cierre_sesion>
             </td>

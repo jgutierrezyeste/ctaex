@@ -10,7 +10,7 @@ use App\Http\Controllers\AñoController;
 use App\Http\Controllers\CarpetaDecesoController;
 use App\Http\Controllers\CentroController;
 use App\Http\Controllers\DependenciaServicioSubtipoController;
-use App\Http\Controllers\DependenciaSevicioController;
+use App\Http\Controllers\DependenciaServicioController;
 use App\Http\Controllers\DocumentoIdentificativoController;
 
 use App\Http\Controllers\EntidadBancariaController;
@@ -55,8 +55,12 @@ use App\Models\TipoRestitucion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
-
-
+use App\Models\DependenciaServicio;
+use App\Models\DocumentoIdentificativo;
+use App\Models\GradoDependencia;
+use App\Models\OpcionAutorizacion;
+use App\Models\Regimen;
+use App\Models\TrabajadorSocial;
 
 /*
 |--------------------------------------------------------------------------
@@ -111,7 +115,7 @@ Route::resource('/empleados',EmpleadoController::class)->middleware('auth');
 
 Route::resource('/carpetas',CarpetaDecesoController::class)->middleware('auth');
 Route::resource('/centros',CentroController::class)->middleware('auth');
-Route::resource('/serviciosDependencias',DependenciaSevicioController::class)->middleware('auth');
+Route::resource('/serviciosDependencias',DependenciaServicioController::class)->middleware('auth');
 Route::resource('/subtipoDependencias',DependenciaServicioSubtipoController::class)->middleware('auth');
 Route::resource('/documentosIdentificativos',DocumentoIdentificativoController::class)->middleware('auth');
 Route::resource('/figuras',FiguraController::class)->middleware('auth');
@@ -149,6 +153,22 @@ Route::resource('/resoluciones',ResolucionController::class)->middleware('auth')
 Route::get('/busqueda/{vista}',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda')->middleware('auth');
 Route::get('/consultarExpedientes/{vista}',[ExpedienteController::class,'consultar'])->name('expedientes.consultar')->middleware('auth');
 Route::get('/modificarExpedientes/{vista}',[ExpedienteController::class,'modificar'])->name('expedientes.modificar')->middleware('auth');
+Route::get('/datosExpediente/{vistadatos}/{idexpte}',[ExpedienteController::class,'mostrardatos'])->name('expediente.datos')->middleware('auth');
+Route::get('/datosExtendidosExpediente/{vistadatos}/{idexpte}',[ExpedienteController::class,'obtener_datos'])->name('expediente.datosextendidos')->middleware('auth');
+Route::get('/datospersonales/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datospersonales')->middleware('auth');
+Route::get('/datosbancarios/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosbancarios')->middleware('auth');
+Route::get('/datosresidencia/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosresidencia')->middleware('auth');
+Route::get('/datosinmuebles/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosinmuebles')->middleware('auth');
+
+Route::get('/datospensiones/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datospensiones')->middleware('auth');
+Route::get('/datosrepresentantes/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosrepresentantes')->middleware('auth');
+Route::get('/datossanitarios/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datossanitarios')->middleware('auth');
+Route::get('/datosoficios/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosoficios')->middleware('auth');
+Route::get('/datosinventarios/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosinventarios')->middleware('auth');
+Route::get('/datosgastos/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosgastos')->middleware('auth');
+Route::get('/datosingresos/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosingresos')->middleware('auth');
+
+
 //Route::get('/oficiosExpediente',[ExpedienteController::class,'oficios'])->name('expedientes.oficios');
 //Route::get('/oficiostutorExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficiostutor');
 //Route::get('/oficiosdefensorjudicialExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficiosdefensorjudicial');
@@ -159,7 +179,7 @@ Route::get('/inventariosExpediente/{vista}',[ExpedienteController::class,'invent
 
 //Route::get('/busquedaModificar',[ExpedienteController::class,'busquedaModificar'])->name('expedientes.busquedaModificar');
 //Route::get('/busquedaConsulta',[ExpedienteController::class,'busquedaConsulta'])->name('expedientes.busquedaConsulta');
-Route::get('/busqueda/{vista}',[ExpedienteController::class,'busqueda'])->name('expedientes.busqueda')->middleware('auth');
+
 
 /*tutelas*/
 Route::get('/tutelas/busquedaTutela/{vista}',[TutelaController::class,'busqueda'])->name('tutelas.busqueda')->middleware('auth');
@@ -186,7 +206,154 @@ Route::get('/inventarioAdmBienes/{vista}',[AdministracionBienController::class,'
 Route::resource('/administracionbienes',AdministracionBienController::class)->middleware('auth');
 
 Auth::routes();
+Route::get('/relacionselect/{id}',[RelacionController::class,'getRelacionById'])->name('seleccionrelacion')->middleware('auth');
+Route::put('/relacionesactualizar',[RelacionController::class,'actualizar'])->name('relaciones.actualizar')->middleware('auth');
+Route::delete('/relacionesEliminar',[RelacionController::class,'eliminar'])->name('relaciones.eliminar')->middleware('auth');
 
+Route::put('/procedimientosJudicialesActualizar',[ProcedimientoJudicialController::class,'actualizar'])->name('procedimientosJudiciales.actualizar')->middleware('auth');
+Route::get('/procedimientos/{id}', [ProcedimientoJudicialController::class,'getProcedimientoById'])->middleware('auth');
+Route::delete('/procedimientosEliminar',[ProcedimientoJudicialController::class,'eliminar'])->name('procedimientosJudiciales.eliminar')->middleware('auth');
+
+
+Route::put('/centrosActualizar',[CentroController::class,'actualizar'])->name('centros.actualizar')->middleware('auth');
+Route::get('/centrosId/{id}', [CentroController::class,'getCentroById'])->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::delete('/centrosEliminar',[CentroController::class,'eliminar'])->name('centros.eliminar')->middleware('auth');
 
+Route::put('/entidadesBancariasActualizar',[EntidadBancariaController::class,'actualizar'])->name('entidadesbancarias.actualizar')->middleware('auth');
+Route::get('/entidadesBancariasId/{id}', [EntidadBancariaController::class,'getEntidadBancariaById'])->middleware('auth');
+Route::delete('/entidadesBancariasEliminar',[EntidadBancariaController::class,'eliminar'])->name('entidadesbancarias.eliminar')->middleware('auth');
+
+Route::put('/aseguradorasActualizar',[AseguradoraController::class,'actualizar'])->name('aseguradoras.actualizar')->middleware('auth');
+Route::get('/aseguradorasId/{id}', [AseguradoraController::class,'getAseguradoraById'])->middleware('auth');
+Route::delete('/aseguradorasEliminar',[AseguradoraController::class,'eliminar'])->name('aseguradoras.eliminar')->middleware('auth');
+
+Route::put('/juzgadosActualizar',[JuzgadoController::class,'actualizar'])->name('juzgados.actualizar')->middleware('auth');
+Route::get('/juzgadosId/{id}', [JuzgadoController::class,'getJuzgadoById'])->middleware('auth');
+Route::delete('/juzagosEliminar',[JuzgadoController::class,'eliminar'])->name('juzgados.eliminar')->middleware('auth');
+
+Route::put('/iniciadorProcedimientoActualizar',[IniciadorProcedimientoController::class,'actualizar'])->name('iniciadorProcedimiento.actualizar')->middleware('auth');
+Route::get('/iniciadorProcedimientoId/{id}', [IniciadorProcedimientoController::class,'getIniciadorProcedimientoById'])->middleware('auth');
+Route::delete('/iniciadorProcedimientoEliminar',[IniciadorProcedimientoController::class,'eliminar'])->name('iniciadorProcedimiento.eliminar')->middleware('auth');
+
+Route::put('/figurasActualizar',[FiguraController::class,'actualizar'])->name('figuras.actualizar')->middleware('auth');
+Route::get('/figurasId/{id}', [FiguraController::class,'getFiguraById'])->middleware('auth');
+Route::delete('/figurasEliminar',[FiguraController::class,'eliminar'])->name('figuras.eliminar')->middleware('auth');
+
+
+Route::put('/tipoRestitucionActualizar',[TipoRestitucionController::class,'actualizar'])->name('tiposRestitucion.actualizar')->middleware('auth');
+Route::get('/tiposRestitucionId/{id}', [TipoRestitucionController::class,'getTipoRestitucionById'])->middleware('auth');
+Route::delete('/tiposRestitucionEliminar',[TipoRestitucionController::class,'eliminar'])->name('tiposRestitucion.eliminar')->middleware('auth');
+
+Route::put('/resolucionModosActualizar',[ModoResolucionController::class,'actualizar'])->name('resolucionModos.actualizar')->middleware('auth');
+Route::get('/resolucionModosId/{id}', [ModoResolucionController::class,'getModoResolucionById'])->middleware('auth');
+Route::delete('/resolucionModosEliminar',[ModoResolucionController::class,'eliminar'])->name('resolucionModos.eliminar')->middleware('auth');
+
+Route::put('/tiposRendicionAnualActualizar',[TipoRendicionAnualController::class,'actualizar'])->name('tiposRendicionAnual.actualizar')->middleware('auth');
+Route::get('/tiposRendicionAnualId/{id}', [TipoRendicionAnualController::class,'getTipoRendicionAnualById'])->middleware('auth');
+Route::delete('/tiposRendicionAnuealEliminar',[TipoRendicionAnualController::class,'eliminar'])->name('tiposRendicionAnual.eliminar')->middleware('auth');
+
+
+Route::put('/empleadosActualizar',[EmpleadoController::class,'actualizar'])->name('empleados.actualizar')->middleware('auth');
+Route::get('/empleadosId/{id}', [EmpleadoController::class,'getEmpleadoById'])->middleware('auth');
+Route::delete('/empleadosEliminar',[EmpleadoController::class,'eliminar'])->name('empleados.eliminar')->middleware('auth');
+
+Route::put('/segurosMedicosActualizar',[SeguroMedicoController::class,'actualizar'])->name('segurosMedicos.actualizar')->middleware('auth');
+Route::get('/segurosMedicosId/{id}', [SeguroMedicoController::class,'getSeguroMedicoById'])->middleware('auth');
+Route::delete('/segurosMedicosEliminar',[SeguroMedicoController::class,'eliminar'])->name('segurosMedicos.eliminar')->middleware('auth');
+
+Route::put('/nacionalidadesActualizar',[NacionalidadController::class,'actualizar'])->name('nacionalidades.actualizar')->middleware('auth');
+Route::get('/nacionalidadesId/{id}', [NacionalidadController::class,'getNacionalidadById'])->middleware('auth');
+Route::delete('/nacionalidadesEliminar',[NacionalidadController::class,'eliminar'])->name('nacionalidades.eliminar')->middleware('auth');
+
+Route::put('/provinciasActualizar',[ProvinciaController::class,'actualizar'])->name('provincias.actualizar')->middleware('auth');
+Route::get('/provinciasId/{id}', [ProvinciaController::class,'getProvinciaById'])->middleware('auth');
+Route::delete('/provinciasEliminar',[ProvinciaController::class,'eliminar'])->name('provincias.eliminar')->middleware('auth');
+
+Route::put('/sexosActualizar',[SexoController::class,'actualizar'])->name('sexo.actualizar')->middleware('auth');
+Route::get('/sexosId/{id}', [SexoController::class,'getSexoById'])->middleware('auth');
+Route::delete('/sexosEliminar',[SexoController::class,'eliminar'])->name('sexo.eliminar')->middleware('auth');
+
+Route::put('/documentosIdentificativosActualizar',[DocumentoIdentificativoController::class,'actualizar'])->name('documentosIdentificativos.actualizar')->middleware('auth');
+Route::get('/documentosIdentificativosId/{id}', [DocumentoIdentificativoController::class,'getDocumentoIdentificativoById'])->middleware('auth');
+Route::delete('/documentosIdentificativosEliminar',[DocumentoIdentificativoController::class,'eliminar'])->name('documentosIdentificativos.eliminar')->middleware('auth');
+
+Route::put('/estadosActualizar',[EstadoController::class,'actualizar'])->name('estados.actualizar')->middleware('auth');
+Route::get('/estadosId/{id}', [EstadoController::class,'getEstadoById'])->middleware('auth');
+Route::delete('/estadosEliminar',[EstadoController::class,'eliminar'])->name('estados.eliminar')->middleware('auth');
+
+Route::put('/tiposViaActualizar',[TipoViaController::class,'actualizar'])->name('tiposVia.actualizar')->middleware('auth');
+Route::get('/tiposViaId/{id}', [TipoViaController::class,'getTipoViaById'])->middleware('auth');
+Route::delete('/tiposViaEliminar',[TipoViaController::class,'eliminar'])->name('tiposVia.eliminar')->middleware('auth');
+
+Route::put('/gradosDependenciaActualizar',[GradoDependenciaController::class,'actualizar'])->name('gradosDependencia.actualizar')->middleware('auth');
+Route::get('/gradosDependenciaId/{id}', [GradoDependenciaController::class,'getGradoDependenciaById'])->middleware('auth');
+Route::delete('/gradosDependenciaEliminar',[GradoDependenciaController::class,'eliminar'])->name('gradosDependencia.eliminar')->middleware('auth');
+
+
+Route::put('/nivelDependenciasActualizar',[NivelDependenciaController::class,'actualizar'])->name('nivelDependencias.actualizar')->middleware('auth');
+Route::get('/nivelDependenciasId/{id}', [NivelDependenciaController::class,'getNivelDependenciaById'])->middleware('auth');
+Route::delete('/nivelDependenciasEliminar',[NivelDependenciaController::class,'eliminar'])->name('nivelDependencias.eliminar')->middleware('auth');
+
+Route::put('/serviciosDependenciasActualizar',[DependenciaServicioController::class,'actualizar'])->name('serviciosDependencias.actualizar')->middleware('auth');
+Route::get('/serviciosDependenciasId/{id}', [DependenciaServicioController::class,'getServicioDependenciaById'])->middleware('auth');
+Route::delete('/serviciosDependenciasEliminar',[DependenciaServicioController::class,'eliminar'])->name('serviciosDependencias.eliminar')->middleware('auth');
+
+Route::put('/subtipoDependenciasActualizar',[DependenciaServicioSubtipoController::class,'actualizar'])->name('subtipoDependencias.actualizar')->middleware('auth');
+Route::get('/subtipoDependenciasId/{id}', [DependenciaServicioSubtipoController::class,'getServicioDependenciaSubtipoById'])->middleware('auth');
+Route::delete('/subtipoDependenciasEliminar',[DependenciaServicioSubtipoController::class,'eliminar'])->name('subtipoDependencias.eliminar')->middleware('auth');
+
+
+Route::put('/patologiasConcretasActualizar',[PatologiaConcretaController::class,'actualizar'])->name('patologiasConcretas.actualizar')->middleware('auth');
+Route::get('/patologiasConcretasId/{id}', [PatologiaConcretaController::class,'getPatologiaConcretaById'])->middleware('auth');
+Route::delete('/patologiasConcretasEliminar',[PatologiaConcretaController::class,'eliminar'])->name('patologiasConcretas.eliminar')->middleware('auth');
+
+Route::put('/patologiasGeneralesActualizar',[PatologiaGeneralController::class,'actualizar'])->name('patologiasGenerales.actualizar')->middleware('auth');
+Route::get('/patologiasGeneralesId/{id}', [PatologiaGeneralController::class,'getPatologiaGeneralById'])->middleware('auth');
+Route::delete('/patologiasGeneralesEliminar',[PatologiaGeneralController::class,'eliminar'])->name('patologiasGenerales.eliminar')->middleware('auth');
+
+Route::put('/prestacionDependenciasActualizar',[PrestacionDependenciaController::class,'actualizar'])->name('prestacionDependencias.actualizar')->middleware('auth');
+Route::get('/prestacionDependenciasId/{id}', [PrestacionDependenciaController::class,'getPrestacionDependenciaById'])->middleware('auth');
+Route::delete('/prestacionDependenciasEliminar',[PrestacionDependenciaController::class,'eliminar'])->name('prestacionDependencias.eliminar')->middleware('auth');
+
+Route::put('/prestacionesActualizar',[PrestacionController::class,'actualizar'])->name('prestaciones.actualizar')->middleware('auth');
+Route::get('/prestacionesId/{id}', [PrestacionController::class,'getPrestacionById'])->middleware('auth');
+Route::delete('/prestacionesEliminar',[PrestacionController::class,'eliminar'])->name('prestaciones.eliminar')->middleware('auth');
+
+Route::put('/opcionAutorizacionActualizar',[OpcionAutorizacionController::class,'actualizar'])->name('opcionAutorizacion.actualizar')->middleware('auth');
+Route::get('/opcionAutorizacionId/{id}', [OpcionAutorizacionController::class,'getOpcionAutorizacionById'])->middleware('auth');
+Route::delete('/opcionAutorizacionEliminar',[OpcionAutorizacionController::class,'eliminar'])->name('opcionAutorizacion.eliminar')->middleware('auth');
+
+
+Route::put('/añosActualizar',[AñoController::class,'actualizar'])->name('años.actualizar')->middleware('auth');
+Route::get('/añosId/{id}', [AñoController::class,'getAñoById'])->middleware('auth');
+Route::delete('/añosEliminar',[AñoController::class,'eliminar'])->name('años.eliminar')->middleware('auth');
+
+Route::put('/tiposRegimenActualizar',[TipoRegimenController::class,'actualizar'])->name('tiposRegimen.actualizar')->middleware('auth');
+Route::get('/tiposRegimenId/{id}', [TipoRegimenController::class,'getTipoRegimenById'])->middleware('auth');
+Route::delete('/tiposRegimenEliminar',[TipoRegimenController::class,'eliminar'])->name('tiposRegimen.eliminar')->middleware('auth');
+
+Route::put('/carpetasActualizar',[CarpetaDecesoController::class,'actualizar'])->name('carpetas.actualizar')->middleware('auth');
+Route::get('/carpetasId/{id}', [CarpetaDecesoController::class,'getCarpetaDecesoById'])->middleware('auth');
+Route::delete('/carpetasEliminar',[CarpetaDecesoController::class,'eliminar'])->name('carpetas.eliminar')->middleware('auth');
+
+Route::put('/regimenesActualizar',[RegimenController::class,'actualizar'])->name('regimenes.actualizar')->middleware('auth');
+Route::get('/regimenesId/{id}', [RegimenController::class,'getRegimenById'])->middleware('auth');
+Route::delete('/regimenesEliminar',[RegimenController::class,'eliminar'])->name('regimenes.eliminar')->middleware('auth');
+
+Route::put('/letradosActualizar',[LetradoController::class,'actualizar'])->name('letrados.actualizar')->middleware('auth');
+Route::get('/letradosId/{id}', [LetradoController::class,'getLetradoById'])->middleware('auth');
+Route::delete('/letradosEliminar',[LetradoController::class,'eliminar'])->name('letrados.eliminar')->middleware('auth');
+
+Route::put('/motivosActualizar',[MotivoController::class,'actualizar'])->name('motivos.actualizar')->middleware('auth');
+Route::get('/motivosId/{id}', [MotivoController::class,'getMotivoById'])->middleware('auth');
+Route::delete('/motivosEliminar',[MotivoController::class,'eliminar'])->name('motivos.eliminar')->middleware('auth');
+
+Route::put('/autorizacionActualizar',[AutorizacionController::class,'actualizar'])->name('autorizacion.actualizar')->middleware('auth');
+Route::get('/autorizacionId/{id}', [AutorizacionController::class,'getAutorizacionById'])->middleware('auth');
+Route::delete('/autorizacionEliminar',[AutorizacionController::class,'eliminar'])->name('autorizacion.eliminar')->middleware('auth');
+
+Route::put('/trabajadoresSocialesActualizar',[TrabajadorSocialController::class,'actualizar'])->name('trabajadoresSociales.actualizar')->middleware('auth');
+Route::get('/trabajadoresSocialesId/{id}', [TrabajadorSocialController::class,'getTrabajadorSocialById'])->middleware('auth');
+Route::delete('/trabajadoresSocialesEliminar',[TrabajadorSocialController::class,'eliminar'])->name('trabajadoresSociales.eliminar')->middleware('auth');
 
