@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Menu;
+
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Pagination\Paginator;
@@ -29,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         
         view()->composer('welcome_menu',function($view)
         {
-            $view->with('menus', Menu::menus());
+            $view->with('menus',Menu::menus());
         });
     }
 }
