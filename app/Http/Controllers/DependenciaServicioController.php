@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DependenciaServicioRequest;
 use App\Models\DependenciaServicio;
+use App\Models\NivelDependencia;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class DependenciaSevicioController extends Controller
+class DependenciaServicioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -68,5 +69,29 @@ class DependenciaSevicioController extends Controller
     {
         $serviciosDependencia->delete();
         return redirect()->route('serviciosDependencias.index')->with('danger','Servicio eliminado');
+    }
+
+    
+    public function getServicioDependenciaById($id)
+    {   
+        $archivo=fopen("getservicioDependiencia.txt","w+");    
+        $servicio = DependenciaServicio::find($id);
+       fwrite($archivo, print_r($servicio,true));
+        return $servicio;
+    }
+
+public function actualizar(DependenciaServicioRequest $request):RedirectResponse
+    {
+        $servicio= DependenciaServicio::find($request->id);
+        
+        $servicio->update($request->all());
+        return redirect()->route('serviciosDependencias.index')->with('success','servicio dependencia actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $servicio=DependenciaServicio::find($request->borrado);
+        $servicio->delete();
+        return redirect()->route('serviciosDependencias.index')->with('danger','servicios dependencia eliminada');
     }
 }

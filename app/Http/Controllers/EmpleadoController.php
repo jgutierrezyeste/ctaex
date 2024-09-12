@@ -70,4 +70,26 @@ class EmpleadoController extends Controller
         $empleado->delete();
         return redirect()->route('empleados.index');
     }
+
+    public function getEmpleadoById($id)
+    {       
+        $empleado = Empleado::find($id);
+       
+        return $empleado;
+    }
+
+public function actualizar(EmpleadoRequest $request):RedirectResponse
+    {
+        $empleado=Empleado::find($request->id);
+        
+        $empleado->update($request->all());
+        return redirect()->route('empleados.index')->with('success','empleado  actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $empleado=Empleado::find($request->borrado);
+        $empleado->delete();
+        return redirect()->route('empleados.index')->with('danger','empleado eliminada');
+    }
 }

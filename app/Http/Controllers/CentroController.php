@@ -85,4 +85,30 @@ class CentroController extends Controller
         $centro->delete();
         return redirect()->route('centros.index')->with('danger','Centro eliminado');
     }
+
+    public function getCentroById($id)
+        { $archivo=fopen("getcentrobyid.txt","w+");
+           
+            $centro = Centro::find($id);
+            fwrite($archivo,$centro);
+            return $centro;
+        }
+
+    public function actualizar(CentroRequest $request):RedirectResponse
+        {
+
+        
+            $centro=Centro::find($request->id);
+            
+            $centro->update($request->all());
+            return redirect()->route('centros.index')->with('success','centro actualizado');
+        }
+
+        public function eliminar(Request $request):RedirectResponse
+        {
+            $centro=Centro::find($request->borrado);
+            $centro->delete();
+            return redirect()->route('centros.index')->with('danger','Centro eliminada');
+        }
+
 }

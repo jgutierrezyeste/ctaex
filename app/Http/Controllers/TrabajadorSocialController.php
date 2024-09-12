@@ -67,4 +67,26 @@ class TrabajadorSocialController extends Controller
         return redirect()->route('trabajadoresSociales.index')->with('danger','Eliminado trabajador social'); 
 
     }
+
+    public function getTrabajadorSocialById($id)
+    {       
+        $trabajador = TrabajadorSocial::find($id);
+       
+        return $trabajador;
+    }
+
+public function actualizar(TrabajadorSocialRequest $request):RedirectResponse
+    {
+        $trabajador=TrabajadorSocial::find($request->id);
+        
+        $trabajador->update($request->all());
+        return redirect()->route('trabajadoresSociales.index')->with('success','trabajador social actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $trabajador=TrabajadorSocial::find($request->borrado);
+        $trabajador->delete();
+        return redirect()->route('trabajadoresSociales.index')->with('danger','trabajadro social eliminada');
+    }
 }

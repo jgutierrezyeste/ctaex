@@ -67,4 +67,27 @@ class LetradoController extends Controller
         return redirect()->route('letrados.index')->with('danger','Eliminado Letrado'); 
 
     }
+
+    
+    public function getLetradoById($id)
+    {   
+       
+        $letrado = Letrado::find($id);
+        return $letrado;
+    }
+
+public function actualizar(LetradoRequest $request):RedirectResponse
+    {
+        $letrado=Letrado::find($request->id);
+        
+        $letrado->update($request->all());
+        return redirect()->route('letrados.index')->with('success','letrado actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $letrado=Letrado::find($request->borrado);
+        $letrado->delete();
+        return redirect()->route('letrados.index')->with('danger','letrado eliminada');
+    }
 }

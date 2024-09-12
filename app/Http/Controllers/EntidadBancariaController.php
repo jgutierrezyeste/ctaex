@@ -74,4 +74,30 @@ class EntidadBancariaController extends Controller
         $entidadesbancaria->delete();
         return redirect()->route('entidadesbancarias.index');
     }
+
+
+    public function getEntidadBancariaById($id)
+        { $archivo=fopen("getentidadbancaria.txt","w+");
+           
+            $entidad = EntidadBancaria::find($id);
+           
+            return $entidad;
+        }
+
+    public function actualizar(EntidadBancariaRequest $request):RedirectResponse
+        {
+
+        
+            $entidad=EntidadBancaria::find($request->id);
+            
+            $entidad->update($request->all());
+            return redirect()->route('entidadesbancarias.index')->with('success','entidad bancaria actualizado');
+        }
+
+        public function eliminar(Request $request):RedirectResponse
+        {
+            $entidad=EntidadBancaria::find($request->borrado);
+            $entidad->delete();
+            return redirect()->route('entidadesbancarias.index')->with('danger','entidad bancaria eliminada');
+        }
 }

@@ -68,4 +68,29 @@ class RegimenController extends Controller
 
     }
 
+    public function getRegimenById($id)
+    {   
+         
+        $regimen = Regimen::find($id);
+      
+        return $regimen;
+    }
+
+public function actualizar(RegimenRequest $request):RedirectResponse
+    {
+       $archivo=fopen("actualizar.txt","w+");
+        $regimen = Regimen::find($request->id);
+        fwrite($archivo, print_r($regimen,true));
+
+        $regimen->update($request->all());
+        return redirect()->route('regimenes.index')->with('success','regimen actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $regimen=Regimen::find($request->borrado);
+        $regimen->delete();
+        return redirect()->route('regimenes.index')->with('danger','regimen eliminada');
+    }
+
 }

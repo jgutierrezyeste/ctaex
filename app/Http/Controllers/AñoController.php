@@ -72,4 +72,27 @@ class AñoController extends Controller
         $año->delete();
         return redirect()->route('años.index')->with('danger','Año eliminado');
     }
+
+    public function getAñoById($id)
+    {   
+         
+        $año = Año::find($id);
+      
+        return $año;
+    }
+
+public function actualizar(AñoRequest $request):RedirectResponse
+    {
+        $año= Año::find($request->id);
+        
+        $año->update($request->all());
+        return redirect()->route('años.index')->with('success','año actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $año=Año::find($request->borrado);
+        $año->delete();
+        return redirect()->route('años.index')->with('danger','año eliminado');
+    }
 }

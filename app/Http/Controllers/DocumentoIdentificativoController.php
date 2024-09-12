@@ -70,4 +70,26 @@ class DocumentoIdentificativoController extends Controller
      $documentosIdentificativo->delete();
      return redirect()->route('documentosIdentificativos.index')->with('danger','Documento identificativo eliminado.');
     }
+
+    public function getDocumentoIdentificativoById($id)
+    {       
+        $documento = DocumentoIdentificativo::find($id);
+       
+        return $documento;
+    }
+
+public function actualizar(DocumentoIdentificativoRequest $request):RedirectResponse
+    {
+        $documento=DocumentoIdentificativo::find($request->id);
+        
+        $documento->update($request->all());
+        return redirect()->route('documentosIdentificativos.index')->with('success','documento actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $documento=DocumentoIdentificativo::find($request->borrado);
+        $documento->delete();
+        return redirect()->route('documentosIdentificativos.index')->with('danger','documento eliminada');
+    }
 }

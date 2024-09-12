@@ -71,4 +71,27 @@ class TipoRendicionAnualController extends Controller
         $tiposRendicionAnual->delete();
         return redirect()->route('tiposRendicionAnual.index')->with('danger','Tipo restitucion eliminada');
     }
+
+    public function getTipoRendicionAnualById($id)
+    {       
+        $tiporendicion = TipoRendicionAnual::find($id);
+       
+        return $tiporendicion;
+    }
+
+public function actualizar(TipoRendicionAnualRequest $request):RedirectResponse
+    {
+        $tiporendicion=TipoRendicionAnual::find($request->id);
+        
+        $tiporendicion->update($request->all());
+        return redirect()->route('tiposRendicionAnual.index')->with('success','tipo rendicion  actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $tiporendicion=TipoRendicionAnual::find($request->borrado);
+        $tiporendicion->delete();
+        return redirect()->route('tiposRedicionAnual.index')->with('danger','tipo rendicion eliminada');
+    }
+
 }

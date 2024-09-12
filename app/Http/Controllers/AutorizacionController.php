@@ -72,4 +72,26 @@ class AutorizacionController extends Controller
         $autorizacion->delete();
         return redirect()->route('autorizacion.index')->with('danger','Autorizacion eliminada');
     }
+
+    public function getAutorizacionById($id)
+    {       
+        $autorizacion = Autorizacion::find($id);
+       
+        return $autorizacion;
+    }
+
+public function actualizar(AutorizacionRequest $request):RedirectResponse
+    {
+        $autorizacion=Autorizacion::find($request->id);
+        
+        $autorizacion->update($request->all());
+        return redirect()->route('autorizacion.index')->with('success','autorizacion actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $autorizacion=Autorizacion::find($request->borrado);
+        $autorizacion->delete();
+        return redirect()->route('autorizacioin.index')->with('danger','autorizacion eliminada');
+    }
 }

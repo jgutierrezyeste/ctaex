@@ -68,4 +68,28 @@ class JuzgadoController extends Controller
 
     
     }
+
+    public function getJuzgadoById($id)
+    {       
+        $juzgado = Juzgado::find($id);
+       
+        return $juzgado;
+    }
+
+public function actualizar(JuzgadoRequest $request):RedirectResponse
+    {
+
+    
+        $juzgado=Juzgado::find($request->id);
+        
+        $juzgado->update($request->all());
+        return redirect()->route('juzgados.index')->with('success','juzgado actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $juzgado=Juzgado::find($request->borrado);
+        $juzgado->delete();
+        return redirect()->route('juzgados.index')->with('danger','juzgado eliminada');
+    }
 }

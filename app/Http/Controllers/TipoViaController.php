@@ -68,4 +68,27 @@ class TipoViaController extends Controller
 
     }
 
+    
+    public function getTipoViaById($id)
+    {       
+        $vias = TipoVia::find($id);
+       
+        return $vias;
+    }
+
+public function actualizar(TipoViaRequest $request):RedirectResponse
+    {
+        $vias=TipoVia::find($request->id);
+        
+        $vias->update($request->all());
+        return redirect()->route('tiposVia.index')->with('success','documento actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $vias=TipoVia::find($request->borrado);
+        $vias->delete();
+        return redirect()->route('tiposVia.index')->with('danger','tipo de via eliminada');
+    }
+
 }

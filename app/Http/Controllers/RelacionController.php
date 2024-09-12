@@ -39,6 +39,14 @@ class RelacionController extends Controller
         return redirect()->route('relaciones.index')->with('success','Relacion nueva añadida');
     }
 
+
+    public function enviarSelected(RelacionRequest $request){
+        $relacione=$request->all();
+        $archivo=fopen("seleccionado.txt","w+");
+        fwrite($archivo,print_r($relacione,true));
+        return view('relaciones.editrelacion',compact('relacione'));
+
+    }
     /**
      * Display the specified resource.
      */
@@ -58,9 +66,21 @@ class RelacionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(RelacionRequest $request, Relacion $relacione):RedirectResponse
+    public function update(RelacionRequest $request):RedirectResponse
     {
-        $relacione->update($request->all());
+        $archivo=fopen("actualizar.txt","w+");
+        fwrite($archivo,print_r($request->all(),true));
+        //$relacione->update($request->all());
+        return redirect()->route('relaciones.index')->with('success','Relacion actualizada');
+    }
+
+    public function actualizar(RelacionRequest $request):RedirectResponse
+    {
+        $archivo=fopen("actualizar.txt","w+");
+        fwrite($archivo,print_r($request->all(),true));
+        $relacion=Relacion::find($request->id);
+        fwrite($archivo, print_r($relacion,true));
+        $relacion->update($request->all());
         return redirect()->route('relaciones.index')->with('success','Relacion actualizada');
     }
 
@@ -72,4 +92,30 @@ class RelacionController extends Controller
         $relacione->delete();
         return redirect()->route('relaciones.index')->with('danger','Relacion eliminada');
     }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $relacion=Relacion::find($request->borrado);
+        $relacion->delete();
+        return redirect()->route('relaciones.index')->with('danger','Relacion eliminada');
+    }
+    /*public function eliminar($id):RedirectResponse
+    {
+        $archivo=fopen("eliminar.txt","w+");
+        $relacion=Relacion::find($id);
+        fwrite($archivo,print_r($relacion,true));
+
+        $relacion->delete();
+        return redirect()->route('relaciones.index')->with('danger','Relacion eliminada');
+    }*/
+
+    public function getRelacionById($id)
+        {
+           
+            $relacion = Relacion::find($id);
+            
+            return $relacion;
+        }
+
+        
 }

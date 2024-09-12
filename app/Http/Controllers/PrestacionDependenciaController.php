@@ -67,4 +67,27 @@ class PrestacionDependenciaController extends Controller
         return redirect()->route('prestacionDependencias.index')->with('danger','Eliminada prestacion dependencia'); 
 
     }
+
+    public function getPrestacionDependenciaById($id)
+    {   
+         
+        $prestacion = PrestacionDependencia::find($id);
+      
+        return $prestacion;
+    }
+
+public function actualizar(PrestacionDependenciaRequest $request):RedirectResponse
+    {
+        $prestacion= PrestacionDependencia::find($request->id);
+        
+        $prestacion->update($request->all());
+        return redirect()->route('prestacionDependencias.index')->with('success','prestacion dependencias actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $prestacion=PrestacionDependencia::find($request->borrado);
+        $prestacion->delete();
+        return redirect()->route('prestacionDependencias.index')->with('danger','prestacion dependencia eliminada');
+    }
 }

@@ -70,4 +70,28 @@ class DependenciaServicioSubtipoController extends Controller
         $subtipoDependencia->delete();
         return redirect()->route('subtipoDependencias.index')->with ('danger', 'Servicio subtipo eliminado');
     }
+
+        
+    public function getServicioDependenciaSubtipoById($id)
+    {   
+         
+        $subtipo = DependenciaServicioSubtipo::find($id);
+      
+        return $subtipo;
+    }
+
+public function actualizar(DependenciaServicioSubtipoRequest $request):RedirectResponse
+    {
+        $subtipo= DependenciaServicioSubtipo::find($request->id);
+        
+        $subtipo->update($request->all());
+        return redirect()->route('subtipoDependencias.index')->with('success','servicio subtipo actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $subtipo=DependenciaServicioSubtipo::find($request->borrado);
+        $subtipo->delete();
+        return redirect()->route('subtipoDependencias.index')->with('danger','servicio subtipo eliminada');
+    }
 }

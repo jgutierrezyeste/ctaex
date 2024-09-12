@@ -72,4 +72,29 @@ class ModoResolucionController extends Controller
         $resolucionModo->delete();
         return redirect()->route('resolucionModos.index')->with('danger','Modo resolucion eliminado');
     }
+
+    
+    public function getModoResolucionById($id)
+    {       
+        $modoresolucion = ModoResolucion::find($id);
+       
+        return $modoresolucion;
+    }
+
+public function actualizar(ModoResolucionRequest $request):RedirectResponse
+    {
+
+    
+        $modoresolucion=ModoResolucion::find($request->id);
+        
+        $modoresolucion->update($request->all());
+        return redirect()->route('resolucionModos.index')->with('success','modo resolucion  actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $modoresolucion=ModoResolucion::find($request->borrado);
+        $modoresolucion->delete();
+        return redirect()->route('resolucionModos.index')->with('danger','modo resolucion eliminada');
+    }
 }

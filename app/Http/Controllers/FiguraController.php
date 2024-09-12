@@ -71,4 +71,26 @@ class FiguraController extends Controller
         $figura->delete();
         return redirect()->route('figuras.index')->with ('danger','Figura eliminada');
     }
+
+    public function getFiguraById($id)
+    {       
+        $figura = Figura::find($id);
+       
+        return $figura;
+    }
+
+public function actualizar(FiguraRequest $request):RedirectResponse
+    {
+        $figura=Figura::find($request->id);
+        
+        $figura->update($request->all());
+        return redirect()->route('figuras.index')->with('success','figuras actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $figura=Figura::find($request->borrado);
+        $figura->delete();
+        return redirect()->route('figuras.index')->with('danger','figura eliminada');
+    }
 }

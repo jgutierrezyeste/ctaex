@@ -67,4 +67,27 @@ class PrestacionController extends Controller
         return redirect()->route('prestaciones.index')->with('danger','Eliminada prestacion'); 
 
     }
+
+    public function getPrestacionById($id)
+    {   
+         
+        $prestacion = Prestacion::find($id);
+      
+        return $prestacion;
+    }
+
+public function actualizar(PrestacionRequest $request):RedirectResponse
+    {
+        $prestacion= Prestacion::find($request->id);
+        
+        $prestacion->update($request->all());
+        return redirect()->route('prestaciones.index')->with('success','prestacion actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $prestacion=Prestacion::find($request->borrado);
+        $prestacion->delete();
+        return redirect()->route('prestaciones.index')->with('danger','prestacion eliminada');
+    }
 }

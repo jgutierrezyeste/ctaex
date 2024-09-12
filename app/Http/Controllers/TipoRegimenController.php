@@ -71,4 +71,28 @@ class TipoRegimenController extends Controller
         $tiposRegiman->delete();
         return redirect()->route('tiposRegimen.index')->with('danger','Tipo regimen eliminada');
     }
+
+    public function getTipoRegimenById($id)
+    {   
+         
+        $tiposregimen = TipoRegimen::find($id);
+      
+        return $tiposregimen;
+    }
+
+public function actualizar(TipoRegimenRequest $request):RedirectResponse
+    {
+       
+        $tiposregimen= TipoRegimen::find($request->id);
+        
+        $tiposregimen->update($request->all());
+        return redirect()->route('tiposRegimen.index')->with('success','tipo regimen actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $tiposregimen=TipoRegimen::find($request->borrado);
+        $tiposregimen->delete();
+        return redirect()->route('tiposRegimen.index')->with('danger','tipo regimen eliminada');
+    }
 }

@@ -67,4 +67,27 @@ class PatologiaGeneralController extends Controller
         return redirect()->route('patologiasGenerales.index')->with('danger','Eliminada patología general'); 
 
     }
+
+    public function getPatologiaGeneralById($id)
+    {   
+         
+        $patologia = PatologiaGeneral::find($id);
+      
+        return $patologia;
+    }
+
+public function actualizar(PatologiaGeneralRequest $request):RedirectResponse
+    {
+        $patologia= PatologiaGeneral::find($request->id);
+        
+        $patologia->update($request->all());
+        return redirect()->route('patologiasGenerales.index')->with('success','patologia general actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $patologia=PatologiaGeneral::find($request->borrado);
+        $patologia->delete();
+        return redirect()->route('patologiasGenerales.index')->with('danger','patologia general eliminada');
+    }
 }

@@ -67,5 +67,27 @@ class ProvinciaController extends Controller
         return redirect()->route('provincias.index')->with('danger','Eliminada provincia'); 
 
     }
+
+    public function getProvinciaById($id)
+    {       
+        $provincia = Provincia::find($id);
+       
+        return $provincia;
+    }
+
+public function actualizar(ProvinciaRequest $request):RedirectResponse
+    {
+        $provincia=Provincia::find($request->id);
+        
+        $provincia->update($request->all());
+        return redirect()->route('provincias.index')->with('success','nacionalidad actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $provincia=Provincia::find($request->borrado);
+        $provincia->delete();
+        return redirect()->route('provincias.index')->with('danger','provincia eliminada');
+    }
     
 }

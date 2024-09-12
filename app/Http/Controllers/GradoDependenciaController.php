@@ -70,4 +70,27 @@ class GradoDependenciaController extends Controller
         return redirect()->route('gradosDependencia.index')->with('danger','Eliminado grado dependencia'); 
 
     }
+
+    
+    public function getGradoDependenciaById($id)
+    {       
+        $grado = GradoDependencia::find($id);
+       
+        return $grado;
+    }
+
+public function actualizar(GradoDependenciaRequest $request):RedirectResponse
+    {
+        $grado=GradoDependencia::find($request->id);
+        
+        $grado->update($request->all());
+        return redirect()->route('gradosDependencia.index')->with('success','documento actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $grado=GradoDependencia::find($request->borrado);
+        $grado->delete();
+        return redirect()->route('gradosDependencia.index')->with('danger','grado dependencia eliminada');
+    }
 }

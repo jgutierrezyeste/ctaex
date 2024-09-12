@@ -16,7 +16,7 @@ class AseguradoraController extends Controller
     public function index()
     {
         $aseguradoras=Aseguradora::all();
-        return view ('aseguradora.aseguradoraplantilla', compact ('aseguradoras'));
+        return view ('aseguradoras.aseguradora', compact ('aseguradoras'));
     }
 
     /**
@@ -25,7 +25,7 @@ class AseguradoraController extends Controller
     public function create():View
     {
        
-        return view ('aseguradora.addaseguradora');
+        return view ('aseguradoras.addaseguradora');
     }
 
     /**
@@ -54,7 +54,7 @@ class AseguradoraController extends Controller
      */
     public function edit(Aseguradora $aseguradora):View
     {
-        return view ('aseguradora.editaseguradora',compact ('aseguradora'));
+        return view ('aseguradoras.editaseguradora',compact ('aseguradora'));
     }
 
     /**
@@ -73,5 +73,37 @@ class AseguradoraController extends Controller
     {
         $aseguradora->delete();
         return redirect()->route('aseguradoras.index')->with('danger','Aseguradora eliminada');
+    }
+
+   /* public function getaseguradora(Request $request)
+    {
+        $archivo=fopen("aseguradoras.txt","w+");
+        $aseguradora=Aseguradora::where ($request->id)->get();
+        fwrite($archivo,print_r($aseguradora,true));
+        return $aseguradora;
+    }*/
+
+    public function getAseguradoraById($id)
+    {       
+        $aseguradora = Aseguradora::find($id);
+       
+        return $aseguradora;
+    }
+
+public function actualizar(AseguradoraRequest $request):RedirectResponse
+    {
+
+    
+        $aseguradora=Aseguradora::find($request->id);
+        
+        $aseguradora->update($request->all());
+        return redirect()->route('aseguradoras.index')->with('success','aseguradora actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $aseguradora=Aseguradora::find($request->borrado);
+        $aseguradora->delete();
+        return redirect()->route('aseguradoras.index')->with('danger','aseguradora eliminada');
     }
 }

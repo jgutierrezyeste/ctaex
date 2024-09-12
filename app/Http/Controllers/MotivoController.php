@@ -67,4 +67,28 @@ class MotivoController extends Controller
         return redirect()->route('motivos.index')->with('danger','Eliminado motivo'); 
 
     }
+
+    public function getMotivoById($id)
+    {       
+        $motivo = Motivo::find($id);
+       
+        return $motivo;
+    }
+
+public function actualizar(MotivoRequest $request):RedirectResponse
+    {
+        $motivo=Motivo::find($request->id);
+        
+        $motivo->update($request->all());
+        return redirect()->route('motivos.index')->with('success','motivo actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $motivo=Motivo::find($request->borrado);
+        $motivo->delete();
+        return redirect()->route('motivos.index')->with('danger','motivo eliminada');
+    }
+
+    
 }

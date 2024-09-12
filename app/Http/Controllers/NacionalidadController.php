@@ -67,4 +67,26 @@ class NacionalidadController extends Controller
         return redirect()->route('nacionalidades.index')->with('danger','Eliminado nacionalidad'); 
 
     }
+
+    public function getNacionalidadById($id)
+    {       
+        $nacionalidad = Nacionalidad::find($id);
+       
+        return $nacionalidad;
+    }
+
+public function actualizar(NacionalidadRequest $request):RedirectResponse
+    {
+        $nacionalidad=Nacionalidad::find($request->id);
+        
+        $nacionalidad->update($request->all());
+        return redirect()->route('nacionalidades.index')->with('success','nacionalidad actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $nacionalidad=Nacionalidad::find($request->borrado);
+        $nacionalidad->delete();
+        return redirect()->route('nacionalidades.index')->with('danger','nacionalidad eliminada');
+    }
 }

@@ -69,4 +69,27 @@ class OpcionAutorizacionController extends Controller
         return redirect()->route('opcionAutorizacion.index')->with('danger','Eliminada opcion de revision'); 
 
     }
+
+    public function getOpcionAutorizacionById($id)
+    {   
+         
+        $opciones = OpcionAutorizacion::find($id);
+      
+        return $opciones;
+    }
+
+public function actualizar(OpcionAutorizacionRequest $request):RedirectResponse
+    {
+        $opciones= OpcionAutorizacion::find($request->id);
+        
+        $opciones->update($request->all());
+        return redirect()->route('opcionAutorizacion.index')->with('success','opcion autorizacion actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $opciones=OpcionAutorizacion::find($request->borrado);
+        $opciones->delete();
+        return redirect()->route('opcionAutorizacion.index')->with('danger','opcion autorizacion eliminada');
+    }
 }

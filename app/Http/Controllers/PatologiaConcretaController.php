@@ -69,4 +69,28 @@ class PatologiaConcretaController extends Controller
         a patologia'); 
 
     }
+
+    public function getPatologiaConcretaById($id)
+    {   
+         
+        $patologia = PatologiaConcreta::find($id);
+      
+        return $patologia;
+    }
+
+public function actualizar(PatologiaConcretaRequest $request):RedirectResponse
+    {
+       
+        $patologia= PatologiaConcreta::find($request->id);
+        
+        $patologia->update($request->all());
+        return redirect()->route('patologiasConcretas.index')->with('success','patologia concreta actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $patologia=PatologiaConcreta::find($request->borrado);
+        $patologia->delete();
+        return redirect()->route('patologiasConcretas.index')->with('danger','patologia concreta eliminada');
+    }
 }

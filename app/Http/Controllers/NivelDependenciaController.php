@@ -67,4 +67,26 @@ class NivelDependenciaController extends Controller
         return redirect()->route('nivelDependencias.index')->with('danger','Eliminado Nivel de Dependencia'); 
 
     }
+
+    public function getNivelDependenciaById($id)
+    {       
+        $nivel = NivelDependencia::find($id);
+       
+        return $nivel;
+    }
+
+public function actualizar(NivelDependenciaRequest $request):RedirectResponse
+    {
+        $nivel=NivelDependencia::find($request->id);
+        
+        $nivel->update($request->all());
+        return redirect()->route('nivelDependencias.index')->with('success','nivel dependencia actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $nivel=NivelDependencia::find($request->borrado);
+        $nivel->delete();
+        return redirect()->route('nivelDependencias.index')->with('danger','nivel dependencia eliminada');
+    }
 }

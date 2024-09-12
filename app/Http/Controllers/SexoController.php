@@ -67,4 +67,28 @@ class SexoController extends Controller
         return redirect()->route('sexo.index')->with('danger','Eliminado sexo'); 
 
     }
+
+    
+    public function getSexoById($id)
+    {       
+        $sexo = Sexo::find($id);
+       
+        return $sexo;
+    }
+
+public function actualizar(SexoRequest $request):RedirectResponse
+    {
+        $sexo=Sexo::find($request->id);
+        
+        $sexo->update($request->all());
+        return redirect()->route('sexo.index')->with('success','sexo actualizado');
+    }
+
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $sexo=Sexo::find($request->borrado);
+        $sexo->delete();
+        return redirect()->route('sexo.index')->with('danger','sexo eliminada');
+    }
 }

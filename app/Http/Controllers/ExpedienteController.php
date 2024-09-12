@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ExpedienteRequest;
+use App\Models\Domicilio;
 use App\Models\Expediente;
+use App\Models\ExpedienteDatoPersonal;
+use App\Models\ExpedienteEntidadBancaria;
+use App\Models\ExpedientePrestacion;
 use App\Models\Juzgado;
 use App\Models\Regimen;
 use Illuminate\Http\RedirectResponse;
@@ -63,44 +67,11 @@ class ExpedienteController extends Controller
     }
 
 
-    
-
-
-/*public function busqueda(ExpedienteRequest $request,$vista)
-{
-    
-    if ($request->has("id"))
-    {
-      $id=$request->get('id');
-      $expte=$request->get('expte');
-    }
-  if ($request->has('nombre'))
-      $nombre=$request->get('nombre');
-  if ($request->has('apellido1'))
-      $apellido1=$request->get('apellido1');
- 
-  $expedientes = DB::table('expediente_datos_personales')
-  
-
-  ->select ('id', 'nombre', 'apellido1', 'fecha_nacimiento','numero_documento')
-  ->when($id, function ($query) use ($id) {
-      return $query->where('id','=',$id);})
-  ->when($nombre, function ($query) use ($nombre) {
-      return $query->where('nombre','=',$nombre);})
-  ->when($apellido1, function ($query) use ($apellido1) {
-          return $query->where('apellido1','=',$apellido1);})
-  ->Paginate(5);
-  
-  
-  
-  return view ( $vista ,compact('expedientes','id','nombre','apellido1'));
-}*/
-
 
 public function busqueda(Request $request,$vista)
 {
     
-  
+ 
     if ($request->has("id"))
     {
       $id=$request->get('id');
@@ -152,11 +123,11 @@ return view ( $vista ,compact('expedientes','id','nombre','apellido1','apellido2
         
     }
     
-    public function modificar():View 
+    public function modificar($vista):View 
         {
-        $expedientes=Expediente::all();
+        $expedientes=Expediente::orderBy('num_expte_intranet')->get();
         $regimenes=Regimen::all();
-        return view('expedientes.editexpediente', compact('expedientes','regimenes'));
+        return view($vista, compact('expedientes','regimenes'));
         }
     /**
      * Update the specified resource in storage.
@@ -184,5 +155,29 @@ return view ( $vista ,compact('expedientes','id','nombre','apellido1','apellido2
         return view($vista,compact('expedientes','regimenes'));
     }
 
+    public function mostrardatos($vistadatos,$idexpte):View
+    {
+       
+        
+
+        $expediente = Expediente::where ('expediente_datos_personales_id',$idexpte)->first();
+        $expdatospersonales= ExpedienteDatoPersonal::where('id',$idexpte)->first();
+        
     
+        $regimenes=Regimen::all();
+        $juzgados=Juzgado::all();
+    
+        return view ($vistadatos,compact('expediente','expdatospersonales','regimenes','juzgados'));
+    }
+
+    public function obtener_datos($vista,$id){
+        $expediente = Expediente::where ('id',$id)->first();
+        $archivo=fopen("obtener_datos.txt","w+");
+        fwrite($archivo,$vista.PHP_EOL);
+        fwrite($archivo,$id);
+       
+        //$expdatospersonales= ExpedienteDatoPersonal::where('id',$expediente->expediente_datos_personales_id)->first();
+        return view($vista,compact('expediente'));
+    }
+
 }

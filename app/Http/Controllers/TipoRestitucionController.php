@@ -71,4 +71,29 @@ class TipoRestitucionController extends Controller
         $tiposRestitucion->delete();
         return redirect()->route('tiposRestitucion.index')->with('danger','Tipo restitucion eliminada');
     }
+
+    
+    public function getTipoRestitucionById($id)
+    {       
+        $tipoRestitucion = TipoRestitucion::find($id);
+       
+        return $tipoRestitucion;
+    }
+
+public function actualizar(TipoRestitucionRequest $request):RedirectResponse
+    {
+
+    
+        $tipoRestitucion=TipoRestitucion::find($request->id);
+        
+        $tipoRestitucion->update($request->all());
+        return redirect()->route('tiposRestitucion.index')->with('success','tipo restitucion  actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $tipoRestitucion=TipoRestitucion::find($request->borrado);
+        $tipoRestitucion->delete();
+        return redirect()->route('tiposRestitucion.index')->with('danger','tipo restitucion eliminada');
+    }
 }

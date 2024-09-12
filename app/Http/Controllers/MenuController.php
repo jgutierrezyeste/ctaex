@@ -9,10 +9,10 @@ class MenuController extends Controller
 {
     
 
-    /*public function menus()
+    public function menus()
     {
-        $archivo=fopen("menus.txt","w+");
-        $menus= Menu::menus();
+       /* $archivo=fopen("menus.txt","w+");
+        $menus= new Menu();
         $data= $menus->optionsMenu();
         $menuAll =[];
         foreach ($data as $line)
@@ -21,7 +21,10 @@ class MenuController extends Controller
             $menuAll = array_merge($menuAll, $item);
         }
         //return $menus->menuAll = $menuAll;
+        return view ('welcome_menu', compact('menus'));*/
+        $menus=Menu::all();
         return view ('welcome_menu', compact('menus'));
-    }*/
+
+    }
     
 }

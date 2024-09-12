@@ -72,4 +72,28 @@ class CarpetaDecesoController extends Controller
         $carpeta->delete();
         return redirect()->route('carpetas.index')->with('danger','Carpeta eliminada');
     }
+
+    public function getCarpetaDecesoById($id)
+    {   
+         
+        $carpeta = CarpetaDeceso::find($id);
+      
+        return $carpeta;
+    }
+
+public function actualizar(CarpetaDecesoRequest $request):RedirectResponse
+    {
+       
+        $carpeta= CarpetaDeceso::find($request->id);
+        
+        $carpeta->update($request->all());
+        return redirect()->route('carpetas.index')->with('success','carpetas actualizada');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $carpeta=CarpetaDeceso::find($request->borrado);
+        $carpeta->delete();
+        return redirect()->route('carpetas.index')->with('danger','carpeta eliminada');
+    }
 }

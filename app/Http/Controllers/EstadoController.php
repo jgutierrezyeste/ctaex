@@ -67,4 +67,25 @@ class EstadoController extends Controller
         return redirect()->route('estados.index')->with('danger','Eliminado estado'); 
 
     }
+    public function getEstadoById($id)
+    {       
+        $estado = Estado::find($id);
+       
+        return $estado;
+    }
+
+public function actualizar(EstadoRequest $request):RedirectResponse
+    {
+        $estado=Estado::find($request->id);
+        
+        $estado->update($request->all());
+        return redirect()->route('estados.index')->with('success','sexo actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $estado=Estado::find($request->borrado);
+        $estado->delete();
+        return redirect()->route('estados.index')->with('danger','estado eliminada');
+    }
 }

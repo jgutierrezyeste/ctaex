@@ -70,4 +70,28 @@ class IniciadorProcedimientoController extends Controller
         return redirect()->route('iniciadorProcedimiento.index')->with('danger','Eliminado Iniciador procedimiento'); 
 
     }
+
+    public function getIniciadorProcedimientoById($id)
+    {       
+        $iniciadorProcedimiento = IniciadorProcedimiento::find($id);
+       
+        return $iniciadorProcedimiento;
+    }
+
+public function actualizar(IniciadorProcedimientoRequest $request):RedirectResponse
+    {
+
+    
+        $iniciadorProcedimiento=IniciadorProcedimiento::find($request->id);
+        
+        $iniciadorProcedimiento->update($request->all());
+        return redirect()->route('iniciadorProcedimiento.index')->with('success','iniciador  actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $iniciadorProcedimiento=IniciadorProcedimiento::find($request->borrado);
+        $iniciadorProcedimiento->delete();
+        return redirect()->route('iniciadorProcedimiento.index')->with('danger','iniciador procedimiento eliminada');
+    }
 }

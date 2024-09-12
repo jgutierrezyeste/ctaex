@@ -67,4 +67,26 @@ class SeguroMedicoController extends Controller
         return redirect()->route('segurosMedicos.index')->with('danger','Eliminado seguro médico'); 
 
     }
+
+    public function getSeguroMedicoById($id)
+    {       
+        $seguro = SeguroMedico::find($id);
+       
+        return $seguro;
+    }
+
+public function actualizar(SeguroMedicoRequest $request):RedirectResponse
+    {
+        $seguro=SeguroMedico::find($request->id);
+        
+        $seguro->update($request->all());
+        return redirect()->route('segurosMedicos.index')->with('success','seguro medico  actualizado');
+    }
+
+    public function eliminar(Request $request):RedirectResponse
+    {
+        $seguro=SeguroMedico::find($request->borrado);
+        $seguro->delete();
+        return redirect()->route('segurosMedicos.index')->with('danger','seguro medico eliminada');
+    }
 }
