@@ -23,13 +23,13 @@ class CentroRequest extends FormRequest
     {
         return [
             'nombre'=>'required',
-            'tipo_via_id'=>'required',
+            //'tipo_via_id'=>'required',
             'direccion'=>'required',
-            'numero'=>'required',
+            //'numero'=>'required',
             
             
             'telefono'=>'required|min:9|max:9',
-            'correo_electronico'=>'nullable|email'
+            //'correo_electronico'=>'nullable|email'
         ];
     }
 }

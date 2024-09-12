@@ -22,7 +22,8 @@ class ProvinciaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'cod_provincia'=>'required|max:3'
+            'nombre'=>'required'
+            //'cod_provincia'=>'required|max:3'
         ];
     }
 }

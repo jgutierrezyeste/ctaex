@@ -23,7 +23,7 @@ class RegimenRequest extends FormRequest
     {
         return [
             'nombre'=>'required|max:255',
-            'abreviatura'=>'required|max:4|min:2'
+            'abreviatura'=>'required|max:4|min:1'
         ];
     }
 }
