@@ -1,5 +1,5 @@
 @props(['titulo','subtitulo'=>'','ruta'=>'index_intranet'])
-<table width="100%" border="0">
+<table width="100%" border="0" align="center" margin-left="20%">
     <tbody>
         <tr>
             <td width="20%" align="left">
@@ -17,7 +17,7 @@
             </td>
             <td width="10%" align ="right">
                 
-                <x-imprimir :ruta="$ruta"></x-cierre_sesion>
+                <x-imprimir :ruta="$ruta"></x-imprimir>
             </td>
             
         </tr>

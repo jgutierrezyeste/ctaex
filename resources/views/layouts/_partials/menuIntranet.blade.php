@@ -2,8 +2,8 @@
 
 <ul class="menu_contenedor">
     <li class="menu"> <h1><img src="{{asset('assets/img/expediente.png')}}">EXPEDIENTES<img src="{{asset('assets/img/flechita.png')}}"></h1>
-        <ul   style="--cantidad-items:5">
-            <li class="submenu"><a href="{{ route('expedientes.index') }}"><h1>Indexar expediente</h1></a></li>
+        <ul   style="--cantidad-items:4">
+            
             <li class="submenu"><a href="{{ route('expedientes.create') }}"><h1>Iniciar Expedientes</h1></a></li>
             <li class="submenu"><a href="{{ route('expedientes.modificar','expedientes.editexpediente') }}"><h1>Modificar Expedientes</h1></a></li>
             <li class="submenu"><a href="{{ route('expedientes.consultar','expedientes.consultarexpediente') }}"><h1>Consultar Expedientes</h1></a></li>
@@ -18,11 +18,7 @@
             </li>
         </ul>
     </li>
-    <li class="menu"> <h1><img src="{{asset('assets/img/expediente.png')}}">DEFENSAS JUDICIALES<img src="{{asset('assets/img/flechita.png')}}"></h1>
-        <ul  style="--cantidad-items:1">
-             <li class="submenu"><a href="{{ route('defensasjudiciales.index') }}"><h1>Listar defensas judiciales</h1></a></li>
-        </ul>
-    </li>
+    
     <li class="menu"> <h1><img src="{{asset('assets/img/tutela.png')}}">TUTELA<img src="{{asset('assets/img/flechita.png')}}"></h1>
         <ul style="--cantidad-items:17">
             <li class="submenu"><a href="{{ route('tutelas.consultar','tutelas.consultartutela')}}"><h1>Consultar</h1></a></li>
