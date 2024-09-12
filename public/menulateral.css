@@ -1,0 +1,108 @@
+ /** {
+    margin:0px;
+    padding:0px;
+    font-family:verdana;
+    color:green;
+}*/
+
+#menu{
+    position:absolute;
+    width:max-content;
+    height:max-content;
+    background-color:indianred;
+    
+ }
+
+#cabecera-menu{
+    width:150px;
+    height:30px;
+    margin:10px;
+   /* background-image: url(assets/img/expediente.png);*/
+
+}
+
+.menu-expedientes{
+    width:150px;
+    height:50px;
+    margin-left:10px;
+    overflow:hidden;
+    /*-webkit-transition: width 0.5;*/
+}
+
+.logo-expedientes{
+    width:30px;
+    height:30px; 
+    background-image: url(assets/img/expediente.png);
+    float:left;
+}
+
+.menu-expedientes:hover{
+    width:500px;
+    transition:1s;
+}
+
+.menu-tutela{
+    width:150px;
+    height:50px;
+    margin-left:10px;
+
+}
+
+.logo-tutela{
+    width:30px;
+    height:30px; 
+    background-image: url(assets/img/tutela.png);
+    float:left;
+}
+
+.menu-curatela{
+    width:150px;
+    height:50px;
+    margin-left:10px;
+
+}
+
+.logo-curatela{
+    width:30px;
+    height:30px; 
+    background-image: url(assets/img/curatela.png);
+    float:left;
+}
+
+.menu-mantenimiento{
+    width:150px;
+    height:50px;
+    margin-left:10px;
+
+}
+
+.logo-mantenimiento{
+    width:30px;
+    height:30px; 
+    background-image: url(assets/img/mantenimiento.png);
+    float:left;
+}
+
+.menu-irinicio{
+    width:150px;
+    height:50px;
+    margin-left:10px;
+
+}
+
+.logo-irinicio{
+    width:30px;
+    height:30px; 
+    background-image: url(assets/img/irinicio.png);
+    float:left;
+}
+
+.texto{
+    margin-left:60px;
+    line-height:40px;/*distancia entre lineas de texto*/
+}
+
+/****body*/
+#body{
+    position:absolute;/*tiene en cuenta el navegador*/
+}

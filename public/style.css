@@ -18,16 +18,42 @@ td{
     
    /* border-top:3px solid black;
     border-left:3px solid black;*/
-    padding:10px; 
+    padding:5px; 
     
 }
 
 table{
-    width:100%;
+    width:60%;
 }
 
 .tablegeneral{
     width:55%;
+    
+}
+
+.tableficha{
+    width:40%;
+    border:0px;
+    
+}
+
+.tablemenulateral{
+    width:15%;
+    height:20%;
+    background-color: rgb(224, 204, 204);
+    font-size: 3;
+    border:1px solid;
+}
+
+.textomenulateral{
+    font-size: 12pt;
+    color:rgb(27, 11, 244);
+}
+
+.tdmenulateral{
+    padding:0px;
+    border-top:1px solid;
+    background-color: rgb(224, 204, 204);
 }
 
 .columna_cabecera{
@@ -219,4 +245,16 @@ crossorigin="anonymous">*/
   .h-custom {
   height: 100%;
   }
+  }
+
+  .inputtable{
+    border:0px;
+    background-color: rgb(224, 204, 204);
+  }
+
+
+  body{
+  
+    background: url("assets/img/escudo_gris_fondo.png");
+    background-repeat: repeat;
   }
