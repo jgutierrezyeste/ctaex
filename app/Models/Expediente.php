@@ -55,7 +55,7 @@ class Expediente extends Model
 
     public function entidadesbancarias():BelongsToMany
     {
-        return $this->belongsToMany(EntidadBancaria::class,'expediente_entidad_bancaria','expediente_id','entidad_bancaria_id');
+        return $this->belongsToMany(EntidadBancaria::class,'expediente_entidad_bancaria','expediente_id','entidad_bancaria_id')->withPivot('codigo_iban','entidad_financiera','oficina','digito_control','numero_cuenta');
     }
 
     public function pensiones():BelongsToMany
@@ -84,9 +84,9 @@ class Expediente extends Model
         return $this->hasOne(Dependencia::class,'expediente_id');
     }
 
-    public function prestaciones():BelongsToMany
+    public function expedientes_prestaciones():BelongsToMany
     {
-        return $this->belongsToMany(Prestacion::class,'expediente_prestacion','expediente_id','prestacion_id'); 
+        return $this->belongsToMany(Prestacion::class,'expediente_prestacion','expediente_id','prestacion_id')->withPivot('importe','año_id');; 
     }
 
     
@@ -117,7 +117,7 @@ class Expediente extends Model
 
     public function remociones():HasOne
     {
-        return $this->hasOne(Expediente::class,'expediente_id');
+        return $this->hasOne(Remocion::class,'expediente_id');
     }
     
     

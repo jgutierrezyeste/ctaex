@@ -16,4 +16,9 @@ class Año extends Model
     {
         return $this->hasMany(Declaracion::class,'año_id');
     }
+
+    public function expedienteprestaciones():HasMany
+    {
+        return $this->hasMany(ExpedientePrestacion::class,'año_id');
+    }
 }

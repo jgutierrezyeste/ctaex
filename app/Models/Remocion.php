@@ -17,7 +17,7 @@ class Remocion extends Model
 
     public function representantes():BelongsToMany
     {
-        return $this->belongsToMany(Representante::class,'representantes_remocion','remocion_id','representante_id');
+        return $this->belongsToMany(Representante::class,'representantes_remocion','remocion_id','representante_id')->withPivot('relacion_id');
     }
 
 

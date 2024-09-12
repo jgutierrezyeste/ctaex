@@ -12,7 +12,7 @@ class ExpedienteEntidadBancaria extends Model
     protected $guarded=['id'];
     protected $table='expediente_entidad_bancaria';
 
-    public function entidades_bancarias():BelongsTo
+    /*public function entidades_bancarias():BelongsTo
     {
         return $this->belongsTo(EntidadBancaria::class,'entidad_bancaria_id');
     }
@@ -20,5 +20,5 @@ class ExpedienteEntidadBancaria extends Model
     public function expedientes():BelongsTo
     {
         return $this->belongsTo(Expediente::class,'expediente_id');
-    }
+    }*/
 }

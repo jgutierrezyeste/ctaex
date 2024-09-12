@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class RepresentanteRemocion extends Model
+class ExpedientePrestacion extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='representantes_remocion';
+    protected $table='expediente_prestacion';
 
-    public function relaciones():BelongsTo
+    public function años():BelongsTo
     {
-        return $this->belongsTo(Relacion::class,'relacion_id')->withPivot('relacion_id');
+        return $this->belongsTo(Año::class,'año_id');
     }
+
+
 }

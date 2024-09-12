@@ -14,7 +14,7 @@ class EntidadBancaria extends Model
 
     public function expedientes():BelongsToMany
     {
-        return $this->belongsToMany(Expediente::class,'expediente_entidad_bancaria','entidad_bancaria_id','expediente_id');
+        return $this->belongsToMany(Expediente::class,'expediente_entidad_bancaria','entidad_bancaria_id','expediente_id')->withPivot('codigo_iban','entidad_financiera','oficina','digito_control','numero_cuenta');
     }
 
     
