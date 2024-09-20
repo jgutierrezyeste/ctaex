@@ -1,13 +1,13 @@
 @php
     $rutaRegreso="index_apm";
-    $subtitulo="Servicios de dependencias";
-    $rutaEdicion="serviciosDependencias.edit";
-    $rutaActualizar="serviciosDependencias.actualizar";
-    $rutaDelete="serviciosDependencias.destroy";
-    $rutaAniadir="serviciosDependencias.create"; 
-    $rutaEliminar="serviciosDependencias.eliminar";
+    $subtitulo="Prestacion Dependencias Servicios";
+    $rutaEdicion="prestacionDependenciasServicios.edit";
+    $rutaActualizar="prestacionDependenciasServicios.actualizar";
+    $rutaDelete="prestacionDependenciasServicios.destroy";
+    $rutaAniadir="prestacionDependenciasServicios.create"; 
+    $rutaEliminar="prestacionDependenciasServicios.eliminar";
     $campos=['nombre'];
-    $getById="serviciosDependenciasId/";
+    $getById="prestacionDependenciasServiciosId/";
 
 @endphp
 

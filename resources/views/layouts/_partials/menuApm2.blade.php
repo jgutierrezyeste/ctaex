@@ -106,11 +106,11 @@
             </td>
             <td  >
                 
-                <x-boton_menu_apm menu="servicios dependencias" ruta="serviciosDependencias.index"></x-boton_menu_apm>
+                <x-boton_menu_apm menu="Prestacion dependencia servicios" ruta="prestacionDependenciasServicios.index"></x-boton_menu_apm>
             </td>
             <td >
                 
-                <x-boton_menu_apm menu="subtipo servicio dependencia" ruta="subtipoDependencias.index"></x-boton_menu_apm>
+                <x-boton_menu_apm menu="prestacion dependencia Economica" ruta="prestacionDependenciasEconomicas.index"></x-boton_menu_apm>
             </td>
             <td >
                 

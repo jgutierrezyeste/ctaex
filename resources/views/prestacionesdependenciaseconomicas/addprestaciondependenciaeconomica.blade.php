@@ -1,8 +1,8 @@
 @php
     $ruta_regreso="index_apm";
-    $subtitulo="Añadir Carpeta nueva";
-    $rutaGuardar="serviciosDependencias.store";
-    $rutaIndice="serviciosDependencias.index";
+    $subtitulo=" Añadir Prestacion Dependencias Economicas";
+    $rutaGuardar="prestacionDependenciasEconomicas.store";
+    $rutaIndice="prestacionDependenciasEconomicas.index";
     $campos=['nombre'];
 
 @endphp

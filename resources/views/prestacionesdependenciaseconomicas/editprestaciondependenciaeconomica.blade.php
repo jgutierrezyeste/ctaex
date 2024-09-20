@@ -1,8 +1,8 @@
 @php
     $rutaRegreso="index_apm";
-    $subtitulo="Edicion de Dependencia Servicio Subtipo";
-    $rutaActualizar="subtipoDependencias.update";
-    $rutaIndice="subtipoDependencias.index";
+    $subtitulo="Edicion de Prestacion Dependencias Economicas";
+    $rutaActualizar="prestacionDependenciasEconomicas.update";
+    $rutaIndice="prestacionDependenciasEconomicas.index";
     $campos=['nombre'];
 @endphp
 

@@ -1,8 +1,8 @@
 @php
     $ruta_regreso="index_apm";
-    $subtitulo=" Añadir Dependencia Servicio Subtipo";
-    $rutaGuardar="subtipoDependencias.store";
-    $rutaIndice="subtipoDependencias.index";
+    $subtitulo="Añadir Prestacion Dependencia Servicio";
+    $rutaGuardar="prestacionDependenciasServicios.store";
+    $rutaIndice="prestacionDependenciasServicios.index";
     $campos=['nombre'];
 
 @endphp

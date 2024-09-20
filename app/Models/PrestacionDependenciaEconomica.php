@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class DependenciaServicioSubtipo extends Model
+class PrestacionDependenciaEconomica extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='prestacion_dependencias_economicas';
     /*public function expedientes():HasMany
     {
         return $this->hasMany(Expediente::class,'dependenciaserviciosubtipo_id');
@@ -17,6 +18,6 @@ class DependenciaServicioSubtipo extends Model
 
     public function dependencias():HasMany
     {
-        return $this->hasMany(Dependencia::class,'dependenciaserviciosubtipo_id');
+        return $this->hasMany(Dependencia::class,'prestacion_dependencia_economica_id');
     }
 }

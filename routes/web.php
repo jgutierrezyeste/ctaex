@@ -9,8 +9,8 @@ use App\Http\Controllers\AutorizacionController;
 use App\Http\Controllers\AñoController;
 use App\Http\Controllers\CarpetaDecesoController;
 use App\Http\Controllers\CentroController;
-use App\Http\Controllers\DependenciaServicioSubtipoController;
-use App\Http\Controllers\DependenciaServicioController;
+use App\Http\Controllers\PrestacionDependenciaEconomicaController;
+use App\Http\Controllers\PrestacionDependenciaServicioController;
 use App\Http\Controllers\DocumentoIdentificativoController;
 
 use App\Http\Controllers\EntidadBancariaController;
@@ -119,8 +119,8 @@ Route::resource('/empleados',EmpleadoController::class);//->middleware('auth');
 
 Route::resource('/carpetas',CarpetaDecesoController::class);//->middleware('auth');
 Route::resource('/centros',CentroController::class);//->middleware('auth');
-Route::resource('/serviciosDependencias',DependenciaServicioController::class);//->middleware('auth');
-Route::resource('/subtipoDependencias',DependenciaServicioSubtipoController::class);//->middleware('auth');
+Route::resource('/prestacionDependenciasServicios',PrestacionDependenciaServicioController::class);//->middleware('auth');
+Route::resource('/prestacionDependenciasEconomicas',PrestacionDependenciaEconomicaController::class);//->middleware('auth');
 Route::resource('/documentosIdentificativos',DocumentoIdentificativoController::class);//->middleware('auth');
 Route::resource('/figuras',FiguraController::class);//->middleware('auth');
 Route::resource('/gradosDependencia',GradoDependenciaController::class);//->middleware('auth');
@@ -299,13 +299,13 @@ Route::put('/nivelDependenciasActualizar',[NivelDependenciaController::class,'ac
 Route::get('/nivelDependenciasId/{id}', [NivelDependenciaController::class,'getNivelDependenciaById']);//->middleware('auth');
 Route::delete('/nivelDependenciasEliminar',[NivelDependenciaController::class,'eliminar'])->name('nivelDependencias.eliminar');//->middleware('auth');
 
-Route::put('/serviciosDependenciasActualizar',[DependenciaServicioController::class,'actualizar'])->name('serviciosDependencias.actualizar');//->middleware('auth');
-Route::get('/serviciosDependenciasId/{id}', [DependenciaServicioController::class,'getServicioDependenciaById']);//->middleware('auth');
-Route::delete('/serviciosDependenciasEliminar',[DependenciaServicioController::class,'eliminar'])->name('serviciosDependencias.eliminar');//->middleware('auth');
+Route::put('/prestacionDependenciasServiciosActualizar',[PrestacionDependenciaServicioController::class,'actualizar'])->name('prestacionDependenciasServicios.actualizar');//->middleware('auth');
+Route::get('/prestacionDependenciasServiciosId/{id}', [PrestacionDependenciaServicioController::class,'getPrestacionDependenciaServicioById']);//->middleware('auth');
+Route::delete('/prestacionDependenciasServiciosEliminar',[PrestacionDependenciaServicioController::class,'eliminar'])->name('prestacionDependenciasServicios.eliminar');//->middleware('auth');
 
-Route::put('/subtipoDependenciasActualizar',[DependenciaServicioSubtipoController::class,'actualizar'])->name('subtipoDependencias.actualizar');//->middleware('auth');
-Route::get('/subtipoDependenciasId/{id}', [DependenciaServicioSubtipoController::class,'getServicioDependenciaSubtipoById']);//->middleware('auth');
-Route::delete('/subtipoDependenciasEliminar',[DependenciaServicioSubtipoController::class,'eliminar'])->name('subtipoDependencias.eliminar');//->middleware('auth');
+Route::put('/prestacionDependenciasEconomicasActualizar',[PrestacionDependenciaEconomicaController::class,'actualizar'])->name('prestacionDependenciasEconomicas.actualizar');//->middleware('auth');
+Route::get('/prestacionDependenciasEconomicasId/{id}', [PrestacionDependenciaEconomicaController::class,'getprestacionDependenciaEconomicaById']);//->middleware('auth');
+Route::delete('/prestacionDependenciasEconomicasEliminar',[PrestacionDependenciaEconomicaController::class,'eliminar'])->name('prestacionDependenciasEconomicas.eliminar');//->middleware('auth');
 
 
 Route::put('/patologiasConcretasActualizar',[PatologiaConcretaController::class,'actualizar'])->name('patologiasConcretas.actualizar');//->middleware('auth');

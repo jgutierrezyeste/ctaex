@@ -1,8 +1,8 @@
 @php
     $rutaRegreso="index_apm";
-    $subtitulo="Edicion de carpeta de deceso";
-    $rutaActualizar="serviciosDependencias.update";
-    $rutaIndice="serviciosDependencias.index";
+    $subtitulo="Edicion de Prestacion Dependencias Servicios";
+    $rutaActualizar="prestacionDependenciasServicios.update";
+    $rutaIndice="prestacionDependenciasServicios.index";
     $campos=['nombre'];
 @endphp
 
