@@ -1,0 +1,806 @@
+Illuminate\Database\Eloquent\Collection Object
+(
+    [items:protected] => Array
+        (
+            [0] => App\Models\Rendicion Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => rendiciones
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 5
+                            [expediente_id] => 5
+                            [fecha_presentacion] => 2008-12-04
+                            [fecha_aprobacion] => 
+                            [tipo] => INICIAL
+                            [observaciones] => NO
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 5
+                            [expediente_id] => 5
+                            [fecha_presentacion] => 2008-12-04
+                            [fecha_aprobacion] => 
+                            [tipo] => INICIAL
+                            [observaciones] => NO
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                            [rendicionesiniciales] => App\Models\RendicionInicial Object
+                                (
+                                    [connection:protected] => mysql
+                                    [table:protected] => rendiciones_iniciales
+                                    [primaryKey:protected] => id
+                                    [keyType:protected] => int
+                                    [incrementing] => 1
+                                    [with:protected] => Array
+                                        (
+                                        )
+
+                                    [withCount:protected] => Array
+                                        (
+                                        )
+
+                                    [preventsLazyLoading] => 
+                                    [perPage:protected] => 15
+                                    [exists] => 1
+                                    [wasRecentlyCreated] => 
+                                    [escapeWhenCastingToString:protected] => 
+                                    [attributes:protected] => Array
+                                        (
+                                            [id] => 5
+                                            [rendicion_id] => 5
+                                            [fecha_aceptacion_cargo] => 2003-03-17
+                                            [fecha_entrada] => 
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [original:protected] => Array
+                                        (
+                                            [id] => 5
+                                            [rendicion_id] => 5
+                                            [fecha_aceptacion_cargo] => 2003-03-17
+                                            [fecha_entrada] => 
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [changes:protected] => Array
+                                        (
+                                        )
+
+                                    [casts:protected] => Array
+                                        (
+                                        )
+
+                                    [classCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [attributeCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [dateFormat:protected] => 
+                                    [appends:protected] => Array
+                                        (
+                                        )
+
+                                    [dispatchesEvents:protected] => Array
+                                        (
+                                        )
+
+                                    [observables:protected] => Array
+                                        (
+                                        )
+
+                                    [relations:protected] => Array
+                                        (
+                                        )
+
+                                    [touches:protected] => Array
+                                        (
+                                        )
+
+                                    [timestamps] => 1
+                                    [usesUniqueIds] => 
+                                    [hidden:protected] => Array
+                                        (
+                                        )
+
+                                    [visible:protected] => Array
+                                        (
+                                        )
+
+                                    [fillable:protected] => Array
+                                        (
+                                        )
+
+                                    [guarded:protected] => Array
+                                        (
+                                            [0] => id
+                                        )
+
+                                )
+
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [1] => App\Models\Rendicion Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => rendiciones
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 716
+                            [expediente_id] => 5
+                            [fecha_presentacion] => 2022-03-28
+                            [fecha_aprobacion] => 2022-11-24
+                            [tipo] => ANUAL
+                            [observaciones] => EN AGOSTO/2022 FUE REQUERIDA LA RENDICION DE CUENTAS DEL 2020, ENVIANDOSE POR LEXNET EL 18/08/2022 APROBADA EL 24/11/2022
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 716
+                            [expediente_id] => 5
+                            [fecha_presentacion] => 2022-03-28
+                            [fecha_aprobacion] => 2022-11-24
+                            [tipo] => ANUAL
+                            [observaciones] => EN AGOSTO/2022 FUE REQUERIDA LA RENDICION DE CUENTAS DEL 2020, ENVIANDOSE POR LEXNET EL 18/08/2022 APROBADA EL 24/11/2022
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                            [rendicionesanuales] => App\Models\RendicionAnual Object
+                                (
+                                    [connection:protected] => mysql
+                                    [table:protected] => rendiciones_anuales
+                                    [primaryKey:protected] => id
+                                    [keyType:protected] => int
+                                    [incrementing] => 1
+                                    [with:protected] => Array
+                                        (
+                                        )
+
+                                    [withCount:protected] => Array
+                                        (
+                                        )
+
+                                    [preventsLazyLoading] => 
+                                    [perPage:protected] => 15
+                                    [exists] => 1
+                                    [wasRecentlyCreated] => 
+                                    [escapeWhenCastingToString:protected] => 
+                                    [attributes:protected] => Array
+                                        (
+                                            [id] => 5
+                                            [rendicion_id] => 716
+                                            [fecha_revision] => 
+                                            [is_rendicion] => 1
+                                            [created_at] => 
+                                            [updated_at] => 
+                                            [tipos_rendiciones_anuales] => 2
+                                        )
+
+                                    [original:protected] => Array
+                                        (
+                                            [id] => 5
+                                            [rendicion_id] => 716
+                                            [fecha_revision] => 
+                                            [is_rendicion] => 1
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [changes:protected] => Array
+                                        (
+                                        )
+
+                                    [casts:protected] => Array
+                                        (
+                                        )
+
+                                    [classCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [attributeCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [dateFormat:protected] => 
+                                    [appends:protected] => Array
+                                        (
+                                        )
+
+                                    [dispatchesEvents:protected] => Array
+                                        (
+                                        )
+
+                                    [observables:protected] => Array
+                                        (
+                                        )
+
+                                    [relations:protected] => Array
+                                        (
+                                            [declaraciones] => Illuminate\Database\Eloquent\Collection Object
+                                                (
+                                                    [items:protected] => Array
+                                                        (
+                                                            [0] => App\Models\Declaracion Object
+                                                                (
+                                                                    [connection:protected] => mysql
+                                                                    [table:protected] => declaraciones
+                                                                    [primaryKey:protected] => id
+                                                                    [keyType:protected] => int
+                                                                    [incrementing] => 1
+                                                                    [with:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [withCount:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [preventsLazyLoading] => 
+                                                                    [perPage:protected] => 15
+                                                                    [exists] => 1
+                                                                    [wasRecentlyCreated] => 
+                                                                    [escapeWhenCastingToString:protected] => 
+                                                                    [attributes:protected] => Array
+                                                                        (
+                                                                            [id] => 207
+                                                                            [mes_id] => 3
+                                                                            [año_id] => 18
+                                                                            [created_at] => 
+                                                                            [updated_at] => 
+                                                                        )
+
+                                                                    [original:protected] => Array
+                                                                        (
+                                                                            [id] => 207
+                                                                            [mes_id] => 3
+                                                                            [año_id] => 18
+                                                                            [created_at] => 
+                                                                            [updated_at] => 
+                                                                            [pivot_rendicion_anual_id] => 5
+                                                                            [pivot_declaracion_id] => 207
+                                                                            [pivot_tipo_id] => 1
+                                                                        )
+
+                                                                    [changes:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [casts:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [classCastCache:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [attributeCastCache:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [dateFormat:protected] => 
+                                                                    [appends:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [dispatchesEvents:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [observables:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [relations:protected] => Array
+                                                                        (
+                                                                            [pivot] => Illuminate\Database\Eloquent\Relations\Pivot Object
+                                                                                (
+                                                                                    [connection:protected] => mysql
+                                                                                    [table:protected] => rendiciones_anuales_declaraciones
+                                                                                    [primaryKey:protected] => id
+                                                                                    [keyType:protected] => int
+                                                                                    [incrementing] => 
+                                                                                    [with:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [withCount:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [preventsLazyLoading] => 
+                                                                                    [perPage:protected] => 15
+                                                                                    [exists] => 1
+                                                                                    [wasRecentlyCreated] => 
+                                                                                    [escapeWhenCastingToString:protected] => 
+                                                                                    [attributes:protected] => Array
+                                                                                        (
+                                                                                            [rendicion_anual_id] => 5
+                                                                                            [declaracion_id] => 207
+                                                                                            [tipo_id] => 1
+                                                                                        )
+
+                                                                                    [original:protected] => Array
+                                                                                        (
+                                                                                            [rendicion_anual_id] => 5
+                                                                                            [declaracion_id] => 207
+                                                                                            [tipo_id] => 1
+                                                                                        )
+
+                                                                                    [changes:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [casts:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [classCastCache:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [attributeCastCache:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [dateFormat:protected] => 
+                                                                                    [appends:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [dispatchesEvents:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [observables:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [relations:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [touches:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [timestamps] => 
+                                                                                    [usesUniqueIds] => 
+                                                                                    [hidden:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [visible:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [fillable:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [guarded:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [pivotParent] => App\Models\RendicionAnual Object
+ *RECURSION*
+                                                                                    [foreignKey:protected] => rendicion_anual_id
+                                                                                    [relatedKey:protected] => declaracion_id
+                                                                                )
+
+                                                                        )
+
+                                                                    [touches:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [timestamps] => 1
+                                                                    [usesUniqueIds] => 
+                                                                    [hidden:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [visible:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [fillable:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [guarded:protected] => Array
+                                                                        (
+                                                                            [0] => id
+                                                                        )
+
+                                                                )
+
+                                                            [1] => App\Models\Declaracion Object
+                                                                (
+                                                                    [connection:protected] => mysql
+                                                                    [table:protected] => declaraciones
+                                                                    [primaryKey:protected] => id
+                                                                    [keyType:protected] => int
+                                                                    [incrementing] => 1
+                                                                    [with:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [withCount:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [preventsLazyLoading] => 
+                                                                    [perPage:protected] => 15
+                                                                    [exists] => 1
+                                                                    [wasRecentlyCreated] => 
+                                                                    [escapeWhenCastingToString:protected] => 
+                                                                    [attributes:protected] => Array
+                                                                        (
+                                                                            [id] => 219
+                                                                            [mes_id] => 3
+                                                                            [año_id] => 19
+                                                                            [created_at] => 
+                                                                            [updated_at] => 
+                                                                        )
+
+                                                                    [original:protected] => Array
+                                                                        (
+                                                                            [id] => 219
+                                                                            [mes_id] => 3
+                                                                            [año_id] => 19
+                                                                            [created_at] => 
+                                                                            [updated_at] => 
+                                                                            [pivot_rendicion_anual_id] => 5
+                                                                            [pivot_declaracion_id] => 219
+                                                                            [pivot_tipo_id] => 2
+                                                                        )
+
+                                                                    [changes:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [casts:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [classCastCache:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [attributeCastCache:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [dateFormat:protected] => 
+                                                                    [appends:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [dispatchesEvents:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [observables:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [relations:protected] => Array
+                                                                        (
+                                                                            [pivot] => Illuminate\Database\Eloquent\Relations\Pivot Object
+                                                                                (
+                                                                                    [connection:protected] => mysql
+                                                                                    [table:protected] => rendiciones_anuales_declaraciones
+                                                                                    [primaryKey:protected] => id
+                                                                                    [keyType:protected] => int
+                                                                                    [incrementing] => 
+                                                                                    [with:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [withCount:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [preventsLazyLoading] => 
+                                                                                    [perPage:protected] => 15
+                                                                                    [exists] => 1
+                                                                                    [wasRecentlyCreated] => 
+                                                                                    [escapeWhenCastingToString:protected] => 
+                                                                                    [attributes:protected] => Array
+                                                                                        (
+                                                                                            [rendicion_anual_id] => 5
+                                                                                            [declaracion_id] => 219
+                                                                                            [tipo_id] => 2
+                                                                                        )
+
+                                                                                    [original:protected] => Array
+                                                                                        (
+                                                                                            [rendicion_anual_id] => 5
+                                                                                            [declaracion_id] => 219
+                                                                                            [tipo_id] => 2
+                                                                                        )
+
+                                                                                    [changes:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [casts:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [classCastCache:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [attributeCastCache:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [dateFormat:protected] => 
+                                                                                    [appends:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [dispatchesEvents:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [observables:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [relations:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [touches:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [timestamps] => 
+                                                                                    [usesUniqueIds] => 
+                                                                                    [hidden:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [visible:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [fillable:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [guarded:protected] => Array
+                                                                                        (
+                                                                                        )
+
+                                                                                    [pivotParent] => App\Models\RendicionAnual Object
+ *RECURSION*
+                                                                                    [foreignKey:protected] => rendicion_anual_id
+                                                                                    [relatedKey:protected] => declaracion_id
+                                                                                )
+
+                                                                        )
+
+                                                                    [touches:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [timestamps] => 1
+                                                                    [usesUniqueIds] => 
+                                                                    [hidden:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [visible:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [fillable:protected] => Array
+                                                                        (
+                                                                        )
+
+                                                                    [guarded:protected] => Array
+                                                                        (
+                                                                            [0] => id
+                                                                        )
+
+                                                                )
+
+                                                        )
+
+                                                    [escapeWhenCastingToString:protected] => 
+                                                )
+
+                                        )
+
+                                    [touches:protected] => Array
+                                        (
+                                        )
+
+                                    [timestamps] => 1
+                                    [usesUniqueIds] => 
+                                    [hidden:protected] => Array
+                                        (
+                                        )
+
+                                    [visible:protected] => Array
+                                        (
+                                        )
+
+                                    [fillable:protected] => Array
+                                        (
+                                        )
+
+                                    [guarded:protected] => Array
+                                        (
+                                            [0] => id
+                                        )
+
+                                )
+
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+        )
+
+    [escapeWhenCastingToString:protected] => 
+)

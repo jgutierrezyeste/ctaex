@@ -1,0 +1,1609 @@
+Illuminate\Database\Eloquent\Collection Object
+(
+    [items:protected] => Array
+        (
+            [0] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 7432
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2018-10-09
+                            [descripcion] => -ESTÁ INGRESADO EN R.MAYORES EN PUENTE REAL 1 , BADAJOZ.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 7432
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2018-10-09
+                            [descripcion] => -ESTÁ INGRESADO EN R.MAYORES EN PUENTE REAL 1 , BADAJOZ.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [1] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 7636
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2018-11-20
+                            [descripcion] => - NO TIENE VALORACION CADEX PQ NO FUE A LA CITA EL DIA 9 FEBRERO DE 2018 ,PARA PODER SER VALORADO NUEVAMENTE HAY QUE JUSTIFICAR LA AUSENCIA. AD
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 7636
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2018-11-20
+                            [descripcion] => - NO TIENE VALORACION CADEX PQ NO FUE A LA CITA EL DIA 9 FEBRERO DE 2018 ,PARA PODER SER VALORADO NUEVAMENTE HAY QUE JUSTIFICAR LA AUSENCIA. AD
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [2] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 8359
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-03-08
+                            [descripcion] => -VISITA EN R.M. PUENTE REAL EN BADAJOZ. REUNION CON DTOR. Y CON SU HNA. MANUELA. HAGO PTO. DE GASTOS PARA LA PARTE ECO.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 8359
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-03-08
+                            [descripcion] => -VISITA EN R.M. PUENTE REAL EN BADAJOZ. REUNION CON DTOR. Y CON SU HNA. MANUELA. HAGO PTO. DE GASTOS PARA LA PARTE ECO.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [3] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 8373
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-03-07
+                            [descripcion] => -HACE 8 AÑOS QUE LE DIAGNOSTICARON COREA H. -GRADO 2 DEPEND, EN T3 EN PUENTE REAL . NO PIDO VALORACION PQ EL RECURSO YA ES EL QUE NECESITA. NO TRASLADO. SE PAGA POR COPAGO 755€. - LA FAMILIA NO HA PODIDO HACER SEGURO DECESOS POR LA ENF. , NO TIENE. - LA NIÑA TIENE 12 AÑOS , LOS APELLIDOS SE LOS CAMBIÓ EL PADRE BIOLOGICO ,NO TENEMOS QUE ABONAR PENSION . - TEMAS EC Y DE PARTICION DE BIENES PENDIENTE , SE LO PASO A LA PARTE ECO.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 8373
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-03-07
+                            [descripcion] => -HACE 8 AÑOS QUE LE DIAGNOSTICARON COREA H. -GRADO 2 DEPEND, EN T3 EN PUENTE REAL . NO PIDO VALORACION PQ EL RECURSO YA ES EL QUE NECESITA. NO TRASLADO. SE PAGA POR COPAGO 755€. - LA FAMILIA NO HA PODIDO HACER SEGURO DECESOS POR LA ENF. , NO TIENE. - LA NIÑA TIENE 12 AÑOS , LOS APELLIDOS SE LOS CAMBIÓ EL PADRE BIOLOGICO ,NO TENEMOS QUE ABONAR PENSION . - TEMAS EC Y DE PARTICION DE BIENES PENDIENTE , SE LO PASO A LA PARTE ECO.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [4] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 8398
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-03-14
+                            [descripcion] => -SEPAD RECLAMA 125€ DE COBRO INDEBIDO POR EL PERIODO QUE PASA DESDE QUE DEJA LA P.V.S. EN JULIO DEL 17 HASTA QUE INGRESA EN T3 EL 27/7/17 EN CASER RESIDENCIAL DE OLIVENZA. LO PASO A LA PARTE ECO PARA EL PAGO. - EL 17/04/18 ES DERIVADO A T3 EN PUENTE REAL BADAJOZ. HE PEDIDO AL DIRECTOR M.50 CON EL IMPORTE QUE SE DEBE EN PLAZAS . LO ENVIARÁ A PARTIR DE AHORA TB MENSUALMENTE PARA QUE SE ABONE. LE COMENTO QUE EL B.SANTARDER AÚN NO NOS HA INCLUIDO EN LA CUENTA DESDE OCTUBRE QUE SE SOLICITÓ. AD
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 8398
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-03-14
+                            [descripcion] => -SEPAD RECLAMA 125€ DE COBRO INDEBIDO POR EL PERIODO QUE PASA DESDE QUE DEJA LA P.V.S. EN JULIO DEL 17 HASTA QUE INGRESA EN T3 EL 27/7/17 EN CASER RESIDENCIAL DE OLIVENZA. LO PASO A LA PARTE ECO PARA EL PAGO. - EL 17/04/18 ES DERIVADO A T3 EN PUENTE REAL BADAJOZ. HE PEDIDO AL DIRECTOR M.50 CON EL IMPORTE QUE SE DEBE EN PLAZAS . LO ENVIARÁ A PARTIR DE AHORA TB MENSUALMENTE PARA QUE SE ABONE. LE COMENTO QUE EL B.SANTARDER AÚN NO NOS HA INCLUIDO EN LA CUENTA DESDE OCTUBRE QUE SE SOLICITÓ. AD
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [5] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 8969
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-05-15
+                            [descripcion] => miguel, asisto por videoconferencia a juicio. Llegamos acuerdo de liquidación de sociedad de gananciales
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 8969
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-05-15
+                            [descripcion] => miguel, asisto por videoconferencia a juicio. Llegamos acuerdo de liquidación de sociedad de gananciales
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [6] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 9016
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-05-21
+                            [descripcion] => miguel, nos remite Abogacia General resolución no firme del Jzdo nº1 de Jerez de los Caballeros, donde se llega a acuerdo en el Procedimiento de Liquidación de Sociedad de Gananciales.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 9016
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-05-21
+                            [descripcion] => miguel, nos remite Abogacia General resolución no firme del Jzdo nº1 de Jerez de los Caballeros, donde se llega a acuerdo en el Procedimiento de Liquidación de Sociedad de Gananciales.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [7] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 9161
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-06-04
+                            [descripcion] => miguel, llega por carta certificada procedimiento de familia, solicitando ejecución de título judicial 410/2016, el cual fue archivado en el 2016 por ser desconocido el docmicilio del demandado. Tras confirmarme Elena del Jzdo de Jerez de los Caballeros nº1 estos extremos, me indica que tenemos 10 días desde que nos llegó la notificación (que es hoy4-6-2019) para contestar a la misma. Así que prepararé la contestación para ser firmada por Consolación y remitiré a la Abogacia General para que se personen y se opongan. Este procedimiento es independiente del de liquidación de sociedad de gananciales al que se llegó a un acuerdo, y cuya vista fue el 15-5-2019.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 9161
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-06-04
+                            [descripcion] => miguel, llega por carta certificada procedimiento de familia, solicitando ejecución de título judicial 410/2016, el cual fue archivado en el 2016 por ser desconocido el docmicilio del demandado. Tras confirmarme Elena del Jzdo de Jerez de los Caballeros nº1 estos extremos, me indica que tenemos 10 días desde que nos llegó la notificación (que es hoy4-6-2019) para contestar a la misma. Así que prepararé la contestación para ser firmada por Consolación y remitiré a la Abogacia General para que se personen y se opongan. Este procedimiento es independiente del de liquidación de sociedad de gananciales al que se llegó a un acuerdo, y cuya vista fue el 15-5-2019.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [8] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 9195
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-06-05
+                            [descripcion] => miguel, envío petición de intervención de la Abogacía General a secretaría general en relación al procedimiento de reclamación de cantidad por alimentos para ejerzan la oposición ante el Jzdo de Jerez de los Caballeros nº1
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 9195
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-06-05
+                            [descripcion] => miguel, envío petición de intervención de la Abogacía General a secretaría general en relación al procedimiento de reclamación de cantidad por alimentos para ejerzan la oposición ante el Jzdo de Jerez de los Caballeros nº1
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [9] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 9242
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-06-10
+                            [descripcion] => miguel, Curro nos contesta vía email la no intervención de la abogacía general y nos adjunta un word basado en legislación
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 9242
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-06-10
+                            [descripcion] => miguel, Curro nos contesta vía email la no intervención de la abogacía general y nos adjunta un word basado en legislación
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [10] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 9502
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-07-09
+                            [descripcion] => miguel, entra por registro general providencia del juzgado nº1 de Jerez de los Caballeros procedimiento familia 410/2016, acordando la suspensión ( a la contestación de la demanda, solicitado por curro) Remito el día 11-7-19 dicha providencia a curro
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 9502
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-07-09
+                            [descripcion] => miguel, entra por registro general providencia del juzgado nº1 de Jerez de los Caballeros procedimiento familia 410/2016, acordando la suspensión ( a la contestación de la demanda, solicitado por curro) Remito el día 11-7-19 dicha providencia a curro
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [11] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 9591
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-07-18
+                            [descripcion] => (Miguel/Pedro). Llamada de Dª Pilar, ex-mujer de D. JNuan Pedro. +++Enviará por correo-e toda la información referente al divorcio, régimen de alimentos, sentencias de los juzgados para tener conocimiento de las obligaciones pendientes por parte de nuestro tutelado.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 9591
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-07-18
+                            [descripcion] => (Miguel/Pedro). Llamada de Dª Pilar, ex-mujer de D. JNuan Pedro. +++Enviará por correo-e toda la información referente al divorcio, régimen de alimentos, sentencias de los juzgados para tener conocimiento de las obligaciones pendientes por parte de nuestro tutelado.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [12] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 10421
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-10-07
+                            [descripcion] => miguel, llama su ex mujer Pilar para preguntar por el estado de la liquidación de la sociedad conyugal. Me comenta que ha fallecido ayer Juan Pedro... La indico que mañana hablaré con Alberto de la parte económica para que indique el estado de todo. Belén me indica que vendrán facturas sin pagar (la pido que la manden las facturas pero no las pague hasta pidamos autorización judicial) Pido a Pilar (exmujer)que su abogado Martin, nos envíe un email comentandonos lo que ella dice que el procedimiento por alimentos está ya para ejecución de sentencia. ********************************** Ver todo esto con Alberto Js económica.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 10421
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-10-07
+                            [descripcion] => miguel, llama su ex mujer Pilar para preguntar por el estado de la liquidación de la sociedad conyugal. Me comenta que ha fallecido ayer Juan Pedro... La indico que mañana hablaré con Alberto de la parte económica para que indique el estado de todo. Belén me indica que vendrán facturas sin pagar (la pido que la manden las facturas pero no las pague hasta pidamos autorización judicial) Pido a Pilar (exmujer)que su abogado Martin, nos envíe un email comentandonos lo que ella dice que el procedimiento por alimentos está ya para ejecución de sentencia. ********************************** Ver todo esto con Alberto Js económica.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [13] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 10424
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-10-06
+                            [descripcion] => EXITUS. Comunica el Director de la Residencia Puente Real I, su fallecimiento a fecha 06/10/2019.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 10424
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-10-06
+                            [descripcion] => EXITUS. Comunica el Director de la Residencia Puente Real I, su fallecimiento a fecha 06/10/2019.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [14] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 10775
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-11-07
+                            [descripcion] => -Amalia: acude a la oficina en SEPAD Bjoz, su hermana pequeña Inma ( 633472771) acompañada de su marido , vive en Badajoz. No se ha pagado aún el deceso de su hno , ni los meses que se debían en la residencia . Hablo con Belén , seccion eco, hay 23.000€ en cuenta para abonar todo . No tienen factura . Vuelvo a llamar a la hna para q nos manden factura del deceso . Tf Manoli ( hna mayor 671284762) Informo a la familia del tema herencia . No saben si tenía ultimas voluntades o testamento.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 10775
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-11-07
+                            [descripcion] => -Amalia: acude a la oficina en SEPAD Bjoz, su hermana pequeña Inma ( 633472771) acompañada de su marido , vive en Badajoz. No se ha pagado aún el deceso de su hno , ni los meses que se debían en la residencia . Hablo con Belén , seccion eco, hay 23.000€ en cuenta para abonar todo . No tienen factura . Vuelvo a llamar a la hna para q nos manden factura del deceso . Tf Manoli ( hna mayor 671284762) Informo a la familia del tema herencia . No saben si tenía ultimas voluntades o testamento.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+            [15] => App\Models\HistorialExpediente Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => historial_expedientes
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 10776
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-11-07
+                            [descripcion] => -Amalia: acude a la oficina en SEPAD Bjoz, su hermana pequeña Inma ( 633472771) acompañada de su marido , vive en Badajoz. No se ha pagado aún el deceso de su hno , ni los meses que se debían en la residencia . Hablo con Belén , seccion eco, hay 23.000€ en cuenta para abonar todo . No tienen factura . Vuelvo a llamar a la hna para q nos manden factura del deceso . Tf Manoli ( hna mayor 671284762) Informo a la familia del tema herencia . No saben si tenía ultimas voluntades o testamento.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 10776
+                            [expediente_id] => 1031
+                            [fecha_suceso] => 2019-11-07
+                            [descripcion] => -Amalia: acude a la oficina en SEPAD Bjoz, su hermana pequeña Inma ( 633472771) acompañada de su marido , vive en Badajoz. No se ha pagado aún el deceso de su hno , ni los meses que se debían en la residencia . Hablo con Belén , seccion eco, hay 23.000€ en cuenta para abonar todo . No tienen factura . Vuelvo a llamar a la hna para q nos manden factura del deceso . Tf Manoli ( hna mayor 671284762) Informo a la familia del tema herencia . No saben si tenía ultimas voluntades o testamento.
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+        )
+
+    [escapeWhenCastingToString:protected] => 
+)
+

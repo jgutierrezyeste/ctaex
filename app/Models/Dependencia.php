@@ -17,14 +17,14 @@ class Dependencia extends Model
         return $this->belongsTo(Expediente::class,'expediente_id');
     }
 
-    public function serviciodependencias():BelongsTo
+    public function prestaciondependenciaservicios():BelongsTo
     {
-        return $this->belongsTo(DependenciaServicio::class,'dependenciaservicio_id');
+        return $this->belongsTo(PrestacionDependenciaServicio::class,'prestacion_dependencia_servicio_id');
     }
 
-    public function serviciodependenciassubtipo():BelongsTo
+    public function prestaciondependenciaeconomicas():BelongsTo
     {
-        return $this->belongsTo(DependenciaServicioSubtipo::class,'dependenciaserviciosubtipo_id');
+        return $this->belongsTo(PrestacionDependenciaEconomica::class,'prestacion_dependencia_economica_id');
     
     }
 
@@ -35,12 +35,12 @@ class Dependencia extends Model
 
     public function gradosdependencias():BelongsTo
     {
-        return $this->belongsTo(GradoDependencia::class,'gradodependencia_id');
+        return $this->belongsTo(GradoDependencia::class,'grado_id');
     }
 
     public function nivelesdependencias():BelongsTo
     {
-        return $this->belongsTo(NivelDependencia::class,'niveldependencia_id');
+        return $this->belongsTo(NivelDependencia::class,'nivel_id');
     }
     
 }

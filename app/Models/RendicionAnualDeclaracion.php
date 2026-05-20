@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class RendicionAnualDeclaracion extends Model
 {
@@ -16,4 +17,15 @@ class RendicionAnualDeclaracion extends Model
     { 
         return $this->belongsTo(TipoRendicionAnual::class,'tipo_id');
     }
+
+    /*public function rendicionesanuales():BelongsTo
+    {
+        return $this->belongsTo(RendicionAnual::class,'rendicion_anual_id');
+    }*/
+
+    /*public function declaraciones():BelongsToMany
+    {
+        return $this->belongsToMany(Declaracion::class,'rendiciones_anuales_declaraciones','rendicion_anual_id','declaracion_id');
+    }*/
+
 }

@@ -1,0 +1,1 @@
+{"id":11,"nombre":"TELESFORA","apellido1":"NIETO","apellido2":"LABRADOR","created_at":null,"updated_at":null,"pivot":{"remocion_id":10,"representante_id":11,"relacion_id":1}}

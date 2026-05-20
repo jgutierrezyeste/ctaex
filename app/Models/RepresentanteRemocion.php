@@ -12,7 +12,7 @@ class RepresentanteRemocion extends Model
     protected $guarded=['id'];
     protected $table='representantes_remocion';
 
-    public function relaciones():BelongsTo
+    public function relacionesremocion():BelongsTo
     {
         return $this->belongsTo(Relacion::class,'relacion_id')->withPivot('relacion_id');
     }

@@ -11,6 +11,7 @@ class Centro extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='centros';
 
     public function expedientes():HasMany
     {
@@ -25,5 +26,11 @@ class Centro extends Model
     public function provincias():BelongsTo
     {
         return $this->belongsTo(Provincia::class,'provincia_id');
+    }
+
+    public function vias():BelongsTo
+    {
+        return $this->belongsTo(TipoVia::class,'tipo_via_id');
+
     }
 }

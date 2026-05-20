@@ -7,7 +7,7 @@ update motivos set nombre='CURATELA ASISTENCIAL FAMILIAR' where nombre='CURATELA
 update motivos set nombre='CURATELA REPRESENTATIVA COMISION' where nombre='CURATELA REPRESENTAIVA COMISION';
 update motivos set nombre='PROCEDIMIENTO FINALIZADO'  where nombre ='FIN PROCEDIMIENTO';
 update motivos set nombre='PROCEDIMIENTO ARCHIVADO'  where nombre ='ARCHIVADO PROCEDIMIENTO';
-UPDATE nacionalidades set nombre='EXPAÑOLA' where nombre='ESPAÑA';
+UPDATE nacionalidades set nombre='ESPAÑOLA' where nombre='ESPAÑA';
 UPDATE nacionalidades set nombre='MARROQUI' where nombre='MARRUECOS';
 UPDATE nacionalidades set nombre='PORTUGUESA' where nombre='PORTUGAL';
 UPDATE nacionalidades set nombre='RUMANA' where nombre='RUMANIA';

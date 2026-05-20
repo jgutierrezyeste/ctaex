@@ -21,7 +21,7 @@ class Declaracion extends Model
 
     public function rendicionesanuales():BelongsToMany
     {
-        return $this->belongsToMany(RendicionAnual::class,'rendiciones_anuales_declaraciones','declaracion_id','rendicion_anual_id');
+        return $this->belongsToMany(RendicionAnual::class,'rendiciones_anuales_declaraciones','declaracion_id','rendicion_anual_id')->withPivot('tipo_id');
     }
 
     public function meses():BelongsTo

@@ -1,0 +1,154 @@
+GET /busqueda/expedientes.showexpedienteconsulta?_token=1AmP1L43phU4eOKAceX4eGj97xkXTIqo3C8H2vUf&id=&regimen_inicial=&apellido1=&apellido2=&nombre=genaro&propuestaAceptacionDesde=&propuestaAceptacionHasta=&entradaSanidadDesde=&entradaSanidadHasta=&enviarGabineteDesde=&enviarGabineteHasta=&recibirGabineteDesde=&recibirGabineteHasta= HTTP/1.1
+Accept:                    text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding:           gzip, deflate, br, zstd
+Accept-Language:           es-ES,es;q=0.9
+Connection:                keep-alive
+Cookie:                    XSRF-TOKEN=eyJpdiI6IkNVYURTSk5BdDNzSzlGMVkrVWduWFE9PSIsInZhbHVlIjoiZXI0UmlTSkRHWGM4d3l2Z1VrZWs0UVBYU0UwU3dXUko1aElJTEZ3aFNPUVpyYlZCYlM2aHZtdTF0Y0xIZEJoQVgrUGlSTENibFpxUWdCdWJJVmZsc2twUVVtb3hJd1JNMHVwNW1ZRklRNG9mczdRNmZyVWp2NVlVcEgxYStzRC8iLCJtYWMiOiJmZWUyNTI3ZWMzMDE4YmNmZWI3MGJjYmY0MTY5N2M0ZmFkODUxMDA5NWEyODAwOWY1MmM2NjcxZjY4NzUyNTNlIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6ImNxSjY4SVAwNFVtQ0JWcHVoQUdSWUE9PSIsInZhbHVlIjoiMjFIZ0F1R2NhZUd3NXd2blhYWEJwOE1mZHJ5WkRUSDg1c3pEVFlKUjQ0YkIvc1ZCM3VEMmwvSFMvNFRIakpObUtHQjVXU09sSjE3QmRNaHYyYTZyUWZQTnYyeHNPL3d4MEZTMkRZd1JDZUFmNG1lcnE4U2czUFg1TllGOGdmeUoiLCJtYWMiOiIxODk3YTE2MGU3MmYwODY4MzA0YTQ3YjM2YzBiNGMxMmY3NWEwNTlmMWNmZWIzODk5MGRmMTU4NDdhN2IxZjlhIiwidGFnIjoiIn0%3D
+Host:                      127.0.0.1:8000
+Referer:                   http://127.0.0.1:8000/consultarExpedientes/expedientes.consultarexpediente
+Sec-Ch-Ua:                 "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+Sec-Ch-Ua-Mobile:          ?0
+Sec-Ch-Ua-Platform:        "Windows"
+Sec-Fetch-Dest:            document
+Sec-Fetch-Mode:            navigate
+Sec-Fetch-Site:            same-origin
+Sec-Fetch-User:            ?1
+Upgrade-Insecure-Requests: 1
+User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+Cookie: XSRF-TOKEN=1AmP1L43phU4eOKAceX4eGj97xkXTIqo3C8H2vUf; laravel_session=cKFbdm1VteXnHrMDPzcvq4QqOfamAOcWnzhkFnd0
+
+
+Illuminate\Pagination\LengthAwarePaginator Object
+(
+    [items:protected] => Illuminate\Support\Collection Object
+        (
+            [items:protected] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [id] => 5
+                            [expediente_datos_personales_id] => 5
+                            [num_expte_intranet] => 66/2002
+                            [expte] => 01/C/2003
+                            [trabajador_social] => 3
+                            [trabajador_social_id] => 3
+                            [fecha_alta] => 2003-01-01
+                            [año] => 2003
+                            [observaciones] => Hemos actualizado el campo fecha de alta con el formato dd-mm-aaaa.
+                            [regimen] => CURATELA
+                            [estado_expediente] => ALTA
+                            [estado_id] => 1
+                            [numero_seguro_medico] => 
+                            [patologia_general] => DISCAPACIDAD INTELECTUAL
+                            [patologiageneral_id] => 4
+                            [num_incapacidad] => 131/02
+                            [nig] => 06036-41-1-2002-0200797
+                            [juzgado] => 1ª INSTANCIA Nº 2 DE CASTUERA
+                            [juzgado_id] => 29
+                            [expte_digital] => ..\04 Expedientes CURATELA\RUIZ GARCIA GENARO 01-C-03#..\04 Expedientes CURATELA\RUIZ GARCIA GENARO 01-C-03#
+                            [observaciones_inv] => NO
+                            [inventario] => 2008-12-04
+                            [aprob_inventario] => 
+                            [declaracion_anual] => MARZO 2023
+                            [rendicion] => VERDADERO
+                            [ultima_rdc_aprobada] => MARZO 2022
+                            [rendicion_final] => 
+                            [aprob_rdc_final] => 
+                            [resolucion_icp] => SENTENCIA
+                            [num_resolucion_icp] => 25
+                            [fecha_dictado_icp] => 2002-06-28
+                            [juzgado_dictado_icp] => 1ª INSTANCIA Nº 2 DE CASTUERA
+                            [resolucion_nb] => AUTO
+                            [num_resolucion_nb] => 0
+                            [fecha_dictado_nb] => 2002-11-28
+                            [juzgado_dictado_nb] => 1ª INSTANCIA Nº 2 DE CASTUERA
+                            [pension] => INSS
+                            [prestaciones] => 
+                            [importe] => 
+                            [observciones_dec] => NO FORMALIZADO POR ENFERMEDAD GRAVE
+                            [grado_discapacidad] => 75
+                            [fecha_discapacidad] => 1987-03-02
+                            [fecha_valor_discapacidad] => 2002-02-22
+                            [revisable_definitiva] => 0
+                            [fecha_revision_discapacidad] => 
+                            [activo_dp] => 1
+                            [grado_dependencia] => II
+                            [gradodependencia_id] => 3
+                            [nivel_dependencia] => 2
+                            [niveldependencia_id] => 2
+                            [fecha_resolucion] => 2011-07-11
+                            [fecha_efectos] => 2011-03-01
+                            [servicio_dependencia] => ATENCION RESIDENCIAL
+                            [dependenciaservicio_id] => 1
+                            [subtipo_servicio] => RESIDENCIA GENERICA
+                            [dependenciaserviciosubtipo_id] => 17
+                            [prestacion_dependencia] => PRESTACION DE SERVICIO
+                            [prestaciondependencia_id] => 1
+                            [fecha_aceptacion_cargo] => 2003-03-17
+                            [fecha_entrada_area_aecca] => 
+                            [empleado_aecca] => 
+                            [empleado_aecca_rdc] => 
+                            [empleado_aecca_final] => 
+                            [fecha_presentacion_rdc] => 2022-03-28
+                            [fecha_aprobacion_rdc] => 2022-11-24
+                            [observaciones_rdc] => EN AGOSTO/2022 FUE REQUERIDA LA RENDICION DE CUENTAS DEL 2020, ENVIANDOSE POR LEXNET EL 18/08/2022
+APROBADA EL 24/11/2022
+                            [fecha_fallecimiento_final] => 
+                            [fecha_cert_def_final] => 
+                            [fecha_sol_ult_vol_final] => 
+                            [observaciones_final] => 
+                            [fecha_revision_rdc] => 
+                            [años_en_ctaex] => 0
+                            [presentacion_rdc] => FALSO
+                            [empleado_ecca_prs_rdc] => 0
+                            [fecha_remocion] => 
+                            [fecha_reintegro_capacidad] => 
+                            [expte_antiguo] => 01/C/2003
+                            [expte_antes_revison] => 01/C/2003
+                            [regimen_actual] => 
+                            [regimen_definitivo] => 
+                            [iniciador_procedimiento] => 
+                            [fecha_remision] => 
+                            [fecha_recepcion] => 
+                            [contratar] => 
+                            [anular_poder_notarial] => 
+                            [uso_armas] => 
+                            [permiso_conducir] => 
+                            [estetica] => 
+                            [certificado_operabilidad] => 
+                            [otorgar_testamento] => 
+                            [redes_sociales] => 
+                            [observaciones_revison] => 
+                            [procedimiento_judicial] => 
+                            [procedimientojudicial_id] => 
+                            [created_at] => 
+                            [updated_at] => 
+                            [apellido1] => RUIZ
+                            [apellido2] => GARCIA
+                            [nombre] => GENARO
+                        )
+
+                )
+
+            [escapeWhenCastingToString:protected] => 
+        )
+
+    [perPage:protected] => 5
+    [currentPage:protected] => 1
+    [path:protected] => http://127.0.0.1:8000/busqueda/expedientes.showexpedienteconsulta
+    [query:protected] => Array
+        (
+        )
+
+    [fragment:protected] => 
+    [pageName:protected] => page
+    [onEachSide] => 3
+    [options:protected] => Array
+        (
+            [path] => http://127.0.0.1:8000/busqueda/expedientes.showexpedienteconsulta
+            [pageName] => page
+        )
+
+    [total:protected] => 1
+    [lastPage:protected] => 1
+)

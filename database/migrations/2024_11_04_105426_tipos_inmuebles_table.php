@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('revisiones', function (Blueprint $table) {
+        Schema::create('tipo_inmuebles', function (Blueprint $table) {
             $table->engine ='InnoDB';
+            $table->charset ='utf8';
+            $table->collation='utf8_general_ci';
             $table->id();
-            $table->bigInteger('expediente_id')->nullable()->default(null);
-            $table->bigInteger('iniciador_id')->nullable()->default(null);
-            $table->date('fecha_revision')->nullable()->default(null);
-            $table->date('fecha_recepcion')->nullable()->default(null);
+            $table->text('nombre')->default(null)->nullable();
+            $table->unsignedBigInteger('is_deleted')->default('2')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('revisiones');
+        Schema::dropIfExists('tipo_inmuebles');
     }
 };

@@ -13,8 +13,8 @@ class TipoRendicionAnual extends Model
     protected $guarded=['id'];
     protected $table='tipos_rendicion_anual';
 
-    public function rendiciones_anuales():HasMany
+    public function rendiciones_anuales_declaracion():HasMany
     {
-        return $this->hasMany(RendicionAnual::class,'tipo_id');
+        return $this->hasMany(RendicionAnualDeclaracion::class,'tipo_id');
     }
 }

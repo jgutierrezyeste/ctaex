@@ -13,5 +13,7 @@
         <x-fila_menu_datos_intranet ruta="expedientes.datosinventarios" vista="expedientes.showdatosinventarios" :id="$expediente->id" opcion="Fecha Inventarios"></x-fila_menu_datos_intranet>
         <x-fila_menu_datos_intranet ruta="expedientes.datosgastos" vista="expedientes.showdatosgastos" :id="$expediente->id" opcion="Gastos Varios"></x-fila_menu_datos_intranet>
         <x-fila_menu_datos_intranet ruta="expedientes.datosingresos" vista="expedientes.showdatosingresos" :id="$expediente->id" opcion="Ingresos Varios"></x-fila_menu_datos_intranet>
+        <x-fila_menu_datos_intranet ruta="expedientes.datoshistorial" vista="expedientes.showdatoshistorial" :id="$expediente->id" opcion="Historial"></x-fila_menu_datos_intranet>
+
     </tbody>
 </table>

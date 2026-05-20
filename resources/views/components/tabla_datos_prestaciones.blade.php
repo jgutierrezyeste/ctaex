@@ -5,7 +5,7 @@
  
 @endphp
 
-<table  class="tablegeneral" style="margin-left:10%; width:70%" cellspacing="0" cellpadding="8">
+<table  cellspacing="0" cellpadding="8" border="0" align="center">
     
     
     <tbody>
@@ -34,13 +34,13 @@
                             <label>Importe </label>
                             <input class="inputtable" id="importe" type="text" style="color:blue" value="{{ $prestacion->pivot->importe??'' }}"></input>
                             <label>Año prestacion </label>
-                            <input class="inputtable" id="importe" type="text" style="color:blue" value="{{ $prestacion->pivot->año_id??''}}"></input>
+                            <input class="inputtable" id="año" type="text" style="color:blue" value="{{ $prestacion->pivot->año_id??''}}"></input>
                         
                         </td>
 
                     </tr>
 
-                    <tr>
+                    <!--<tr>
                         <td style="border:1px solid; border-top:0px;  padding:12px; background-color: rgb(224, 204, 204)"  >
                             <label>Cuenta Bancaria:   </label>
 
@@ -59,7 +59,7 @@
 
                         </td>
 
-                    </tr>
+                    </tr>-->
                 
                     @endforeach
             

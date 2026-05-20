@@ -10,13 +10,14 @@ class NivelDependencia extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $table='nivel_dependencias';
     /*public function expedientes():HasMany
     {
         return $this->hasMany(Expediente::class,'niveldependencia_id');
     }*/
 
-    public function expedientedependencias():HasMany
+    public function dependencias():HasMany
     {
-        return $this->hasMany(DependenciaExpediente::class,'niveldependencia_id');
+        return $this->hasMany(Dependencia::class,'nivel_id');
     }
 }

@@ -107,7 +107,7 @@ class Expediente extends Model
 
     public function restituciones():HasOne
     {
-        return $this->hasOne(Expediente::class,'expediente_id');
+        return $this->hasOne(Restitucion::class,'expediente_id');
     }
 
     public function revisiones():HasMany
@@ -126,13 +126,27 @@ class Expediente extends Model
     {
         return $this->hasOne(GestionSeguroDeceso::class,'expediente_id');
     }
-    public function rendiciones():BelongsTo
+    public function rendicionestotales():HasMany
     {
-        return $this->belongsTo(Rendicion::class,'expediente_id');
+        return $this->hasMany(Rendicion::class,'expediente_id');
     }
     
     public function datos_personales():BelongsTo
     {
         return $this->belongsTo(ExpedienteDatoPersonal::class,'expediente_datos_personales_id');
+    }
+
+    public function inmuebles():BelongsToMany
+    {
+        return $this->belongsToMany(BienInmueble::class,'expediente_bienes_inmuebles','expediente_id','inmueble_id');
+    }
+
+    public function representantes():BelongsToMany
+    {
+        return $this->belongsToMany(Representante::class,'expediente_representantes','expediente_id','representante_id')->withPivot('relacion_id');
+    }
+    public function historial():HasMany
+    {
+        return $this->hasMany(HistorialExpediente::class,'expediente_id');
     }
 }

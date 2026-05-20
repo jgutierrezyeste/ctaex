@@ -97,7 +97,7 @@ class TutelaController extends Controller
         return view($vista,compact('expedientes','regimenes'));
     }
 
-    public function busqueda (ExpedienteRequest $request,$vista)
+    /*public function busqueda (ExpedienteRequest $request,$vista)
     {
         
         if ($request->has("id"))
@@ -125,4 +125,48 @@ class TutelaController extends Controller
         
         return view ($vista,compact('expedientes','id','nombre','apellido'));
     }
+*/
+
+
+    public function busqueda(Request $request,$vista)
+{
+    
+ 
+    if ($request->has("id"))
+    {
+      $id=$request->get('id');
+      
+    }
+  if ($request->has('nombre'))
+      $nombre=$request->get('nombre');
+  if ($request->has('apellido1'))
+      $apellido1=$request->get('apellido1');
+    if ($request->has('apellido2'))
+      $apellido2=$request->get('apellido2');
+ 
+  $expedientes = DB::table('expedientes_intranet')
+  
+  ->select ('*')
+  ->join('expediente_datos_personales','expediente_datos_personales_id','=','expediente_datos_personales.id')
+  ->when($id, function ($query) use ($id) {
+      return $query->where('expedientes_intranet.id','=',$id);})
+  ->when($nombre, function ($query) use ($nombre) {
+      return $query-> where('nombre','=',$nombre);})
+  ->when($apellido1, function ($query) use ($apellido1) {
+    
+          return $query->where('apellido1','=',$apellido1);})
+  ->when($apellido2, function ($query) use ($apellido2) {
+    
+            return $query->where('apellido2','=',$apellido2);})
+  ->Paginate(5);
+    
+  
+  $numexpteintranet=$expedientes[0]->num_expte_intranet??'';
+return view ( $vista ,compact('expedientes','id','nombre','apellido1','apellido2','numexpteintranet'));
+}
+
+
+
+
+
 }

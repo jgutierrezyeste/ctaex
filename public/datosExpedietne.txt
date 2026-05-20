@@ -1,0 +1,999 @@
+App\Models\Expediente Object
+(
+    [connection:protected] => mysql
+    [table:protected] => expedientes_intranet
+    [primaryKey:protected] => id
+    [keyType:protected] => int
+    [incrementing] => 1
+    [with:protected] => Array
+        (
+        )
+
+    [withCount:protected] => Array
+        (
+        )
+
+    [preventsLazyLoading] => 
+    [perPage:protected] => 15
+    [exists] => 1
+    [wasRecentlyCreated] => 
+    [escapeWhenCastingToString:protected] => 
+    [attributes:protected] => Array
+        (
+            [id] => 228
+            [expediente_datos_personales_id] => 228
+            [num_expte_intranet] => 11/2011
+            [expte] => 09/C/2011
+            [trabajador_social] => 2
+            [trabajador_social_id] => 2
+            [fecha_alta] => 2011-01-01
+            [año] => 2011
+            [observaciones] => Hemos actualizado el campo fecha de alta con el formato dd-mm-aaaa.
+            [regimen] => CURATELA
+            [estado_expediente] => ALTA
+            [estado_id] => 1
+            [numero_seguro_medico] => 
+            [patologia_general] => ENFERMEDAD MENTAL
+            [patologiageneral_id] => 5
+            [num_incapacidad] => 075/18
+            [nig] => 10109-41-1-2016-0100155
+            [juzgado] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [juzgado_id] => 13
+            [expte_digital] => ..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#
+            [observaciones_inv] => NO
+            [inventario] => 2015-10-08
+            [aprob_inventario] => 
+            [declaracion_anual] => OCTUBRE 2019
+            [rendicion] => VERDADERO
+            [ultima_rdc_aprobada] => 
+            [rendicion_final] => 
+            [aprob_rdc_final] => 
+            [resolucion_icp] => SENTENCIA
+            [num_resolucion_icp] => 46
+            [fecha_dictado_icp] => 2011-07-09
+            [juzgado_dictado_icp] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [resolucion_nb] => SENTENCIA
+            [num_resolucion_nb] => 46
+            [fecha_dictado_nb] => 2011-07-09
+            [juzgado_dictado_nb] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [pension] => PNC
+            [prestaciones] => 
+            [importe] => 
+            [observciones_dec] => 
+            [grado_discapacidad] => 
+            [fecha_discapacidad] => 
+            [fecha_valor_discapacidad] => 
+            [revisable_definitiva] => 
+            [fecha_revision_discapacidad] => 
+            [activo_dp] => 1
+            [grado_dependencia] => II
+            [gradodependencia_id] => 3
+            [nivel_dependencia] => 
+            [niveldependencia_id] => 
+            [fecha_resolucion] => 2016-02-26
+            [fecha_efectos] => 2016-02-26
+            [servicio_dependencia] => 
+            [dependenciaservicio_id] => 
+            [subtipo_servicio] => 
+            [dependenciaserviciosubtipo_id] => 
+            [prestacion_dependencia] => 
+            [prestaciondependencia_id] => 
+            [fecha_aceptacion_cargo] => 2011-09-21
+            [fecha_entrada_area_aecca] => 
+            [empleado_aecca] => 
+            [empleado_aecca_rdc] => 
+            [empleado_aecca_final] => 
+            [fecha_presentacion_rdc] => 
+            [fecha_aprobacion_rdc] => 
+            [observaciones_rdc] => 
+            [fecha_fallecimiento_final] => 
+            [fecha_cert_def_final] => 
+            [fecha_sol_ult_vol_final] => 
+            [observaciones_final] => 
+            [fecha_revision_rdc] => 
+            [años_en_ctaex] => 0
+            [presentacion_rdc] => FALSO
+            [empleado_ecca_prs_rdc] => 0
+            [fecha_remocion] => 
+            [fecha_reintegro_capacidad] => 
+            [expte_antiguo] => 09/C/2011
+            [expte_antes_revison] => 09/C/2011
+            [regimen_actual] => 
+            [regimen_definitivo] => 
+            [iniciador_procedimiento] => 
+            [fecha_remision] => 
+            [fecha_recepcion] => 
+            [contratar] => 
+            [anular_poder_notarial] => 
+            [uso_armas] => 
+            [permiso_conducir] => 
+            [estetica] => 
+            [certificado_operabilidad] => 
+            [otorgar_testamento] => 
+            [redes_sociales] => 
+            [observaciones_revison] => 
+            [procedimiento_judicial] => ICP
+            [procedimientojudicial_id] => 5
+            [created_at] => 
+            [updated_at] => 
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 228
+            [expediente_datos_personales_id] => 228
+            [num_expte_intranet] => 11/2011
+            [expte] => 09/C/2011
+            [trabajador_social] => 2
+            [trabajador_social_id] => 2
+            [fecha_alta] => 2011-01-01
+            [año] => 2011
+            [observaciones] => Hemos actualizado el campo fecha de alta con el formato dd-mm-aaaa.
+            [regimen] => CURATELA
+            [estado_expediente] => ALTA
+            [estado_id] => 1
+            [numero_seguro_medico] => 
+            [patologia_general] => ENFERMEDAD MENTAL
+            [patologiageneral_id] => 5
+            [num_incapacidad] => 075/18
+            [nig] => 10109-41-1-2016-0100155
+            [juzgado] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [juzgado_id] => 13
+            [expte_digital] => ..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#
+            [observaciones_inv] => NO
+            [inventario] => 2015-10-08
+            [aprob_inventario] => 
+            [declaracion_anual] => OCTUBRE 2019
+            [rendicion] => VERDADERO
+            [ultima_rdc_aprobada] => 
+            [rendicion_final] => 
+            [aprob_rdc_final] => 
+            [resolucion_icp] => SENTENCIA
+            [num_resolucion_icp] => 46
+            [fecha_dictado_icp] => 2011-07-09
+            [juzgado_dictado_icp] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [resolucion_nb] => SENTENCIA
+            [num_resolucion_nb] => 46
+            [fecha_dictado_nb] => 2011-07-09
+            [juzgado_dictado_nb] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [pension] => PNC
+            [prestaciones] => 
+            [importe] => 
+            [observciones_dec] => 
+            [grado_discapacidad] => 
+            [fecha_discapacidad] => 
+            [fecha_valor_discapacidad] => 
+            [revisable_definitiva] => 
+            [fecha_revision_discapacidad] => 
+            [activo_dp] => 1
+            [grado_dependencia] => II
+            [gradodependencia_id] => 3
+            [nivel_dependencia] => 
+            [niveldependencia_id] => 
+            [fecha_resolucion] => 2016-02-26
+            [fecha_efectos] => 2016-02-26
+            [servicio_dependencia] => 
+            [dependenciaservicio_id] => 
+            [subtipo_servicio] => 
+            [dependenciaserviciosubtipo_id] => 
+            [prestacion_dependencia] => 
+            [prestaciondependencia_id] => 
+            [fecha_aceptacion_cargo] => 2011-09-21
+            [fecha_entrada_area_aecca] => 
+            [empleado_aecca] => 
+            [empleado_aecca_rdc] => 
+            [empleado_aecca_final] => 
+            [fecha_presentacion_rdc] => 
+            [fecha_aprobacion_rdc] => 
+            [observaciones_rdc] => 
+            [fecha_fallecimiento_final] => 
+            [fecha_cert_def_final] => 
+            [fecha_sol_ult_vol_final] => 
+            [observaciones_final] => 
+            [fecha_revision_rdc] => 
+            [años_en_ctaex] => 0
+            [presentacion_rdc] => FALSO
+            [empleado_ecca_prs_rdc] => 0
+            [fecha_remocion] => 
+            [fecha_reintegro_capacidad] => 
+            [expte_antiguo] => 09/C/2011
+            [expte_antes_revison] => 09/C/2011
+            [regimen_actual] => 
+            [regimen_definitivo] => 
+            [iniciador_procedimiento] => 
+            [fecha_remision] => 
+            [fecha_recepcion] => 
+            [contratar] => 
+            [anular_poder_notarial] => 
+            [uso_armas] => 
+            [permiso_conducir] => 
+            [estetica] => 
+            [certificado_operabilidad] => 
+            [otorgar_testamento] => 
+            [redes_sociales] => 
+            [observaciones_revison] => 
+            [procedimiento_judicial] => ICP
+            [procedimientojudicial_id] => 5
+            [created_at] => 
+            [updated_at] => 
+        )
+
+    [changes:protected] => Array
+        (
+        )
+
+    [casts:protected] => Array
+        (
+        )
+
+    [classCastCache:protected] => Array
+        (
+        )
+
+    [attributeCastCache:protected] => Array
+        (
+        )
+
+    [dateFormat:protected] => 
+    [appends:protected] => Array
+        (
+        )
+
+    [dispatchesEvents:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [relations:protected] => Array
+        (
+            [remociones] => 
+            [resoluciones] => Illuminate\Database\Eloquent\Collection Object
+                (
+                    [items:protected] => Array
+                        (
+                            [0] => App\Models\Resolucion Object
+                                (
+                                    [connection:protected] => mysql
+                                    [table:protected] => resoluciones
+                                    [primaryKey:protected] => id
+                                    [keyType:protected] => int
+                                    [incrementing] => 1
+                                    [with:protected] => Array
+                                        (
+                                        )
+
+                                    [withCount:protected] => Array
+                                        (
+                                        )
+
+                                    [preventsLazyLoading] => 
+                                    [perPage:protected] => 15
+                                    [exists] => 1
+                                    [wasRecentlyCreated] => 
+                                    [escapeWhenCastingToString:protected] => 
+                                    [attributes:protected] => Array
+                                        (
+                                            [id] => 196
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 2
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [original:protected] => Array
+                                        (
+                                            [id] => 196
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 2
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [changes:protected] => Array
+                                        (
+                                        )
+
+                                    [casts:protected] => Array
+                                        (
+                                        )
+
+                                    [classCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [attributeCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [dateFormat:protected] => 
+                                    [appends:protected] => Array
+                                        (
+                                        )
+
+                                    [dispatchesEvents:protected] => Array
+                                        (
+                                        )
+
+                                    [observables:protected] => Array
+                                        (
+                                        )
+
+                                    [relations:protected] => Array
+                                        (
+                                        )
+
+                                    [touches:protected] => Array
+                                        (
+                                        )
+
+                                    [timestamps] => 1
+                                    [usesUniqueIds] => 
+                                    [hidden:protected] => Array
+                                        (
+                                        )
+
+                                    [visible:protected] => Array
+                                        (
+                                        )
+
+                                    [fillable:protected] => Array
+                                        (
+                                        )
+
+                                    [guarded:protected] => Array
+                                        (
+                                            [0] => id
+                                        )
+
+                                )
+
+                            [1] => App\Models\Resolucion Object
+                                (
+                                    [connection:protected] => mysql
+                                    [table:protected] => resoluciones
+                                    [primaryKey:protected] => id
+                                    [keyType:protected] => int
+                                    [incrementing] => 1
+                                    [with:protected] => Array
+                                        (
+                                        )
+
+                                    [withCount:protected] => Array
+                                        (
+                                        )
+
+                                    [preventsLazyLoading] => 
+                                    [perPage:protected] => 15
+                                    [exists] => 1
+                                    [wasRecentlyCreated] => 
+                                    [escapeWhenCastingToString:protected] => 
+                                    [attributes:protected] => Array
+                                        (
+                                            [id] => 805
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 1
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [original:protected] => Array
+                                        (
+                                            [id] => 805
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 1
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [changes:protected] => Array
+                                        (
+                                        )
+
+                                    [casts:protected] => Array
+                                        (
+                                        )
+
+                                    [classCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [attributeCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [dateFormat:protected] => 
+                                    [appends:protected] => Array
+                                        (
+                                        )
+
+                                    [dispatchesEvents:protected] => Array
+                                        (
+                                        )
+
+                                    [observables:protected] => Array
+                                        (
+                                        )
+
+                                    [relations:protected] => Array
+                                        (
+                                        )
+
+                                    [touches:protected] => Array
+                                        (
+                                        )
+
+                                    [timestamps] => 1
+                                    [usesUniqueIds] => 
+                                    [hidden:protected] => Array
+                                        (
+                                        )
+
+                                    [visible:protected] => Array
+                                        (
+                                        )
+
+                                    [fillable:protected] => Array
+                                        (
+                                        )
+
+                                    [guarded:protected] => Array
+                                        (
+                                            [0] => id
+                                        )
+
+                                )
+
+                        )
+
+                    [escapeWhenCastingToString:protected] => 
+                )
+
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [timestamps] => 1
+    [usesUniqueIds] => 
+    [hidden:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [fillable:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => id
+        )
+
+)
+App\Models\Expediente Object
+(
+    [connection:protected] => mysql
+    [table:protected] => expedientes_intranet
+    [primaryKey:protected] => id
+    [keyType:protected] => int
+    [incrementing] => 1
+    [with:protected] => Array
+        (
+        )
+
+    [withCount:protected] => Array
+        (
+        )
+
+    [preventsLazyLoading] => 
+    [perPage:protected] => 15
+    [exists] => 1
+    [wasRecentlyCreated] => 
+    [escapeWhenCastingToString:protected] => 
+    [attributes:protected] => Array
+        (
+            [id] => 228
+            [expediente_datos_personales_id] => 228
+            [num_expte_intranet] => 11/2011
+            [expte] => 09/C/2011
+            [trabajador_social] => 2
+            [trabajador_social_id] => 2
+            [fecha_alta] => 2011-01-01
+            [año] => 2011
+            [observaciones] => Hemos actualizado el campo fecha de alta con el formato dd-mm-aaaa.
+            [regimen] => CURATELA
+            [estado_expediente] => ALTA
+            [estado_id] => 1
+            [numero_seguro_medico] => 
+            [patologia_general] => ENFERMEDAD MENTAL
+            [patologiageneral_id] => 5
+            [num_incapacidad] => 075/18
+            [nig] => 10109-41-1-2016-0100155
+            [juzgado] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [juzgado_id] => 13
+            [expte_digital] => ..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#
+            [observaciones_inv] => NO
+            [inventario] => 2015-10-08
+            [aprob_inventario] => 
+            [declaracion_anual] => OCTUBRE 2019
+            [rendicion] => VERDADERO
+            [ultima_rdc_aprobada] => 
+            [rendicion_final] => 
+            [aprob_rdc_final] => 
+            [resolucion_icp] => SENTENCIA
+            [num_resolucion_icp] => 46
+            [fecha_dictado_icp] => 2011-07-09
+            [juzgado_dictado_icp] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [resolucion_nb] => SENTENCIA
+            [num_resolucion_nb] => 46
+            [fecha_dictado_nb] => 2011-07-09
+            [juzgado_dictado_nb] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [pension] => PNC
+            [prestaciones] => 
+            [importe] => 
+            [observciones_dec] => 
+            [grado_discapacidad] => 
+            [fecha_discapacidad] => 
+            [fecha_valor_discapacidad] => 
+            [revisable_definitiva] => 
+            [fecha_revision_discapacidad] => 
+            [activo_dp] => 1
+            [grado_dependencia] => II
+            [gradodependencia_id] => 3
+            [nivel_dependencia] => 
+            [niveldependencia_id] => 
+            [fecha_resolucion] => 2016-02-26
+            [fecha_efectos] => 2016-02-26
+            [servicio_dependencia] => 
+            [dependenciaservicio_id] => 
+            [subtipo_servicio] => 
+            [dependenciaserviciosubtipo_id] => 
+            [prestacion_dependencia] => 
+            [prestaciondependencia_id] => 
+            [fecha_aceptacion_cargo] => 2011-09-21
+            [fecha_entrada_area_aecca] => 
+            [empleado_aecca] => 
+            [empleado_aecca_rdc] => 
+            [empleado_aecca_final] => 
+            [fecha_presentacion_rdc] => 
+            [fecha_aprobacion_rdc] => 
+            [observaciones_rdc] => 
+            [fecha_fallecimiento_final] => 
+            [fecha_cert_def_final] => 
+            [fecha_sol_ult_vol_final] => 
+            [observaciones_final] => 
+            [fecha_revision_rdc] => 
+            [años_en_ctaex] => 0
+            [presentacion_rdc] => FALSO
+            [empleado_ecca_prs_rdc] => 0
+            [fecha_remocion] => 
+            [fecha_reintegro_capacidad] => 
+            [expte_antiguo] => 09/C/2011
+            [expte_antes_revison] => 09/C/2011
+            [regimen_actual] => 
+            [regimen_definitivo] => 
+            [iniciador_procedimiento] => 
+            [fecha_remision] => 
+            [fecha_recepcion] => 
+            [contratar] => 
+            [anular_poder_notarial] => 
+            [uso_armas] => 
+            [permiso_conducir] => 
+            [estetica] => 
+            [certificado_operabilidad] => 
+            [otorgar_testamento] => 
+            [redes_sociales] => 
+            [observaciones_revison] => 
+            [procedimiento_judicial] => ICP
+            [procedimientojudicial_id] => 5
+            [created_at] => 
+            [updated_at] => 
+        )
+
+    [original:protected] => Array
+        (
+            [id] => 228
+            [expediente_datos_personales_id] => 228
+            [num_expte_intranet] => 11/2011
+            [expte] => 09/C/2011
+            [trabajador_social] => 2
+            [trabajador_social_id] => 2
+            [fecha_alta] => 2011-01-01
+            [año] => 2011
+            [observaciones] => Hemos actualizado el campo fecha de alta con el formato dd-mm-aaaa.
+            [regimen] => CURATELA
+            [estado_expediente] => ALTA
+            [estado_id] => 1
+            [numero_seguro_medico] => 
+            [patologia_general] => ENFERMEDAD MENTAL
+            [patologiageneral_id] => 5
+            [num_incapacidad] => 075/18
+            [nig] => 10109-41-1-2016-0100155
+            [juzgado] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [juzgado_id] => 13
+            [expte_digital] => ..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#..\04 Expedientes CURATELA\CHAMORRO HOLGUIN JUAN 09-C-11#
+            [observaciones_inv] => NO
+            [inventario] => 2015-10-08
+            [aprob_inventario] => 
+            [declaracion_anual] => OCTUBRE 2019
+            [rendicion] => VERDADERO
+            [ultima_rdc_aprobada] => 
+            [rendicion_final] => 
+            [aprob_rdc_final] => 
+            [resolucion_icp] => SENTENCIA
+            [num_resolucion_icp] => 46
+            [fecha_dictado_icp] => 2011-07-09
+            [juzgado_dictado_icp] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [resolucion_nb] => SENTENCIA
+            [num_resolucion_nb] => 46
+            [fecha_dictado_nb] => 2011-07-09
+            [juzgado_dictado_nb] => 1ª INSTANCIA Nº 1 DE LOGROSAN
+            [pension] => PNC
+            [prestaciones] => 
+            [importe] => 
+            [observciones_dec] => 
+            [grado_discapacidad] => 
+            [fecha_discapacidad] => 
+            [fecha_valor_discapacidad] => 
+            [revisable_definitiva] => 
+            [fecha_revision_discapacidad] => 
+            [activo_dp] => 1
+            [grado_dependencia] => II
+            [gradodependencia_id] => 3
+            [nivel_dependencia] => 
+            [niveldependencia_id] => 
+            [fecha_resolucion] => 2016-02-26
+            [fecha_efectos] => 2016-02-26
+            [servicio_dependencia] => 
+            [dependenciaservicio_id] => 
+            [subtipo_servicio] => 
+            [dependenciaserviciosubtipo_id] => 
+            [prestacion_dependencia] => 
+            [prestaciondependencia_id] => 
+            [fecha_aceptacion_cargo] => 2011-09-21
+            [fecha_entrada_area_aecca] => 
+            [empleado_aecca] => 
+            [empleado_aecca_rdc] => 
+            [empleado_aecca_final] => 
+            [fecha_presentacion_rdc] => 
+            [fecha_aprobacion_rdc] => 
+            [observaciones_rdc] => 
+            [fecha_fallecimiento_final] => 
+            [fecha_cert_def_final] => 
+            [fecha_sol_ult_vol_final] => 
+            [observaciones_final] => 
+            [fecha_revision_rdc] => 
+            [años_en_ctaex] => 0
+            [presentacion_rdc] => FALSO
+            [empleado_ecca_prs_rdc] => 0
+            [fecha_remocion] => 
+            [fecha_reintegro_capacidad] => 
+            [expte_antiguo] => 09/C/2011
+            [expte_antes_revison] => 09/C/2011
+            [regimen_actual] => 
+            [regimen_definitivo] => 
+            [iniciador_procedimiento] => 
+            [fecha_remision] => 
+            [fecha_recepcion] => 
+            [contratar] => 
+            [anular_poder_notarial] => 
+            [uso_armas] => 
+            [permiso_conducir] => 
+            [estetica] => 
+            [certificado_operabilidad] => 
+            [otorgar_testamento] => 
+            [redes_sociales] => 
+            [observaciones_revison] => 
+            [procedimiento_judicial] => ICP
+            [procedimientojudicial_id] => 5
+            [created_at] => 
+            [updated_at] => 
+        )
+
+    [changes:protected] => Array
+        (
+        )
+
+    [casts:protected] => Array
+        (
+        )
+
+    [classCastCache:protected] => Array
+        (
+        )
+
+    [attributeCastCache:protected] => Array
+        (
+        )
+
+    [dateFormat:protected] => 
+    [appends:protected] => Array
+        (
+        )
+
+    [dispatchesEvents:protected] => Array
+        (
+        )
+
+    [observables:protected] => Array
+        (
+        )
+
+    [relations:protected] => Array
+        (
+            [remociones] => 
+            [resoluciones] => Illuminate\Database\Eloquent\Collection Object
+                (
+                    [items:protected] => Array
+                        (
+                            [0] => App\Models\Resolucion Object
+                                (
+                                    [connection:protected] => mysql
+                                    [table:protected] => resoluciones
+                                    [primaryKey:protected] => id
+                                    [keyType:protected] => int
+                                    [incrementing] => 1
+                                    [with:protected] => Array
+                                        (
+                                        )
+
+                                    [withCount:protected] => Array
+                                        (
+                                        )
+
+                                    [preventsLazyLoading] => 
+                                    [perPage:protected] => 15
+                                    [exists] => 1
+                                    [wasRecentlyCreated] => 
+                                    [escapeWhenCastingToString:protected] => 
+                                    [attributes:protected] => Array
+                                        (
+                                            [id] => 196
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 2
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [original:protected] => Array
+                                        (
+                                            [id] => 196
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 2
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [changes:protected] => Array
+                                        (
+                                        )
+
+                                    [casts:protected] => Array
+                                        (
+                                        )
+
+                                    [classCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [attributeCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [dateFormat:protected] => 
+                                    [appends:protected] => Array
+                                        (
+                                        )
+
+                                    [dispatchesEvents:protected] => Array
+                                        (
+                                        )
+
+                                    [observables:protected] => Array
+                                        (
+                                        )
+
+                                    [relations:protected] => Array
+                                        (
+                                        )
+
+                                    [touches:protected] => Array
+                                        (
+                                        )
+
+                                    [timestamps] => 1
+                                    [usesUniqueIds] => 
+                                    [hidden:protected] => Array
+                                        (
+                                        )
+
+                                    [visible:protected] => Array
+                                        (
+                                        )
+
+                                    [fillable:protected] => Array
+                                        (
+                                        )
+
+                                    [guarded:protected] => Array
+                                        (
+                                            [0] => id
+                                        )
+
+                                )
+
+                            [1] => App\Models\Resolucion Object
+                                (
+                                    [connection:protected] => mysql
+                                    [table:protected] => resoluciones
+                                    [primaryKey:protected] => id
+                                    [keyType:protected] => int
+                                    [incrementing] => 1
+                                    [with:protected] => Array
+                                        (
+                                        )
+
+                                    [withCount:protected] => Array
+                                        (
+                                        )
+
+                                    [preventsLazyLoading] => 
+                                    [perPage:protected] => 15
+                                    [exists] => 1
+                                    [wasRecentlyCreated] => 
+                                    [escapeWhenCastingToString:protected] => 
+                                    [attributes:protected] => Array
+                                        (
+                                            [id] => 805
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 1
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [original:protected] => Array
+                                        (
+                                            [id] => 805
+                                            [expediente_id] => 228
+                                            [juzgado_id] => 13
+                                            [figura_id] => 3
+                                            [modo_resolucion_id] => 1
+                                            [fecha] => 2011-07-09
+                                            [numero] => 46
+                                            [created_at] => 
+                                            [updated_at] => 
+                                        )
+
+                                    [changes:protected] => Array
+                                        (
+                                        )
+
+                                    [casts:protected] => Array
+                                        (
+                                        )
+
+                                    [classCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [attributeCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [dateFormat:protected] => 
+                                    [appends:protected] => Array
+                                        (
+                                        )
+
+                                    [dispatchesEvents:protected] => Array
+                                        (
+                                        )
+
+                                    [observables:protected] => Array
+                                        (
+                                        )
+
+                                    [relations:protected] => Array
+                                        (
+                                        )
+
+                                    [touches:protected] => Array
+                                        (
+                                        )
+
+                                    [timestamps] => 1
+                                    [usesUniqueIds] => 
+                                    [hidden:protected] => Array
+                                        (
+                                        )
+
+                                    [visible:protected] => Array
+                                        (
+                                        )
+
+                                    [fillable:protected] => Array
+                                        (
+                                        )
+
+                                    [guarded:protected] => Array
+                                        (
+                                            [0] => id
+                                        )
+
+                                )
+
+                        )
+
+                    [escapeWhenCastingToString:protected] => 
+                )
+
+            [defensasjudiciales] => Illuminate\Database\Eloquent\Collection Object
+                (
+                    [items:protected] => Array
+                        (
+                        )
+
+                    [escapeWhenCastingToString:protected] => 
+                )
+
+        )
+
+    [touches:protected] => Array
+        (
+        )
+
+    [timestamps] => 1
+    [usesUniqueIds] => 
+    [hidden:protected] => Array
+        (
+        )
+
+    [visible:protected] => Array
+        (
+        )
+
+    [fillable:protected] => Array
+        (
+        )
+
+    [guarded:protected] => Array
+        (
+            [0] => id
+        )
+
+)

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -33,8 +34,8 @@ class Rendicion extends Model
     {
         return $this->belongsToMany(Empleado::class,'rendiciones_empleados','rendicion_id','empleado_id');
     }
-    public function expedientes():HasMany
+    public function expedientes():BelongsTo
     {
-        return $this->hasMany(Expediente::class,'expediente_id');
+        return $this->belongsTo(Expediente::class,'expediente_id');
     }
 }

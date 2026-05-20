@@ -30,4 +30,9 @@ class Provincia extends Model
     {
         return $this->hasMany(Municipio::class,'provincia_id');
     }
+
+    public function juzgados():HasMany
+    {
+        return $this->hasMany(Juzgado::class,'provincia_id');
+    }
 }

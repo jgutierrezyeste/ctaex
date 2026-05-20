@@ -1,6 +1,6 @@
 @props (['expediente'])
 
-<table  class="tablegeneral" style="margin-left:10%; width:70%" cellspacing="0" cellpadding="5">
+<table cellspacing="0" cellpadding="8" border="0" align="center">
     
     
     <tbody>

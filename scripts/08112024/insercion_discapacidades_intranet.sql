@@ -1,0 +1,14 @@
+ALTER TABLE `discapacidades` 
+CHANGE COLUMN `is_revisable` `is_revisable` TINYINT NULL DEFAULT '0' ;
+
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='JULIA'and apellido1='DE LA MORENA'and apellido2='MARTINEZ'),'65',NULL);
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='FLORENCIO'and apellido1='GALLEGO'and apellido2='MOLINA'),'91','1986-04-07');
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='LUIS'and apellido1='PEREZ'and apellido2='GARCIA'),'65','2007-07-16');
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='MANUEL'and apellido1='RUIZ'and apellido2='GARCIA'),'75','2011-08-19');
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='MIGUEL'and apellido1='PEREZ'and apellido2='GRANADO'),'75',NULL);
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='JOSE FERMIN'and apellido1='GARCIA'and apellido2='PABLOS'),'65',NULL);
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='JUAN'and apellido1='RODRÍGUEZ'and apellido2='CALERO'),'68','2009-10-01');
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='MANUEL'and apellido1='SUAREZ'and apellido2='ALCALDE'),'65',NULL);
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='JUAN JOSE'and apellido1='BLANCO'and apellido2='TAMAYO'),'89',NULL);
+insert into discapacidades(expediente_id,grado,fecha_efecto)values((select ei.id from expedientes_intranet ei inner join expediente_datos_personales edp on edp.id=ei.expediente_datos_personales_id where nombre='FRANCISCO'and apellido1='DOMINGUEZ'and apellido2='JIMENEZ'),'77',NULL);
+

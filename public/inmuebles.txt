@@ -1,0 +1,723 @@
+Illuminate\Database\Eloquent\Collection Object
+(
+    [items:protected] => Array
+        (
+            [0] => App\Models\BienInmueble Object
+                (
+                    [connection:protected] => mysql
+                    [table:protected] => bienes_inmuebles
+                    [primaryKey:protected] => id
+                    [keyType:protected] => int
+                    [incrementing] => 1
+                    [with:protected] => Array
+                        (
+                        )
+
+                    [withCount:protected] => Array
+                        (
+                        )
+
+                    [preventsLazyLoading] => 
+                    [perPage:protected] => 15
+                    [exists] => 1
+                    [wasRecentlyCreated] => 
+                    [escapeWhenCastingToString:protected] => 
+                    [attributes:protected] => Array
+                        (
+                            [id] => 13
+                            [expediente_id] => 18
+                            [tipo_id] => 3
+                            [localidad] => Aldeanueva de la Vera
+                            [codigo_postal] => 10440
+                            [direccion] => PZA. SAN ANTON, 15
+                            [observaciones] => SE HA PROCEDIDO AL ARREGLO DEL TEJADO
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                        )
+
+                    [original:protected] => Array
+                        (
+                            [id] => 13
+                            [expediente_id] => 18
+                            [tipo_id] => 3
+                            [localidad] => Aldeanueva de la Vera
+                            [codigo_postal] => 10440
+                            [direccion] => PZA. SAN ANTON, 15
+                            [observaciones] => SE HA PROCEDIDO AL ARREGLO DEL TEJADO
+                            [is_deleted] => 2
+                            [created_at] => 
+                            [updated_at] => 
+                            [pivot_expediente_id] => 18
+                            [pivot_inmueble_id] => 13
+                        )
+
+                    [changes:protected] => Array
+                        (
+                        )
+
+                    [casts:protected] => Array
+                        (
+                        )
+
+                    [classCastCache:protected] => Array
+                        (
+                        )
+
+                    [attributeCastCache:protected] => Array
+                        (
+                        )
+
+                    [dateFormat:protected] => 
+                    [appends:protected] => Array
+                        (
+                        )
+
+                    [dispatchesEvents:protected] => Array
+                        (
+                        )
+
+                    [observables:protected] => Array
+                        (
+                        )
+
+                    [relations:protected] => Array
+                        (
+                            [pivot] => Illuminate\Database\Eloquent\Relations\Pivot Object
+                                (
+                                    [connection:protected] => mysql
+                                    [table:protected] => expediente_bienes_inmuebles
+                                    [primaryKey:protected] => id
+                                    [keyType:protected] => int
+                                    [incrementing] => 
+                                    [with:protected] => Array
+                                        (
+                                        )
+
+                                    [withCount:protected] => Array
+                                        (
+                                        )
+
+                                    [preventsLazyLoading] => 
+                                    [perPage:protected] => 15
+                                    [exists] => 1
+                                    [wasRecentlyCreated] => 
+                                    [escapeWhenCastingToString:protected] => 
+                                    [attributes:protected] => Array
+                                        (
+                                            [expediente_id] => 18
+                                            [inmueble_id] => 13
+                                        )
+
+                                    [original:protected] => Array
+                                        (
+                                            [expediente_id] => 18
+                                            [inmueble_id] => 13
+                                        )
+
+                                    [changes:protected] => Array
+                                        (
+                                        )
+
+                                    [casts:protected] => Array
+                                        (
+                                        )
+
+                                    [classCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [attributeCastCache:protected] => Array
+                                        (
+                                        )
+
+                                    [dateFormat:protected] => 
+                                    [appends:protected] => Array
+                                        (
+                                        )
+
+                                    [dispatchesEvents:protected] => Array
+                                        (
+                                        )
+
+                                    [observables:protected] => Array
+                                        (
+                                        )
+
+                                    [relations:protected] => Array
+                                        (
+                                        )
+
+                                    [touches:protected] => Array
+                                        (
+                                        )
+
+                                    [timestamps] => 
+                                    [usesUniqueIds] => 
+                                    [hidden:protected] => Array
+                                        (
+                                        )
+
+                                    [visible:protected] => Array
+                                        (
+                                        )
+
+                                    [fillable:protected] => Array
+                                        (
+                                        )
+
+                                    [guarded:protected] => Array
+                                        (
+                                        )
+
+                                    [pivotParent] => App\Models\Expediente Object
+                                        (
+                                            [connection:protected] => mysql
+                                            [table:protected] => expedientes_intranet
+                                            [primaryKey:protected] => id
+                                            [keyType:protected] => int
+                                            [incrementing] => 1
+                                            [with:protected] => Array
+                                                (
+                                                )
+
+                                            [withCount:protected] => Array
+                                                (
+                                                )
+
+                                            [preventsLazyLoading] => 
+                                            [perPage:protected] => 15
+                                            [exists] => 1
+                                            [wasRecentlyCreated] => 
+                                            [escapeWhenCastingToString:protected] => 1
+                                            [attributes:protected] => Array
+                                                (
+                                                    [id] => 18
+                                                    [expediente_datos_personales_id] => 18
+                                                    [num_expte_intranet] => 70/1998
+                                                    [expte] => 01/T/1999
+                                                    [trabajador_social] => 2
+                                                    [trabajador_social_id] => 2
+                                                    [fecha_alta] => 1999-01-01
+                                                    [año] => 1999
+                                                    [observaciones] => Hemos actualizado el campo fecha de alta con el formato dd-mm-aaaa.
+                                                    [regimen] => TUTELA
+                                                    [estado_expediente] => ALTA
+                                                    [estado_id] => 1
+                                                    [numero_seguro_medico] => 
+                                                    [patologia_general] => PATOLOGIA DUAL
+                                                    [patologiageneral_id] => 6
+                                                    [num_incapacidad] => 209/98
+                                                    [nig] => 10148-41-1-2008-0301540
+                                                    [juzgado] => 1ª INSTANCIA Nº 3 DE PLASENCIA
+                                                    [juzgado_id] => 46
+                                                    [expte_digital] => ..\05 Expedientes TUTELA\SERRANO TRANCON AGUSTIN 01-T-99#..\05 Expedientes TUTELA\SERRANO TRANCON AGUSTIN 01-T-99#
+                                                    [observaciones_inv] => ALDEANUEVA DE LA VERA
+                                                    [inventario] => 2008-02-26
+                                                    [aprob_inventario] => 2008-03-30
+                                                    [declaracion_anual] => ABRIL 2023
+                                                    [rendicion] => VERDADERO
+                                                    [ultima_rdc_aprobada] => DICIEMBRE 2020
+                                                    [rendicion_final] => 
+                                                    [aprob_rdc_final] => 
+                                                    [resolucion_icp] => 
+                                                    [num_resolucion_icp] => 0
+                                                    [fecha_dictado_icp] => 
+                                                    [juzgado_dictado_icp] => 
+                                                    [resolucion_nb] => 
+                                                    [num_resolucion_nb] => 0
+                                                    [fecha_dictado_nb] => 
+                                                    [juzgado_dictado_nb] => 
+                                                    [pension] => INSS
+                                                    [prestaciones] => 
+                                                    [importe] => 
+                                                    [observciones_dec] => 
+                                                    [grado_discapacidad] => 
+                                                    [fecha_discapacidad] => 
+                                                    [fecha_valor_discapacidad] => 
+                                                    [revisable_definitiva] => 
+                                                    [fecha_revision_discapacidad] => 
+                                                    [activo_dp] => 0
+                                                    [grado_dependencia] => II
+                                                    [gradodependencia_id] => 3
+                                                    [nivel_dependencia] => 
+                                                    [niveldependencia_id] => 
+                                                    [fecha_resolucion] => 2022-05-04
+                                                    [fecha_efectos] => 2021-06-14
+                                                    [servicio_dependencia] => ATENCION RESIDENCIAL
+                                                    [dependenciaservicio_id] => 1
+                                                    [subtipo_servicio] => RESIDENCIA APOYO LIMITADO: RAL
+                                                    [dependenciaserviciosubtipo_id] => 14
+                                                    [prestacion_dependencia] => PRESTACION DE SERVICIO
+                                                    [prestaciondependencia_id] => 1
+                                                    [fecha_aceptacion_cargo] => 1999-01-14
+                                                    [fecha_entrada_area_aecca] => 
+                                                    [empleado_aecca] => 
+                                                    [empleado_aecca_rdc] => 
+                                                    [empleado_aecca_final] => 
+                                                    [fecha_presentacion_rdc] => 2022-04-26
+                                                    [fecha_aprobacion_rdc] => 2022-05-12
+                                                    [observaciones_rdc] => 
+                                                    [fecha_fallecimiento_final] => 
+                                                    [fecha_cert_def_final] => 
+                                                    [fecha_sol_ult_vol_final] => 
+                                                    [observaciones_final] => 
+                                                    [fecha_revision_rdc] => 
+                                                    [años_en_ctaex] => 0
+                                                    [presentacion_rdc] => FALSO
+                                                    [empleado_ecca_prs_rdc] => 0
+                                                    [fecha_remocion] => 
+                                                    [fecha_reintegro_capacidad] => 
+                                                    [expte_antiguo] => 01/T/1999
+                                                    [expte_antes_revison] => 01/T/1999
+                                                    [regimen_actual] => 
+                                                    [regimen_definitivo] => 
+                                                    [iniciador_procedimiento] => 
+                                                    [fecha_remision] => 
+                                                    [fecha_recepcion] => 
+                                                    [contratar] => 
+                                                    [anular_poder_notarial] => 
+                                                    [uso_armas] => 
+                                                    [permiso_conducir] => 
+                                                    [estetica] => 
+                                                    [certificado_operabilidad] => 
+                                                    [otorgar_testamento] => 
+                                                    [redes_sociales] => 
+                                                    [observaciones_revison] => 
+                                                    [procedimiento_judicial] => 
+                                                    [procedimientojudicial_id] => 
+                                                    [created_at] => 
+                                                    [updated_at] => 
+                                                )
+
+                                            [original:protected] => Array
+                                                (
+                                                    [id] => 18
+                                                    [expediente_datos_personales_id] => 18
+                                                    [num_expte_intranet] => 70/1998
+                                                    [expte] => 01/T/1999
+                                                    [trabajador_social] => 2
+                                                    [trabajador_social_id] => 2
+                                                    [fecha_alta] => 1999-01-01
+                                                    [año] => 1999
+                                                    [observaciones] => Hemos actualizado el campo fecha de alta con el formato dd-mm-aaaa.
+                                                    [regimen] => TUTELA
+                                                    [estado_expediente] => ALTA
+                                                    [estado_id] => 1
+                                                    [numero_seguro_medico] => 
+                                                    [patologia_general] => PATOLOGIA DUAL
+                                                    [patologiageneral_id] => 6
+                                                    [num_incapacidad] => 209/98
+                                                    [nig] => 10148-41-1-2008-0301540
+                                                    [juzgado] => 1ª INSTANCIA Nº 3 DE PLASENCIA
+                                                    [juzgado_id] => 46
+                                                    [expte_digital] => ..\05 Expedientes TUTELA\SERRANO TRANCON AGUSTIN 01-T-99#..\05 Expedientes TUTELA\SERRANO TRANCON AGUSTIN 01-T-99#
+                                                    [observaciones_inv] => ALDEANUEVA DE LA VERA
+                                                    [inventario] => 2008-02-26
+                                                    [aprob_inventario] => 2008-03-30
+                                                    [declaracion_anual] => ABRIL 2023
+                                                    [rendicion] => VERDADERO
+                                                    [ultima_rdc_aprobada] => DICIEMBRE 2020
+                                                    [rendicion_final] => 
+                                                    [aprob_rdc_final] => 
+                                                    [resolucion_icp] => 
+                                                    [num_resolucion_icp] => 0
+                                                    [fecha_dictado_icp] => 
+                                                    [juzgado_dictado_icp] => 
+                                                    [resolucion_nb] => 
+                                                    [num_resolucion_nb] => 0
+                                                    [fecha_dictado_nb] => 
+                                                    [juzgado_dictado_nb] => 
+                                                    [pension] => INSS
+                                                    [prestaciones] => 
+                                                    [importe] => 
+                                                    [observciones_dec] => 
+                                                    [grado_discapacidad] => 
+                                                    [fecha_discapacidad] => 
+                                                    [fecha_valor_discapacidad] => 
+                                                    [revisable_definitiva] => 
+                                                    [fecha_revision_discapacidad] => 
+                                                    [activo_dp] => 0
+                                                    [grado_dependencia] => II
+                                                    [gradodependencia_id] => 3
+                                                    [nivel_dependencia] => 
+                                                    [niveldependencia_id] => 
+                                                    [fecha_resolucion] => 2022-05-04
+                                                    [fecha_efectos] => 2021-06-14
+                                                    [servicio_dependencia] => ATENCION RESIDENCIAL
+                                                    [dependenciaservicio_id] => 1
+                                                    [subtipo_servicio] => RESIDENCIA APOYO LIMITADO: RAL
+                                                    [dependenciaserviciosubtipo_id] => 14
+                                                    [prestacion_dependencia] => PRESTACION DE SERVICIO
+                                                    [prestaciondependencia_id] => 1
+                                                    [fecha_aceptacion_cargo] => 1999-01-14
+                                                    [fecha_entrada_area_aecca] => 
+                                                    [empleado_aecca] => 
+                                                    [empleado_aecca_rdc] => 
+                                                    [empleado_aecca_final] => 
+                                                    [fecha_presentacion_rdc] => 2022-04-26
+                                                    [fecha_aprobacion_rdc] => 2022-05-12
+                                                    [observaciones_rdc] => 
+                                                    [fecha_fallecimiento_final] => 
+                                                    [fecha_cert_def_final] => 
+                                                    [fecha_sol_ult_vol_final] => 
+                                                    [observaciones_final] => 
+                                                    [fecha_revision_rdc] => 
+                                                    [años_en_ctaex] => 0
+                                                    [presentacion_rdc] => FALSO
+                                                    [empleado_ecca_prs_rdc] => 0
+                                                    [fecha_remocion] => 
+                                                    [fecha_reintegro_capacidad] => 
+                                                    [expte_antiguo] => 01/T/1999
+                                                    [expte_antes_revison] => 01/T/1999
+                                                    [regimen_actual] => 
+                                                    [regimen_definitivo] => 
+                                                    [iniciador_procedimiento] => 
+                                                    [fecha_remision] => 
+                                                    [fecha_recepcion] => 
+                                                    [contratar] => 
+                                                    [anular_poder_notarial] => 
+                                                    [uso_armas] => 
+                                                    [permiso_conducir] => 
+                                                    [estetica] => 
+                                                    [certificado_operabilidad] => 
+                                                    [otorgar_testamento] => 
+                                                    [redes_sociales] => 
+                                                    [observaciones_revison] => 
+                                                    [procedimiento_judicial] => 
+                                                    [procedimientojudicial_id] => 
+                                                    [created_at] => 
+                                                    [updated_at] => 
+                                                )
+
+                                            [changes:protected] => Array
+                                                (
+                                                )
+
+                                            [casts:protected] => Array
+                                                (
+                                                )
+
+                                            [classCastCache:protected] => Array
+                                                (
+                                                )
+
+                                            [attributeCastCache:protected] => Array
+                                                (
+                                                )
+
+                                            [dateFormat:protected] => 
+                                            [appends:protected] => Array
+                                                (
+                                                )
+
+                                            [dispatchesEvents:protected] => Array
+                                                (
+                                                )
+
+                                            [observables:protected] => Array
+                                                (
+                                                )
+
+                                            [relations:protected] => Array
+                                                (
+                                                    [datos_personales] => App\Models\ExpedienteDatoPersonal Object
+                                                        (
+                                                            [connection:protected] => mysql
+                                                            [table:protected] => expediente_datos_personales
+                                                            [primaryKey:protected] => id
+                                                            [keyType:protected] => int
+                                                            [incrementing] => 1
+                                                            [with:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [withCount:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [preventsLazyLoading] => 
+                                                            [perPage:protected] => 15
+                                                            [exists] => 1
+                                                            [wasRecentlyCreated] => 
+                                                            [escapeWhenCastingToString:protected] => 
+                                                            [attributes:protected] => Array
+                                                                (
+                                                                    [id] => 18
+                                                                    [sexo_id] => 1
+                                                                    [nacionalidad_id] => 2
+                                                                    [documento_identificativo_id] => 4
+                                                                    [seguro_medico_id] => 
+                                                                    [centro_id] => 6
+                                                                    [domicilio_id] => 
+                                                                    [aseguradora_id] => 14
+                                                                    [apellido1] => SERRANO
+                                                                    [apellido2] => TRANCON
+                                                                    [nombre] => AGUSTIN
+                                                                    [fecha_nacimiento] => 1950-11-15
+                                                                    [numero_documento] => 76103042K
+                                                                    [fecha_caducidad_documento] => 2023-04-04
+                                                                    [telefono] => 
+                                                                    [telefono2] => 
+                                                                    [fax] => 
+                                                                    [correo_electronico] => 
+                                                                    [seg_social] => 46/01275157/96
+                                                                    [numero_seguro_medico] => 
+                                                                    [disponible] => VERDADERO
+                                                                    [poliza] => 0381280192429
+                                                                    [carpeta] => 6
+                                                                    [no_por_edad_decesos] => FALSO
+                                                                    [fecha_fallecimiento] => 
+                                                                    [is_fallecido] => 0
+                                                                    [created_at] => 
+                                                                    [updated_at] => 
+                                                                )
+
+                                                            [original:protected] => Array
+                                                                (
+                                                                    [id] => 18
+                                                                    [sexo_id] => 1
+                                                                    [nacionalidad_id] => 2
+                                                                    [documento_identificativo_id] => 4
+                                                                    [seguro_medico_id] => 
+                                                                    [centro_id] => 6
+                                                                    [domicilio_id] => 
+                                                                    [aseguradora_id] => 14
+                                                                    [apellido1] => SERRANO
+                                                                    [apellido2] => TRANCON
+                                                                    [nombre] => AGUSTIN
+                                                                    [fecha_nacimiento] => 1950-11-15
+                                                                    [numero_documento] => 76103042K
+                                                                    [fecha_caducidad_documento] => 2023-04-04
+                                                                    [telefono] => 
+                                                                    [telefono2] => 
+                                                                    [fax] => 
+                                                                    [correo_electronico] => 
+                                                                    [seg_social] => 46/01275157/96
+                                                                    [numero_seguro_medico] => 
+                                                                    [disponible] => VERDADERO
+                                                                    [poliza] => 0381280192429
+                                                                    [carpeta] => 6
+                                                                    [no_por_edad_decesos] => FALSO
+                                                                    [fecha_fallecimiento] => 
+                                                                    [is_fallecido] => 0
+                                                                    [created_at] => 
+                                                                    [updated_at] => 
+                                                                )
+
+                                                            [changes:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [casts:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [classCastCache:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [attributeCastCache:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [dateFormat:protected] => 
+                                                            [appends:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [dispatchesEvents:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [observables:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [relations:protected] => Array
+                                                                (
+                                                                    [sexos] => App\Models\Sexo Object
+                                                                        (
+                                                                            [connection:protected] => mysql
+                                                                            [table:protected] => sexos
+                                                                            [primaryKey:protected] => id
+                                                                            [keyType:protected] => int
+                                                                            [incrementing] => 1
+                                                                            [with:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [withCount:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [preventsLazyLoading] => 
+                                                                            [perPage:protected] => 15
+                                                                            [exists] => 1
+                                                                            [wasRecentlyCreated] => 
+                                                                            [escapeWhenCastingToString:protected] => 
+                                                                            [attributes:protected] => Array
+                                                                                (
+                                                                                    [id] => 1
+                                                                                    [nombre] => HOMBRE
+                                                                                    [created_at] => 
+                                                                                    [updated_at] => 2024-08-27 06:34:56
+                                                                                )
+
+                                                                            [original:protected] => Array
+                                                                                (
+                                                                                    [id] => 1
+                                                                                    [nombre] => HOMBRE
+                                                                                    [created_at] => 
+                                                                                    [updated_at] => 2024-08-27 06:34:56
+                                                                                )
+
+                                                                            [changes:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [casts:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [classCastCache:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [attributeCastCache:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [dateFormat:protected] => 
+                                                                            [appends:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [dispatchesEvents:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [observables:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [relations:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [touches:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [timestamps] => 1
+                                                                            [usesUniqueIds] => 
+                                                                            [hidden:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [visible:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [fillable:protected] => Array
+                                                                                (
+                                                                                )
+
+                                                                            [guarded:protected] => Array
+                                                                                (
+                                                                                    [0] => id
+                                                                                )
+
+                                                                        )
+
+                                                                )
+
+                                                            [touches:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [timestamps] => 1
+                                                            [usesUniqueIds] => 
+                                                            [hidden:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [visible:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [fillable:protected] => Array
+                                                                (
+                                                                )
+
+                                                            [guarded:protected] => Array
+                                                                (
+                                                                    [0] => id
+                                                                )
+
+                                                        )
+
+                                                    [inmuebles] => Illuminate\Database\Eloquent\Collection Object
+ *RECURSION*
+                                                )
+
+                                            [touches:protected] => Array
+                                                (
+                                                )
+
+                                            [timestamps] => 1
+                                            [usesUniqueIds] => 
+                                            [hidden:protected] => Array
+                                                (
+                                                )
+
+                                            [visible:protected] => Array
+                                                (
+                                                )
+
+                                            [fillable:protected] => Array
+                                                (
+                                                )
+
+                                            [guarded:protected] => Array
+                                                (
+                                                    [0] => id
+                                                )
+
+                                        )
+
+                                    [foreignKey:protected] => expediente_id
+                                    [relatedKey:protected] => inmueble_id
+                                )
+
+                        )
+
+                    [touches:protected] => Array
+                        (
+                        )
+
+                    [timestamps] => 1
+                    [usesUniqueIds] => 
+                    [hidden:protected] => Array
+                        (
+                        )
+
+                    [visible:protected] => Array
+                        (
+                        )
+
+                    [fillable:protected] => Array
+                        (
+                        )
+
+                    [guarded:protected] => Array
+                        (
+                            [0] => id
+                        )
+
+                )
+
+        )
+
+    [escapeWhenCastingToString:protected] => 
+)

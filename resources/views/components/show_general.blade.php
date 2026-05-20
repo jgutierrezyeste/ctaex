@@ -30,7 +30,7 @@
 
 @section('content')
  
-  <table width="100%">
+  <table width="100%" align="center">
     <thead > 
         <x-td_variable campo_propio="" tipo="columna_cabecera"></x-td_variable>
           
@@ -44,14 +44,14 @@
       
       <tr>
         <x-datos_resultado_busqueda :expediente="$expediente" campo=""></x-datos_resultado_busqueda>
-        <td class="columna_cabecera"><a href=""><img src="{{asset('assets/img/lupa.png')}}" align="left"></a><a href="{{ route('expediente.datos', ['vistadatos' => $vistadatos,'idexpte'=> $expediente->id]) }}">{{ $expediente->num_expte_intranet??'Sin datos' }}</a></td>
+        <td class="columna_cabecera"><a href=""><img src="{{asset('assets/img/lupa.png')}}" align="left"></a><a href="{{ route('expediente.datos', ['vistadatos' => $vistadatos,'idexpte'=> $expediente->id]) }}">{{ $expediente->num_expte_intranet??'Sin datos' }}</a></br> <a href="{{ route('expediente.datos', ['vistadatos' => $vistadatos,'idexpte'=> $expediente->id]) }}">{{ $expediente->expte??'Sin datos' }}</a></td>
 
-        <td class="columna_cabecera"><a href=""><img src="{{asset('assets/img/lupa.png')}}" align="left"></a><a href="{{ route('expediente.datosextendidos', ['vistadatos' => $vistadatosextendidos,'idexpte'=> $expediente->id]) }}">{{ $expediente->expte??'Sin datos' }}</a></td>
+        <!--<td class="columna_cabecera"><a href=""><img src="{{asset('assets/img/lupa.png')}}" align="left"></a><a href="{{ route('expediente.datosextendidos', ['vistadatos' => $vistadatosextendidos,'idexpte'=> $expediente->id]) }}">{{ $expediente->expte??'Sin datos' }}</a></td>-->
 
         <!--<x-datos_resultado_busqueda_hipervinculo :expediente="$expediente" tipo="columna_cabecera" campo="num_expte_intranet"></x-datos_resultado_busqueda_hipervinculo>
         <x-datos_resultado_busqueda_hipervinculo :expediente="$expediente" tipo="columna_cabecera" campo="expte"></x-datos_resultado_busqueda_hipervinculo>-->
           @foreach($campos as $campo)
-            <x-datos_resultado_busqueda :expediente="$expediente" tipo="columna_cabecera" :campo="$campo" ></x-datos_resultado_busqueda>
+            <x-datos_resultado_busqueda  tipo="columna_cabecera" :campo="$campo" :expediente="$expediente" ></x-datos_resultado_busqueda>
           @endforeach
       </tr>
       @endforeach

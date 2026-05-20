@@ -1,4 +1,4 @@
-@props(['expedientes','regimenes','titulo','ruta','vista'])
+@props(['expedientes','regimenes','titulo','ruta','vista','campo'])
 @extends ('layouts.landing')
 @section('title','Comisión tutelar de adultos')
 
@@ -18,7 +18,8 @@
         <table class="tablegeneral" cellspacing ="0" cellpadding="5" bordercolor="black" border="1">
             <tbody>
         
-                @include('layouts._partials.comun_tabla_expedientes') 
+                <!--@include('layouts._partials.comun_tabla_expedientes')-->
+                <x-comun_tabla_expedientes :expedientes="$expedientes" :regimenes="$regimenes" :campo="$campo"></x-comun_tabla_expedientes>
 
                 @include('layouts._partials.comun_fechas_consulta') 
                         

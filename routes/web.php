@@ -171,7 +171,15 @@ Route::get('/datosoficios/{vista}/{id}',[ExpedienteController::class,'obtener_da
 Route::get('/datosinventarios/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosinventarios');//->middleware('auth');
 Route::get('/datosgastos/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosgastos');//->middleware('auth');
 Route::get('/datosingresos/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datosingresos');//->middleware('auth');
+Route::get('/datoshistorial/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.datoshistorial');//->middleware('auth');
 
+Route::get('/datosprocesos/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.obtenerdatos');//->middleware('auth');
+/*Route::get('/daotsdefjudiciales/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.obtenerdatos');//->middleware('auth');
+Route::get('/datosremociones/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.obtenerdatos');//->middleware('auth');
+Route::get('/datosrestituciones/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.obtenerdatos');//->middleware('auth');
+Route::get('/datosexitus/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.obtenerdatos');//->middleware('auth');
+Route::get('/datosjuridico/{vista}/{id}',[ExpedienteController::class,'obtener_datos'])->name('expedientes.obtenerdatos');//->middleware('auth');
+*/
 
 //Route::get('/oficiosExpediente',[ExpedienteController::class,'oficios'])->name('expedientes.oficios');
 //Route::get('/oficiostutorExpediente/{vista}',[ExpedienteController::class,'oficios'])->name('expedientes.oficiostutor');

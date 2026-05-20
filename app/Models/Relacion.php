@@ -17,5 +17,10 @@ class Relacion extends Model
         return $this->hasMany(RepresentanteRemocion::class,'relacion_id')->withPivot('relacion_id');
     }
 
+    public function expedientesrepresentantes():HasMany
+    {
+        return $this->hasMany(ExpedienteRepresentante::class,'relacion_id');
+    }
+
     
 }

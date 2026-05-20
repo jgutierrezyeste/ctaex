@@ -19,8 +19,18 @@ class Representante extends Model
         return $this->belongsToMany(Remocion::class,'representantes_remocion','representante_id','remocion_id')->withPivot('relacion_id');
     }
 
-    public function relaciones():BelongsTo
+    /*public function relaciones():BelongsTo
     {
         return $this->belongsTo(Relacion::class,'relacion_id');
+    }*/
+
+    public function expedientes():BelongsToMany
+    {
+        return $this->belongsToMany(Expediente::class,'expediente_representantes','representante_id','expediente_id')->withPivot('relacion_id');
+    }
+
+    public function tvias():BelongsTo
+    {
+        return $this->belongsTo(TipoVia::class,'tipo_via_id');
     }
 }

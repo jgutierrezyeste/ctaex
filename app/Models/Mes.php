@@ -10,7 +10,7 @@ class Mes extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
-    protected $table='años';
+    protected $table='meses';
 
     public function Declaraciones():HasMany
     {

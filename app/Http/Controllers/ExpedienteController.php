@@ -70,8 +70,8 @@ class ExpedienteController extends Controller
 
 public function busqueda(Request $request,$vista)
 {
-    
- 
+    $archivo=fopen("expedientes.txt","w+");
+ fwrite($archivo,$request.PHP_EOL);
     if ($request->has("id"))
     {
       $id=$request->get('id');
@@ -86,7 +86,7 @@ public function busqueda(Request $request,$vista)
  
   $expedientes = DB::table('expedientes_intranet')
   
-  ->select ('*')
+  ->select ('expedientes_intranet.*','expediente_datos_personales.apellido1','expediente_datos_personales.apellido2','expediente_datos_personales.nombre')
   ->join('expediente_datos_personales','expediente_datos_personales_id','=','expediente_datos_personales.id')
   ->when($id, function ($query) use ($id) {
       return $query->where('expedientes_intranet.id','=',$id);})
@@ -100,6 +100,7 @@ public function busqueda(Request $request,$vista)
             return $query->where('apellido2','=',$apellido2);})
   ->Paginate(5);
     
+    fwrite($archivo,print_r($expedientes,true));
   
   $numexpteintranet=$expedientes[0]->num_expte_intranet??'';
 return view ( $vista ,compact('expedientes','id','nombre','apellido1','apellido2','numexpteintranet'));
@@ -160,14 +161,14 @@ return view ( $vista ,compact('expedientes','id','nombre','apellido1','apellido2
        
         
 
-        $expediente = Expediente::where ('expediente_datos_personales_id',$idexpte)->first();
-        $expdatospersonales= ExpedienteDatoPersonal::where('id',$idexpte)->first();
+        $expediente = Expediente::where ('id',$idexpte)->first();
+        //$expdatospersonales= ExpedienteDatoPersonal::where('id',$idexpte)->first();
         
     
         $regimenes=Regimen::all();
         $juzgados=Juzgado::all();
     
-        return view ($vistadatos,compact('expediente','expdatospersonales','regimenes','juzgados'));
+        return view ($vistadatos,compact('expediente','regimenes','juzgados'));
     }
 
     public function obtener_datos($vista,$id){
